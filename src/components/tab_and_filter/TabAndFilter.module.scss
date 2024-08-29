@@ -1,0 +1,32 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+.TabSortContainer {
+    height: 48px;
+    border-bottom: 1px solid $gray-v1;
+    background-color: $white;
+    padding: 0 24px;
+
+    .SortName {
+        color: $gray-v91;
+        @extend %FTwo13;
+    }
+
+    .DropdownList {
+        position: relative;
+        width: 170px !important;
+        height: 100% !important;
+        border-radius: 6px !important;
+        top: -30px;
+        left: -60px;
+        z-index: 3 !important;
+        box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.25);
+        white-space: nowrap;
+    }
+
+    .FilterClass {
+        @extend %FS13;
+        font-weight: $fw-semibold !important;
+        color: $blue-v25 !important;
+    }
+}

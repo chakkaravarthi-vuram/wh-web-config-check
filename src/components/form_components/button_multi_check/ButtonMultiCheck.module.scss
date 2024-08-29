@@ -1,0 +1,72 @@
+@import '../../../scss/utilities';
+@import '../../../scss/constants';
+
+.Button {
+  margin-right: 15px;
+  padding: 0 30px;
+  //width: 100%;
+  height: 34px;
+  border-radius: 4px;
+  border: solid 1px #d8dee9;
+  background-color: #ffffff;
+  &:focus {
+    outline: none;
+  }
+}
+
+.CheckedButton {
+  margin-right: 15px;
+  padding: 0 30px;
+  //width: 100%;
+  height: 34px;
+  border-radius: 4px;
+  border: solid 1px $blue-v39;
+  background-color: #e6f3f9;
+  &:focus {
+    outline: none;
+  }
+}
+
+.DefaultPrimaryButton {
+  background-image: $primary-button;
+  color: $white;
+
+  &:hover {
+    background-image: $primary-button-hover;
+  }
+}
+
+.DefaultPrimaryDisabledButton {
+  background-image: $primary-button;
+  color: $white;
+  opacity: 0.6;
+}
+
+.SecondaryButton {
+  border-width: 1px;
+  border-style: solid;
+  background-color: $white;
+}
+
+.PrimaryButton {
+  color: $white;
+}
+
+.DefaultSecondaryButton {
+  border-color: $blue-v2;
+
+  &:hover {
+    background-image: $primary-button;
+    color: $white;
+  }
+}
+
+.closeIcon {
+  width: 9px;
+  height: 9px;
+  margin-top: 3px;
+}
+
+.FieldTitle {
+  margin: 0 26px 6px 0;
+}

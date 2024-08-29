@@ -1,0 +1,75 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+$step-circle-height: 28px;
+
+.Container {
+  border-radius: 4px;
+  background-color: $white;
+}
+.W100Imp {
+  width: 100% !important;
+}
+.Container:hover {
+  background-color: $gray-v69;
+  .StepNumber{
+    background-color: $blue-v39;
+    color: $white;
+  }
+}
+.EditIcon {
+  fill: $gray-v101;
+}
+.StepNumber {
+  height: $step-circle-height;
+  width: $step-circle-height;
+  border-radius: 50%;
+  background-color: $gray-v6;
+  color: $black-v10;
+}
+.ActionBtn {
+  font-size: $font-size-sm;
+  height: 32px;
+  background: none !important;
+  padding: 0 !important;
+  margin-left: 16px;
+  &:hover {
+    background-color: none !important;
+  }
+}
+.SecondaryBtn {
+  color: $black-v20 !important;
+}
+.PrimaryBtn {
+  color: $blue-v39 !important;
+  &:hover {
+    color: $blue-v69 !important;
+  }
+}
+
+.ErrorBorder {
+  border: 1px solid $red-v27;
+}
+
+.InputBackground {
+  background-color: $white;
+}
+
+.InputComponent {
+  width: 35%;
+  flex-grow: 1;
+}
+.MetricMainContent {
+  flex: 1 1;
+  width: 70%;
+}
+
+@include for-phone-and-tab{
+  .MetricMainContent{
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .InputComponent {
+    width: 100%;
+    min-width: 100%;
+  }
+}

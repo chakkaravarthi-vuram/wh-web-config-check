@@ -1,0 +1,85 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.CustomModalClass {
+  width: 70vw !important;
+}
+
+.TitleClass {
+  color: $gray-v3;
+}
+.CheckBoxClass label {
+  color: $gray-v90;
+  margin-bottom: 11px;
+}
+.DropDownMaxWidth {
+  max-width: 380px !important;
+}
+.DropdownLabelClass label {
+  color: $black-v20;
+}
+.CheckBoxGroupLabel {
+  color: $gray-v90;
+  line-height: 16px;
+  :nth-child(2) {
+    gap: 12px !important;
+  }
+}
+.SubFlowContentClass label {
+  font-size: 16px;
+  color: $gray-v3;
+}
+.InputTreeHeaderRow {
+  border-top: none !important;
+  border-bottom: 1px solid $gray-v108 !important;
+  padding: 0px, 16px, 4px, 16px;
+
+  & > div > div > p {
+    font-size: 12px;
+    color: $gray-v89;
+    font-weight: 500;
+    padding-right: 0px !important;
+  }
+}
+.InputTreeRow {
+  & > li:last-child {
+    border-bottom: 1px solid $gray-v1 !important;
+  }
+}
+.FieldNameColumn {
+  width: 35% !important;
+}
+.OperationColumn {
+  width: 30% !important;
+}
+.ValueColumn {
+  width: 35% !important;
+}
+.ValueTypePopper {
+  min-width: 120px;
+}
+.IterateDropDOwnMaxWidth {
+  max-width: 380px !important;
+}
+.IterateClass label {
+  color: $black-v20;
+}
+
+.FieldNameClass {
+  color: $gray-v89;
+}
+.InsertDropdown {
+  width: 102px;
+  height: 15px;
+  z-index: 1;
+  @media (max-width: 375px) {
+    width: 83px;
+  }
+}
+.FlowFieldsSpanish {
+  width: 125px;
+}
+
+.DeleteStepButton {
+  color: $red-v25 !important;
+}

@@ -1,0 +1,33 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.AddConfigCard{
+  margin-bottom: 15px;
+  flex:1;
+  border-radius: 3px;
+  border: dashed 1px $gray-v68;
+  text-align: center;
+  min-width: 280px;
+  background-color: #fff;
+  height: 48px;
+}
+.AddIcon {
+  width: 16px;
+  height: 16px;
+  margin: 0 10px 0 0;
+  object-fit: contain;
+  border-radius: 1px;
+}
+
+.AllConfigCards{
+  display: grid;
+  column-gap: 15px;
+  row-gap: 15px;
+
+  @include for-medium-height-device{
+    grid-template-columns: 1fr;
+  }
+}
+.SectionSubtitleStyle{
+  color: $gray-v53;
+}

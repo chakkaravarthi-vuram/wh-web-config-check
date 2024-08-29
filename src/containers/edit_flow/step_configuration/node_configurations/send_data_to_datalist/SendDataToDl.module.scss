@@ -1,0 +1,53 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.CustomModalClass {
+    width: 70vw !important;
+}
+.LabelClass label{
+    @extend %FTwo12Important;
+    @extend %BlackV20;
+    @extend %FontWeight500;
+}
+
+.CreateEntryContainer {
+    display: flex;
+    border-bottom: 1px solid $gray-v108;
+    gap: 8px;
+    > div {
+        flex: 1;
+    }
+}
+
+.UpdateEntryContainer {
+    display: flex;
+    border-bottom: 1px solid $gray-v108;
+    > div {
+        flex: 1;
+    }
+
+    > div:last-child {
+        flex: 10% !important;
+    }
+}
+
+.SecondNestedView {
+    background-color: $white;
+    border: 1px solid $gray-v102;
+
+    & .Dropdown{
+        width: 100%;
+    }
+};
+
+.DropdownResponsive {
+    width: 50%;
+
+    @include for-medium-hd-screen {
+        width: 100%;
+    }
+}
+
+.DeleteStepButton {
+    color: $red-v25 !important;
+}

@@ -1,0 +1,79 @@
+@import '../../../scss/constants';
+.GradientSwatchPicker {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background-color: $gray-v6;
+}
+
+.GradientSwatchPickerV2 {
+  width: 66px;
+  height: 32px;
+  border-radius: 3px;
+  border: solid 1px $gray-v1;
+}
+
+.InnerGradientSwatchPickerV2 {
+  width: 60px;
+  height: 26px;
+  border-radius: 2px;
+  background-color: $gray-v6;
+}
+
+.Picker {
+  width: 277px;
+  height: 245px;
+  border-radius: 12px;
+  box-shadow: 4px 4px 12px 0 rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  padding: 20px;
+  // top: 34px;
+  // left: 34px;
+  z-index: 1;
+}
+
+.Tile {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+
+  &:hover {
+    .CorrectIcon {
+      opacity: 1;
+    }
+  }
+}
+
+.SelectedTile {
+  .CorrectIcon {
+    opacity: 1;
+  }
+}
+
+.CorrectIcon {
+  fill: $white;
+  width: 16px;
+  height: 13px;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.DisplayIconOnHover {
+  opacity: 0;
+}
+
+.HideTextOnHover {
+  opacity: 1;
+}
+
+.ContainerHover {
+  &:hover {
+    .DisplayIconOnHover {
+      opacity: 1;
+    }
+    .HideTextOnHover {
+      opacity: 0;
+    }
+  }
+}

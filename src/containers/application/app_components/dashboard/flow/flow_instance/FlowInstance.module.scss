@@ -1,0 +1,18 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.Header{
+   padding: 15px 30px 0 30px;
+   border-bottom: 1px solid $gray-v102;
+    & .TabText {
+        margin-left: 0 !important;
+        margin-bottom: 10px;
+        outline: none;
+    }
+    & .ActiveBar{
+        height: 4px;
+    }
+}
+.Content{
+    padding: 30px 30px 0 30px;
+}

@@ -1,0 +1,80 @@
+@import '../../../scss/constants';
+
+.UserImage {
+  height: 24px;
+  width: 24px;
+}
+.LeftBubble {
+  // padding: 10px 20px 10px 15px;
+  width: 61px;
+  height: 32px;
+  border-radius: 20px;
+  border-top-left-radius: 0px;
+  max-width: 350px;
+  word-wrap: break-word;
+  background-color: $gray-v34;
+}
+.StatusDot {
+  z-index: 1;
+  margin-left: -8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 4.5px;
+  background-color: $green-v5;
+}
+.OfflineStatusDot {
+  background-color: $gray-v13 !important;
+}
+.TypingDot {
+  background-color: $blue-v14;
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  animation: popup 1.4s infinite ease-in-out both;
+}
+.TypingDot2Animation {
+  animation-delay: 0.16s;
+}
+.TypingDot3Animation {
+  animation-delay: 0.32s;
+}
+@keyframes popup {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.Dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #4fa64f;
+  margin-left: 2px;
+  animation: wave 1.2s linear infinite;
+
+  &:nth-child(2) {
+    animation-delay: -1s;
+  }
+
+  &:nth-child(3) {
+    animation-delay: -0.8s;
+  }
+}
+
+@keyframes wave {
+  0%,
+  60%,
+  100% {
+    transform: initial;
+  }
+  30% {
+    transform: translateY(-5px);
+  }
+}

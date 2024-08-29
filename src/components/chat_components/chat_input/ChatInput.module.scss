@@ -1,0 +1,15 @@
+@import '../../../scss/constants';
+
+.Container {
+  padding: 2px 15px 0px 8px;
+  .Input {
+    flex: 1;
+  }
+  .SendIcon {
+    fill: $gray-v62;
+  }
+  .SendIconContainer {
+    align-self: center;
+    // padding-bottom: 15px;
+  }
+}

@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: utils/UtilityFunctions.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: utils/UtilityFunctions.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import moment from 'moment';
+import React, { useContext } from 'react';
+import { createStore } from 'redux';
+
+import cx from 'classnames';
+
+import {
+  cloneDeep, get, isEmpty, startCase, upperFirst,
+} from 'lodash';
+import { Modal } from 'reactstrap';
+import { ADDITIONAL_DETAILS_STRINGS } from '../containers/sign_up/additional_details/AdditionalDetails.strings';
+import {
+  EMPTY_STRING,
+  DROPDOWN_CONSTANTS,
+  SPACE,
+  PLUS,
+  TEAM_CREATED_DATE,
+  TEAM_CREATED_DATE_TIME,
+  EFFECTIVE_DATE,
+  LANGUAGES_LIST,
+  DOT,
+  DRAFT_PROCEDURE_UPDATED_DATE,
+  DRAFT_DATA_LIST_UPDATED_DATE,
+} from './strings/CommonStrings';
+import { DEFAULT_COLORS_CONSTANTS, BS, COLOR_CONSTANTS } from './UIConstants';
+import { RESET_PASSWORD_STRINGS } from '../containers/reset_password/ResetPassword.strings';
+import { store } from '../Store';
+import rootReducer from '../redux/reducer/index';
+import { SIGN_IN_PASSWORD } from '../containers/sign_in/SignIn.strings';
+import { CREATE_TASK } from '../containers/task/task/TaskTranslation.string';
+
+import * as actions from '../redux/actions/Actions';
+import {
+  RESPONSE_TYPE,
+  DATE,
+  ROLES,
+  BUTTON_TYPE,
+  ENCRYPTION_AES_ENC_KEY_OPTIONS,
+  ENCRYPTION_RSA_ENC_FORMAT,
+  ENCRYPTION_RSA_ENC_KEY_OPTIONS,
+  FORM_POPOVER_STATUS,
+} from './Constants';
+import gClasses from '../scss/Typography.module.scss';
+import { HOLIDAY_DATE } from '../containers/admin_settings/language_and_calendar/holidays/holiday_table/HolidayTable.strings';
+// import ACCOUNT_SETTINGS_STRINGS_ENG from '../translations/AccountSettingsStringEng.json';
+import ONETHING_STRINGS_SPANISH from '../translations/AccountSettingsStringSpa.json';
+import { ADMIN_SETTINGS } from '../containers/admin_settings/AdminSettingsTranslation.strings';
+import { TEAMS_T } from '../containers/teams/TeamsTransalation.strings';
+import { NEW_PASSWORD } from '../containers/user_settings/change_password/ChangePassword.strings';
+import { PROCEDURE_T_STRINGS } from '../containers/procedures/ProcedureTranslations.strings';
+import { ALL_USERS } from '../containers/all_users/AllUserTranslation.strings';
+import { USER_PROFILE } from '../containers/user_settings/user_profile/UserProfileTranslation.strings';
+import { SIDE_NAV_BAR } from '../components/side_nav_bar/SideNavbarTranslation.string';
+import { LOGGED_IN_NAVBAR } from '../components/logged_in_nav_bar/LoggedInNavbarTranlsation.strings';
+import { CHANGE_PASSWORD } from '../containers/user_settings/change_password/ChangePasswordTranslation.strings';
+import { GUIDE } from '../components/guide/GuideTranslation.strings';
+import { CHAT_STRINGS } from '../containers/chat/ChatTranslation.string';
+import {
+  ALLOWED_EXTENSIONS_REGEX,
+  FULL_NAME_REGEX,
+  NEW_PASSWORD_REGEX,
+  ONLY_ALPHABETS_REGEX,
+  EMAIL_REGEX,
+} from './strings/Regex';
+import { PROCEDURE_STRINGS } from '../containers/procedures/Procedure.strings';
+import { OTHER_SETTINGS_FORM } from '../containers/admin_settings/other_settings/OtherSettings.strings';
+import { FIELD_NAME } from '../components/form_builder/FormBuilder.strings';
+import { ACTORS } from '../containers/task/task/Task.strings';
+import { LANDING_PAGE } from '../containers/landing_page/LandingPageTranslation.strings';
+import getLanguage from '../axios/apiService/getLanguage.apiService';
+import ThemeContext from '../hoc/ThemeContext';
+import buttonStyles from '../components/form_components/button/Button.module.scss';
+import * as ROUTE_CONSTANTS from '../urls/RouteConstants';
+
+import jsUtils, { nullCheck } from './jsUtility';
+
+import countryCodeList from '../components/form_components/flags/countryCodeList';
+import { CREATE_TEAM } from '../containers/teams/teams/Teams.strings';
+import { generatePostServerErrorMessage } from '../server_validations/ServerValidation';
+import { getAllSearchParams } from './taskContentUtils';
+import UpdateConfirmPopover from '../components/update_confirm_popover/UpdateConfirmPopover';
+import { STRING_VALIDATION } from './ValidationConstants';
+import {
+  GET_CHAT_ENCRYPT_DETAILS,
+} from '../urls/ApiUrls';
+import getEncryptionDetailsThunk from '../axios/apiService/encryption.apiService';
+import { updateErrorPopoverInRedux, updateFormPopOverStatus } from './popoverUtils';
+import { setPointerEvent, updatePostLoader } from './loaderUtils';
+
+/** @module helper * */
+/**
+ * @memberof helper
+ */
+/**
+ * @function mergeObjects
+ * @description To merge two objects
+ * @param   {Object} obj1 first object
+ * @param   {Object} obj2 second object
+ * @return  {Object}
+ */
+export const mergeObjects = (obj1, obj2) => {
+  const value1 = jsUtils.omitBy(obj1, jsUtils.isNil);
+  const value2 = jsUtils.omitBy(obj2, jsUtils.isNil);
+  const mergedObject = jsUtils.merge(value1, value2);
+  return mergedObject;
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function compareObjects
+ * @description To compare two objects
+ * @param   {Object} obj1 first object
+ * @param   {Object} obj2 second object
+ * @return  {boolean}
+ */
+export const compareObjects = (object1, object2) => {
+  if (jsUtils.isEqual(object1, object2)) return true;
+  return false;
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function nullCheckAndReturnValueOrEmptyString
+ * @description To return value or empty string based on empty condition check
+ * @param   {string} value value
+ * @return  empty string or value
+ */
+export const nullCheckAndReturnValueOrEmptyString = (value) => {
+  if (jsUtils.isEmpty(value)) return EMPTY_STRING;
+  return value;
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function nullCheckAndReturnValueOrBool
+ * @description To return value or false based on empty condition check
+ * @param   {string} value value
+ * @return  false or value
+ */
+export const nullCheckAndReturnValueOrBool = (value) => {
+  if (jsUtils.isEmpty(value)) return false;
+  return value;
+};
+
+/**
+ * @memberof helper
+ */
+/**
+ * @function getUserProfileData
+ * @description To return user profile data based on role
+ * @return object or null
+ */
+export const getUserProfileData = () => {
+  switch (store.getState().RoleReducer.role) {
+    case ROLES.ADMIN:
+      return store.getState().AdminProfileReducer.adminProfile;
+    case ROLES.MEMBER:
+      return store.getState().MemberProfileReducer.memberProfile;
+    case ROLES.PROCEDURE_CREATOR:
+      return store.getState().ProcedureCreatorProfileReducer
+        .procedureCreatorProfile;
+    default:
+      return null;
+  }
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function getLogoSize
+ * @description To return maximum file size configured by admin or user
+ * @return {number}
+ */
+export const getLogoSize = () => {
+  switch (store.getState().RoleReducer.role) {
+    case ROLES.ADMIN:
+      if (store.getState().AdminProfileReducer.adminProfile.maximum_file_size) {
+        return (
+          parseInt(
+            store.getState().AdminProfileReducer.adminProfile.maximum_file_size,
+            10,
+          ) * 1000000
+        );
+      }
+      return 1000000;
+    case ROLES.MEMBER:
+      if (
+        store.getState().MemberProfileReducer.memberProfile.maximum_file_size
+      ) {
+        return (
+          parseInt(
+            store.getState().MemberProfileReducer.memberProfile
+              .maximum_file_size,
+            10,
+          ) * 1000000
+        );
+      }
+      return 1000000;
+    case ROLES.PROCEDURE_CREATOR:
+      if (
+        store.getState().ProcedureCreatorProfileReducer.procedureCreatorProfile
+          .maximum_file_size
+      ) {
+        return (
+          parseInt(
+            store.getState().ProcedureCreatorProfileReducer
+              .procedureCreatorProfile.maximum_file_size,
+            10,
+          ) * 1000000
+        );
+      }
+      return 1000000;
+    default:
+      return 1000000;
+  }
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function hexToRgbA
+ * @param {string} hex Hexadecimal value
+ * @param {string} value opacity
+ * @description Color code conversion from hexadecimal to RGB
+ * @return {string} or error
+ */
+export function hexToRgbA(hex, opacity) {
+  let c;
+  if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
+    c = hex.substring(1).split('');
+    if (c.length === 3) {
+      c = [c[0], c[0], c[1], c[1], c[2], c[2]];
+    }
+    c = `0x${c.join('')}`;
+    return `rgba(${[(c >> 16) &amp; 255, (c >> 8) &amp; 255, c &amp; 255].join(
+      ',',
+    )},${opacity})`;
+  }
+  throw new Error('Bad Hex');
+}
+
+// test utility function
+export const findByTestAttribute = (wrapper, val) => wrapper.find(`[data-test="${val}"]`);
+
+export const storeFactory = (initialState) => createStore(rootReducer, initialState);
+/**
+ * @memberof helper
+ */
+/**
+ * @function calcwidth
+ * @param {string} x x axis
+ * @param {string} y y axis
+ * @param {string} width width
+ * @description calculate width based on screen size
+ * @return {string}
+ */
+export const calcwidth = (x, y, width) => {
+  const val = (x / 100) * width - y;
+  return val;
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function getFormDataFromJSON
+ * @param {string} data json data
+ * @description convert json to form data
+ * @return {Object}
+ */
+export const getFormDataFromJSON = (data) => {
+  const form_data = new FormData();
+  Object.keys(data).forEach((key) => {
+    // if(typeof data[key]===TYPE_OBJECT || typeof data[key]===TYPE_ARRAY)
+    // form_data.append(key,JSON.stringify(data[key]))
+    // else
+    console.log(data[key] instanceof Blob);
+    if (jsUtils.isArray(data[key])) {
+      data[key].forEach((key_data) => {
+        form_data.append(key, key_data);
+      });
+    } else form_data.append(key, data[key]);
+  });
+  return form_data;
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function hasOwn
+ * @param {Object} obj object
+ * @param {string} key key
+ * @description to check whether given object has the key
+ * @return {boolean}
+ */
+export const hasOwn = (obj, key) => Object.prototype.hasOwnProperty.call(obj, key);
+/**
+ * @memberof helper
+ */
+/**
+ * @function appendFormDataArrayOrObject
+ * @param {Object} form_data json object
+ * @description to construct form data in nested structures recursively
+ * @return {Object} form data
+ */
+export const appendFormDataArrayOrObject = (form_data) => {
+  FormData.prototype.appendRecursive = function (data, wrapper) {
+    Object.keys(data).map((key) => {
+      let keyString = EMPTY_STRING;
+      if (wrapper === EMPTY_STRING) keyString = key;
+      else keyString = `${wrapper}[${key}]`;
+      if (
+        (!(data[key] instanceof File)
+          &amp;&amp; !(data[key] instanceof Blob)
+          &amp;&amp; typeof data[key] === 'object')
+        || data[key].constructor === Array
+      ) {
+        this.appendRecursive(data[key], keyString);
+      } else {
+        this.append(keyString, data[key]);
+      }
+    });
+  };
+  const formData = new FormData();
+  const wrapper = EMPTY_STRING;
+  formData.appendRecursive(form_data, wrapper);
+  return formData;
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function updateFormPostOperationFeedback
+ * @param {Object} data data
+ * @description to invoke feedback operation after form submit
+ * @return action to update feedback in redux
+ */
+export const updateFormPostOperationFeedback = (data) => {
+  store.dispatch(actions.addFormFeedbackAction(data));
+  setTimeout(() => {
+    const feedbacks = cloneDeep(
+      store.getState().FormPostOperationFeedbackReducer.feedbacks,
+    );
+    const index = feedbacks.findIndex((eachItem) => eachItem.id === data.id);
+    feedbacks.splice(index, 1);
+    store.dispatch(actions.updateFormFeedbackAction(feedbacks));
+  }, 5000);
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function getServerErrorMessageObject
+ * @param {Object} server_error error response from server
+ * @param {Object} list_data list of data
+ * @description construct error message based on server error response
+ * @return {Object} error message object
+ */
+export const getServerErrorMessageObject = (
+  server_error,
+  list_data,
+  type,
+) => {
+  let messageObject = null;
+  if (!isEmpty(server_error)) {
+    messageObject = {
+      title: 'Oops',
+      subTitle: server_error,
+      type: RESPONSE_TYPE.SERVER_ERROR,
+    };
+  } else if (list_data.length === 0) {
+    if (type === RESPONSE_TYPE.NO_TASK_FOUND) {
+      messageObject = {
+        title: 'There is no tasks!',
+        type: RESPONSE_TYPE.NO_TASK_FOUND,
+      };
+      return messageObject;
+    }
+    messageObject = {
+      title: 'No data found',
+      subTitle: 'Once you receive data, the details will live here.',
+      type: RESPONSE_TYPE.NO_DATA_FOUND,
+    };
+  }
+  return messageObject;
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function reArrangeArray
+ * @param {Object} list list to arrange
+ * @param {string} from from 
+ * @param {string} to to
+ * @description rearrange an array based on given from and to
+ * @return {Object} error message object
+ */
+export const reArrangeArray = (list, from, to) => {
+  const f = list.splice(from, 1)[0];
+  list.splice(to, 0, f);
+  return list;
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function getStringFileFromLanguage
+ * @param {string} language
+ * @description get strings based on language
+ * @return {Object} string file
+ */
+export const getStringFileFromLanguage = (language) => {
+  console.log(language);
+  switch (language) {
+    case LANGUAGES_LIST.ENGLISH:
+      return {
+        ADMIN_SETTINGS,
+        TEAMS: TEAMS_T,
+        ALL_USERS,
+        USER_PROFILE,
+        SIDE_NAV_BAR,
+        LOGGED_IN_NAVBAR,
+        PROCEDURES: PROCEDURE_T_STRINGS,
+        CHANGE_PASSWORD,
+        GUIDE,
+        CREATE_TASK,
+        CHAT_STRINGS,
+        LANDING_PAGE,
+      };
+    case LANGUAGES_LIST.SPANISH:
+      return ONETHING_STRINGS_SPANISH;
+    default:
+      return {
+        ADMIN_SETTINGS,
+        TEAMS: TEAMS_T,
+        ALL_USERS,
+        USER_PROFILE,
+        SIDE_NAV_BAR,
+        LOGGED_IN_NAVBAR,
+        PROCEDURES: PROCEDURE_T_STRINGS,
+        CHANGE_PASSWORD,
+        GUIDE,
+        CREATE_TASK,
+        CHAT_STRINGS,
+        LANDING_PAGE,
+      };
+  }
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function arryToDropdownData
+ * @param {Array} array data
+ * @description convert array to dropdown data
+ * @return {Object} dropdown
+ */
+export const arryToDropdownData = (array) => {
+  const dropdownData = [];
+
+  array.map((data) => {
+    if (!jsUtils.isEmpty(data.trim())) {
+      dropdownData.push({
+        [DROPDOWN_CONSTANTS.OPTION_TEXT]: data,
+        [DROPDOWN_CONSTANTS.VALUE]: data,
+      });
+    }
+  });
+
+  return dropdownData;
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function getUserCardFromIndex
+ * @param {Array} optionList data
+ * @param {string} index
+ * @description retreive user details from index
+ * @return {Object} dropdown
+ */
+export const getUserCardFromIndex = (optionList, index) => {
+  if (!jsUtils.isNull(index)) return jsUtils.find(optionList, (option) => option.value === index).userDetails;
+  return EMPTY_STRING;
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function reportError
+ * @description error if any key not present in server
+ */
+export const reportError = (err) => console.log('Bad API Response', err);
+/**
+ * @memberof helper
+ */
+/**
+ * @function normalizeIsEmpty
+ * @param {Object} normalizeData
+ * @param {function} resolve
+ * @param {function} reject
+ * @description check if data from server is not empty
+ */
+export const normalizeIsEmpty = (normalizeData, resolve, reject) => {
+  const emptyError = {
+    response: {
+      status: 500,
+    },
+  };
+  !jsUtils.isEmpty(normalizeData) ? resolve(normalizeData) : reject(emptyError);
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function updateLanguage
+ * @param {string} languageUrl
+ * @description update language in system based on language url from server
+ */
+export const updateLanguage = (languageUrl) => new Promise((resolve, reject) => {
+  getLanguage(languageUrl)
+    .then(async (languageResponse) => {
+      const languageSettings = Object.freeze({
+        language: 'english',
+        strings: languageResponse,
+      });
+      store.dispatch(actions.updateLanguageAction(languageSettings));
+      caches.open('language_strings').then((cache) => {
+        cache
+          .keys()
+          .then((keys) => Promise.all(
+            keys.map((key) => {
+              console.log(
+                'keykey out',
+                languageUrl !== key.url,
+                languageUrl,
+                key.url,
+              );
+              if (languageUrl !== key.url) {
+                console.log('keykey', key);
+                cache.delete(key.url);
+              }
+            }),
+
+            cache.keys().then((keys) => {
+              console.log('keykey', keys);
+            }),
+          ))
+          .catch((error) => {
+            throw error;
+          });
+      });
+      resolve(true);
+    })
+    .catch((error) => {
+      reject(error);
+    });
+});
+/**
+ * @memberof helper
+ */
+/**
+ * @function toIsAfterFromDate
+ * @param {string} from
+ * @param {string} to
+ * @description check whether to date is after from date
+ * @return {boolean}
+ */
+export const toIsAfterFromDate = (from, to) => moment(to, 'YYYY-MM-DDThh:mm a').isAfter(moment(from, 'YYYY-MM-DDThh:mm a'));
+/**
+ * @memberof helper
+ */
+/**
+ * @function updateDefaultLanguage
+ * @description if language url is not present update default language string
+ *  @return action to update language
+ */
+export const updateDefaultLanguage = () => {
+  const languageStringObj = {
+    ADMIN_SETTINGS,
+    TEAMS: TEAMS_T,
+    ALL_USERS,
+    USER_PROFILE,
+    SIDE_NAV_BAR,
+    LOGGED_IN_NAVBAR,
+    PROCEDURES: PROCEDURE_T_STRINGS,
+    CHANGE_PASSWORD,
+    GUIDE,
+    CREATE_TASK,
+    CHAT_STRINGS,
+    LANDING_PAGE,
+  };
+  const languageSettings = Object.freeze({
+    language: 'english',
+    strings: languageStringObj,
+  });
+  store.dispatch(actions.updateLanguageAction(languageSettings));
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function getReferenceNameError
+ * @param {Object} error
+ * @description construct reference name error message from server
+ *  @return {string}
+ */
+export const getReferenceNameError = (error) => {
+  if (error.response) {
+    const server_error = error.response;
+    if (server_error.data &amp;&amp; server_error.data.errors) {
+      if (server_error.data.errors[0].type === 'string.min') return 'Reference name should be minimum of 2 characters';
+      if (server_error.data.errors[0].type === 'exist') return 'Reference name already exists';
+    }
+  }
+  return null;
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function navigateToHome
+ * @param {number} user_type
+ * @param {Object} { isInviteUser, username, id }
+ * @param {Object} history
+ * @description common navigation to home for specific scenarios
+ */
+export const navigateToHome = (
+  user_type,
+  { isInviteUser, username, id },
+  history,
+) => {
+  const searchParams = get(history, ['location', 'search'])
+    ? getAllSearchParams(
+      new URLSearchParams(get(history, ['location', 'search'])),
+    )
+    : null;
+  let nextUrl = '';
+  if (searchParams) {
+    nextUrl = searchParams.nextUrl;
+  } else if (isInviteUser) {
+    nextUrl = `${ROUTE_CONSTANTS.INVITE_USER_LOGIN}${id}`;
+    return history.push({
+      pathname: nextUrl,
+      state: { username },
+    });
+  } else {
+    switch (user_type) {
+      case ROLES.ADMIN:
+        nextUrl = ROUTE_CONSTANTS.ADMIN_HOME;
+        break;
+      case ROLES.MEMBER:
+        nextUrl = ROUTE_CONSTANTS.MEMBER_HOME;
+        break;
+      case ROLES.PROCEDURE_CREATOR:
+        nextUrl = ROUTE_CONSTANTS.PROCEDURE_CREATOR_HOME;
+        break;
+      default:
+        break;
+    }
+  }
+  console.log(
+    'searchParams',
+    nextUrl,
+    searchParams,
+    `${ROUTE_CONSTANTS.ADMIN_HOME}${nextUrl}`,
+  );
+  if (!isEmpty(nextUrl)) history.push(nextUrl);
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function getFileNameFromServer
+ * @param {Object} fileObj
+ * @description retrieve file name from the file details sent from server
+ * @return {string} file name
+ */
+export const getFileNameFromServer = (fileObj) => {
+  if (fileObj &amp;&amp; fileObj.content_type &amp;&amp; fileObj.filename) {
+    const fileExtension = fileObj.content_type.split('/').pop();
+    const fileName = [fileObj.filename, fileExtension].join(DOT);
+    return fileName;
+  }
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function getCountryCodeDropdownList
+ * @description customised country code dropdown
+ * @return {Object} country code list
+ */
+export const getCountryCodeDropdownList = () => countryCodeList.map((countryObj) => {
+  return {
+    label: `${countryObj.countryCodeId} ${countryObj.countryName}`,
+    value: countryObj.countryCodeId,
+    countryCode: countryObj.countryCode,
+  };
+});
+/**
+ * @memberof helper
+ */
+/**
+ * @function getSearchedCountryCodeDropdownList
+ * @param {string} searchText
+ * @description return country code list based on searched text
+ * @return {string} file name
+ */
+export const getSearchedCountryCodeDropdownList = (searchText) => {
+  let searchTextCap = jsUtils.capitalize(searchText);
+  if (RegExp('^[0-9]+$').test(searchTextCap)) searchTextCap = `+${searchText}`;
+  if (RegExp('^\\+[0-9]+$').test(searchTextCap)) {
+    const matches = getCountryCodeDropdownList().filter((country) => {
+      if (jsUtils.startsWith(country.label.split(' ')[0], searchTextCap)) return true;
+      return false;
+    });
+    return jsUtils.sortBy(matches, (country) => Number(country.label.split(' ')[0].split('+')[1]));
+  }
+  return getCountryCodeDropdownList().filter((country) => {
+    if (jsUtils.startsWith(country.label.split(' ')[1], searchTextCap)) {
+      return true;
+    }
+    return false;
+  });
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function onWindowResize
+ * @param {function} callback
+ * @description set event listener if window is resized
+ */
+export const onWindowResize = (callback) => {
+  window.addEventListener('resize', callback);
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function getWindowWidth
+ * @description return inner width of the screen
+ */
+export const getWindowWidth = () => window.innerWidth;
+/**
+ * @memberof helper
+ */
+/**
+ * @function getWindowHeight
+ * @description return inner height of the screen
+ */
+export const getWindowHeight = () => window.innerHeight;
+/**
+ * @memberof helper
+ */
+/**
+ * @function isMobileScreen
+ * @description return true if mobile screen else false
+ * @return {boolean}
+ */
+export const isMobileScreen = () => window.innerWidth &lt; 1024;
+/**
+ * @memberof helper
+ */
+/**
+ * @function onSwipedUpOrDown
+ * @param {Object} event 
+ * @description for mobile if swiped what should be dynamic top css set
+ * @return {number} top
+ */
+export const onSwipedUpOrDown = (event) => {
+  let top = Math.ceil(Math.abs(event.deltaY - event.initial[1]));
+  // height-change-alert change in top pixel has to replicated in
+  //  LCContainer in Typography.module.scss
+  const windowHeight = getWindowHeight();
+  if (top > windowHeight - 80) {
+    top = windowHeight - 80;
+  } else if (top &lt; 65) {
+    top = 65;
+  }
+  return top;
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function priorityTask
+ * @param {number} deadline 
+ * @param {number} priority
+ * @description return priority of task
+ * @return {number} 
+ */
+export const priorityTask = (deadline, priority) => {
+  if (deadline &lt; 0 &amp;&amp; deadline * -1 &lt; priority) return 1; // hight priority
+  if (deadline > 0) return -1; // overdue
+  return 0; // medium priority
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function addNotificationToTaskList
+ * @param {Array} taskList
+ * @param {Array} notificationArray
+ * @param {number} maxCount
+ * @description return notification on tasks list if new task arrived
+ * @return {number}
+ */
+export const addNotificationToTaskList = (
+  taskList,
+  notificationArray,
+  maxCount,
+) => {
+  const modifiedTaskList = [...taskList];
+  notificationArray.forEach((notification) => {
+    taskList.forEach((task, index) => {
+      if (task.task_log_id === notification._id) modifiedTaskList[index].notificationCount = notification.count > maxCount ? `${maxCount}+` : notification.count;
+    });
+  });
+  return modifiedTaskList;
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function getUserImagesForAvatar
+ * @param {Array} users
+ * @param {Array} teams
+ * @param {Object} docUrlDetails
+ * @description send if user image exists else send first letter from firstname and first letter from last name to construct image
+ * @return {number}
+ */
+export const getUserImagesForAvatar = (users, teams, docUrlDetails) => {
+  const userImages = [];
+  const temp = jsUtils.concat(jsUtils.compact(users), jsUtils.compact(teams));
+  temp.forEach((user) => {
+    if (jsUtils.isArray(docUrlDetails) &amp;&amp; docUrlDetails.length > 0) {
+      let profilePicFound = false;
+      docUrlDetails.forEach((docUrlDetail) => {
+        if (
+          docUrlDetail.document_id === user.profile_pic
+          || docUrlDetail.document_id === user.team_pic
+        ) {
+          profilePicFound = true;
+          userImages.push({
+            firstName: user.first_name,
+            lastName: user.last_name,
+            teamName: user.team_name,
+            url: docUrlDetail.signedurl,
+          });
+        }
+      });
+      if (!profilePicFound) {
+        userImages.push({
+          firstName: user.first_name,
+          lastName: user.last_name,
+          teamName: user.team_name,
+        });
+      }
+    } else {
+      userImages.push({
+        firstName: user.first_name,
+        lastName: user.last_name,
+        teamName: user.team_name,
+      });
+    }
+  });
+  return userImages;
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function validateEmailAndName
+ * @param {string} inpString
+ * @description check if name and email are valid
+ * @return {string}
+ */
+export const validateEmailAndName = (inpString) => {
+  const string = !jsUtils.isEmpty(inpString) ? inpString.trim() : EMPTY_STRING;
+  let type = 'invalid';
+  if (!jsUtils.isEmpty(string)) {
+    if (string.match(EMAIL_REGEX)) {
+      type = 'email';
+    } else if (string.match(ALLOWED_EXTENSIONS_REGEX)) {
+      if (string.match(ONLY_ALPHABETS_REGEX)) type = 'first_name';
+      else if (string.match(FULL_NAME_REGEX)) type = 'full_name';
+    }
+  }
+  return type;
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function trimString
+ * @param {string} input
+ * @description trim the given string
+ * @return {string}
+ */
+export const trimString = (input) => {
+  if (input &amp;&amp; typeof input === 'string') {
+    let trimmedString = input.trim(); // start and end
+    trimmedString = trimmedString.replace(/\s{2,}/g, ' '); // middle
+    return trimmedString;
+  }
+  return input;
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function isGeneratedRefName
+ * @param {string} fieldName
+ * @param {string} refName
+ * @description if reference name generated return true else false
+ * @return {boolean}
+ */
+export const isGeneratedRefName = (fieldName, refName) => {
+  const refNameRegExp = RegExp(`^${jsUtils.snakeCase(fieldName)}jsUtils[0-9]+$`);
+  if (`${jsUtils.snakeCase(fieldName)}` === refName || refNameRegExp.test(refName)) return true;
+  return false;
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function validatingRequiredFieldInDocuments
+ * @param {Object} documentDetails
+ * @param {string} requiredType
+ * @description validate required field for document
+ * @return {Object}
+ */
+export const validatingRequiredFieldInDocuments = (
+  documentDetails,
+  requiredType,
+) => {
+  if (jsUtils.nullCheck(documentDetails, 'file_metadata.0')) {
+    return documentDetails.file_metadata.some(
+      (file_info) => file_info.type === requiredType,
+    );
+  }
+  return false;
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function snakeCaseToSentenceCase
+ * @param {string} snakeString
+ * @description convert snake case to sentence case
+ * @return {string}
+ */
+export const snakeCaseToSentenceCase = (snakeString) => {
+  if (snakeString) {
+    const stringTokens = snakeString.split('jsUtils');
+    return startCase(stringTokens.join(' '));
+  }
+  return snakeString;
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function generateApiErrorsAndHandleCatchBlock
+ * @param {Object} errorData
+ * @param {function} apiFailureAction
+ * @param {boolean} errorPopoverData
+ * @param {boolean} callPostOperations
+ * @description to handle error messages sent from server and display message in frontend
+ * @return {Object} error
+ */
+export const generateApiErrorsAndHandleCatchBlock = (
+  errorData,
+  apiFailureAction = {},
+  errorPopoverData = false,
+  callPostOperations = false,
+) => {
+  const { error, serverError = {}, labels = {} } = errorData;
+
+  const { dispatch = false, action = false } = apiFailureAction;
+
+  // generating errors
+  const errors = generatePostServerErrorMessage(error, serverError, labels);
+
+  // setting generated errors
+  if (dispatch &amp;&amp; action) {
+    dispatch(
+      action({
+        common_server_error: errors.common_server_error || EMPTY_STRING,
+        server_error: errors.state_error || [],
+      }),
+    );
+  }
+
+  if (errors.common_server_error) {
+    const COMMON_ERROR_POPOVER_DATA = {
+      title: 'Error',
+      status: FORM_POPOVER_STATUS.SERVER_ERROR,
+      isVisible: true,
+    };
+
+    // calling common server error popover
+    updateErrorPopoverInRedux(
+      COMMON_ERROR_POPOVER_DATA,
+      startCase(errors.common_server_error),
+    );
+  } else if (errorPopoverData) {
+    // calling error popover
+    updateFormPopOverStatus(errorPopoverData);
+  }
+
+  // calling post operations
+  if (callPostOperations) {
+    updatePostLoader(false);
+    setPointerEvent(false);
+  }
+
+  return errors;
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function openInNewTab
+ * @param {string} url
+ * @description open the given url in new tab
+ */
+export const openInNewTab = (url) => {
+  const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+  if (newWindow) newWindow.opener = null;
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function stringLocaleNumericSort
+ * @param {Array} arr
+ * @description sort locale
+ * @return {Array} sorted array
+ */
+export const stringLocaleNumericSort = (arr) => arr.sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }));
+/**
+ * @memberof helper
+ */
+/**
+ * @function getSortedListForFormField
+ * @param {Array} fields
+ * @description to sort the form fields
+ * @return {Array} sorted form field list
+ */
+export const getSortedListForFormField = (fields) => {
+  let new_list = [];
+  if (typeof fields === 'string') {
+    let list = fields.split(',');
+    if (list) {
+      list = list.map((eachItem) => trimString(eachItem));
+      list = list.filter((eachItem) => eachItem !== '');
+      list = Array.from(new Set(list));
+    }
+    new_list = stringLocaleNumericSort(list);
+  } else if (Array.isArray(fields)) new_list = stringLocaleNumericSort(fields);
+  else new_list = fields;
+  return new_list;
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function getUsersAndTeamsIdList
+ * @param {Object} usersAndTeams
+ * @description to seperate users and teams
+ * @return {Object}
+ */
+export const getUsersAndTeamsIdList = (usersAndTeams) => {
+  let usersAndTeams_ = {};
+  if (nullCheck(usersAndTeams, 'teams.length', true)) {
+    usersAndTeams_ = {
+      ...usersAndTeams_,
+      teams: usersAndTeams.teams.map((eachTeam) => eachTeam._id),
+    };
+  }
+  if (nullCheck(usersAndTeams, 'users.length', true)) {
+    usersAndTeams_ = {
+      ...usersAndTeams_,
+      users: usersAndTeams.users.map((eachUser) => eachUser._id),
+    };
+  }
+  return usersAndTeams_;
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function filterListBySearchValue
+ * @param {Object} list_
+ * @param {string} search_text
+ * @param {boolean} isTimeZone
+ * @description to filter list based on search
+ * @return {Object}
+ */
+export const filterListBySearchValue = (list_, search_text, isTimeZone) => {
+  let list = list_;
+  if (search_text) {
+    if (isTimeZone) list = list_.filter((str) => str.Country.toLowerCase().includes(search_text.toLowerCase()));
+    else list = list_.filter((str) => str.label.toLowerCase().includes(search_text.toLowerCase()));
+  }
+  console.log('RETURNED LIST', list);
+  return list;
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function generateEscapeString
+ * @param {string} value
+ * @description to generate escape string for regular expression
+ * @return {Object}
+ */
+const generateEscapeString = (value) => {
+  const escapeChar = ['\\', '[', '^', '$', '.', '|', '?', '*', '+', '(', ')', '/'];
+  let result = value;
+  escapeChar.forEach((item) => {
+    const regex = RegExp(`\\${item}`, 'g');
+    result = result.replace(regex, `\\${item}`);
+  });
+  return result;
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function regexFormattedString
+ * @param {string} value
+ * @param {boolean} exactMatch
+ * @description to format the regaulr expression
+ * @return {Object}
+ */
+export const regexFormattedString = (value, exactMatch = false) => {
+  if (isEmpty(value)) return RegExp(value);
+  let result = generateEscapeString(value);
+  if (exactMatch) {
+    result = `^${result}$`;
+  }
+  return result;
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function unionUsersAndTeams
+ * @param {Object} usersAndTeams
+ * @description to combine users and teams into single array
+ * @return {Array}
+ */
+export const unionUsersAndTeams = (usersAndTeams) => {
+  let unionedUserAndTeams = [];
+  if (usersAndTeams &amp;&amp; usersAndTeams.teams) unionedUserAndTeams = jsUtils.union(unionedUserAndTeams, usersAndTeams.teams);
+  if (usersAndTeams &amp;&amp; usersAndTeams.users) unionedUserAndTeams = jsUtils.union(unionedUserAndTeams, usersAndTeams.users);
+  return unionedUserAndTeams;
+};
+/**
+ * @memberof helper
+ */
+/**
+ * @function getUsersAndTeamsIdObj
+ * @param {Object} usersAndTeams
+ * @description to get user and team id from list
+ * @return {Array}
+ */
+export const getUsersAndTeamsIdObj = (usersAndTeams) => {
+  const usersAndTeamsId = {};
+  if (nullCheck(usersAndTeams, 'teams.length', true) || nullCheck(usersAndTeams, 'users.length', true)) {
+    if (nullCheck(usersAndTeams, 'teams.length', true)) {
+      usersAndTeamsId.teams = usersAndTeams.teams.map((eachTeam) => eachTeam._id);
+    }
+    if (nullCheck(usersAndTeams, 'users.length', true)) {
+      usersAndTeamsId.users = usersAndTeams.users.map((eachUser) => eachUser._id);
+    }
+  }
+  return usersAndTeamsId;
+};
+
+/**
+ * @memberof helper
+ */
+/**
+ * @function calculateVerticalCardCountFromRef
+ * @param {ref} containerRef
+ * @param {number} usersAndTeams
+ * @param {number} usersAndTeams
+ * @param {number} usersAndTeams
+ * @description to get no of cards to display from ref
+ * @return {number}
+ */
+export const calculateVerticalCardCountFromRef = (containerRef, eachCardHeight, extraHeight = 0, minCount = 5) => {
+  if (nullCheck(containerRef, 'current.clientHeight') &amp;&amp; eachCardHeight) {
+    return Math.max(Math.floor((containerRef.current.clientHeight - extraHeight) / eachCardHeight), minCount);
+  }
+  return minCount;
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-date%2520_.html">date *</a></li><li><a href="module-encryption%2520_.html">encryption *</a></li><li><a href="module-getter&generator%2520_.html">getter&generator *</a></li><li><a href="module-helper%2520_.html">helper *</a></li><li><a href="module-imagehelper%2520_.html">imagehelper *</a></li><li><a href="module-joi%2520_.html">joi *</a></li><li><a href="module-loader%2520_.html">loader *</a></li><li><a href="module-popover%2520_.html">popover *</a></li><li><a href="module-profile%2520_.html">profile *</a></li></ul><h3>Global</h3><ul><li><a href="global.html#generateActionName">generateActionName</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Thu Aug 12 2021 18:35:32 GMT+0530 (India Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

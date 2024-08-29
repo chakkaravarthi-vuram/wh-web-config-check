@@ -1,0 +1,149 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.AIInput {
+  border-radius: 6px;
+  width: 200px;
+  border: none;
+  &>div {
+    gap: 8px;
+    @include responsive-layout {
+      gap: 0px;
+      display: contents !important;
+    }
+    &>input {
+      @include responsive-layout {
+        display: none;
+      }
+    }
+  }
+  @include responsive-layout {
+    width: 50px;
+    :focus {
+      outline: none;
+      cursor: default;
+    }
+  }
+}
+
+.AllInput {
+  &>div {
+    &>input {
+      @include responsive-layout {
+        display: none;
+      }
+    }
+  }
+}
+
+.CopilotIcon {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.MainContent {
+  background-color: $white;
+  border-radius: 8px;
+  width: 600px;
+  margin-top: -10px;
+  box-shadow: 0px 4px 6px rgba_func($black-v24, 0.03), 0px 12px 16px rgba_func($black-v24, 0.08);
+  @include responsive-layout {
+    border-radius: 0px;
+    width: fit-content;
+    box-shadow: none;
+  }
+}
+
+.AISearch {
+  border: none !important;
+  border-bottom: 1px solid $gray-v107 !important;
+  height: 48px;
+  @include responsive-layout {
+    padding: 0px 20px 0px 24px !important;
+    border: 0 !important;
+  }
+
+  &>div {
+    gap: 10px;
+  }
+}
+
+.SubmitButton {
+  padding: 0px !important;
+  width: max-content;
+}
+
+.SearchArrowIcon {
+  & path,
+  & path:hover {
+    fill: none !important;
+  }
+}
+
+.CloseIcon {
+  width: 16px !important;
+}
+
+.Results {
+  padding: 16px;
+  max-height: 300px;
+  @include responsive-layout {
+    max-height: 100%;
+  }
+}
+
+
+.Info {
+  background-color: $gray-v109;
+  color: $red-v30;
+  padding: 5px 20px;
+  border-top: 1px solid $gray-v107;
+  height: 40px;
+  border-radius: 0px 0px 8px 8px;
+  @include responsive-layout {
+    background-color: $white;
+    border-radius: 0px !important;
+    border: 0px !important;
+  }
+}
+
+.InfoIcon {
+  color: $orange-v36;
+  height: 16px;
+  width: 16px;
+}
+
+.MagicInput {
+  padding: 1px;
+  border-radius: 6px;
+  background-image: conic-gradient(from 138deg, #E72F2F, #EFDC2C, #39F0A4, #2CECEC, #E42AB0);
+  background-image: -moz-conic-gradient(from 138deg, #E72F2F, #EFDC2C, #39F0A4, #2CECEC, #E42AB0);
+  display: flex;
+  width: fit-content;
+  @include responsive-layout {
+    padding: 0px;
+    border-radius: 0px;
+    background-image: none;
+    width: 100%;
+    > div {
+      border-radius: 0px;
+      background-color: inherit !important;
+    }
+  }
+}
+
+.CopilotAnimation {
+  opacity: 0;
+  animation: enter .2s ease-in-out forwards;
+}
+
+@keyframes enter {
+  0% {
+    opacity: 0;
+    transform: scale(0.97) translate(-152px, 10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translate(-152px, 18px);
+  }
+}

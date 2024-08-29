@@ -1,0 +1,38 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.MdCancelBtn {
+   border: none;
+   color: $gray-v89;
+}
+ 
+.AlertCircle{
+   padding: 6px 6px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: $red-v23;
+   border-radius: 50px;
+   border: 8px solid $red-v24;
+   margin-bottom: 16px;
+}
+
+.UserNameErrorContainer {
+   background-color: $red-v26;
+   border-radius: 3px;
+   padding: 12px;
+
+   p {
+      color: $black-v22;
+
+      span {
+         color: $blue-v39;
+      }
+   }
+}
+
+.DeleteQuestion {
+   span {
+      font-weight: 500;
+   }
+}

@@ -1,0 +1,102 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.FormConfigHeader {
+  padding: 24px 48px;
+}
+
+.FormConfigHeaderContent {
+  color: $gray-v3;
+  letter-spacing: -0.2px;
+}
+
+.CloseIconContainer {
+  height: 32px;
+  width: 32px;
+  top: 8px;
+  right: 8px;
+}
+
+.CloseIcon {
+  cursor: pointer;
+}
+
+.FormConfigBody {
+  padding: 8px 48px;
+}
+
+.FormConfigBodyTitle {
+  color: $black-v12;
+  letter-spacing: -0.2px;
+}
+
+.FormConfigFooter {
+  padding: 10px 24px;
+  width: 100%;
+  background: $white;
+  box-shadow: 0px -1px 4px 0px rgba(16, 24, 40, 0.08);
+  align-items: center;
+}
+
+.FormButtonsListContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.FormHeaderWrapper {
+  padding: 12px 24px;
+  position: relative;
+  background-color: $white;
+  border: 1px solid $gray-v108;
+  border-radius: 3px;
+
+  &:hover {
+    border-color: $blue-v46;
+  }
+}
+
+.FormHeaderChip {
+  font-size: 12px;
+  line-height: 18px;
+  height: 22px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Add a smooth transition */
+}
+
+.FormHeaderWrapper:hover .FormHeaderChip {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease; /* Add a smooth transition */
+}
+
+.FormTitle {
+  font-size: 18px;
+  color: $gray-v3;
+  height: 28px;
+}
+
+.FormDescription {
+  color: $gray-v86;
+  line-height: 20px;
+}
+
+.DisabledColor {
+  color: $gray-v62;
+}
+
+.FormSettingsIcon {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.ErrorBorder {
+  border-bottom: 1px solid red;
+}

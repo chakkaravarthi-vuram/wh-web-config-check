@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: utils/generatorUtils.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: utils/generatorUtils.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { v4 as uuidv4 } from 'uuid';
+import { DROPDOWN_CONSTANTS, EMPTY_STRING, PLUS, SPACE } from './strings/CommonStrings';
+import jsUtils from './jsUtility';
+
+/** @module getter&amp;generator * */
+/**
+ * @memberof getter&amp;generator
+ */
+/**
+ * @function generateFieldId
+ * @description to generate uique field id
+ * @param {string} field id value
+ * @param {string} index  index value
+ * @return {string} unique field id
+ */
+ export const generateFieldId = (fieldId, index) => `${fieldId}_${index}`;
+/**
+ * @memberof getter&amp;generator
+ */
+ /**
+  * @function generateUuid
+  * @description to generate a random uuid using uuidv4 module
+  */
+ export const generateUuid = () => uuidv4();
+/**
+ * @memberof getter&amp;generator
+ */
+ /**
+  * @function generateEventTargetObject
+  * @description to construct event object
+  * @param {string} id target id
+  * @param {string} value target value
+  * @return  {Object} event object
+  */
+ export function generateEventTargetObject(id, value) {
+    const target = {
+      target: {
+        value,
+        id,
+      },
+    };
+    return target;
+  }
+  /**
+ * @memberof getter&amp;generator
+ */
+/**
+  * @function getContainerHeight
+  * @description to get containre height dynamically
+  * @param {string} containerId container element id
+  * @return {number} height
+  */
+  export const getContainerHeight = (containerId) => {
+    const containerHeight = document.getElementById(containerId).clientHeight;
+    return containerHeight;
+  };
+/**
+ * @memberof getter&amp;generator
+ */
+  /**
+  * @function getCardCount
+  * @description to get no of cards to display based on screen size
+  * @param {string} containerHeight container element height
+  * @param {string} cardHeight card height
+  * @param {string} containerWidth container element width
+  * @param {string} cardWidth card width
+  * @return {number} count
+  */
+  export const getCardCount = (
+    containerHeight,
+    cardHeight,
+    containerWidth,
+    cardWidth,
+  ) => {
+    let cardCount = 0;
+    if (!containerWidth) {
+      cardCount = Math.floor(containerHeight / cardHeight);
+    } else {
+      const cardArea = cardHeight * cardWidth;
+      const containerArea = containerHeight * containerWidth;
+      cardCount = Math.floor(containerArea / cardArea);
+    }
+    if (cardCount &lt;= 0) return 1;
+    return cardCount;
+  };
+/**
+ * @memberof getter&amp;generator
+ */
+  /**
+ * @function getExtensionFromFileName
+ * @description To extract extension from file name
+ * @param {string} fileName file name
+ * @return string or null
+ */
+export const getExtensionFromFileName = (fileName) => {
+    const lastIndex = fileName.lastIndexOf('.');
+    if (lastIndex != -1) {
+      return fileName.substring(lastIndex + 1).toLowerCase();
+    }
+    return null;
+  };
+/**
+ * @memberof getter&amp;generator
+ */
+  /**
+ * @function removePlusFromCountryCode
+ * @param {string} value country code
+ * @description To remove + symbol from country code
+ * @return {string}
+ */
+export const removePlusFromCountryCode = (value) => {
+    let removedValue = value;
+    removedValue = value.replace('+', '');
+    return removedValue;
+  };
+/**
+ * @memberof getter&amp;generator
+ */
+/**
+ * @function getInitials
+ * @param {string} value country code
+ * @description Construct initials from first name and last name
+ * @return {string}
+ */
+  export const getInitials = (content) => {
+    if (!jsUtils.isEmpty(content.trim())) {
+      const contentArray = content.trim().split(SPACE);
+      if (Array.isArray(contentArray)) {
+        const firstInitial = contentArray[0].toString()[0];
+        const lastInitial = contentArray[1]
+          ? contentArray[1].toString()[0]
+          : contentArray[0].toString()[1] || '';
+        const displayText = firstInitial.concat(lastInitial).toUpperCase();
+        return displayText;
+      }
+      const firstInitial = contentArray[0].toString()[0];
+      return firstInitial;
+    }
+    return EMPTY_STRING;
+  };
+/**
+ * @memberof getter&amp;generator
+ */
+  /**
+ * @function getFullName
+ * @param {string} first_name
+ * @param {string} last_name
+ * @description Join first name and last name
+ * @return {string}
+ */
+  export const getFullName = (first_name, last_name) => {
+    const firstName = jsUtils.capitalize(first_name);
+    const lastName = jsUtils.capitalize(last_name);
+    const fullName = [firstName, lastName].join(SPACE);
+    return fullName;
+  };
+/**
+ * @memberof getter&amp;generator
+ */
+  /**
+ * @function getMobileNumber
+ * @param {string} country_code
+ * @param {string} mobile_number
+ * @description Construct mobile number by appending country code
+ * @return {string}
+ */
+  export const getMobileNumber = (country_code, mobile_number) => {
+    if (!jsUtils.isEmpty(country_code) &amp;&amp; !jsUtils.isEmpty(mobile_number)) {
+      const countryCode = [PLUS, country_code].join(EMPTY_STRING);
+      const ccMobileNumber = [countryCode, mobile_number].join(SPACE);
+      return ccMobileNumber;
+    }
+    return EMPTY_STRING;
+  };
+/**
+ * @memberof getter&amp;generator
+ */
+  /**
+ * @function getDropdownData
+ * @param {string} values
+ * @description convert array of strings to object as label and value for dropdown
+ * @return {Object} dropdown data
+ */
+   export const getDropdownData = (values) => {
+    if (typeof values === 'string') {
+      const dropdownData = [];
+      let list = values.split(',');
+      console.log(list);
+      list = Array.from(new Set(list));
+      console.log(list);
+      list.map((data) => {
+        if (!jsUtils.isEmpty(data.trim())) {
+          console.log(data);
+          dropdownData.push({
+            [DROPDOWN_CONSTANTS.OPTION_TEXT]: data,
+            [DROPDOWN_CONSTANTS.VALUE]: data,
+          });
+        }
+      });
+      return dropdownData;
+    }
+    return values;
+  };
+/**
+ * @memberof getter&amp;generator
+ */
+   /**
+ * @function randomNumberInRange
+ * @param {string} min minimum thershold
+ * @param {string} max maximum thershold
+ * @description generate random number
+ * @return {number}
+ */
+export function randomNumberInRange(min, max) {
+  return Math.random() * (max - min) + min;
+}
+/**
+ * @memberof getter&amp;generator
+ */
+ /**
+ * @function randomItemFromArray
+ * @param {Array} array
+ * @description get random element from array
+ * @return {string}
+ */
+export function randomItemFromArray(array) {
+  const item = array[Math.floor(Math.random() * array.length)];
+  return item;
+}
+/**
+ * @memberof getter&amp;generator
+ */
+ /**
+ * @function getLabelFromIndexList
+ * @param {Array} optionList
+ * @param {Array} indexList
+ * @description get random element from array
+ * @return {string}
+ */
+export const getLabelFromIndexList = (optionList, indexList) => {
+  if (indexList.length > 0) {
+    const labelObjList = jsUtils.intersectionWith(
+      optionList,
+      indexList,
+      (option, index) => {
+        if (jsUtils.isObject(index)) {
+          return option.value === index.value;
+        }
+        return option.value === index;
+      },
+    );
+
+    const labelList = labelObjList.map((labelObj) => labelObj.label);
+
+    return labelList;
+  }
+  return [];
+};
+/**
+ * @memberof getter&amp;generator
+ */
+/**
+ * @function getLabelFromIndex
+ * @param {Object} optionList
+ * @param {number} index
+ * @description get label from index
+ * @return {string} label
+ */
+export const getLabelFromIndex = (optionList, index) => {
+  if (!jsUtils.isNull(index)) {
+    const label = jsUtils.find(optionList, (obj) => obj.value === index);
+    if (label &amp;&amp; label.label) return label.label;
+  }
+  return EMPTY_STRING;
+};
+/**
+ * @memberof getter&amp;generator
+ */
+/**
+ * @function getFormattedLanguageListDropDown
+ * @param {Object} response
+ * @description convert array of language strings formatted for dropdown
+ */
+ export const getFormattedLanguageListDropDown = (response) => {
+  console.log('getFormattedLanguageListDropDown', response);
+  let index;
+  const data = [];
+  for (index = 0; index &lt; response.length; index += 1) {
+    data.push({
+      [DROPDOWN_CONSTANTS.OPTION_TEXT]: response[index],
+      [DROPDOWN_CONSTANTS.VALUE]: response[index],
+    });
+  }
+  return data;
+};
+/**
+ * @memberof getter&amp;generator
+ */
+/**
+ * @function getFormattedLocaleListDropDown
+ * @param {Object} response
+ * @description convert array of locale strings formatted for dropdown
+ */
+export const getFormattedLocaleListDropDown = (response) => {
+  let index;
+  const data = [];
+  for (index = 0; index &lt; response.length; index += 1) {
+    data.push({
+      [DROPDOWN_CONSTANTS.OPTION_TEXT]: response[index].locale,
+      [DROPDOWN_CONSTANTS.VALUE]: response[index].locale,
+    });
+  }
+  return data;
+};
+/**
+ * @memberof getter&amp;generator
+ */
+/**
+ * @function getFormattedTimezoneListDropDown
+ * @param {Object} response
+ * @description convert array of timezone strings formatted for dropdown
+ */
+export const getFormattedTimezoneListDropDown = (response) => {
+  let index;
+  const data = [];
+  for (index = 0; index &lt; response.length; index += 1) {
+    data.push({
+      [DROPDOWN_CONSTANTS.OPTION_TEXT]: response[index].timezone_display,
+      // [DROPDOWN_CONSTANTS.VALUE]: response[index].timezone_display,
+      [DROPDOWN_CONSTANTS.VALUE]: response[index].timezone,
+      [DROPDOWN_CONSTANTS.COUNTRY]: response[index].country,
+    });
+  }
+  return data;
+};
+/**
+ * @memberof getter&amp;generator
+ */
+/**
+ * @function generateRefName
+ * @param {string} fieldName
+ * @description return reference name same as field name
+ */
+export const generateRefName = (fieldName) => jsUtils.snakeCase(fieldName);
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-date%2520_.html">date *</a></li><li><a href="module-encryption%2520_.html">encryption *</a></li><li><a href="module-getter&generator%2520_.html">getter&generator *</a></li><li><a href="module-helper%2520_.html">helper *</a></li><li><a href="module-imagehelper%2520_.html">imagehelper *</a></li><li><a href="module-joi%2520_.html">joi *</a></li><li><a href="module-loader%2520_.html">loader *</a></li><li><a href="module-popover%2520_.html">popover *</a></li><li><a href="module-profile%2520_.html">profile *</a></li></ul><h3>Global</h3><ul><li><a href="global.html#generateActionName">generateActionName</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Thu Aug 12 2021 18:35:32 GMT+0530 (India Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.ContentModal {
+  width: 67vw !important;
+  // overflow-x: hidden !important;
+  // overflow-y: hidden !important;
+  overflow: -moz-hidden-unscrollable !important;
+  @include border-radius(6px);
+  @include for-phone-and-tab {
+    width: 100% !important;
+  }
+  @include for-desktop {
+    margin: 0px !important;
+    overflow: initial !important;
+  }
+}
+
+.IntegrationTabContainer {
+  position: relative;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.04);
+  padding: 12px 30px;
+  background-color: $white;
+  border-top: none !important;
+
+  .SearchContainer {
+    flex: 1;
+  }
+  .SearchContainer,
+  .SortContainer {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.Table {
+  border-spacing: 0 8px !important;
+
+  &.GeneralTable {
+    overflow: initial;
+  }
+
+  thead {
+    & td:not(:first-child) {
+      padding-left: 0px !important;
+    }
+  }
+
+  .TableCustomHeaderPadding {
+    padding: 0 30px 8px 30px !important;
+  }
+
+  tr {
+    height: 70px !important;
+    padding: 8;
+    transform: none !important;
+    border-radius: 3px !important;
+
+    &:hover {
+      height: 70px !important;
+      transform: none !important;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15) !important;
+      border: none;
+
+      .Thumbnail {
+        background-color: $blue-v39 !important;
+      }
+
+      .ThumbnailIcon {
+        fill: $white;
+      }
+    }
+
+    td {
+      min-width: 0px !important;
+      padding: 0px !important;
+    }
+  }
+}
+.ConnectorName {
+  font-size: $font-size-md;
+  color: $gray-v3;
+  font-weight: 500;
+}
+.BodyHeader {
+  border-top: 1px solid $gray-v1;
+  padding-top: 16px;
+}
+.ConnectorNameHeader {
+  display: inline-block;
+}
+.ApiTypeHeader,
+.CreatedOnHeader,
+.EditIconHeader {
+  display: inline-block;
+}
+.ConnectorDescription {
+  font-size: $font-size-sm;
+  color: $gray-v86;
+  font-weight: 400;
+}
+.APITypeBadge {
+  display: inline-block;
+  width: fit-content;
+  height: 24px;
+  border-radius: 20px;
+  font-size: $font-size-sm;
+  background-color: $gray-v96;
+  color: $gray-v3;
+  padding: 4.5px 8px;
+  font-weight: 400;
+}
+.CreatedOn {
+  display: inline-block;
+  color: $gray-v3;
+  font-weight: 400;
+  font-size: $font-size-mdt;
+}
+.ConnectorLogo {
+  width: 32px;
+  height: 32px;
+  margin: 0px 16px;
+}
+.EditIcon {
+  width: 12px !important;
+  height: 12px !important;
+  margin-right: 24px;
+  path {
+    fill: $gray-v53 !important;
+  }
+}
+.AddIntegrationTitle { //
+  font-size: 24px;
+  color: $gray-v3;
+  font-weight: 500;
+}
+.AddIntegrationHeader { //
+  background-color: $white;
+  border: none;
+  padding: 15px 15px 0 40px !important;
+}
+.IntegrationDescriptionHeight {
+  min-height: 72px !important;
+  max-height: 72px !important;
+}
+.CancelButton {
+  font-size: $font-size-mdt;
+  color: $gray-v93;
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: var(--gray-50, $gray-v109) !important;
+  padding: 8px 16px;
+  height: 36px;
+  &:hover {
+    color: $black-v18 !important;
+  }
+}
+.BackButton {
+  font-size: $font-size-mdt;
+  color: $gray-v93;
+  cursor: pointer;
+  padding: 8px 16px;
+  height: 36px;
+  border-radius: 3px;
+  border: 1px solid var(--gray-300-border, $gray-v1);
+  background: var(--gray-white, $white);
+  &:hover {
+    color: $black-v18 !important;
+  }
+}
+.SaveButton {
+  width: 116px;
+  padding: 0px;
+}
+.DeleteButton {
+  font-size: $font-size-mdt;
+  color: $red-v25;
+  padding: 8px 16px;
+  height: 36px;
+  cursor: pointer;
+  &:hover {
+    background: $red-v26;
+  }
+}
+.NextButton {
+  min-width: 74px;
+  height: 36px;
+  border-radius: 3px;
+}
+.HeaderTitle {
+  display: inline-block;
+  width: 300px;
+  font-size: 24px;
+  font-weight: 500;
+  color: $gray-v3;
+}
+.AddButton {
+  height: 32px !important;
+}
+.AddEventContainer {
+  position: absolute !important;
+  top: 0px !important;
+  z-index: 25;
+}
+
+.ModalHeader {
+  height: fit-content !important;
+  padding: 0px !important;
+}
+
+.Header {
+    width: 100%;
+    height: 59px;
+    padding: 18px 0 20px 30px;
+}
+
+.CloseIcon {
+    margin: 15px 15px 16px 0px;
+}
+.MainContent {
+  padding: 5px 40px 40px 40px !important;
+}
+.MainContainer {
+  height: 100%;
+  @include border-radius(6px);
+  @include for-phone-and-tab {
+    width: 100%;
+    z-index: 6;
+  }
+  background-color: $white;
+}
+.ContentContainer {
+  height: fit-content;
+  overscroll-behavior: contain;
+
+  @include for-phone-and-tab {
+    padding: 15px;
+  }
+}
+.AddIcon{
+  height: 16px;
+  width: 16px;
+}
+.ChooseFlowContainer {
+  width: 70% !important;
+}
+.EventContainer {
+  height: 36px !important;
+  background: $white;
+  border: 1px solid $gray-v1;
+  padding: 12px;
+  width: 768px;
+  margin-bottom: 15px !important;
+}
+.StepperClass {
+  padding: 14px 10px 10px 0px !important;
+  display: flex !important;
+}

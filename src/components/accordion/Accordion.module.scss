@@ -1,0 +1,15 @@
+@import '../../scss/constants';
+.Container {
+  border-radius: 4px;
+}
+.Header {
+  padding: 16px 20px;
+  border-radius: 4px;
+}
+.Content {
+  padding: 0px 20px 16px 20px;
+}
+
+.Border {
+  border: solid 1px $gray-v1;
+}

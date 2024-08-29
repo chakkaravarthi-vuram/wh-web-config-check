@@ -1,0 +1,47 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.H75 {
+  height: 75% !important;
+}
+
+.ListingPage {
+  padding: 16px 24px;
+}
+
+.SearchTab {
+  width: 300px;
+}
+
+.OuterTable {
+  overflow: hidden;
+  overflow-y: auto;
+  height: calc(100% - 100px);
+  margin-top: 15px;
+}
+
+.OverFlowInherit{
+  overflow: inherit !important;
+  overflow-x: auto !important;
+}
+
+.Loader {
+  height: 48px;
+  margin: 5px 0px;
+  padding: 4px 15px;
+}
+
+.ErrorMsg {
+  font-size: $font-size-smt;
+  color: $red-v28;
+}
+
+.ErrorContainer {
+  background: $orange-v30;
+  @include border-radius(6px);
+  padding: 4px 5px;
+}
+
+.CreateIcon {
+  stroke-width: 0;
+}

@@ -1,0 +1,50 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.ComponentDnd {
+  height: 100%;
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  @extend %ScrollYOnHover;
+
+  .DragElement {
+    cursor: grab;
+    width: 100%;
+    height: 48px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    border-radius: 3px;
+    border: 1px solid $gray-v108;
+
+    &:hover {
+      border: 1px solid $blue-v39;
+      background: $blue-v48;
+      color: $blue-v39 !important;
+
+      .IconStyle {
+        &.GStickIcon g {
+          stroke: $blue-v39 !important;
+        }
+
+        &:not(.GStickIcon) {
+          & path {
+            fill: $blue-v39 !important;
+          }
+
+          & rect {
+            stroke: $blue-v39 !important;
+          }
+        }
+      }
+    }
+
+    & p {
+      color: $black-v22;
+    }
+  }
+}

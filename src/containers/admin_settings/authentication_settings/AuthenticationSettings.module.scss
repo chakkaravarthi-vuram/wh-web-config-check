@@ -1,0 +1,16 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.AuthenticationContainer {
+    background-color: $white;
+    margin: 30px;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.04);
+  }
+
+  .Title{
+    @extend %BlueV25;
+    @extend %FTwo16;
+    @extend %FontWeight500;
+  }

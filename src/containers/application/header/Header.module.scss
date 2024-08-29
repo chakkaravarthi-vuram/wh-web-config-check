@@ -1,0 +1,492 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.Header {
+  position: sticky;
+  top: 0;
+  z-index: 6;
+  height: 56px;
+  @include responsive-layout {
+    height: 110px;
+  }
+
+  .Overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.25) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+
+    &.AllPageHeight {
+      bottom: 0;
+    }
+    &.HomeHeight {
+      height: 110px;
+    }
+  }
+}
+.ProfilePic {
+  button {
+    border: 0 !important;
+  }
+}
+.ImagePlaceholder {
+  width: 144px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include responsive-layout {
+    display: none;
+  }
+}
+
+.HeaderContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 7;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include responsive-layout {
+    height: 56px;
+  }
+}
+
+.Logo {
+  object-fit: contain;
+  max-width: 144px;
+  max-height: 36px;
+}
+
+.NavLeft {
+  margin: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.NavLink {
+  padding: 8px 0;
+  outline: none;
+  cursor: pointer;
+  font-size: 13px;
+  color: white !important;
+  opacity: 0.75;
+  text-decoration: none !important;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &.Selected {
+    opacity: 1;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      background-color: $blue-v39;
+      content: '';
+      height: 4px;
+      width: 100%;
+      left: 0;
+      display: block;
+      bottom: -10px;
+    }
+  }
+}
+
+.SearchContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 448px;
+}
+
+.Icon {
+  cursor: pointer;
+  opacity: 0.75;
+  outline: none;
+
+  & path {
+    fill: white;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.SystemDirectoryIcon {
+  opacity: 0.75;
+  &:hover {
+    opacity: 1;
+  }
+  outline: none;
+}
+
+.TabText {
+  margin-left: 0 !important;
+  color: white !important;
+  opacity: 0.9;
+  font-size: 13px;
+
+  &:hover{
+    opacity: 1;
+  }
+}
+
+.BottomClass {
+  height: 4px;
+  bottom: -3px;
+}
+
+// Profile Dropdwon
+
+.ProfilePopper {
+  margin-top: 8px;
+  z-index: 22;
+  @include transition(0.1s);
+   
+  & .Container {
+    background-color: $white;
+    width: 320px;
+    padding-top: 8px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.03), 0px 12px 16px -4px rgba(16, 24, 40, 0.08);
+  }
+
+  & .Profile {
+    padding: 12px 24px ;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $gray-v102;
+
+    & .ProfileRightContainer {
+      margin-left: 12px;
+    }
+    & .ProfileName{
+       color: $black-v22;
+       font-size: 16px;
+       font-style: normal;
+       font-weight: 500;
+       line-height: 24px;
+    }
+
+    & .ProfileEmail{
+      color: $black-v21;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 18px;
+      max-width: 200px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+
+  }
+
+  & .Mode {
+    border-bottom: 1px solid $gray-v102;
+
+    & .Title{
+      color: $black-v21;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 18px; 
+      padding: 12px 0 8px 24px;
+    }
+
+    & .ModeOption {
+      outline: none;
+      padding: 8px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      outline: none;
+
+      &:hover, &:focus-visible{
+        background-color: $gray-v103;
+        outline: none;
+      }
+    }
+
+    & .ModeOptionTitle {
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px; 
+      color: $black-v22;
+      margin-bottom: 4px ;
+    }
+
+    & .ModeOptionSubTitle {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 18px;
+      color: $black-v21;
+    }
+
+    & .ModeActive {
+       background-color: $gray-v103;
+       & .ModeOptionSubTitle {
+         color: $blue-v39;
+       }
+    }
+
+  }
+
+  & .ExtraOptions {
+    display: flex;
+    flex-direction: column;
+
+    & .EachOption {
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      outline: none;
+
+      &:focus{
+        outline: none;
+      }
+      &:hover, &:focus-visible{
+        background-color: $gray-v103;
+        outline: none;
+      }
+
+      & .EachOptionLabel {
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: $black-v22
+      }
+
+      & .Logout{
+        color: $red-v22
+      }
+
+      &.BorderBottom {
+        border-bottom: 1px solid $gray-v102;
+      }
+    }
+
+  }
+}
+
+.NotificationCount{
+  width: 18px;
+  height: 18px;
+  background-color: $red-v18;
+  border-radius: 9px;
+  top: -5px;
+  right: -5px;
+}
+
+.ButtonIcon {
+  cursor: pointer;
+  outline: none;
+
+  svg path {
+    fill: $white;
+    opacity: 0.75;
+  }
+
+  &:hover svg path{
+    opacity: 1;
+  }
+}
+
+.MoreButton {
+  bottom: 3px;
+  position: relative;
+}
+
+.MoreArrow {
+  margin-left: 5px;
+  bottom: -4px;
+  position: relative;
+}
+
+.AppDropDown {
+  background-color: transparent !important;
+}
+
+.AppDropDownPopper {
+  width: 240px;
+}
+
+.Divider {
+  border-left: 2px solid $white-v5;
+  height: 26px;
+}
+
+.ResponsiveHide {
+  @include responsive-layout {
+    display: none !important;
+  }
+}
+
+.HamburgerIcon {
+  display: none;
+  cursor: pointer;
+  @include responsive-layout {
+    display: block;
+  }
+}
+
+.ResponsiveTitle {
+  position: absolute;
+  top: 48px;
+  width: 100%;
+  display: none;
+  color: $white !important;
+  @include responsive-layout {
+    display: block;
+  }
+}
+
+.AppSelectionHeader {
+  padding: 18px 24px;
+  justify-content: space-between;
+  border-bottom: solid 1px $gray-v119;
+
+  .AppSelectionLogo {
+    width: 144px;
+    height: 36px;
+    border-radius: 3px;
+    background: $white;
+    justify-content: flex-start;
+  }
+}
+
+.AppSelectionMainContainer {
+  margin-top: 16px;
+  .AppSelectionMainSubContainer {
+    height: calc(100vh - 118px);
+  }
+  .AppList {
+    padding: 14px 24px;
+    justify-content: space-between;
+
+    &:hover {
+      background-color: $blue-v49;
+    }
+  }
+}
+
+.HeaderContainer {
+  padding: 12px 24px;
+  margin-top: 8px;
+
+  .CloseIcon {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+  }
+}
+
+.ModeContainer {
+  border-bottom: 1px solid $gray-v102;
+}
+
+.ProfileOptionsIndividual {
+  &:hover, &:focus-visible{
+    background-color: $gray-v103;
+    outline: none;
+  }
+}
+
+.OverlayContainer {
+  position: absolute;
+  gap: 16px;
+  display: none !important;
+  right: 0;
+
+  @include responsive-layout {
+    display: flex !important;
+  }
+
+  .SmallButton {
+    width: 24px;
+  }
+
+  .ProfileButton {
+    height: 32px;
+    width: 32px;
+  }
+
+  .LargeButton {
+    width: 30px;
+  }
+}
+
+.SearchHeaderContainer {
+  .CloseIcon {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+  }
+}
+
+.SearchRespContainer {
+  padding: 1px;
+  border-radius: 6px;
+  background-image: conic-gradient(from 156deg, #f72929, #f8e63c, #39f0a4, #39f0f0, #f039bd);
+  display: flex;
+  height: 40px;
+
+  button {
+    background-image: none;
+    background-color: white;
+    border-radius: 6px;
+    height: 38px;
+    width: 100%;
+
+    svg path {
+        fill: #959ba3;
+    }
+  }
+}
+
+.CreateTask {
+  border-radius: 50px !important;
+  padding: 6px !important;
+}
+
+
+.Documentation {
+  > label {
+    width: 24px !important;
+    height: 24px !important;
+    > svg > path {
+      fill: $gray-v101 !important;
+      height: 24px !important;
+      width: 24px !important;
+    }
+  }
+}
+
+.MorePopper {
+  z-index: 22 !important;
+  >div {
+    overflow-y: hidden !important;
+  }
+}

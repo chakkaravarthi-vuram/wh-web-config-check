@@ -1,0 +1,173 @@
+@import '../../../../../../../scss/constants';
+@import '../../../../../../../scss/utilities';
+$step-circle-height: 28px;
+
+.Metric{
+  .Icon{
+    visibility: hidden;
+  }
+   &:hover, &:focus-within {
+      .Icon{
+        visibility: visible;
+      }
+  }
+}
+.BgWhite {
+  background-color: $white !important;
+}
+.Container {
+  border-radius: 4px;
+  background-color: $white;
+  // overflow: hidden;
+  :hover {
+    background-color: $gray-v69;
+    .DeleteIcon {
+      opacity: 1;
+    }
+    .StepNumber{
+      background-color: $blue-v39;
+      color: $white;
+    }
+    .ActionBtn {
+      background-color: $gray-v69 !important;
+    }
+    .BgWhite {
+      background-color: $white;
+    }
+  }
+}
+.Container:hover{
+  background-color: $gray-v69;
+}
+.InnerContainer {
+  padding: 18px 30px;
+  @include for-phone-and-tab {
+    padding: 18px 30px;
+  }
+}
+
+.Header {
+  padding: 10px 15px;
+  // @include for-phone-and-tab {
+  //   padding: 15px 0;
+  // }
+}
+.ActiveHeader {
+  background-color: $gray-v7;
+  border-bottom: 1px solid $gray-v1;
+}
+
+.StepNumber {
+  height: $step-circle-height;
+  width: $step-circle-height;
+  border-radius: 50%;
+  background-color: $gray-v6;
+  color: $black-v10;
+}
+
+.Edit {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: $gray-v6;
+}
+
+.Hr {
+  height: 1px;
+  background-color: $gray-v1;
+}
+
+.ProgressBar {
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  background-color: $gray-v1;
+  overflow: hidden;
+}
+.Progress {
+  height: inherit;
+  background-color: $green-v6;
+}
+
+.CreateTeamModal {
+  width: 700px;
+}
+.ActionContainer {
+  padding: 30px 40px;
+}
+
+
+.FormSourceCircle {
+  background-color: $gray-v10;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.AddIcon {
+  width: 16px;
+  height: 16px;
+}
+.CopyImportIcon {
+  width: 32px;
+  height: 32px;
+}
+.ImportIcon {
+  width: 13px;
+  height: 16px;
+}
+.FormSourceContainer {
+  padding: 14px 20px;
+  border: 1px dashed $gray-v1;
+}
+.ImportFormPopUpContainer {
+  width: 50vw;
+}
+
+.EditIcon {
+  fill: $gray-v101;
+}
+.SecondaryBtn {
+  margin-left: 16px;
+  color: $black-v20 !important;
+}
+.PrimaryBtn {
+  color: $blue-v39 !important;
+  &:hover {
+    color: $blue-v69 !important;
+  }
+}
+.ActionBtn {
+  font-size: $font-size-sm;
+  height: 32px;
+  margin-left: 16px;
+  padding: 0 !important;
+  :hover {
+    background-color: $gray-v69 !important;
+    padding: 0;
+  }
+}
+.FieldCommonProperties {
+  height: 36px !important;
+}
+.MetricMainContent{
+  width: 70%;
+  flex: 1 1;
+}
+.Dropdown {
+  width: 35%;
+}
+
+@include for-phone-and-tab{
+  .MetricMainContent{
+      flex-wrap: wrap;
+      gap: 10px;
+
+      & .Dropdown,
+      & .Input {
+          width: 90%;
+          margin-right: 0;
+        }
+  }
+}
+

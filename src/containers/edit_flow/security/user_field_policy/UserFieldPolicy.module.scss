@@ -1,0 +1,56 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.UserBasedPolicy {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+
+  & .Title {
+    font-weight: 500;
+    color: $black-v20;
+  }
+
+  & .PolicyList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  & .EachPolicyAccessContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  & .AccessTo {
+    font-weight: 600;
+    color: $black-v13;
+  }
+
+  & .AddPolicy {
+    width: fit-content;
+    font-size: 13px;
+    color: $blue-v39;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+  }
+}
+.EachRow {
+  border: 1px solid $gray-v1;
+  border-radius: 4px;
+  margin-top: 8px;
+  padding: 8px;
+}
+.UserFieldDropdown {
+  width: 50%;
+}
+.ChipContainer {
+  width: 40%;
+}
+.FieldChip {
+  background-color: $blue-v49;
+  border-radius: 16px;
+  color: $blue-v39;
+  padding: 4px 12px;
+}

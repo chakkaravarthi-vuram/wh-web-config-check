@@ -1,0 +1,127 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+.Icon {
+  // width: 11.2px;
+  // height: 14px;
+  object-fit: contain;
+  border-radius: 1px;
+  // ::selection {  //not needed as isSelected prop is passed to icons
+  //   fill: $blue-v21;
+  // }
+}
+// .Container {
+//   // & .Selected {
+//   //   color: #1a9cd1 !important;
+//   //   fill: #1a9cd1 !important;
+//   // }
+// }
+.Label {
+  @extend %FS13;
+  color: $gray-v90;
+  font-weight: $fw-semibold;
+  ::selection {
+    color: $blue-v39;
+  }
+}
+.PrimaryButton {
+  height: 36px;
+  @include for-phone-and-tab {
+    font-size: 20px;
+    padding: 0 13px;
+    max-width: 36px;
+  }
+}
+.MobileDropdown {
+  background-color: $white;
+  min-width: 190px;
+  position: absolute;
+  top: 62px;
+  right: 20px;
+  padding: 10px;
+  list-style: none;
+  box-shadow: 0 6px 30px 0 rgba($black, 0.25);
+  @include border-radius(6px);
+  @include transition(3s);
+  li {
+    padding: 10px;
+    @include border-radius(3px);
+    &:hover {
+      color: $blue-v39;
+      background-color: #e8f5fa;
+      svg path {
+        fill: $blue-v39
+        // stroke: $blue-v21;
+      }
+      svg g {
+        stroke: $blue-v39;
+      }
+    }
+    .MobNavItem {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+.Margin {
+  border-right: 1px solid $gray-v65;
+  padding-right: 15px;
+  line-height: 15px !important;
+}
+.NavItem {
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+.Selected {
+  position: relative;
+
+  svg {
+    fill: $blue-v39;
+  }
+  @include for-desktop {
+    .Label {
+      color: $blue-v39;
+      font-weight: $fw-semibold;
+    }
+    .Icon {
+      svg path {
+        fill: $blue-v39; 
+      }
+      svg[specialIcon=true]{
+        path{
+          fill: none;
+        }
+      }
+    }
+    &::after {
+      content: '';
+      height: 3px;
+      width: calc(100% - 15px);
+      background-color: $blue-v39;
+      position: absolute;
+      left: 0;
+      bottom: -22px;
+    }
+  }
+}
+.SupportDropdown {
+  min-width: 220px;
+  // margin: 0px 0px -30px -190px;
+  z-index: 10;
+  position: relative !important;
+}
+.LinkTag {
+  text-decoration: none !important;
+}
+
+//temp fix for kebab menu accessibility and screen reader
+.customDisplay{
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}

@@ -1,0 +1,34 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+
+.AlertCircle{
+    padding: 6px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $red-v23;
+    border-radius: 50px;
+    border: 8px solid $red-v24;
+    margin-bottom: 16px;
+}
+.MdCancelBtn {
+    border: none;
+    color: $gray-v89;
+}
+.Link {
+    &:hover {
+        text-decoration: none;
+        color: $blue-v39;
+    }
+}
+
+.AppBreadCrumb {
+    padding: 0px 8px;
+    li > div > div { 
+        max-width: 300px;
+        > p {
+            max-width: none;
+        }
+    }
+}

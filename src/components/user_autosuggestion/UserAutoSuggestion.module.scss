@@ -1,0 +1,148 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+// .DropdownContainer {
+  // top: 60px;
+  // bottom: 0;
+  // left: 0;
+// }
+
+.UserDetailContainer {
+  flex-grow: 2;
+}
+
+.FlexGrow1 {
+  flex-grow: 1;
+}
+
+.UserImage {
+  height: 28px;
+  width: 28px;
+}
+
+.Option {
+  border-bottom: 1px solid $gray-v1;
+  padding: 11px 23px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    background-color: $gray-v7;
+  }
+}
+
+.SelectedOption {
+  background-color: $blue-v47;
+}
+
+.HeaderOption {
+  background-color: $gray-v7;
+  cursor: default !important;
+  pointer-events: none;
+}
+
+.Container {
+  &:first-child {
+    margin-left: 0px;
+  }
+}
+
+.FileContainer {
+  padding: 10px 10px 0px 10px;
+  &:first-child {
+    margin-left: 0px;
+  }
+}
+
+.SuggestionDropdownContainer {
+  border-radius: 12px;
+  box-shadow: 4px 4px 12px 0 rgba(0, 0, 0, 0.2);
+  background-color: $white;
+}
+
+.SuggestionDropdown {
+  max-height: 150px !important;
+}
+
+.SuggestionListItem {
+  padding: 7px 20px;
+  background-color: $white;
+  &:hover {
+    background-color: $gray-v23;
+    .SuggestionListItemVisibilityA {
+      display: none;
+    }
+    .SuggestionListItemVisibilityB {
+      display: block;
+    }
+  }
+}
+
+.SuggestionListItemVisibilityA {
+  display: block;
+}
+
+.SuggestionListItemVisibilityB {
+  display: none;
+}
+
+.NoSuggestionList {
+  padding: 7px 20px;
+  background-color: $white;
+}
+
+// multi section view classes
+.MultiSectionViewContainer {
+  max-height: 298px;
+  border-radius: 3px;
+  box-shadow: 4px 4px 12px 0 rgba(0, 0, 0, 0.2);
+  background-color: $white;
+}
+
+.MultiSectionChooseView {
+  max-height: 237px;
+  overflow-y: scroll;
+}
+
+.MultiSectionChooseScrollView {
+  height: 100%;
+}
+
+.MultiSectionViewButton {
+  padding: 0px 16px;
+  height: 30px;
+}
+
+.MultiSectionViewDropdownListItem {
+  &:hover {
+    background-color: $gray-v7;
+  }
+  &:last-child {
+    border-bottom: 0px;
+  }
+  border-bottom: solid 1px $gray-v1;
+  height: 50px;
+}
+
+.Modal {
+  width: 45vw;
+  padding-bottom: 40px;
+}
+
+.LoaderContainer {
+  height: 75px;
+}
+
+
+.AssigneesClass{
+  font-size: 14px;
+color: #333;
+font-weight: 600;
+text-transform: uppercase;
+}
+
+.CloseIcon {
+  position: fixed !important;
+}

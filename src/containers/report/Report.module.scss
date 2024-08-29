@@ -1,0 +1,72 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+@import '../../scss/Typography.module.scss';
+
+.ReportHeader {
+    background-color: $white;
+    padding: 0 24px 16px;
+    display: flex;
+    flex-direction: column;
+
+    .HeaderContent {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .Text {
+        width: 100%;
+        max-width: 700px;
+
+        .Title {
+            max-width: 99%;
+            color: $black-v3;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .HeaderSubTitle {
+            max-width: 99%;
+            font-size: 12px;
+            font-weight: 400;
+            color: $gray-v86;
+        }
+    }
+
+
+    .HeaderRight {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .ReportIcon {
+        path {
+            fill: $blue-v39;
+        }
+    }
+}
+
+.Breadcrumb {
+    width: fit-content;
+    margin-left: 0 !important;
+
+    li {
+        width: fit-content;
+        max-width: 400px;
+        @extend .Ellipsis;
+    }
+}
+
+.MainContent {
+    display: flex;
+    padding: 24px;
+    height: calc(100vh - 174px);
+    background-color: $gray-v103;
+}
+
+.SidePanel {
+    width: 0;
+    display: none;
+}

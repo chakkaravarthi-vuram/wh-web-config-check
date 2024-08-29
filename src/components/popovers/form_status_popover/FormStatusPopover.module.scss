@@ -1,0 +1,53 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.Container {
+  padding: 15px;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin: 0 auto;
+  min-width: 400px;
+  z-index: 10000 !important;
+  @include border-radius(15px);
+  box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.2);
+
+  @include for-phone-and-tab {
+    min-width: 280px;
+    max-width: 400px;
+    width: 90%;
+  }
+}
+
+.Success {
+  background-color: $red-v4;
+}
+.StatusText {
+  width: 90%;
+  margin-right: 10px;
+}
+
+.ServerError {
+  background-color: $red-v18;
+}
+
+.CloseIcon {
+  top: 10px;
+  right: 10px;
+  height: 12p;
+  width: 12px;
+  fill: $white;
+  &:focus{
+    outline: none;
+  }
+}
+.CorrectIconContainer {
+  height: 32px;
+  width: 32px;
+  @include border-radius(50%);
+  background-color: $white;
+}
+
+.CorrectIcon {
+  fill: transparent;
+}

@@ -1,0 +1,88 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+@import 'scss/Typography.module.scss';
+
+.ExternalDataModal {
+  width: 90vw;
+}
+
+.Header {
+  padding: 24px 12px 12px 32px;
+  > div {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.main {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.footer {
+  display: flex;
+  margin: 0px !important;
+  padding: 10px 15px 10px 15px;
+  width: auto;
+  box-shadow: 0 -4px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.SpacedContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.MainContentPadding {
+  padding: 0px 32px 16px 32px !important;
+}
+
+.ButtonStyling {
+  color: $red-v20;
+
+  &:hover {
+    color: $red-v20;
+  }
+}
+
+.ViewMoreButtonColor {
+  color: $blue-v39;
+
+  &:hover {
+    color: $blue-v39;
+  }
+}
+
+.AddIcon {
+  width: 12px;
+  height: 12px;
+  margin: 0 8px 0 0;
+  object-fit: contain;
+  border-radius: 1px;
+  fill: $blue-v39;
+}
+
+.ColWidthWithTrash {
+  width: 95%;
+}
+
+.TrashButton {
+  padding: 0 !important;
+  justify-content: end !important;
+}
+
+.DeleteIcon {
+  cursor: pointer;
+}
+
+.CloseIcon {
+  width: 20px;
+  height: 20px;
+  top: 12px;
+  right: 12px;
+}
+.ChooseSource {
+  width: 49% !important;
+}

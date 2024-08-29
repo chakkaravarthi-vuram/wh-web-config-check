@@ -1,0 +1,19 @@
+@import '../../../../../scss/constants';
+@import '../../../../../scss/utilities';
+
+.StatusDropdown {
+    width: 50%;
+    @include responsive-layout {
+      width: 100%;
+    }
+  }
+
+  .SearchInput {
+    padding-right: 2px !important
+  }
+  
+  .SearchLabel {
+    color: $black-v18 !important;
+    font-size: $font-size-sm !important;
+    font-weight: $fw-semibold !important;
+  }

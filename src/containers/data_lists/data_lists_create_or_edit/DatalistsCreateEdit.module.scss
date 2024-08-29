@@ -1,0 +1,171 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+
+.HeaderContainer {
+    height: 60px;
+    border-bottom: solid 1px $gray-v108;
+    position: sticky;
+    top: 0;
+    background-color: $white;
+    z-index: 10;
+}
+
+.TableSecuritySummary {
+    border-radius: 3px;
+    border: 1px solid $gray-v108;
+
+    thead tr th {
+        border-bottom: 1px solid $gray-v108 !important;
+        background: $gray-v109 !important;
+    }
+
+    tbody tr {
+        &:hover {
+            td {
+                background: $blue-v47;
+            }
+        }
+    }
+}
+
+.FieldLabel label {
+    margin-bottom: 0px;
+}
+
+.DropdownWidth {
+  width: 172px;
+}
+
+.LanguageContainer {
+  padding: 24px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.UniqueIdentifierTitle {
+  color: $gray-v3;
+}
+.IdentifierDropdown > label {
+  color: $black !important;
+  font-weight: 500 !important;
+  line-height: 18px;
+}
+.ConfigureClass {
+  color: $black !important;
+  font-weight: 500 !important;
+  line-height: 18px;
+}
+.DropdownWrapper {
+  width: 20%;
+}
+.TranslateAgain {
+  padding: 6px 12px !important;
+  border-radius: 3px !important;
+}
+.TechnicalConfiguration {
+  color: $gray-v3;
+}
+.ProgressContainer {
+  height: 12px;
+  width: 280px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: $gray-v107;
+}
+
+.ProgressBar {
+  height: 100%;
+  transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  background-color: $blue-v39;
+  border-radius: 4px;
+}
+.TranslationTable{
+  & tbody{
+       & tr {
+         height: 44px !important;
+       }
+       & td {
+         padding: 0px 12px 0px 24px !important;
+         vertical-align: middle;
+       }
+       & td:last-child{
+         width: 12% !important;
+       }
+       & td:nth-child(2) {
+         width: 50% !important;
+       }
+     
+  }
+  & thead {
+   border-bottom: 1px solid $gray-v108;
+   background: $gray-v109;
+  }
+}
+.ShortCodeLabel > label {
+color: $black !important;
+font-weight: 500 !important;
+}
+.UniqueDropdown {
+background: $gray-v102;
+pointer-events: none;
+}
+.OptionLabelClass {
+  color: $gray-v89;
+}
+
+.TableSubflowAction {
+  border-radius: 3px;
+  border: 1px solid $gray-v108;
+
+  thead tr th {
+      border-bottom: 1px solid $gray-v108 !important;
+      background: $gray-v109 !important;
+  }
+
+  tbody tr {
+    &:hover {
+      .TableButtons {
+        visibility: visible;
+      } 
+      td {
+          background: $blue-v47;
+      }
+    }
+  }
+}
+
+.ButtonContainer {
+  height: 20px !important;
+  width: 20px !important;
+  padding: 0px !important;
+  margin-left: 8px;
+}
+
+.TableButtons {
+  visibility: hidden;
+}
+
+.MainLoader {
+  height: calc(100vh - 60px);
+}
+
+.DataListFormContainer {
+  height: calc(100vh - 60px);
+}
+
+.DatalistName {
+  width: 185px;
+  white-space: nowrap;
+}
+
+.PublishingLoader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  place-items: center;
+  background-color: #ffffffa6;
+  z-index: 10;
+}

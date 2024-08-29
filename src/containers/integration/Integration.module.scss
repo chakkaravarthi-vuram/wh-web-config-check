@@ -1,0 +1,732 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.IntegrationTabContainer {
+  position: relative;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.04);
+  padding: 12px 30px;
+  background-color: $white;
+  border-top: none !important;
+
+  .SearchContainer {
+    flex: 1;
+  }
+  .SearchContainer,
+  .SortContainer {
+    display: flex;
+    align-items: center;
+  }
+}
+.AlertIcon {
+  path {
+    stroke: $blue-v39;
+  }
+}
+.CustomApiIcon {
+  width: 24px;
+  height: 24px;
+}
+.AlertModalBtns {
+  margin-bottom: 0 !important;
+}
+.AlertCircle {
+  padding: 5px;
+  background-color: $blue-v41;
+  border-radius: 50px;
+  border: 6px solid $blue-v48;
+  width: 45px;
+  height: 45px;
+}
+.AlertModal {
+  padding: 40px !important;
+}
+.EditText {
+  font-weight: $fw-semibold;
+  color: $black-v20;
+  font-size: $font-size-sm;
+}
+.EditHeaderTab {
+  align-items: center;
+  gap: 0;
+}
+.ViewDesc {
+  color: $gray-v89;
+  font-size: $font-size-mdt;
+  font-weight: $fw-normal;
+}
+.BreadcrumbText {
+  font-size: $font-size-sm;
+  font-weight: $fw-normal;
+}
+.EditButton {
+  &:not(:hover) {
+    svg path {
+      fill: $gray-v101;
+    }
+  }
+  &:hover {
+    .EditText {
+      color: $blue-v39;
+    }
+  }
+}
+.ViewLabel {
+  max-width: 60vw;
+}
+.NavStyle {
+  max-width: 70vw;
+}
+.CredDescription {
+  height: 88px;
+}
+.EditModalMain {
+  padding: 0 48px;
+  overflow-y: scroll;
+}
+.TemplateLogo {
+  width: 20px;
+  height: 20px;
+}
+.OkButton {
+  background-color: $blue-v39 !important;
+  border: none !important;
+}
+.MaxLimitModal {
+  padding: 40px 40px 16px !important;
+}
+.AddHeader {
+  padding: 14px 14px 0;
+}
+.ListHeader {
+  min-height: 36px;
+  margin-top: 16px;
+  padding: 0 24px;
+}
+.EditHeaderIconClass {
+  margin-right: 4px !important;
+}
+.EditFooter {
+  padding: 12px 24px;
+  box-shadow: 0px -1px 4px 0px rgba(16, 24, 40, 0.08);
+}
+.EditPageModal {
+  width: 55vw !important;
+}
+.CreateTitle {
+  line-height: 29px;
+}
+.OauthName {
+  max-width: 25vw;
+}
+.ApiTypeOption {
+  padding: 14px 16px;
+  &:hover {
+    background: $blue-v41;
+  }
+}
+.CreateHeader {
+  padding: 24px 24px 0;
+}
+.MethodType {
+  padding: 2px 8px;
+  border-radius: 16px;
+  background: $blue-v48;
+  color: $blue-v69;
+  font-size: $font-size-sm;
+  font-weight: $fw-semibold;
+}
+.EditNameLabel {
+  line-height: 24PX;
+}
+.OptionDesc {
+  color: $gray-v86;
+  font-size: $font-size-sm;
+  font-weight: $fw-normal;
+}
+
+.CloseVector {
+  height: 13px;
+}
+.FilterCount{
+  font-size: $font-size-sm;
+  font-weight: $fw-semibold;
+  color: $blue-v39;
+  background-color: $blue-v41;
+  padding: 2px 8px;
+  border-radius: 16px;
+  margin-left: 6px;
+}
+.AddDescription {
+  height: 100px;
+  padding: 10px 13px !important;
+}
+.AddLabel {
+  font-weight: $fw-medium;
+  color: $black-v25;
+  font-size: $font-size-mdt;
+}
+.TextValue {
+  color: $black-v20;
+  font-weight: $fw-semibold;
+}
+.ReadOnlyButton {
+  background: $gray-v109;
+  border: 0px !important;
+  & .ButtonLink {
+    display: none;
+  }
+}
+.MT56 {
+  margin-top: 56px;
+}
+.DefaultCursor {
+  cursor: default;
+}
+.IntegrationLogo {
+  path {
+    fill: none !important;
+    stroke: $blue-v39 !important;
+  }
+}
+.TextLeft {
+  text-align: left;
+}
+.ListOuterClass {
+  height: calc(100vh - 84px);
+  padding-bottom: 24px;
+  background: $white;
+}
+.ShowByDropdown {
+  width: 150px;
+}
+.ShowByPopper {
+  z-index: 10;
+}
+.ApiInfo {
+  width: 92%;
+}
+.OuterTable {
+  overflow: hidden;
+  overflow-y: auto;
+  height: calc(100% - 100px);
+}
+.SearchTab {
+  width: 300px;
+}
+.ShowByText {
+  font-size: 12px;
+  font-weight: 500;
+  color: $gray-v87;
+  margin-right: 12px;
+}
+.ListFilter {
+  z-index: 100;
+  background: $white;
+  border-radius: 3px;
+  width: 200px;
+}
+.FilterMain {
+  padding: 24px 24px 16px;
+}
+.FilterFooter {
+  padding: 12px 24px;
+  border-top: 1px solid $gray-v88;
+}
+.ListFilterLabel {
+  color: $black-v12;
+  margin-bottom: 10px;
+}
+.RadioLabel {
+  margin-bottom: 0 !important;
+  font-size: $font-size-sm;
+}
+.FilterRadio {
+  gap: 5px;
+}
+.OverFlowInherit{
+  overflow: inherit !important;
+  overflow-x: auto !important;
+}
+.CustomIntegration {
+  width: 100%;
+  padding: 12px;
+  &:hover {
+    background-color: $blue-v41;
+  }
+}
+.ListingTab {
+  padding-left: 24px;
+  background: $white;
+  border-bottom: 1px solid $gray-v102;
+}
+.WorkhallIcon {
+  padding: 5px;
+  background-color: $blue-v41;
+  border-radius: 50px;
+  border: 6px solid $blue-v48;
+  width: 45px;
+  height: 45px;
+}
+.ApiSubtitle {
+  color: $gray-v87;
+}
+.ChooseApi {
+  border-radius: 8px;
+  border: 1px solid #EAECF0;
+  width: 100%;
+}
+.ButtonLink {
+  font-size: $font-size-mdt;
+  font-weight: $fw-semibold;
+  color: $blue-v39;
+}
+.Subtitle {
+  color: $gray-v87;
+  text-align: center;
+  width: 100%;
+  margin-top: 4px;
+}
+.AddIntegrationModal {
+  padding: 24px 48px 0;
+  overflow-y: scroll;
+}
+.ListTitle {
+  color: $gray-v3;
+}
+.TabText {
+  margin-left: 0 !important;
+  margin-bottom: 8px;
+}
+.ActiveTab {
+  height: 4px;
+  border-radius: 0 !important;
+}
+.IntegrationHeader {
+  padding: 24px 24px 0 !important;
+}
+.AuthInfo {
+  max-width: 90%;
+}
+.AddIntegrationMain {
+  width: 720px;
+}
+.EditIconContainer {
+  visibility: hidden;
+}
+.OauthTable {
+  tr {
+    & td:first-child {
+      padding-left: 12px !important;
+    }
+  }
+}
+.ExternalTable {
+  thead {
+    & th:nth-child(3) {
+      div {
+        justify-content: center;
+      }
+    }
+    & th:last-child {
+      div {
+        justify-content: center;
+      }
+    }
+  }
+  tbody {
+    & td {
+      .IntegrationNavIcon
+        path {
+          fill: none !important;
+          stroke: $blue-v39 !important;
+        }
+    }
+  }
+}
+.Table {
+  // border-spacing: 0 8px !important;
+
+  &.GeneralTable {
+    overflow: initial;
+  }
+
+  thead {
+    & td:not(:first-child) {
+      padding-left: 0px !important;
+    }
+    & th {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      padding-top: 0 !important;
+    }
+    & th:first-child {
+      padding-left: 12px !important;
+    }
+    & td {
+      min-width: 50px !important;
+      color: $gray-v89;
+      border-bottom: 1px solid $gray-v102 !important;
+      padding-bottom: 8px !important;
+    }
+  }
+
+  .TableCustomHeaderPadding {
+    padding: 0 24px 8px 24px !important;
+  }
+
+  tbody {
+    & tr {
+      height: 48px !important;
+    }
+  }
+
+  tr {
+    padding: 8;
+    transform: none !important;
+    border-bottom: 1px solid $gray-v102;
+    border-radius: 0;
+
+    &:hover {
+      transform: none !important;
+      transition: none;
+      box-shadow: none !important;
+      .EditIconContainer {
+        visibility: visible;
+      }
+
+      .Thumbnail {
+        background-color: $blue-v39 !important;
+      }
+
+      .ThumbnailIcon {
+        fill: $white;
+      }
+    }
+
+    td {
+      padding: 0 10px 0 0 !important;
+      min-width: 50px !important; // min-width required to avoid table overflow-x
+    }
+
+    & td:last-child {
+      padding: 0 !important;
+    }
+  }
+
+  & td:first-child { //name & description
+    width: 35%;
+  }
+  & td:nth-child(2) { //auth type
+    width: 20%;
+  }
+  & td:nth-child(3) {
+    width: 20%;
+  }
+  
+  & td:nth-child(4) { // date created 
+    width: 15%;
+  }
+  & td:last-child { //edit delete icons
+    width: 10%;
+  }
+}
+
+.ModalFooter {
+  box-shadow: none;
+  padding-bottom: 27px !important;
+}
+.DeleteIcon {
+  margin-right: 8px;
+}
+.ConnectorNameContainer {
+  width: 100%;
+}
+.UpdatedOn {
+  display: inline-block;
+  color: $gray-v3;
+  font-weight: 400;
+  font-size: $font-size-mdt;
+  max-width: 100px;
+}
+.ConnectorNameHeader {
+  display: inline-block;
+}
+.ConnectorClass {
+  max-width: 22vw;
+  padding-right: 20px;
+  @include for-medium-hd-screen {
+    max-width: 25vw;
+  }
+}
+.ApiTypeHeader,
+.CreatedOnHeader,
+.EditIconHeader {
+  display: inline-block;
+}
+.ConnectorDescription {
+  font-size: $font-size-sm;
+  color: $gray-v86;
+  font-weight: 400;
+}
+.APITypeBadge {
+  display: inline-block;
+  width: fit-content;
+  height: 24px;
+  border-radius: 20px;
+  font-size: $font-size-sm;
+  padding: 3px 8px;
+  font-weight: 400;
+  max-width: 100%;
+}
+.SourceCol {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 12vw;
+}
+.UpdatedBy {
+  display: inline-block;
+  color: $gray-v3;
+  font-weight: 400;
+  font-size: $font-size-mdt;
+  max-width: 15vw;
+}
+.OauthBadge {
+  background-color: $orange-v34;
+  color: $orange-v35;
+}
+.ApiBadge {
+  background-color: $blue-v48;
+  color: $blue-v69;
+}
+.OpenAuth {
+  background-color: $blue-v48;
+  color: $blue-v69;
+}
+.ExternalAPIkeyAuth {
+  background-color: $green-v24;
+  color: $green-v27;
+}
+.BasicAuth {
+  background-color: $gray-v107;
+  color: $black-v20;
+}
+.APIkeyAuth {
+  background-color: $green-v22;
+  color: $green-v17;
+}
+.DisabledAuth {
+  background-color: $gray-v99;
+  color: $gray-v3;
+}
+.ExpiredAuth {
+  background-color: $red-v31;
+  color: $red-v20;
+}
+.OAuthStyle {
+  background-color: $white;
+  border: 1px solid var(--text-border, $gray-v1);
+  color: $gray-v3;
+}
+.TokenAuth {
+  background-color: $orange-v30;
+  color: $red-v30;
+}
+.BR50 {
+  border-radius: 50%;
+}
+.DefaultLogo {
+  width: 16px;
+  height: 12px;
+}
+.WorkhallLogo {
+  width: 15px;
+  height: 15px;
+}
+.ConnectorLogo {
+  width: 24px;
+  height: 24px;
+  margin: 0px 16px 0px 8px;
+}
+.LogoContainer {
+  background: $blue-v41;
+  width: 32px;
+  height: 32px;
+  margin: 0px 16px;
+}
+.LogoIntegrationContainer {
+  background: $blue-v41;
+  width: 24px;
+  height: 24px;
+  margin: 0px 16px 0px 8px;
+}
+.EditIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 14px;
+}
+.IntegrationDescription {
+  margin-bottom: 16px;
+}
+.CancelButton {
+  font-size: $font-size-mdt;
+  color: $black-v18;
+  cursor: pointer;
+}
+.HeaderTitle {
+  display: inline-block;
+  width: 300px;
+}
+.ChildComponent {
+  height: calc(100vh - 90px);
+  overflow-y: scroll;
+}
+.ViewComponent {
+  overflow-y: scroll;
+  flex: 1 1;
+}
+.AddButton {
+  height: 32px !important;
+}
+.AddEventContainer {
+  position: absolute !important;
+  top: 0px !important;
+  z-index: 25;
+}
+.ListingPage {
+  padding: 16px 24px;
+}
+.CardLoader {
+  height: 48px;
+  margin: 5px 0px;
+  padding: 4px 15px;
+}
+.DropdownContainer {
+  width: 100% !important;
+}
+.AddCustomElem {
+  color: $blue-v39;
+  font-size: $font-size-mdt;
+  padding: 13px 0;
+  cursor: pointer;
+  border-radius: 2px;
+  font-weight: 500;
+  border-top: 1px solid $gray-v68;
+}
+.TableBody{
+  height: calc(100vh - 150px);
+  padding: 0 24px;
+}
+.SaveButton {
+  padding: 6px 10px !important;
+}
+.PublishButton {
+  min-width: 110px !important;
+}
+.ConnectorName {
+  max-height: 29px !important;
+}
+.TooltipError {
+  max-width: 450px !important;
+  background-color: $red-v14 !important;
+  color: $red-v12 !important;
+}
+.TooltipArrow::before {
+  border-top-color: $red-v14 !important;
+  border-bottom-color: $red-v14 !important;
+}
+.HeaderLogo {
+  background: $blue-v41;
+  width: 48px;
+  height: 48px;
+  border-radius: 3px;
+}
+.EditContainer {
+  overflow: hidden !important;
+}
+.BackIcon {
+  width: 9px;
+  height: 12px;
+  object-fit: contain;
+  margin-right: 7px;
+}
+
+.Layout {
+ height: calc(100vh - 62px) !important;
+  @include for-desktop {
+    height: calc(100vh - 64px) !important;
+  }
+}
+
+.Description {
+  @include for-phone-and-tab {
+    max-width: 40vw;
+  }
+  @include for-desktop {
+    max-width: 55vw;
+  }
+}
+.FullDescription {
+  max-width: 55vw;
+}
+.HeaderWidth {
+  width: calc(100% - 48px);
+}
+
+.Title {
+  width: calc(100% - 150px);
+}
+
+.DBType {
+  background-color: $white;
+  border: 1px solid var(--text-border, $gray-v1);
+  color: $gray-v3;
+}
+
+.CancelButton {
+  color: $gray-v3 !important;
+}
+
+.SearchOuterContainer {
+  border-radius: 4px;
+  padding: 4px 0px !important;
+  border: 1px solid $gray-v108;
+  width: 140px;
+  height: 24px;
+  @include transition(0.1s);
+}
+
+.ExpandedSearch {
+  width: 256px !important;
+}
+
+.SearchCloseIcon {
+  &:focus{
+    outline: none;
+  }
+}
+
+.FilterContainer {
+  background-color: $white;
+  box-shadow: 0px 1px 16px 0px rgba(16, 24, 40, 0.12);
+  border-radius: 3px;
+}
+
+.FilterTitle {
+  padding: 12px 16px;
+  border-bottom: 1px solid $gray-v107;
+}
+
+.FilterActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  padding: 16px;
+}
+
+.SortContainer {
+  padding: 2px 6px 2px 8px;
+  border-radius: 4px;
+  background-color: $blue-v48;
+}

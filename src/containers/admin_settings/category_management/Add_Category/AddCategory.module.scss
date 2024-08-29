@@ -1,0 +1,18 @@
+@import "../../../../scss/constants";
+@import "../../../../scss/utilities";
+
+
+.CategoryLabel {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.Label2{
+    @extend %FS13;
+    color: $gray-v9;
+}
+
+.Remainder{
+    font-size: 13px;
+    color:$gray-v9;
+}

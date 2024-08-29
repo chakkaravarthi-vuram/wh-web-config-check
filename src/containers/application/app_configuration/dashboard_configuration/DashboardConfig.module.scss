@@ -1,0 +1,12 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.DashboardDDListPopper {
+  height: 50vh !important;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.DropdownPopper {
+  border-bottom: 1px solid $gray-v113;
+  border-radius: 3px;
+}

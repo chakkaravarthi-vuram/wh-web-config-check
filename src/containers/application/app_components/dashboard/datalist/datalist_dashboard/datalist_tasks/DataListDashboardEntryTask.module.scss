@@ -1,0 +1,346 @@
+@import '../../../../../../../scss/constants';
+@import '../../../../../../../scss/utilities';
+
+.outerContainer {
+  height: 100%;
+}
+
+.AddNewButton {
+  width: 100px;
+  height: 34px;
+  background-color: $white;
+  border-radius: 22px;
+  border: solid 1px $blue-v2;
+}
+.Start {
+  height: 36px;
+}
+
+.SearchBar {
+  flex: 1;
+  height: 40px;
+  border-radius: 4px;
+  border: solid 1px $gray-v1 !important;
+  background: white;
+
+  ::placeholder {
+    color: $gray-v6;
+    opacity: 1;
+  }
+}
+
+.SearchBarEntry {
+  flex: 1;
+  height: 36px;
+  border-radius: 0px 4px 4px 0px;
+  border: solid 1px $gray-v1 !important;
+  background: white;
+  padding: 0px 0px 0px 30px !important;
+  box-shadow: none;
+  margin-bottom: 1px;
+
+  ::placeholder {
+    color: $gray-v6;
+    opacity: 1;
+  }
+}
+
+.RadioButtons {
+  padding: 0 0 0 30px;
+  background-color: var(--black-20);
+  margin-left: 50px;
+}
+
+.OptionListClassName {
+  width: 100px;
+  list-style: none;
+  border: none !important;
+  padding: 10px;
+  height: 32px;
+}
+
+.OptionContainerClassName {
+  padding: 10px 15px;
+}
+
+.DropdownContainerStyles {
+  border-radius: 3px 0px 0px 3px;
+  border-right: none;
+  margin-top: 11px !important;
+}
+
+.OptionListDropDown {
+  box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.1) !important;
+}
+
+.taskfound {
+  height: 16px;
+  @extend %FS13;
+  font-weight: $fw-medium;
+  color: $black-v2;
+}
+.FlowTasksList {
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+    thead {
+      td {
+        position: sticky;
+        top: 0;
+        border-top: 0;
+
+        &:first-child {
+          border-left: 0;
+          width: 6vw;
+        }
+      }
+    }
+    tbody {
+      td {
+        border-bottom: 0;
+
+        &:first-child {
+          border-left: 0;
+        }
+      }
+    }
+  }
+}
+.AllDatalistTask {
+  table thead {
+    z-index: 0 !important;
+  }
+}
+.DatalistTasksList {
+  // overflow-x: scroll;
+  // max-height: calc(100vh - 400px);
+  min-height: 300px;
+
+  @include for-small-to-medium-height-device {
+    min-height: 250px;
+  }
+  &::-webkit-scrollbar-corner {
+    background: transparent;
+    width: 0;
+    height: 0;
+    border-left: 16px solid $gray-v63;
+    border-top: 16px solid $gray-v63;
+    border-bottom: 16px solid transparent;
+    border-right: 16px solid transparent;
+  }
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border: none !important;
+    border-bottom: 0.5px solid $gray-v68;
+
+    thead {
+      border: none !important;
+      z-index: 1;
+
+      td {
+        position: sticky;
+        top: 0;
+        background-color: transparent !important;
+        border-top: none;
+        padding-bottom: 0px !important;
+      }
+    }
+    tbody {
+      border-bottom: 0.5px solid $gray-v68;
+      tr{
+        background-color: transparent !important;
+        &:last-child {
+          td {
+            border-bottom: 0.5px solid $gray-v68;
+          }
+        }
+      }
+      td {
+        background-color: transparent !important;
+        &:first-child {
+          border-left: 0.5px solid $gray-v68;
+          width: 5vw;
+        }
+        
+        &:last-child {
+          border-right: 0.5px solid $gray-v68;
+        }
+      }
+    }
+  }
+
+  &.EntryTasksTableContainer {
+    min-height: fit-content;
+    table tr td:nth-child(2) {
+      min-width: 23vw;
+    }
+
+    &::-webkit-scrollbar-corner {
+      border-left-color: $white;
+      border-top-color: $white;
+    }
+  }
+}
+.ClosedTasksTableContainer {
+  table tr td:first-child {
+    width: 0px;
+  }
+}
+.AllEntryTasksTableContainer {
+  table tr td:nth-child(3) {
+    min-width: 20vw;
+  }
+}
+.allTaskTable {
+  tr {
+    & td:nth-child(2) {
+      // min-width: 300px;
+      // padding-left: 30px;
+      padding-right: 100px;
+    }
+  }
+}
+.entryTaskTable {
+  tr {
+    & td:first-child {
+      // min-width: 300px;
+      // padding-left: 30px;
+      padding-right: 100px;
+    }
+  }
+}
+
+.RowContainer {
+  white-space: nowrap;
+  opacity: 0.75;
+
+  td,
+  td * {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
+  }
+}
+.RowsPerPage {
+  font-size: 13px;
+  color: $gray-v12;
+  margin: 20px;
+  padding-left: 50px;
+}
+
+.DropdownList {
+  width: 136px;
+}
+
+.DropdownHeader {
+  width: 100px;
+  height: 36px;
+  padding-left: 10px;
+  padding-top: 8px;
+  border-radius: 4px 0px 0px 4px;
+  border-right: none;
+}
+
+.ContainerClass {
+  width: 584px;
+  border-radius: 6px;
+}
+
+.HeaderClass {
+  border: none;
+  background-color: $white;
+  padding-left: 40px;
+  padding-top: 20px;
+  font-size: 18px;
+}
+
+.IconClass {
+  border: none !important;
+}
+
+.MainContentClassName {
+  height: 455px !important;
+  padding-left: 40px;
+  padding-top: 0;
+}
+
+.ModalContentStyles {
+  color: $gray_v89;
+}
+
+.WarningTxt {
+  border-radius: 3px;
+  background-color: $orange-v23;
+  text-align: left;
+  color: $orange-v24;
+  padding: 10px 10px;
+  font-size: 13px;
+}
+
+.ReassignTask {
+  font-size: 13px;
+  cursor: pointer;
+  width: fit-content;
+  top: 20px;
+  padding-left: 10px;
+}
+
+.ReassignTaskEntry {
+  position: relative;
+  padding-left: 10px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.RowContainerTable {
+  white-space: nowrap;
+  background-color: $white;
+  padding: 11px 180px 11px 19px !important;
+  height: 48px !important;
+  max-width: '300px';
+  &:hover {
+    background-color: $gray-v68;
+  }
+}
+
+.HeaderContainer {
+  & td {
+    border-top: 1px solid $white !important;
+    border-left: 1px solid $white !important;
+    border-right: 1px solid $white !important;
+    background-color: $white !important;
+  }
+}
+
+.TableBodyContainer {
+  & tr:hover td {
+    background-color: $gray-v63 !important;
+  }
+}
+.ReasonDescription {
+  min-height: 55px;
+  height: 55px;
+  resize: vertical;
+}
+.ReassignedFlowTasks {
+  max-height: 252px !important;
+}
+.skeletonTopMargin{
+  margin-top: 27px !important;
+}
+
+.ModalFooter {
+  justify-content: space-between !important;
+}
+
+.FooterCTAClass {
+  position: relative;
+  bottom: -20px;
+}
+.SearchBarTop{
+  padding-left:  30px !important;
+  padding-right: 30px !important;
+  background-color: transparent !important;
+}

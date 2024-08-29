@@ -1,0 +1,40 @@
+@import '../../../../scss/constants';
+
+.FunctionTooltip {
+    background-color: #1f243d;
+    color: #fff;
+    border-radius: 4px;
+    padding: 8px;
+    min-width: 200px;
+    width: 100%;
+    max-width: 350px;
+    text-align: left;
+    white-space: pre-wrap;
+    height: fit-content;
+
+    .Syntax{
+        display: flex;
+        font-size: 12px;
+        margin-bottom: 4px;
+        font-weight: 500;
+        .Expression{
+            width: 70%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+    .Definition{
+        margin-bottom: 3px;
+        margin-bottom: 8px;
+    }
+    .Example{
+        font-size: 11px;
+    }
+
+}
+
+.ErrorToolTip {
+    padding: 7px;
+    color: $red;
+    background: transparent;
+}

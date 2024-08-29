@@ -1,0 +1,151 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+
+.CustomModalClass {
+    width: 72vw !important;
+    @include for-medium-hd-screen {
+        width: 76vw !important;
+    }
+}
+
+.LabelClass label{
+    @extend %FTwo12Important;
+    @extend %BlackV20;
+    @extend %FontWeight500;
+}
+.FormFieldDropdown {
+    max-width: 37vw;
+}
+.RuleDropdownClass {
+    max-width: 230px !important;
+}
+.SendEmailModal {
+    width: 70vw !important;
+}
+.RuleTypeDropdown {
+    max-width: 200px;
+}
+.InserFieldButton {
+    width: 100%;
+    text-align: left;
+}
+.FieldTag {
+    border-radius: 3px;
+    background: #f1f2f3;
+    padding: 5px;
+}
+.CloseIcon {
+    width: 10px;
+}
+.W70 {
+    width: 70%;
+}
+.RecipientDataContainer {
+    flex-grow: 1;
+    transition: 0.3s all ease-in-out;
+    align-items: center;
+}
+.InsertField {
+    width: 200px;
+}
+
+.ViewContainer {
+    &:hover {
+        background-color: $gray-v109;
+    }
+    .FlowOrDlLabel {
+        color: $gray-v115; 
+    }
+}
+
+.SecondNestedView {
+    background-color: $white;
+    border: 1px solid $gray-v102;
+
+    & .Dropdown{
+        width: 100%;
+    }
+};
+.RecipientTypeDropdown {
+    width: 300px;
+}
+
+.Divider {
+    width: 1px;
+    height: 32px;
+    background: $gray-v1;
+}
+
+.RecipientContainer {
+    border-bottom: 1px solid $gray-v108;
+}
+
+.AddButton {
+    justify-content: left !important;
+    color: $blue-v39 !important;
+    padding: 0px !important;
+    height: 20px;
+    width: 200px;
+    svg path {
+        fill: $blue-v39 !important;
+        stroke: none !important;
+    }
+}
+
+.InsertDropdown {
+    top: 0px;
+    right: 0px;
+    height: 20px;
+    width: 200px;
+    >div {
+        >button {
+            background-color: $blue-v47 !important;
+            height: 20px !important;
+            border-radius: 3px !important;
+            border-color: $blue-v47 !important;
+            >div {
+                >div {
+                    padding: 0px 3px 0px 6px !important;
+                }
+            }
+        }
+    } 
+}
+
+.W124 {
+    width: 124px;
+}
+
+.RuleAssigneeContainer {
+    border-radius: 4px;
+    border: 1px solid $gray-v108;
+}
+
+.RuleCondition {
+    flex-basis: 35%
+}
+
+.RuleAssignee {
+    flex-basis: 65%
+}
+
+.RuleHeader {
+    background-color: $gray-v107;
+    padding: 12px;
+}
+
+.RuleAssigneeBody {
+    border-radius: 0px 0px 3px 3px;
+    border-top: 1px solid $gray-v108 !important;
+    background-color: $gray-v80 !important;
+    padding: 8px 10px 13px 15px;
+}
+
+.DeleteStepButton {
+    color: $red-v25 !important;
+}
+
+.MaxWidth {
+    max-width: 15vw;
+}

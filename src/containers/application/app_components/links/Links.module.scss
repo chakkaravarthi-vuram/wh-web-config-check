@@ -1,0 +1,45 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.LinkStyle {
+    max-width: 85% !important;
+    padding: 4px 16px !important;
+    height: 28px !important;
+}
+
+.OutlineButton {
+    color: $blue-v39 !important;
+    border: 1px solid $blue-v39 !important;
+};
+
+.OpenTaskModalContainer {
+    width: 100vw;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    @include border-radius(6px);
+    @include for-phone-and-tab {
+      width: 100%;
+    }
+    @include for-desktop {
+      margin: 15px 15px 15px 0px !important; //Margin for create task modal
+    }
+    @include transition(0.3s);
+    position: fixed;
+  }
+
+  .ModalCotainerClass {
+    @include for-desktop {
+      width: 100%;
+      height: 100%;
+    }
+    @include for-phone-and-tab {
+      margin: 0 !important;
+    }
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+
+  .Ellipsis {
+    text-overflow: ellipsis !important;
+    overflow-x: hidden !important;
+    white-space: nowrap !important
+  }

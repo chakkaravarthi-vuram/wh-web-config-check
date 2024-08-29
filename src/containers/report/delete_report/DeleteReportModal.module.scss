@@ -1,0 +1,13 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.AlertCircle{
+    padding: 6px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $red-v23;
+    border-radius: 50px;
+    border: 8px solid $red-v24;
+    margin-bottom: 16px;
+}

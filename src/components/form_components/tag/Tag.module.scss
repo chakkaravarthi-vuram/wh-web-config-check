@@ -1,0 +1,30 @@
+@import '../../../scss/constants';
+@import 'scss/utilities';
+.Tag {
+  background-color: $gray-v10;
+  padding: 5px 7px;
+
+  & .CloseIcon {
+    height: 10px;
+    width: 10px;
+    &:focus{
+      outline: none;
+    }
+  }
+}
+.ReadOnly {
+  background-color: $gray-v8;
+  border: 1px solid $gray-v1;
+}
+.TagTooltip {
+  opacity: 1 !important;
+}
+.CustomTag {
+  max-width: 400px !important;
+  @include for-hd-screen {
+    max-width: 350px !important;
+  }
+  @include for-medium-hd-screen {
+    max-width: 300px !important;
+  }
+}

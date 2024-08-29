@@ -1,0 +1,65 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+.ImageContainer {
+    max-width: 300px;
+    // height: 128px;
+    min-height: 100px;
+    background-color: rgba(0,0,0,0.1);
+    
+
+    img {
+        width: 100%;
+        // max-height: 100%;
+    }
+}
+
+.CorrectIcon {
+    fill: $green-v2;
+}
+
+.AddUpload {
+    min-width: 300px;
+}
+
+.ButtonContainer {
+    width: 300px;
+}
+
+.ContainerHover {
+    // img {
+        .AdminAddText {
+            opacity: 0;
+        }
+        &:hover,
+        &:focus-within {
+            img {
+                opacity: 0.2;
+                transition: opacity 0.5s;
+            }
+            .AdminAddText {
+                opacity: 1;
+            }
+        }
+        
+        
+    // }
+}
+
+.AdminWidth {
+    min-width: 100%!important;
+}
+.ReactCrop {
+    cursor: url('../../assets/icons/cursor_cross.png'), auto; 
+}
+.DeleteIcon{
+    fill: $gray-v87;
+}
+.DeleteIconContainer{
+    @include border-radius(4px);
+    height: 24px;
+    width: 24px;
+    &:hover{
+        background-color: $gray-v96;
+    }
+}

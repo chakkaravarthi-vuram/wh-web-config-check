@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: utils/popoverUtils.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: utils/popoverUtils.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React from 'react';
+import * as ROUTE_CONSTANTS from '../urls/RouteConstants';
+import jsUtils from './jsUtility';
+import store from '../Store';
+import * as actions from '../redux/actions/Actions';
+import UpdateConfirmPopover from '../components/update_confirm_popover/UpdateConfirmPopover';
+
+/** @module popover * */
+/**
+ * @memberof popover
+ */
+/**
+ * @function updateFormPopOverStatus
+ * @param {Object} obj obejct
+ * @description to display a consolidated popover on any success or failure action
+ * @return dispatch function to update popover in redux
+ */
+ export const updateFormPopOverStatus = (obj) => {
+    store.dispatch(actions.formPopOverStatusAction(obj));
+  };
+/**
+ * @memberof popover
+ */
+  /**
+   * @function updateConfirmPopover
+   * @param {Object} obj object
+   * @description to display a confirmation popover
+   * @return dispatch function to update confirmation popover in redux
+   */
+  export const updateConfirmPopover = (data) => {
+    store.dispatch(actions.setConfirmPopoverAction(data));
+  };
+/**
+ * @memberof popover
+ */
+  /**
+   * @function updateFormPopOverStatus
+   * @description to clear confirm popoverr
+   * @return dispatch function to update confirmation popover in redux
+   */
+  export const clearConfirmPopover = () => {
+    store.dispatch(actions.clearConfirmPopoverAction());
+  };
+  /**
+ * @memberof popover
+ */
+  /**
+   * @function updateAlertPopverStatus
+   * @param {Object} obj object
+   * @description to display a alert popover
+   * @return dispatch function to update alert popover in redux
+   */
+  export const updateAlertPopverStatus = (obj) => {
+    store.dispatch(actions.alertPopOverStatusAction(obj));
+  };
+/**
+ * @memberof popover
+ */
+  /**
+   * @function updateErrorPopoverInRedux
+   * @param {Object} obj object
+   * @param {Object} serverError error from server
+   * @description to display a server error popover
+   * @return dispatch function to update server error popover in redux
+   */
+
+  export const updateErrorPopoverInRedux = (obj, serverError) => {
+    const error_object = obj;
+    if (!jsUtils.isEmpty(serverError)) {
+      error_object.subTitle = serverError;
+      updateFormPopOverStatus(error_object);
+    }
+  };
+  /**
+ * @memberof popover
+ */
+/**
+   * @function clearAlertPopOverStatus
+   * @description to clear alert popover
+   */
+  export const clearAlertPopOverStatus = () => {
+    store.dispatch(actions.clearAlertPopOverStatusAction());
+  };
+  /**
+ * @memberof popover
+ */
+ /**
+   * @function createTaskExit
+   * @param {Object} history history object
+   * @param {function} callBack call back method
+   * @description to display task exit popover
+   */
+  export const createTaskExit = (history, callBack) => {
+    updateAlertPopverStatus({
+      isVisible: true,
+      customElement: (
+        &lt;UpdateConfirmPopover
+          onYesHandler={async () => {
+            if (callBack) await callBack();
+            history.push(ROUTE_CONSTANTS.ADMIN_HOME);
+            clearAlertPopOverStatus();
+          }}
+          onNoHandler={() => clearAlertPopOverStatus()}
+          title="Are you sure you want to discard the task?"
+        />
+
+      ),
+    });
+  };
+  /**
+ * @memberof popover
+ */
+/**
+   * @function createProcedureExit
+   * @param {Object} history history object
+   * @param {function} callBack call back method
+   * @description to display procedure exit popover
+   */
+  export const createProcedureExit = (history, callBack) => {
+    updateAlertPopverStatus({
+      isVisible: true,
+      customElement: (
+        &lt;UpdateConfirmPopover
+          onYesHandler={async () => {
+            if (callBack) await callBack();
+            history.push(ROUTE_CONSTANTS.ADMIN_HOME);
+            clearAlertPopOverStatus();
+          }}
+          onNoHandler={() => clearAlertPopOverStatus()}
+          title="Are you sure you want to close?"
+          subTitle="All saved changes will be saved as draft"
+        />
+      ),
+    });
+  };
+  /**
+ * @memberof popover
+ */
+/**
+   * @function createDataSetExit
+   * @param {Object} history history object
+   * @param {function} callBack call back method
+   * @description to display data list exit popover
+   */
+  export const createDataSetExit = (history, callBack) => {
+    updateAlertPopverStatus({
+      isVisible: true,
+      // title: "Are you sure you want to discard the Data List Creation?",
+      // history.push(ROUTE_CONSTANTS.ADMIN_HOME);
+      customElement: (
+        &lt;UpdateConfirmPopover
+          onYesHandler={async () => {
+            if (callBack) await callBack();
+            history.push(ROUTE_CONSTANTS.ADMIN_HOME);
+            clearAlertPopOverStatus();
+          }}
+          onNoHandler={() => clearAlertPopOverStatus()}
+          title="Are you sure you want to close?"
+          subTitle="All saved changes will be saved as draft"
+        />
+      ),
+    });
+  };
+  /**
+ * @memberof popover
+ */
+/**
+   * @function defaultAlert
+   * @param {Object} history history object
+   * @param {function} callBack call back method
+   * @description to display default alert popover
+   */
+  export const defaultAlert = (history, callBack) => {
+    updateAlertPopverStatus({
+      isVisible: true,
+      // title: "Are you sure you want to discard the Data List Creation?",
+      // history.push(ROUTE_CONSTANTS.ADMIN_HOME);
+      customElement: (
+        &lt;UpdateConfirmPopover
+          onYesHandler={async () => {
+            if (callBack) await callBack();
+            history.push(ROUTE_CONSTANTS.ADMIN_HOME);
+            clearAlertPopOverStatus();
+          }}
+          onNoHandler={() => clearAlertPopOverStatus()}
+          title="Are you sure you want to close?"
+          subTitle="Recommended to save the current changes and close"
+        />
+      ),
+    });
+  };
+  /**
+ * @memberof popover
+ */
+/**
+   * @function editProcedureExit
+   * @param {Object} history history object
+   * @param {function} callBack call back method
+   * @description to display edit procedure exit popover
+   */
+  export const editProcedureExit = (history, callBack) => {
+    updateAlertPopverStatus({
+      isVisible: true,
+      customElement: (
+        &lt;UpdateConfirmPopover
+          onYesHandler={async () => {
+            if (callBack) await callBack();
+            history.push(ROUTE_CONSTANTS.ADMIN_HOME);
+            clearAlertPopOverStatus();
+          }}
+          onNoHandler={() => clearAlertPopOverStatus()}
+          title="Are you sure you want to close?"
+          subTitle="All saved changes will be saved as draft"
+        />
+      ),
+    });
+  };
+  /**
+ * @memberof popover
+ */
+/**
+   * @function editDataListExit
+   * @param {Object} history history object
+   * @param {function} callBack call back method
+   * @description to display editDataList exit popover
+   */
+  export const editDataListExit = (history, callBack) => {
+    updateAlertPopverStatus({
+      isVisible: true,
+      customElement: (
+        &lt;UpdateConfirmPopover
+          onYesHandler={async () => {
+            if (callBack) await callBack();
+            history.push(ROUTE_CONSTANTS.ADMIN_HOME);
+            clearAlertPopOverStatus();
+          }}
+          onNoHandler={() => clearAlertPopOverStatus()}
+          title="Are you sure you want to close?"
+          subTitle="All saved changes will be saved as draft"
+        />
+      ),
+    });
+  };
+  /**
+ * @memberof popover
+ */
+/**
+   * @function saveDataListExit
+   * @param {Object} history history object
+   * @param {function} callBack call back method
+   * @description to display save data list exit popover
+   */
+  export const saveDataListExit = (history, callBack) => {
+    updateAlertPopverStatus({
+      isVisible: true,
+      customElement: (
+        &lt;UpdateConfirmPopover
+          onYesHandler={async () => {
+            if (callBack) await callBack();
+            history.push(ROUTE_CONSTANTS.ADMIN_HOME);
+            clearAlertPopOverStatus();
+          }}
+          onNoHandler={() => clearAlertPopOverStatus()}
+          title="Are you sure you want to close?"
+          subTitle="All saved changes will be saved as draft"
+        />
+      ),
+    });
+  };
+  /**
+ * @memberof popover
+ */
+/**
+   * @function createTeamExit
+   * @param {Object} history history object
+   * @description to display create team exit popover
+   */
+  export const createTeamExit = (history) => {
+    updateConfirmPopover({
+      isVisible: true,
+      title: 'Are you sure you want to cancel the team?',
+      onConfirm: () => history.push(ROUTE_CONSTANTS.ADMIN_HOME),
+    });
+  };
+  /**
+ * @memberof popover
+ */
+/**
+   * @function submitTaskChangeConfirmation
+   * @description task confirmation popover
+   */
+  export const submitTaskChangeConfirmation = () => {
+    const confirmation = confirm(
+      'Change made will be lost if you try to collapse. Do you want to collapse?',
+    );
+    return confirmation;
+  };
+/**
+ * @memberof popover
+ */
+  /**
+   * @function onFileSizeExceed
+   * @description file size exceeded alert
+   */
+  export const onFileSizeExceed = () => {
+    alert('MAx file size exceeeded');
+  };
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-date%2520_.html">date *</a></li><li><a href="module-encryption%2520_.html">encryption *</a></li><li><a href="module-getter&generator%2520_.html">getter&generator *</a></li><li><a href="module-helper%2520_.html">helper *</a></li><li><a href="module-imagehelper%2520_.html">imagehelper *</a></li><li><a href="module-joi%2520_.html">joi *</a></li><li><a href="module-loader%2520_.html">loader *</a></li><li><a href="module-popover%2520_.html">popover *</a></li><li><a href="module-profile%2520_.html">profile *</a></li></ul><h3>Global</h3><ul><li><a href="global.html#generateActionName">generateActionName</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Thu Aug 12 2021 18:35:32 GMT+0530 (India Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

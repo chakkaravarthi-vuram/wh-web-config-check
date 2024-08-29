@@ -1,0 +1,41 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.GradientSwatchPicker {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background-color: $gray-v6;
+}
+.SecurityContainer {
+  background: $white;
+}
+.header {
+  margin-bottom: 18px;
+}
+.ContainerClass {
+  width: 537px !important;
+}
+.FormFieldRadio {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  border: 1px solid $gray-v1;
+  cursor: pointer;
+}
+.RadioSelectedStyle {
+  height: 12px !important;
+  width: 12px !important;
+  border-radius: 9px;
+}
+.AssignTo {
+  // // Assign to form placeholder
+  ::placeholder {
+    font-size: $font-size-sm;
+    color: $gray-v62;
+  }
+}
+
+.AdminFieldHelperClass {
+  line-height: 1.5;
+}

@@ -1,0 +1,166 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+.Default {
+  height: 46px;
+  &::-webkit-scrollbar {
+    height: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  & button {
+    list-style: none;
+    margin-right: 20px;
+
+    & .SelectedTab {
+      bottom: 0;
+    }
+  }
+}
+
+.Type1 {
+  & button {
+    margin-right: 20px;
+
+    & .SelectedTab {
+      height: 0;
+    }
+  }
+}
+
+.Type2,
+.Type3 {
+  height: 30px;
+
+  & button {
+    margin-right: 30px;
+    @include for-phone-and-tab {
+      margin-right: 20px;
+    }
+
+    & .SelectedTab {
+      height: 3px;
+      bottom: 0;
+    }
+  }
+}
+.Type3 {
+  border-bottom: 1px solid $gray-v1;
+}
+
+.Type4 {
+  margin-top: 0px;
+  margin-bottom: -10px;
+  & button {
+    margin-right: 10px;
+    @include for-phone-and-tab {
+      margin-right: 10px;
+    }
+
+    & .SelectedTab {
+      height: 3px;
+      bottom: 2px;
+    }
+  }
+}
+
+.Type5 {
+  &::-webkit-scrollbar {
+    height: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  & button {
+    list-style: none;
+    margin-right: 20px;
+
+    & .SelectedTab {
+      bottom: 0;
+    }
+  }
+}
+
+.Type6 {
+  &::-webkit-scrollbar {
+    height: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  & button {
+    list-style: none;
+
+    & .SelectedTab {
+      bottom: 0;
+    }
+  }
+}
+
+.Type7 {
+  &::-webkit-scrollbar {
+    height: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+  & button {
+    margin-left:15px;
+    padding-right:13px;
+   // border-right:1px solid #ddd;
+    font-size: 12px;
+    
+    & .TabName{
+        position:relative;
+
+        & span{
+          position:absolute;
+          bottom:-12px;
+          left:0;
+          height:3px;
+          width:100%;
+        }
+    }
+ 
+    &:last-child{
+        border:none;
+      }
+    &:first-child{
+        margin:0 !important;
+      }
+
+    
+  }
+}
+
+.Dashboard {
+  padding: 5px 50px 5px 19px;;
+}
+
+.SelectedDashboard {
+  padding: 5px 50px 5px 19px;;
+  background-color: #e6f3f9;
+  color: #1a9cd1;
+  width: 100%;
+}

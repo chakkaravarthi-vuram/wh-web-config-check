@@ -1,0 +1,41 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.TableContainer{
+    height: 200px;
+    overflow:hidden;
+    overflow-y: auto;
+    background-color: white;
+    flex-basis: 93% !important;
+    margin-top: 20px !important;
+}
+
+.Table{
+    & thead{
+        height: 44px !important;
+        & th{
+            border: 1px solid $gray-v108 !important;
+            background: $gray-v109;
+            padding: 12px !important
+            }
+    }
+    & tbody{
+        & td{
+            height: 44px !important;
+        }
+        & td{
+            border: 1px solid $gray-v108 !important;
+            padding: 8px 12px !important
+        }
+    }
+}
+
+.OverFlowInherit{
+    overflow: inherit !important;
+ } 
+ .PageViewers {
+    &:first-child {
+        // position: sticky;
+        margin-top: 0px !important;
+      }
+ }

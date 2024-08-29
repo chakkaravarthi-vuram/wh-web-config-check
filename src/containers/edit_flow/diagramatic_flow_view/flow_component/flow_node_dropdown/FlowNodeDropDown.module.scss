@@ -1,0 +1,49 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+
+.Container {
+  display: flex;
+  width: 250px;
+  padding: 15px 16px;
+  flex-direction: column;
+  gap: 16px;
+  @include border-radius(4px);
+  background: $white;
+  box-shadow: 0px 2px 12px -2px rgba(16, 24, 40, 0.12);
+}
+.OptionLabel {
+  color: $gray-v89;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 17px;
+}
+
+.AddNewStepLabel{
+  color: $gray-v98;
+}
+
+.AddNewStep {
+  label {
+    color: $gray-v98;
+  }
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 17px;
+}
+.SideMenu {
+  padding: 15px 16px 16px 16px;
+  @include border-radius(4px);
+  background: $white;
+  box-shadow: 0px 2px 12px -2px rgba(16, 24, 40, 0.12);
+}
+.InputClass {
+  padding: 4px 4px 4px 0px !important;
+  height: 100%;
+}
+.SubMenu {
+  // position: absolute;
+  left: 100%;
+  top: 10%;
+  width: 250px;
+}

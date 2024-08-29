@@ -1,0 +1,13 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.Dropdown {
+  min-width: 332px;
+}
+.Identifier {
+  background: $white;
+}
+.CorrectIconStyles {
+  height: 9px;
+  width: 12px;
+}

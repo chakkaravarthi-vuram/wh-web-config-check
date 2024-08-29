@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: utils/joiUtils.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: utils/joiUtils.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { FIELD_NAME } from '../components/form_builder/FormBuilder.strings';
+import { OTHER_SETTINGS_FORM } from '../containers/admin_settings/other_settings/OtherSettings.strings';
+import PROCEDURE_STRINGS from '../containers/procedures/Procedure.strings';
+import { RESET_PASSWORD_STRINGS } from '../containers/reset_password/ResetPassword.strings';
+import { SIGN_IN_PASSWORD } from '../containers/sign_in/SignIn.strings';
+import { ADDITIONAL_DETAILS_STRINGS } from '../containers/sign_up/additional_details/AdditionalDetails.strings';
+import { ACTORS } from '../containers/task/task/Task.strings';
+import { CREATE_TEAM } from '../containers/teams/teams/Teams.strings';
+import { NEW_PASSWORD } from '../containers/user_settings/change_password/ChangePassword.strings';
+import { generateFieldId } from './generatorUtils';
+import jsUtils, { nullCheck } from './jsUtility';
+import { NEW_PASSWORD_REGEX } from './strings/Regex';
+import { STRING_VALIDATION } from './ValidationConstants';
+
+/** @module joi * */
+/**
+ * @memberof joi
+ */
+/**
+ * @function joiValidate
+ * @description To evaluate given schema and data using joi validation
+ * @param   {Object} data Data to validate
+ * @param   {Object} schema Schema against which you want to validate
+ * @return  Return either error object or false if no errors
+ */
+ export const joiValidate = (data, schema) => {
+    if (!jsUtils.isEmpty(schema)) {
+      const errors = schema.validate(data || {}, {
+        abortEarly: false,
+      });
+      return errors.error;
+    }
+    return false;
+  };
+/**
+ * @memberof joi
+ */
+/**
+ * @function generateValidationMessage
+ * @description to get raw error returned from joi and constructed meaningful string based on that
+ * @param   {Object} errors errors object
+ * @return  {string} constructed error message
+ */
+ export const generateValidationMessage = (errors) => {
+    const error_list = {};
+    let message = null;
+    console.log('task error joi', errors);
+    if (errors) {
+      console.log('task error joi inside', errors.details);
+      errors.details.forEach((element) => {
+        console.log('Joi Error Object', element);
+        if (!nullCheck(element.context.value)) {
+          if (element.context.label === SIGN_IN_PASSWORD) {
+            message = 'Password is required';
+          } else if (
+            element.type
+            &amp;&amp; (element.type.includes('array.includesRequiredUnknowns')
+              || element.type.includes('array.base'))
+          ) {
+            if (
+              element.context.label === 'teams'
+              || element.context.label === 'users'
+            ) {
+              message = 'Add atleast one actor to save the step.';
+            } else message = element.message;
+        }
+          // else if (
+          //   element.context.label === OTHER_SETTINGS_FORM.SESSION_TIMEOUT.LABEL ||
+          //   element.context.label === OTHER_SETTINGS_FORM.PASSWORD_AGE.LABEL ||
+          //   element.context.label === OTHER_SETTINGS_FORM.STAY_LOGGED_IN.LABEL ||
+          //   element.context.label === OTHER_SETTINGS_FORM.MAXIMUM_FILE_SIZE.LABEL ||
+          //   element.context.label === OTHER_SETTINGS_FORM.DOCUMENT_EXPIRY_TIME.LABEL
+          // )
+          //   message = `${element.context.label} must be larger than or equal to 1`;
+          else message = `${element.context.label} is required`;
+        } else if (
+          element.type
+          &amp;&amp; (element.type.includes('regex') || element.type.includes('pattern'))
+        ) {
+          const newPasswordSchema = STRING_VALIDATION.regex(NEW_PASSWORD_REGEX);
+          const newPasswordError = newPasswordSchema.validate(
+            element.context.value,
+          );
+          if (
+            element.context.label
+              === ADDITIONAL_DETAILS_STRINGS.FORM_LABEL.PASSWORD.LABEL
+            || element.context.label
+              === RESET_PASSWORD_STRINGS.FORM_LABEL.CONFIRM_PASSWORD.LABEL
+            || (element.context.label === NEW_PASSWORD &amp;&amp; newPasswordError.error)
+          ) {
+            message = `${element.context.label} should contain atleast one alphabet and a number`;
+          } else if (
+            element.context.label === SIGN_IN_PASSWORD
+            || element.context.label === NEW_PASSWORD
+          ) {
+            console.log('sign password error captured2');
+
+            message = 'Invalid Password';
+          } else if (
+            element.context.label
+              === OTHER_SETTINGS_FORM.ALLOWED_EXTENSIONS.LABEL
+            || element.context.label
+              === OTHER_SETTINGS_FORM.ALLOWED_CURRENCY_TYPES.LABEL
+          ) {
+            message = `${element.context.label} must be only characters`;
+          } else if (element.context.label === FIELD_NAME.LABEL) {
+            message = `${element.context.label} should not contain special characters(Exception: ?)`;
+          } else message = `Invalid ${element.context.label}`;
+        } else if (element.type &amp;&amp; element.type.includes('string.min')) {
+          if (element.context.label === SIGN_IN_PASSWORD) message = 'Invalid Password';
+          else message = element.message;
+        } else if (element.type &amp;&amp; element.type.includes('any.only')) {
+          if (element.context.label === 'Confirm Password') message = 'Password mismatch.';
+          else message = element.message;
+        } else if (element.type &amp;&amp; element.type.includes('array.min')) {
+          if (element.context.label === PROCEDURE_STRINGS.STEPS.ID) message = 'Atleast one step is required.';
+          else if (element.context.label === CREATE_TEAM.TEAM_MEMBERS.TITLE) message = 'Atleast one team member required.';
+          else message = element.message;
+        } else if (element.type &amp;&amp; element.type.includes('object.min')) {
+          if (element.context.label === ACTORS.MEMBER_OR_TEAM.ASSIGN_TO.ID) message = 'Please assign one user or team for the task.';
+          else if (element.context.label === 'assignees') message = 'Add atleast one actor to save the step.';
+          else if (element.context.label === 'Viewers') message = 'Add atleast one viewer';
+          else if (element.context.label === 'Owners') message = 'Add atleast one owner';
+          else if (element.context.label === 'entry adders') message = 'Add atleast one entry adder';
+          else message = element.message;
+        } else if (element.type &amp;&amp; element.type.includes('any.invalid')) {
+          if (element.context.label === NEW_PASSWORD) message = 'New Password is same as Current Password. Try a new one.';
+          else message = element.message;
+        } else if (
+          element.message
+          &amp;&amp; element.message.includes('duplicate value')
+        ) {
+          message = `${element.context.label} holds a duplicate value`;
+        } else if (
+          element.message
+          &amp;&amp; element.message.includes('must be one of')
+        ) {
+          message = `${element.context.label} mismatch`;
+        } else if (element.type &amp;&amp; element.type.includes('date.min')) {
+          message = `${element.context.label} should be greater than start time`;
+        } else message = element.message.replace(/"/g, '');
+        let { key } = element.context;
+        if (key !== element.path[0]) {
+          key = generateFieldId(element.path[0], element.path[1]);
+          // if (element.path[element.path.length - 1]) key = element.path[element.path.length - 1];
+          if (element.path.length > 1) {
+            key = element.path.map((path) => path);
+            console.log(typeof key);
+            // key = key.replace(',', '.');
+          }
+        }
+        if (element.path[0] === 'steps' &amp;&amp; element.path[1] + 1) error_list.step_order = element.path[1] + 1;
+        if (!error_list[key]) {
+          error_list[key] = message;
+        }
+        message = null;
+      });
+    }
+    return error_list;
+  };
+/**
+ * @memberof joi
+ */
+  /**
+   * @function validate
+   * @description To evaluate given schema and data using joi validation
+   * @param   {Object} data Data to validate
+   * @param   {Object} schema Schema against which you want to validate
+   * @return  function
+   */
+  export const validate = (data, schema) => generateValidationMessage(joiValidate(data, schema));
+
+export default joiValidate;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-date%2520_.html">date *</a></li><li><a href="module-encryption%2520_.html">encryption *</a></li><li><a href="module-getter&generator%2520_.html">getter&generator *</a></li><li><a href="module-helper%2520_.html">helper *</a></li><li><a href="module-imagehelper%2520_.html">imagehelper *</a></li><li><a href="module-joi%2520_.html">joi *</a></li><li><a href="module-loader%2520_.html">loader *</a></li><li><a href="module-popover%2520_.html">popover *</a></li><li><a href="module-profile%2520_.html">profile *</a></li></ul><h3>Global</h3><ul><li><a href="global.html#generateActionName">generateActionName</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Thu Aug 12 2021 18:35:32 GMT+0530 (India Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

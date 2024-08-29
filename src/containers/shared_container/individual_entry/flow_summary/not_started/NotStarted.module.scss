@@ -1,0 +1,46 @@
+@import '../../../../../scss/constants';
+@import '../../../../../scss/utilities';
+$container-height: 422px;
+.Circle1 {
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  @extend %FlexShrink0;
+}
+
+.NotStartedBg {
+  background-color: $gray-v8;
+}
+
+.AccTitle {
+  font-size: $font-size-md;
+  font-weight: $fw-semibold;
+  color: $gray-v3;
+}
+
+.AccsummaryCircle {
+  display: inline-flex;
+  margin-right: 10px;
+  color: $blue-v2;
+  @extend %FS13;
+  font-weight: $fw-semibold;
+}
+
+.AccnotStartedtxt {
+  @extend %FS13;
+  line-height: normal;
+  color: $gray-v53;
+  padding-top: 7px;
+}
+
+.grayborderCard {
+  margin: 15px 0px;
+  border-radius: 4px;
+  border: solid 1px $gray-v1;
+  background-color: $white;
+  position: unset !important;
+}
+
+.cardheaderNobg {
+  background-color: transparent;
+}

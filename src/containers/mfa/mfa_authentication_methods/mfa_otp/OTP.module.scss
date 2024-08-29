@@ -1,0 +1,18 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.otpClass {
+    margin-top: 10px;
+}
+
+.OtpInputClass {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid $gray-v1;
+    text-align: center;
+    font-weight: 400;
+    margin-right: 5px;
+    font-size: 16px;
+    color: $gray-v89;
+}

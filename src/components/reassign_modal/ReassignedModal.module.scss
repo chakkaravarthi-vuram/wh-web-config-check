@@ -1,0 +1,94 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+.RowContainerTable {
+  white-space: nowrap;
+  background-color: $white;
+  padding: 11px 180px 11px 19px !important;
+  height: 48px !important;
+  max-width: '300px';
+  &:hover {
+    background-color: $gray-v68;
+  }
+}
+
+.HeaderContainer {
+  & td {
+    border-top: 1px solid $white !important;
+    border-left: 1px solid $white !important;
+    border-right: 1px solid $white !important;
+    background-color: $white !important;
+  }
+}
+
+.ContainerClass {
+  width: 584px;
+  border-radius: 6px;
+}
+
+.MainContentClassName {
+  height: 455px !important;
+  padding-left: 40px;
+  padding-top: 0;
+}
+
+.HeaderClass {
+  border: none;
+  background-color: $white;
+  padding-left: 40px;
+  padding-top: 20px;
+  font-size: 18px;
+}
+
+.IconClass {
+  border: none !important;
+}
+
+.ModalContentStyles {
+  color: $gray_v89;
+}
+
+.WarningTxt {
+  border-radius: 3px;
+  background-color: $orange-v23;
+  text-align: left;
+  color: $orange-v24;
+  padding: 10px 10px;
+  font-size: 13px;
+}
+
+.HeaderContainer {
+  & td {
+    border-top: 1px solid $white !important;
+    border-left: 1px solid $white !important;
+    border-right: 1px solid $white !important;
+    background-color: $white !important;
+  }
+}
+
+.TableBodyContainer {
+  & tr:hover td {
+    background-color: $gray-v63 !important;
+  }
+}
+
+.ReassignedFlowTasks {
+  max-height: 252px !important;
+}
+
+.MenuMargin {
+  margin-bottom: 0px !important;
+}
+
+.CustomContentStyle {
+  width: 0px;
+}
+
+.ModalFooter {
+  justify-content: space-between !important;
+}
+
+.FooterCTAClass {
+  position: relative;
+  bottom: -12px;
+}

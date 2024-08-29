@@ -1,0 +1,27 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.ContainerCard {
+    @include border-radius(3px);
+    border: 1px solid $gray-v108;
+    height: 50px;
+    @extend %FS13;
+
+    .StepperRound {
+        color: $gray-v89;
+        background-color: $gray-v108;
+        height: 24px;
+        width: 24px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border-radius: 50%;
+    }
+
+    &:hover {
+        .StepperRound {
+            color: $white;
+            background-color: $blue-v39;
+        }
+    }
+}

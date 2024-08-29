@@ -1,0 +1,104 @@
+@import '../../../../../scss/constants';
+@import '../../../../../scss/utilities';
+
+.DashboardConfigAppModal {
+  z-index: 155 !important;
+  width: 48Svw !important;
+  height: 100vh !important;
+  border: 1px solid $gray-v1;
+  margin-left: 52vw !important;
+  &:first-child {
+    width: 48vw !important;
+  }
+}
+.AddMore {
+  margin-top: 24px;
+}
+.HeaderTitle {
+  color: #1a1a1a;
+  font-size: 20px;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+.Content {
+  height: 80vh !important;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.DashboardDDList {
+ height: 60vh !important;
+ overflow: hidden;
+ overflow-y: auto;
+}
+.FooterContent {
+    height: 100px !important;
+}
+.SelectType {
+  width: 320px;
+}
+.CloseIcon {
+  width: 12px;
+  height: 12px;
+  margin-top: 3px;
+  fill: $gray-v101 !important;
+}
+.LinkHeader {
+  padding: 0px !important;
+  font-weight: 500 !important;
+}
+
+.LinkWidth {
+  width: 29% !important;
+}
+.ContentScroll {
+  overflow-y: scroll !important;
+  overflow-x: hidden !important;
+}
+.GridGap {
+  grid-gap: 10px;
+}
+.Link {
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+.PopperClass {
+  height: 40vh !important;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.LinkPopperClass {
+  z-index:10 !important;
+}
+.LinkRow {
+  display: block !important;
+}
+.DragIcon {
+  cursor: grab !important;
+}
+.ChooseDropdonw {
+  display: inline-block !important;
+  word-break: break-word !important;
+}
+.DragClass {
+  height: 32px !important;
+}
+
+.FlowDLDropdown {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden
+}
+
+.Width1{
+  width: 1%;
+}
+.Width20{
+  width: 20px;
+}
+.Width29{
+  width: 29%;
+}
+.DeleteIcon {
+  outline: none;
+}

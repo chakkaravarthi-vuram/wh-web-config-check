@@ -1,0 +1,78 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.AllowedExtensions {
+  flex-grow: 1;
+  height: 96px !important;
+}
+
+.Input {
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
+
+.OtherSettingsFontStyle {
+  padding-bottom: 6px !important;
+}
+
+.OtherSettingslabelClass {
+  margin-bottom: 0px !important;
+}
+
+.OtherSettingsInputContainer {
+  width: 163px;
+}
+.ContainerSize {
+  width: 695px;
+}
+.OtherSettingsContainer {
+  margin: 30px 30px;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.04);
+  background-color: $white;
+}
+.LabelStylesOtherSettings {
+  width: 174px;
+  margin-top: 10px;
+}
+@include for-phone-and-tab {
+  .ContainerSize {
+    width: 100%;
+  }
+}
+
+.MfaButton {
+  border-color: $gray-v1;
+  color: $black-v20;
+}
+
+.MfaEnabledDisaledText{
+color: $gray-v86;
+}
+.MfaCheckbox {
+  div {
+    gap: 8px !important;
+  }
+}
+
+.MfaTable {
+  width: 50%
+}
+
+.MfaAddTeams {
+  cursor: pointer;
+  width: 15%;
+  color: $blue-v39
+}
+
+.MFALabel {
+  width: 174px;
+}

@@ -1,0 +1,31 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+@import '../../../../scss/Typography.module.scss';
+
+.supportIcon{
+  @include border-radius(50%);
+  background-color: $blue-v41;
+  padding: 1px 6px 4px 6px;
+}
+.supportPopperContainer {
+  margin: 0px 0px -30px -32px;
+  @include for-phone-and-tab {
+    margin: 0px 0px -32px 80px;
+  }
+}
+.optionList {
+  font-weight: 400;
+  svg {
+    width: 18px;
+  }
+}
+.userPopperContainer {
+  margin: 0px  0px -32px -60px;
+  @include for-phone-and-tab {
+    margin: 0px  0px -32px 12px;
+  }
+}
+.supportmenu {
+  margin-left: auto;
+}
+

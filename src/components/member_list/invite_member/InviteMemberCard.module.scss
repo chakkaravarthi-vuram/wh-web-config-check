@@ -1,0 +1,24 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.CardContainer{
+  border-radius: 6px;
+  padding: 15px 14.8px 25px 20px;
+  border: solid 1px $gray-v1;
+}
+
+.DeleteIconContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  width: 24px;
+  @include border-radius(4px);
+  &:hover{
+    background-color: $gray-v96;
+  }
+}
+
+.DeleteIcon{
+  fill : $gray-v87;
+}

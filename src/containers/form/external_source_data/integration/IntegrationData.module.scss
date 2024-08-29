@@ -1,0 +1,33 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.MappingField {
+  width: 48%;
+}
+.ChooseIntegrationPopper {
+  max-height: 120px !important;
+}
+.DropdownPopper {
+  max-height: 150px !important;
+}
+.MappingFieldDropdown {
+  width: 100% !important;
+}
+.HeaderColumnClass {
+  padding: 4px 0px !important;
+  width: 48% !important;
+}
+.DataNeeded {
+  margin-top: 23px;
+}
+.RequiredIcon {
+  color: $red-v7;
+}
+.SpanClassName {
+  color: $red-v22;
+  position: relative;
+  top: -3px;
+}
+.TextClassName {
+  display:inline;
+}

@@ -1,0 +1,18 @@
+@import '../../../../../../scss/utilities';
+@import 'scss/constants';
+
+.Container {
+  padding: 15px 8px 15px 15px !important;
+  max-height: 50px;
+  border-radius: 4px;
+  background: $white;
+}
+.AddBadge {
+  width: 28px;
+  height: 28px;
+}
+.BtnAdd{
+  height: 32px;
+  padding: 0;
+  width:70px !important;
+}

@@ -1,0 +1,9 @@
+const BOX_STYLE = {
+  HIGH_PRIORITY_BOX: 2,
+  MEDIUM_PRIORITY_BOX: 1,
+  OVER_DUE_BOX: -2,
+  COMPLETED_BOX: -1,
+  NO_DUE_BOX: 0,
+};
+
+export { BOX_STYLE };

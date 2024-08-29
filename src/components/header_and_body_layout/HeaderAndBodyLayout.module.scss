@@ -1,0 +1,28 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+.HeaderContainer {
+  padding: 16px;
+  width: 100%;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.04);
+  border: solid 1px $gray-v68;
+  background-color: #fff;
+}
+.FlowBodyContainer {
+  background-color: $gray-v63;
+  overflow: hidden;
+  overflow-y: scroll;
+  height: calc(100vh - 120px);
+}
+
+.BodyContainer {
+  padding: 20px 30px 60px 30px;
+}
+
+.HeaderWidth {
+  width: calc(100% - 54px);
+}
+
+.PageTitle {
+  font-weight: 600;
+}

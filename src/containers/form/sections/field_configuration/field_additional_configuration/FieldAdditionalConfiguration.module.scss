@@ -1,0 +1,44 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.VisibilityContainer {
+    border-radius: 4px;
+    background-color: $gray-v109;
+    padding: 20px;
+}
+
+.DropdownDimension {
+    width: 90px;
+}
+
+.ButtonContainer {
+    height: 32px !important;
+    width: 32px !important;
+    padding: 0px !important;
+    margin-left: 8px;
+}
+
+.EditIcon:hover {
+    & path {
+        stroke: $blue-v39
+    }
+}
+
+.ChipStyle {
+    height: 24px;
+    margin-top: 5px;
+}
+
+.SelectedRuleContainer {
+    border-radius: 4px;
+    border: 1px solid $gray-v1;
+    background: $white;
+    height: 48px;
+    padding: 8px 16px;
+}
+
+.FieldInstructions textarea {
+    resize: vertical;
+    min-height: 54px;
+    height: 54px;
+}

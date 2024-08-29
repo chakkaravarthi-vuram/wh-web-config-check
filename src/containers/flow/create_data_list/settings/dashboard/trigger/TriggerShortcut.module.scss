@@ -1,0 +1,29 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.SubtitleClass {
+  margin: 9px 0px 4px 0px;
+  @extend %FS13;
+  color: $black-v18 !important;
+  font-weight: $fw-medium;
+}
+.AddBtn {
+  height: 64px !important;
+  width: 100% !important;
+}
+.TriggerIcon {
+  width: 28px; 
+}
+.AddShortcut {
+  color: $blue-v39;
+  @extend %FS13;
+  font-weight: $fw-semibold;
+}
+.AddIcon {
+  height: 12px;
+  width: 12px;
+  fill: $blue-v39 !important;
+}
+.ButtonContainer {
+  cursor: pointer;
+}

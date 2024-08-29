@@ -1,0 +1,11 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+
+.ToggleSection {
+    border-bottom: 1px solid $gray-v88;
+
+    .Title {
+        font-weight: 500;
+    }
+}

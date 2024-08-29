@@ -1,0 +1,168 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.FormFieldTabStyle {
+    padding-left: 48px;
+  }
+  
+  .TabUnderline {
+    border-bottom: 1px solid $gray-v1;
+  }
+  .SelectedTab {
+    border-bottom: 2px solid var(--primary-primary, #217cf5) !important;
+  }
+  
+  .FormFieldConfigTabText {
+    font-size: 13px;
+    margin-bottom: 8px !important;
+  }
+
+  .FieldListContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    scroll-behavior: unset;
+  }
+  .AddFormFieldButton {
+    display: flex;
+    height: 76px;
+    padding: 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+    border-radius: 4px;
+    border: 2px dashed var(--primary-400, #74b0ff) !important;
+    background: var(--primary-25, #f3f9ff) !important;
+    margin: 5px;
+    color: #217cf5 !important;
+    font-size: 13px;
+  }
+  
+  .AddFormFieldPlusIcon {
+    padding-top: 5px;
+  }
+  .NewFieldHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 24px 24px 24px 48px;
+  }
+  
+  .NewFieldFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 0px 0px 3px 3px;
+    background: #fff;
+    box-shadow: 0px -1px 4px 0px rgba(16, 24, 40, 0.08);
+    flex-shrink: 0;
+  }
+  .NewFieldCloseIcon {
+    cursor: pointer;
+  }
+  
+  .NewFieldHeaderText {
+    color: var(--gray-900-title, #1f243d);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.2px;
+  }
+  
+  .SaveAndCancelButtons {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .DeleteFormField {
+    color: #b42318;
+    padding: 0px !important;
+    height: auto;
+    margin: 8px 24px;
+  }
+  .DeleteFormField:hover {
+    color: #b42318 !important;
+  }
+  
+  .Cancel {
+    padding: 0px !important;
+    height: auto;
+    margin: 8px 24px;
+  }
+
+  .FieldLabel label {
+    margin-bottom: 0px;
+  }
+
+  .ButtonContainer {
+    height: 20px !important;
+    width: 20px !important;
+    padding: 0px !important;
+    margin-left: 16px;
+  }
+
+  .TableDependantApps {
+
+    thead tr th {
+      padding: 12px 16px !important;
+    }
+
+    tbody tr td {
+      padding: 12px 16px !important;
+    }
+}
+
+.OptionListContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+  border-radius: 4px;
+  border: 1px solid $gray-v1;
+  background: $white;
+  padding: 16px;
+  & > div {
+    gap: 16px;
+  }
+}
+
+.SummaryFieldNestedDropdown {
+  background-color: $white;
+  border-radius: 2px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+
+  .DropdownList {
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .BackBtn {
+    @extend %FTwo13;
+    color: $gray-v90;
+    padding: 12px 0 0 8px;
+    width: 100%;
+    display: flex;
+
+    &:hover {
+      color: $blue-v39;
+
+      svg path {
+        stroke: $blue-v39;
+      }
+    }
+  }
+}
+
+.TableLabel {
+  order: 1;
+}
+
+.TableIcon {
+  order: 2;
+  margin-left: auto;
+}

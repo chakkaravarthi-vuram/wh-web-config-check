@@ -1,0 +1,97 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.FieldType {
+  padding: 8px 6px;
+}
+
+.FieldTypeItem {
+  border-left: 3px solid transparent;
+  border-radius: 2px;
+  padding: 12px 9px;
+  @extend %FTwo13;
+  line-height: 17px;
+
+  .Text {
+    width: 85%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &.Selected {
+    background: $blue-v41;
+    border-left: 3px solid $blue-v39;
+  }
+
+  &:hover {
+    background: $blue-v41;
+  }
+
+  .Count {
+    color: $gray-v98;
+    margin-right: 6px;
+  }
+}
+
+.BackBtn {
+  @extend %FTwo13;
+  color: $gray-v90;
+  margin-left: 16px;
+  margin-right: 16px;
+  width: 100%;
+
+  .Text {
+    width: 80%;
+  }
+
+  &:hover {
+    color: $blue-v39;
+
+    svg path {
+      fill: $blue-v39;
+    }
+  }
+}
+
+.Divider {
+  height: 1px;
+  background-color: $gray-v68;
+}
+
+.FieldList {
+  padding: 16px 0;
+
+  .FieldListItems {
+    max-height: 268px;
+    overflow: auto;
+
+    .Category {
+      background: $gray-v99;
+      @extend %FTwo11;
+      line-height: 13px;
+      color: $gray-v98;
+      padding: 8px 16px;
+    }
+
+    .Option {
+      @extend .FieldTypeItem;
+      margin: 0 5px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.FieldConfiguration {
+  padding: 16px 0;
+  max-height: 350px;
+  display: flex;
+  flex-direction: column;
+
+  .FieldContent {
+    flex: 1;
+    overflow-y: auto;
+  }
+}

@@ -1,0 +1,56 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.ModalContainer {
+  width: calc(55vw - 15px);
+  // height: 100%;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+  overflow-x: hidden !important;
+  margin: 15px 15px 15px 20px !important;
+  // overflow: initial !important;
+  @include for-phone-and-tab {
+    width: 100vw;
+    border-radius: 0px;
+  }
+
+  & .ImageContainer {
+    min-height: 300px;
+
+    min-height: 380px;
+    margin: 30px 50px 20px;
+    // padding: 76px 218px 80px;
+    background-color: #eff1f4 !important;
+  }
+  & .ReactCrop {
+    max-width: calc(100% - 120px);
+  }
+}
+
+.HeaderClass {
+  width: 100%;
+  height: 66px;
+  padding: 19px 0 0;
+  opacity: 0.75;
+  border-radius: 6px;
+  background-color: #f3f6f9 !important;
+}
+
+.TitleClass {
+  width: 123px;
+  height: 25px;
+  margin: 1px 536px 20px 50px;
+  font-size: 21px;
+  font-weight: 600;
+  color: #1f243d;
+}
+.ModalContent {
+  width: 55vw !important;
+}
+.CropBtnClass {
+  min-width: 90px ;
+}
+
+.FillClass {
+  fill: #14162a;
+}

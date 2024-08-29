@@ -1,0 +1,68 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.ContainerClass {
+    border-radius: 6px;
+    background-color: $white;
+    overflow: hidden!important;
+    width: 500px;
+}
+.ModalContainer {
+    min-height: 300px;
+}
+.ContentClass {
+    overflow: hidden !important
+}
+.AlertCircle{
+    padding: 6px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $red-v23;
+    border-radius: 50px;
+    border: 8px solid $red-v24;
+    margin-bottom: 16px;
+}
+.MdCancelBtn {
+    border: none;
+    color: $gray-v89;
+}
+.Container {
+    .HeaderContainer {
+        height: 50px;
+        background-color: $gray-v63;
+        border-bottom: solid 1px $gray-v68;
+
+        h2 {
+            margin-bottom: 0;
+        }
+
+        .CloseIcon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+    }
+    .MainContainer {
+        .AlertIcon {
+            align-self: center;
+        }
+    }
+
+    .ButtonContainer {
+        height: 64px;
+        padding: 0 20px;
+        box-shadow: 0 -4px 20px 0 rgba(0, 0, 0, 0.1);
+
+        .Button {
+            height: 38px;
+        }
+
+        .CancelButton {
+            padding: 6px 30px;
+        }
+    }
+}
+.ZIndex {
+    z-index: 500;
+}

@@ -1,0 +1,141 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+.ModalContainer {
+  width: 100%;
+  // opacity: 0.75;
+  background-color: rgba(20, 22, 42, 0.75) !important;
+
+  .HeaderContainer {
+    justify-content: space-between;
+    width: 100%;
+
+    .TitleContainer {
+      p {
+        color: $white;
+        font-size: $font-size-sm;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.InvoiceButton {
+  width: 32px;
+  height: 32px;
+  background-color: $white;
+  opacity: 0.2;
+  border-radius: 4px;
+
+  svg {
+    margin: auto;
+  }
+}
+
+.MainContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 35px;
+
+  .SubContainer {
+    width: 50%;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .ZoomContainer {
+    background-color: rgba(0, 0, 0, 0.75);
+    height: 44px;
+    bottom: 34px;
+    border-radius: 4px;
+    width: fit-content;
+    transform: none !important;
+
+    .PageNumber {
+      padding: 14px 20px;
+      color: $white;
+      font-size: $font-size-smt;
+      position: relative;
+
+      .ZoomDivider {
+        position: absolute;
+        width: 1px;
+        height: 44px;
+        opacity: 0.5;
+        background-color: $white;
+        right: 0;
+        bottom: 0px;
+      }
+    }
+
+    .ZoomMain {
+      justify-content: space-evenly;
+      margin: 0 20px;
+      svg {
+        margin-right: 25px !important;
+        min-height: 16px;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+.VideoContainer {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: 650px;
+}
+.VideoMainContainer {
+  margin: 50px;
+  height: 80%;
+  width: 100%;
+  margin-top: 50px;
+}
+.ImageComponentDiv {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 62px;
+  height: calc(100vh - 100px);
+}
+.Image {
+  max-width: 100%;
+}
+.header {
+  width: '100%';
+  top: 0;
+}
+.Icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  background-color: #555765;
+}
+.Title {
+  height: 15px;
+  font-size: $font-size-sm;
+  color: #fff;
+}
+.downloadIcon {
+  fill: #fff !important ;
+  margin: auto !important;
+}
+
+.ContainerHeight {
+  height: calc(100% - 62px);
+}
+
+.MainConatinerDimension {
+  height: 80vh;
+  width: 80vw;
+  margin: auto;
+}

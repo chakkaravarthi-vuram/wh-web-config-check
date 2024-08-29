@@ -1,0 +1,25 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.Tab {
+    border-bottom: 1px solid $gray-v102;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 2 !important;
+}
+.TaskList{
+    padding: 24px;
+    background-color: $white;
+    min-height: inherit;
+
+    .TabText {
+        margin-left: 0 !important;
+        margin-bottom: 10px;
+    }
+    .ActiveBar{
+        height: 4px;
+    }
+    .Tasks{
+        // height: calc(100% - 31px);
+    }
+}

@@ -1,0 +1,22 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.HeaderContent {
+  padding: 32px 32px 0px 32px;
+}
+.FooterContent {
+  padding: 0px 32px 32px 32px;
+}
+.InsertFieldCardContainer {
+  height: fit-content;
+  padding: 32px;
+}
+.InsertFieldDropdown {
+  height: 230px;
+}
+.DropdownList {
+  max-height: 150px !important;
+}
+.LabelClassName label {
+  color: $black-v20 !important;
+}

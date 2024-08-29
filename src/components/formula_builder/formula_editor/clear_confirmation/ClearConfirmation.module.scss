@@ -1,0 +1,22 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.PopperPosition {
+    top: 5px!important;
+}
+
+.ClearContainer {
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 3px 14px 0 rgba(0, 0, 0, 0.27);
+    background-color: $white;
+
+    h3 {
+        margin: 0;
+    }
+
+    .ConfirmButton {
+        height: 28px !important;
+        padding: 3px 8px !important;
+    }
+}

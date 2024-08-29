@@ -1,0 +1,46 @@
+@import 'scss/constants';
+
+.DashboardConfig {
+  display: flex;
+  height: calc(100vh - 60px);
+
+  &.ReadOnlyMode {
+    height: calc(100vh - 222px);
+  }
+}
+
+.MainPreview {
+  flex: 9;
+  width: 70%;
+  height: 100%;
+  background-color: $white;
+}
+
+.Preview {
+  height: 100%;
+  border: 1px solid $gray-v108;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.MainTabClass {
+  border-bottom: 1px solid $gray-v108;
+}
+
+.ColumnWidthSmall {
+  width: 72px !important;
+}
+.ColumnWidthMedium {
+  width: 120px !important;
+}
+.ColumnWidthLarge {
+  width: 160px !important;
+}
+
+.HeaderEllipsis {
+    overflow-x: hidden;
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: default;
+}

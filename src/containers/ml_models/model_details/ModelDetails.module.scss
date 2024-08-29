@@ -1,0 +1,367 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.ModelDetailsContainer {
+    border-radius: 6px;
+    border: 1px solid $gray-v108;
+    padding: 0px 24px 24px 24px;
+    margin-top: 30px;
+    background-color: $white;
+}
+
+.TryItResultContainer {
+    border-radius: 6px;
+    border: 1px solid $gray-v108;
+    padding: 24px;
+    margin-top: 30px;
+    background-color: $white;
+}
+
+.ModelCardData {
+    justify-content: space-between;
+    // padding-top: 15px;
+}
+
+.ModelCardColumnRight {
+    padding-left: 30px;
+}
+
+.ModelCardColumn {
+    flex: 1; 
+}
+
+.ModelCardTitle{
+    padding: 20px 0px 0px 0px;
+}
+
+.SampleDescriptionValue {
+    padding-top: 3px;
+}
+
+.SampleFileContainer {
+    border: 1px solid $gray-v1;
+    border-radius: 4px;
+    padding: 5px
+}
+
+.SupportedFileStyles {
+    border-radius: 16px;
+    padding: 3px 6px;
+    margin-left: 5px;
+    font-size: 10px !important;
+    font-weight: 500;
+}
+
+.TextStyle {
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.TextStyle1 {
+    font-size: 12px;
+    font-weight: 400;
+    color: $gray-v98;
+
+
+}
+
+.Thumbnail label {
+    margin-bottom: 0;
+}
+
+.TeamDesc {
+    color: $gray-v98;
+    width: 50vw;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.ValidationAccuracyBG {
+    background-color: $orange-v30;
+    padding: 4px 10px 4px 10px;
+    border-radius: 16px;
+    width: fit-content;
+}
+
+.ValidationAccuracy {
+    color: $red-v30;
+    padding: 4px 10px 4px 0px;
+    border-radius: 16px;
+    width: fit-content;
+}
+
+.ValidationAccuracyScore {
+    color: $white;
+    background-color: $orange-v33;
+    padding: 4px 10px 4px 10px;
+    border-radius: 16px;
+    width: fit-content;
+}
+
+.ModelTextOutputBase {
+    padding-top: 3px;
+    text-align: left;
+}
+
+.ModelTextOutputCommon {
+    @extend .ModelTextOutputBase;
+    padding: 4px 10px 4px 10px;
+    border-radius: 16px;
+    width: fit-content;
+}
+
+.ModelTextOutputPositive {
+    @extend .ModelTextOutputCommon;
+    color: $green-v27;
+    background-color: $green-v24;
+    margin-top: 10px; 
+}
+
+.ButtonClass {
+    border-radius: 0px !important;
+}
+.ModelTextOutputNegative {
+    @extend .ModelTextOutputCommon;
+    color: $red;
+    background-color: $red-v3;
+    margin-top: 10px; 
+}
+
+.ModelTextOutputNeutral {
+  @extend .ModelTextOutputCommon;
+  color: $gray-v44;
+  background-color: $gray-v57;
+  margin-top: 10px; 
+}
+
+.ModelDetailsListing {
+    height: calc(100vh - 215px);
+    overflow-y: auto;
+    border-radius: 6px;
+    border: 1px solid $gray-v108;
+    padding: 24px;
+    margin: 15px;
+    background-color: $white;
+}
+
+.FileClass {
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.TextClass {
+    width: 100%;
+    height: 100%;
+}
+
+.CreateForm {
+    color: $blue-v39;
+    letter-spacing: normal;
+    @extend %FS13;
+  }
+
+.FileUploadClass {
+    border: 1px solid $gray-v68;
+    padding: 15px;
+    min-height: 55px;
+    margin-bottom: 5px;
+    color: $gray-v9;
+    @extend %FS13;
+    text-align: center;
+}
+
+.FileUploadText {
+    color: $blue-v39;
+    cursor: pointer ;
+    padding-left: 5px;
+    
+}
+
+.Icon {
+    fill: rgb(149, 155, 163);;
+}
+
+.Failed {
+  color: $red-v5;
+}
+.Completed,
+.Inprogress {
+  color: $gray-v3;
+}
+
+.ProgressBar {
+  min-width: 75px;
+  right: 0px;
+  flex-grow: 0;
+}
+.Button {
+  font-size: $font-size-smt;
+  padding: 5px 13px;
+  width: fit-content;
+  height: fit-content;
+}
+.Icon {
+  height: 32px;
+  width: 23px;
+  margin: 11px 15px 9px 15px;
+  pointer-events: none;
+}
+.StandardFileIcon {
+  height: 32px;
+  width: 23px;
+  margin: 11px 15px 9px 15px;
+  object-fit: contain;
+  pointer-events: none;
+}
+.Container {
+  border-radius: 2px;
+  background-color: #e9e9e9;
+  height: 52.5px;
+}
+.NameIconComponent {
+  // margin-right: 15px;
+  border: solid 1px $gray-v68;
+  background-color: $gray-v114;
+  height: 54px;
+  border-radius: 2px;
+  box-shadow: 3px 2px 5px 0 rgba(0, 0, 0, 0.11);
+  // margin: 11px 15px 11px 15px;
+  // height: 58px;
+}
+.Margin {
+  border-right: 1px solid $gray-v65;
+  padding-right: 10px;
+  line-height: 14px !important;
+  display: flex;
+  align-items: center;
+}
+.NameContainer {
+  width: calc(100% - 50px) !important
+}
+.IconContainer {
+  background-color: $white important;
+  border-radius: 2px;
+  :hover {
+    background-color: black;
+    width:54px;
+    height: 52.5px;
+    opacity: 0.5;
+    border-radius: 2px;
+  } 
+}
+.DeleteIcon {
+  fill: $gray-v87 !important;  
+}
+.DelIconAlignment{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.FileIcon {
+  width: 165px;
+  height: 100px;
+  position: relative;
+
+  // padding-left: 60px;
+  // padding-top: 15px;
+  border-radius: 3px;
+  background-color: $gray-v114;
+}
+.EyeIcon {
+  margin-top: -65px;
+  z-index: 5;
+  position: relative;
+  pointer-events: none;
+  margin-left: 15px;
+}
+.VideoHoverIcon {
+  margin-top: -79px;
+  z-index: 5;
+  margin-left: 15px;
+  position: relative;
+  pointer-events: none;
+}
+.FileDetails {
+  margin-top: -15px;
+}
+.ImageIcon {
+  width: 53px !important;
+  height: 52px;
+  // object-fit: contain;
+  // margin-top: 15px;
+  // margin-left:60px
+}
+.VideoIcon {
+  margin-top: -120px;
+  margin-left: 70px;
+  position: relative;
+  z-index: 10;
+}
+.Unsupported {
+  width: 53px !important;
+  height: 52px;
+  // border-radius: 3px;
+  // background-color: #000 !important;
+  // opacity: 0.5;
+}
+.DownloadIcon{
+  cursor: pointer;
+  fill: $gray-v87;
+}
+.DownloadDeleteIconContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  width: 24px;
+  @include border-radius(4px);
+
+  &:hover{
+    background-color: $white;
+  }
+}
+.RetryIcon{
+  fill: $gray-v87;
+}
+.FileName {
+  color: $blue-v39;
+  cursor: pointer;
+  // text-overflow: ellipsis;
+  // overflow: hidden !important;
+  // white-space: nowrap;
+  // width: fit-content;commented to prevent overlap with adjacent form fields data
+}
+.FileName:hover {
+  text-decoration: underline;
+}
+.Thumbnail {
+  width:54px;
+  height: 52px;
+  background-color: none !important;
+  :hover {
+    background-color: none !important;
+  }
+}
+
+
+
+.container {
+  width: 500px; /* Set the width of your container */
+}
+
+.image {
+  width: 100%; /* Make the image take up 100% of the container width */
+  height: 100%; /* Make the image take up 100% of the container height */
+  object-fit: cover; /* Maintain aspect ratio while covering the container */
+}
+.Tab {
+  border-bottom: 1px solid $gray-v102;
+  padding: 12px 24px 0 24px;
+}
+.TabText {
+  margin-left: 0 !important;
+  margin-bottom: 10px;
+}

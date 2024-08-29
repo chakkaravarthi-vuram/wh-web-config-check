@@ -1,0 +1,31 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+%BackgroundBox {
+  background-color: $gray-v21;
+}
+
+.Container {
+  height: calc(100% + 2px);
+  border-radius: 4px;
+}
+
+.Editable {
+  &:hover {
+    @extend %BackgroundBox;
+  }
+}
+
+.BackgroundBox {
+  @extend %BackgroundBox;
+}
+
+.Input {
+  border: none;
+  outline: none;
+  &::placeholder {
+    color: $gray-v6;
+    opacity: 1;
+    font-weight: $fw-normal;
+  }
+}

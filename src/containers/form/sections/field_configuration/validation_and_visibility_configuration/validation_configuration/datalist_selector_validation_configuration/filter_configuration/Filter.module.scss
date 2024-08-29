@@ -1,0 +1,69 @@
+@import '../../../../../../../../scss/constants';
+@import '../../../../../../../../scss/utilities';
+
+.Dropper {
+    padding-left: 15px;
+    max-width: 31%;
+  }
+  
+  .CenterDropper {
+    padding-left: 20px;
+    max-width: 30%;
+  }
+  
+  .IfElseIntend {
+    margin-left: 20px;
+  }
+  
+  .DeleteIconContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    width: 24px;
+    @include border-radius(4px);
+    &:hover{
+      background-color: $gray-v96;
+    }
+  }
+  
+  .DeleteCol {
+    text-align: right;
+  }
+  
+  .RowConditions {
+    border: 1px dashed #d8dee9;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .DropdownPopper {
+    width: 361px;  
+    overflow-y: hidden;
+    @include for-hd-screen {
+      width: 335px;
+    }
+  }
+  .RowMargin {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .ErrorFilter {
+    border: 1px solid $red;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .AddCondition{
+    fill: $blue-v21;
+    color: $blue-v21;
+    stroke-width: 3px
+  }
+
+  .StaticDynamic {
+    width: 20%;
+  }
+
+  .ValueField {
+    width: 70%;
+    margin-left: 8px;
+  }

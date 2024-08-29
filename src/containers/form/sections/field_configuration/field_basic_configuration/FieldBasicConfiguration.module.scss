@@ -1,0 +1,27 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+
+.StylesOption {
+    &>div {
+      width: 20%;
+    }
+  }
+.LinkTypeClass label {
+    color: $gray-v3 !important;
+    font-weight: 500 !important;
+}
+.AlignEnd {
+    align-items: end;
+}
+
+.FieldLabel label {
+  margin-bottom: 0px;
+}
+
+.ColorBtn{
+    width: 40px;
+    height: 40px;
+    border: 1px solid $gray-v102;
+    border-radius: 4px;
+}

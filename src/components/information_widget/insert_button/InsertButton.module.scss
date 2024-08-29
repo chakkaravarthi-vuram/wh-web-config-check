@@ -1,0 +1,16 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.HeaderContent {
+  padding: 16px 32px;
+}
+.FooterContent {
+  padding: 16px 32px;
+}
+.InsertButtonCardContainer {
+  height: 230px;
+  padding: 0px 32px 0px 32px;
+}
+.LabelClassName label {
+  color: $black-v20 !important;
+}

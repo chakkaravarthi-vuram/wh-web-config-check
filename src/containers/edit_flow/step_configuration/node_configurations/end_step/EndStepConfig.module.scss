@@ -1,0 +1,32 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.ContentTitleClass {
+    color: $black-v22;
+    margin-bottom: 12px !important;
+}
+.ContentSubTitleClass label {
+    color: $black-v26;
+    margin-bottom: 12px !important;
+}
+.Gap8Imp {
+    gap: 8px !important;
+}
+.RadioLabelClass {
+    color: $gray-v3;
+}
+.ConfigurationTitleClass {
+    color: $gray-v3;
+    line-height: 20px;
+    font-weight: 500;
+}
+.DropDownMaxWidth {
+    max-width: 380px;
+}
+.StatusInfoClass {
+    color: $gray-v104;
+    max-width: 380px;
+}
+.DeleteStepButton {
+    color: $red-v25 !important;
+}

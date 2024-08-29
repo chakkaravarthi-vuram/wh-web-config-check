@@ -1,0 +1,120 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.Tab {
+  border-bottom: 1px solid $gray-v102;
+  padding: 0px 24px;
+  position: relative;
+  z-index: 2;
+  background-color: $white;
+
+  p {
+    @extend %FS13
+  }
+}
+
+.ActiveBar {
+  height: 4px;
+}
+
+.RowContainer {
+  tr:hover td:nth-child(1) svg path {
+    fill: none;
+    stroke: $blue-v39;
+  }
+}
+
+.LeftBorder {
+  border-left: 1px solid $gray-v68;
+  padding-left: 12px;
+}
+
+.ListingTable {
+  overflow-y: auto;
+  background-color: $white;
+}
+
+.SearchIcon {
+  cursor: pointer;
+  outline: none;
+  margin-right: 8px;
+}
+
+.Search {
+  border-radius: 3px;
+}
+
+.CreateTeamButton > div > {
+  & path {
+    fill: $white !important;
+}
+}
+
+.SearchOuterContainer {
+  border-radius: 4px;
+  padding: 4px 0px !important;
+  border: 1px solid $gray-v108;
+  width: 140px;
+  height: 24px;
+  @include transition(0.1s);
+}
+
+.ExpandedSearch {
+  width: 256px !important;
+}
+
+.SearchCloseIcon {
+  &:focus{
+    outline: none;
+  }
+}
+
+.SortContainer {
+  padding: 2px 6px 2px 8px;
+  border-radius: 4px;
+  background-color: $blue-v48;
+}
+
+.TableTaskContainer {
+  border-radius: 6px;
+  overflow-y: auto;
+  height: calc(100vh - 196px);
+  padding: 0px 24px;
+}
+
+.TableTrialContainer {
+  height: calc(100vh - 236px) !important;
+}
+
+.TeamTable{
+  & thead{
+   & tr {
+      & th {
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+      }
+      & th:first-child {
+        padding-left: 12px;
+      }
+      & th:last-child {
+        padding-right: 12px;
+      }
+    } 
+  }
+  & tbody{
+    & tr:hover td:nth-child(1) svg path {
+      fill: none;
+      stroke: $blue-v39;
+    }
+    & td:first-child {
+      padding-left: 12px;
+    }
+    & td:last-child {
+      padding-right: 12px;
+    }
+    & td{
+      padding-top: 12px !important;
+      padding-bottom: 12px !important;
+    }
+  }
+}

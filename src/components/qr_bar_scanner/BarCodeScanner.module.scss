@@ -1,0 +1,19 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+.ContainerClass {
+    width: 434px !important;
+    border-radius: 2px;
+}
+
+.HeaderClass {
+    background-color: $white;
+    border: none;
+    font-size: 22px;
+    padding: 10px 10px 10px 16px;
+}
+
+.MainContentClassName {
+    height: fit-content !important;
+    padding: 0;
+}

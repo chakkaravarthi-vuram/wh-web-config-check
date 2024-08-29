@@ -1,0 +1,17 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.Title {
+    font-size: $font-size-md;
+    font-weight: $fw-semibold;
+    line-height: 17px;
+    color: $gray-v3;
+}
+.Container {
+    height: 300px;
+}
+.Info {
+    font-size: $font-size-sm;
+    line-height: 15px;
+    color: $gray-v86;
+}

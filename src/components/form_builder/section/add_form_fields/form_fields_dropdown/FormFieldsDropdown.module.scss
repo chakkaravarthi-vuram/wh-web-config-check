@@ -1,0 +1,98 @@
+@import '../../../../../scss/constants';
+@import '../../../../../scss/utilities';
+
+.Dropdown {
+  overflow-y: auto;
+  width: 387px;
+  height: 360px;
+  @include for-hd-screen {
+    height: 330px;
+    width: 360px;
+  }
+  // height: inherit;
+}
+
+.Container {
+  border-radius: 6px;
+  box-shadow: 0 2px 10px 0 #0000004c;
+  list-style: none;
+  top: 0px;
+  background-color: $white;
+
+  & .ListContainer {
+    padding: 9px 20px;
+    margin: 0 0 2px;
+    border-bottom: 1px solid $gray-v1;
+    background-color: $white;
+    width: 100%;
+    border-right: 0;
+    border-top: 0;
+    border-left: 0;
+    &:hover {
+      background-color: $gray-v7;
+    }
+    &:last-child{
+      margin-bottom: 3px;
+    }
+    @include for-hd-screen {
+      padding: 6.5px 15px;
+    }
+  }
+  & .FFSectionTitle {
+    padding: 6.5px 15px;
+    border-bottom: 1px solid $gray-v1;
+    background-color: $gray-v49;
+    width: 100%;
+    border-right: 0;
+    border-top: 0;
+    border-left: 0;
+  }
+  &:last-of-type {
+    border-bottom: 0;
+  }
+}
+
+.MenuContainer {
+  border-radius: 6px;
+  box-shadow: 0 2px 10px 0 #0000004c;
+  list-style: none;
+  overflow-y: auto;
+  top: 0px;
+  width: 240px;
+  height: 124px;
+  z-index: 1;
+  overflow: hidden !important;
+
+  & .ListContainer {
+    padding: 15px;
+    border-bottom: 1px solid $gray-v1;
+    background-color: $gray-v7;
+    width: 100%;
+    border-right: 0;
+    border-top: 0;
+    border-left: 0;
+    &:hover {
+      background-color: $white;
+    }
+    white-space: break-spaces;
+  }
+  &:last-of-type {
+    border-bottom: 0;
+  }
+}
+
+.SelectedMenuItem {
+  background-color: $white !important;
+}
+
+.DropdownPopper {
+  height: 330px;
+  @include for-hd-screen {
+    height: 330px;
+  }
+
+  @include for-medium-hd-screen {
+    height: 250px;
+  }
+}
+

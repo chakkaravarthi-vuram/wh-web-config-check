@@ -1,0 +1,112 @@
+@import 'scss/utilities';
+@import 'scss/constants';
+
+.AccordionContainerClass {
+  width: 320px;
+  padding: 0px 24px;
+
+  border-bottom: 1px solid $gray-v1;
+  border-radius: 0px !important;
+}
+
+.Sticky {
+  position: sticky;
+  top: 0px;
+  width: 272px !important;
+  padding: 16px 0px !important;
+  border-radius: 0px !important;
+  z-index: 2;
+  background-color: $white;
+}
+
+.AccordionHeader {
+  line-height: 20px;
+  color: $black-v22 !important;
+}
+
+.ChevronClass {
+  fill: $gray-v101 !important;
+}
+
+.ChevronContainerClass {
+  height: 20px;
+  width: 18px;
+  justify-content: center;
+}
+
+.AccordionChildren {
+  width: 272px;
+}
+
+.CardContainerClass {
+  border-radius: 3px;
+  border: 1px solid $gray-v68;
+  background: $white;
+
+  &:first-child {
+    margin-top: 0px !important;
+  }
+}
+
+.CardClass {
+  display: flex;
+  align-content: center;
+  row-gap: 10px;
+  flex-direction: row-reverse;
+  justify-content: flex-end !important;
+  padding: 8px !important;
+  overflow: hidden;
+}
+
+.RuleName {
+  color: $gray-v89;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+   word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 75% !important;
+}
+.RuleList {
+  max-height: 200px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.RuleEditIcon {
+  &:hover {
+    & path {
+      fill: $blue-v39;
+      
+    }
+  }
+}
+
+.FieldNameContainer {
+  // width: 256px;
+  height: 32px;
+  padding: 8px 4px 8px 12px;
+  border-radius: 3px;
+  background: $gray-v107;
+
+  &:first-child {
+    margin-top: 0px;
+  }
+}
+
+.AddOrImportButtonClass {
+  width: 100%;
+  button {
+    width: 272px;
+    height: 40px;
+    padding: 11px 12px;
+    gap: 8px;
+    border-radius: 2px;
+    border: 1px solid $gray-v1;
+    background: $white;
+    color: $blue-v39;
+  }
+}

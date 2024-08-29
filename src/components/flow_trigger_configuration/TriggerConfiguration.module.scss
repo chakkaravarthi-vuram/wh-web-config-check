@@ -1,0 +1,93 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.ContentModal {
+  width: 85vw !important;
+  // overflow-x: hidden !important;
+  // overflow-y: hidden !important;
+  overflow: -moz-hidden-unscrollable !important;
+  @include border-radius(6px);
+  @include for-phone-and-tab {
+    width: 100% !important;
+  }
+  @include for-desktop {
+    margin: 0px !important;
+    overflow: initial !important;
+  }
+}
+.ChooseFlowDropdown {
+  margin-bottom: 0 !important;
+}
+.SaveButton {
+  height: 36px;
+}
+.CancelButton {
+  font-size: $font-size-mdt;
+  color: $gray-v93;
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: $gray-v109 !important;
+  padding: 8px 16px;
+  height: 36px;
+  &:hover {
+    color: $black-v18 !important;
+  }
+}
+.DeleteButton {
+  font-size: $font-size-mdt;
+  color: $red-v25 !important;
+  padding: 8px 16px;
+  height: 36px;
+  cursor: pointer;
+  &:hover {
+    background: $red-v26;
+  }
+}
+.ModalHeader {
+  height: fit-content !important;
+  padding: 0px !important;
+}
+.Header {
+    width: 100%;
+    height: 59px;
+    padding: 18px 0 20px 30px;
+}
+.CloseIcon {
+    margin: 15px 15px 16px 0px;
+}
+.InputContainer {
+  width: 70% !important;
+}
+.ReadOnlyClass {
+  margin-bottom: 0px !important;
+  background-color: $gray-v40;
+  padding: 16px 16px 0;
+  overflow: hidden;
+}
+.MainContent {
+  padding: 30px 30px 0px 30px  !important;
+}
+.MainContainer {
+  height: 100%;
+  @include border-radius(6px);
+  @include for-phone-and-tab {
+    width: 100%;
+    z-index: 6;
+  }
+  background-color: $white;
+}
+.ContentContainer {
+  height: fit-content;
+  overscroll-behavior: contain;
+
+  @include for-phone-and-tab {
+    padding: 15px;
+  }
+}
+.AddIcon{
+  height: 16px;
+  width: 16px;
+}
+.ChooseFlowContainer {
+  width: 70% !important;
+}

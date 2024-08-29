@@ -1,0 +1,120 @@
+
+@import '../../../scss/constants';
+
+.RuleWrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  .ErrorMessage{
+    font-size: 11px;
+    font-weight: 400;
+    color: $red-v22;
+  }
+}
+.Rule{
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    width: 100%;
+
+    .When{
+        width: 20%;
+    }
+
+    .OperatorAndValue {
+        display: flex;
+        align-items: start;
+        gap: 8px;
+        width: 80%;
+        .Operator{
+          max-width: 50%;
+        }
+
+        .Value{
+          min-width: 40%;
+          max-width: 75%;
+          border-radius: 2px;
+          background-color: $white;
+          gap: 8px;
+          display: flex;
+        }
+        
+        .ValueType {
+          flex-basis: 30%;
+        }
+        
+        .ValueTypeFlex {
+         
+          > button {
+            border-radius: 2px !important;
+            background-color: $blue-v47 !important;
+          }
+        }
+        
+        .ValueTypeFlex > button > div > div > div > div {
+          color: $blue-v39 !important;
+          font-size: $font-size-sm !important;
+          font-weight: $fw-semibold !important;
+        }
+    }
+    
+    .DropdownPopper{
+      min-width: 200px;
+  }
+}
+
+.DropdownPopperOperator{
+  min-width: 138px;
+}
+
+
+// RValue With Field Mapping
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+.DateErrMsg{
+    margin-top: 10px;
+    margin-bottom: 0;
+ }
+
+.DualField {
+    display: flex;
+    align-items: start;
+    gap: 8px;
+
+    .Text {
+       height: 34px;
+       display: flex;
+       align-items: center;
+    }
+}
+ 
+.height32{
+    height: 32px;
+}
+.RoundedField{
+    border-radius: 3px;
+    overflow: hidden;
+}
+.UserPicker{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-top: 3px;
+}
+.SingleDropdwon{
+   width: 200px;
+}
+.MultiDropdown {
+    width: 200px;
+}

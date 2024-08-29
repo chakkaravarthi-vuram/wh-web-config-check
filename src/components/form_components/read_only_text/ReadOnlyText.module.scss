@@ -1,0 +1,111 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+.ContentContainer {
+  background: #ffffff;
+  height: 100%;
+  border: 0;
+  border-radius: 6px;
+  padding-top: 16px;
+}
+.ModalContainer {
+  border-radius: 6px;
+  min-width: 90%;
+  align-items: flex-start !important;
+  background: #ffffff;
+}
+.ModalHeading {
+  background-color: #fff;
+  height: 40px;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+.ModalBodyStyle {
+  height: 82vh;
+}
+.ModalBodyStyle::-webkit-scrollbar {
+  width: 5px;
+}
+.ModalBodyStyle::-webkit-scrollbar-thumb {
+  background: #979797;
+  border-radius: 6px;
+}
+.FileName {
+  color: $blue-v39;
+  cursor: pointer;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  white-space: nowrap;
+  // width: fit-content;commented to prevent overlap with adjacent form fields data
+}
+.FileName:hover {
+  text-decoration: underline;
+}
+.CloseIconView {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+}
+// .DownloadIcon {
+//   margin-right: 20px;
+// }
+.IconContainer{
+  height: 24px;
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include border-radius(4px);
+  &:hover{
+    background-color: $gray-v96;
+  }
+}
+.CloseIcon{
+  width: 11px;
+  height: 12px;
+}
+.DownloadIcon{
+  fill: $gray-v87;
+}
+@media only screen and (min-width: 1441px) {
+  .ModalBodyStyle {
+    height: 88vh;
+  }
+}
+.DeleteIcon {
+  fill: $gray-v87;
+}
+.Margin {
+  border-right: 1px solid $gray-v65;
+  padding-right: 20px;
+  line-height: 12px !important;
+}
+
+.Indicator{
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+}
+.EditedBackground{
+  background-color: $orange-v15;
+}
+.DeletedBackground{
+  background-color: $red-v15;
+}
+.AddedBackgroung{
+  background-color: $green-V9;
+}
+.AddedCard{
+  background-color: #f0faf1;
+}
+.EditedCard{
+  background-color: #fdf4ed;
+}
+.DeletedCard{
+  background-color: #fcf0f0;
+}
+.IndicatorContainer{
+  grid-gap: 20px;
+}
+// .AuditCard{
+  // height: 46px;
+// }

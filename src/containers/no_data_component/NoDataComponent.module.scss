@@ -1,0 +1,17 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+.IconTitle {
+    font-size: $font-size-sm;
+    font-weight: $fw-semibold;
+    color: $black-v12;
+    width: 100%;
+    text-align: center;
+}
+.IconSubtitle {
+    font-size: $font-size-smt;
+    font-weight: $fw-normal;
+    color: $gray-v104;
+    width: 100%;
+    text-align: center;
+}

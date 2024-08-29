@@ -1,0 +1,291 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.AddIcon{
+  height: 12px;
+  width: 12px;
+  fill: $blue-v39 !important;
+}
+.MappingTItle {
+  font-weight: $fw-medium !important;
+  font-size: $font-size-mdt !important;
+  line-height: 16px;
+  color: $gray-v3 !important;
+}
+.AddBtn {
+  line-height: 18px;
+}
+.DropdownOption {
+  border-bottom: none !important;
+}
+.MappingTable{
+  border:none !important;
+  border-collapse: collapse;
+  table-layout: fixed;
+   & thead{
+    border:none !important;
+    // border-top: 1px solid $gray-v1 !important;
+     & tr:hover{
+        border:none;   
+     }
+     & td{
+        //  width: 50px !important;
+         padding: 5px 0;
+         background-color: transparent;
+         border:none !important;         
+     }
+      & td:first-child{
+          border: none !important;
+          width: 120px !important;
+          padding-left: 8px;
+      }
+      & td:last-child{
+        width: 30px !important;
+      }
+      & td:nth-child(3) {
+        width: 120px !important;
+      }
+      & td:nth-child(2) {
+        width: 120px !important;
+      }
+      
+     & td:hover{
+        background-color: transparent;
+        border:none !important;   
+     }
+   }
+   & tbody{
+      margin-top: 15px;
+       & tr:hover{
+          border:none;   
+       }
+       & td{
+           padding:0;
+           background-color: transparent;
+           border:none !important;         
+       }
+        & td:first-child{
+            border: none !important;
+            width: 120px !important;
+        }
+        & td:last-child{
+          width: 30px !important;
+        }
+        & td:nth-child(3) {
+          width: 120px !important;
+        }
+        & td:nth-child(2) {
+          width: 120px !important;
+        }
+        
+       & td:hover{
+          background-color: transparent;
+          border:none !important;   
+       }
+   }
+   & tbody{
+       & td{
+          padding-top: 5px;
+          padding-right:20px;
+          vertical-align: top;
+      }
+      & tr{
+          & td{
+              padding-top: 15px;
+          }
+      }
+   }
+}
+
+.SubMappingTable{
+  border:none !important;
+  border-collapse: collapse;
+  table-layout: fixed;
+   & thead{
+    border:none !important;
+     & tr:hover{
+        border:none;   
+     }
+     & td{
+         padding:0;
+         padding-bottom: 12px !important;
+         background-color: transparent;
+         border:none !important;         
+     }
+      & td:first-child{
+          border: none !important;
+          width: 120px !important;
+      }
+      & td:last-child{
+        width: 30px !important;
+      }
+      & td:nth-child(3) {
+        width: 120px !important;
+      }
+      & td:nth-child(2) {
+        width: 120px !important;
+      }
+      
+     & td:hover{
+        background-color: transparent;
+        border:none !important;   
+     }
+   }
+   & tbody{
+      margin-top: 15px;
+       & tr:hover{
+          border:none;   
+       }
+       & td{
+           padding:0;
+           background-color: transparent;
+           border:none !important;         
+       }
+        & td:first-child{
+            border: none !important;
+            width: 120px !important;
+        }
+        & td:last-child{
+          width: 30px !important;
+        }
+        & td:nth-child(3) {
+          width: 120px !important;
+        }
+        & td:nth-child(2) {
+          width: 120px !important;
+        }
+        
+       & td:hover{
+          background-color: transparent;
+          border:none !important;   
+       }
+   }
+   & tbody{
+       & td{
+          padding-top: 5px;
+          padding-right:20px;
+          vertical-align: top;
+      }
+      & tr{
+        background-color: $gray-v99 !important; //
+          & td{
+              padding-top: 15px;
+          }
+      }      
+   }
+}
+.OptionContainer{
+  max-height: 150px !important;
+}
+.DeleteIconContainer {
+  width: 24px;
+  height: 24px;
+  @include border-radius(4px);
+  margin-left: 5px;
+  cursor: pointer;
+  & .DeleteIcon{
+    path {
+      fill: $gray-v87;
+    }
+  }
+  &:hover {
+    background-color: $gray-v96;
+  }
+}
+.MappingContainer {
+  overflow-y: auto !important;
+  // overflow-x: hidden !important;
+}
+.SubMappingContainer {  
+  overflow-y: hidden !important;
+  // width: 360% !important;
+  background-color: $gray-v99;//
+  
+
+}
+
+.TableMappingContainer {
+  width: 347% !important;
+  background-color: $gray-v99 !important;
+}
+.ErrorInputBorder {
+  border: 1px solid $red-v18 !important
+}
+.ErrorContainer {
+  width: 347% !important;
+}
+
+.TableRow {
+  border-top: 1px solid $gray-v1 !important;
+  border-bottom: 1px solid $gray-v1 !important;
+  & td:first-child{
+    padding-left: 6px !important
+  }
+}
+
+.SubTableRow {
+  border-top: 0px !important;
+  border-bottom: 1px solid $gray-v1 !important;
+  & td:first-child{
+    padding-left: 10px !important;
+  }
+  &:first-child td {
+    padding-top: 0px !important;
+  }
+  &:last-child{
+    border-bottom: 0px !important;
+  }
+}
+
+.Field{
+  background-color: $white;
+}
+
+.ListContainer {
+  border-bottom: 1px solid $gray-v1;
+  padding-top: 12px;
+}
+.ParentListContainer{
+  background-color: $gray-v99;
+  border-left: 3px solid $blue-v39;
+  padding-top: 12px;
+  &:last-child{
+    border-bottom: 0px !important;
+  }
+}
+.ColMid {
+  width: 32%;
+  padding: 0 8px 4px 8px;
+}
+.ColMini {
+  width: 4%;
+  padding: 0 8px 4px 8px;
+  height: 36px;
+}
+.ChildContainer {
+  padding: 0 0 6px 8px;
+  .ListContainer {
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+}
+.Header {
+  font-weight: $fw-medium;
+  padding: 16px 12px 12px 8px;
+  border-bottom: 1px solid $gray-v1;
+  @extend %FS13;
+  color: $gray-v89;
+  &:first-child {
+    width: 32%;
+  }
+  &:nth-child(2) {
+    width: 32%
+  }
+  &:nth-child(3) {
+    width: 32%;
+  }
+  &:last-child {
+    width: 4%;
+  }
+}

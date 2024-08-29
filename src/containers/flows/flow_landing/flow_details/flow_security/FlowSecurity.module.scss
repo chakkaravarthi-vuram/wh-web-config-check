@@ -1,0 +1,89 @@
+@import '../../../../../scss/constants';
+@import '../../../../../scss/utilities';
+
+.SecurityTitle {
+    color: $gray-v3 !important;
+    font-size: $font-size-lg !important;
+    font-weight: $fw-semibold;
+}
+
+.EditSecurity {
+    background-color: inherit !important;
+    > div {
+        color: $black-v20 !important;
+        font-size: $font-size-sm;
+        font-weight: $fw-semibold;
+        > svg {
+            > g {
+                > path {
+                    fill: none !important;
+                    stroke: $gray-v101 !important
+                }
+            }
+        }
+    }
+}
+
+.Security {
+    label {
+        margin: 0px !important;
+        color: $black !important;
+        font-size: $font-size-sm !important;
+        font-weight: $fw-semibold !important;
+    }
+}
+.SpecifiedUserLabel {
+    label {
+        margin: 0px !important;
+        color: $black-v12 !important;
+        font-size: $font-size-mdt !important;
+        font-weight: normal !important;
+    }
+}
+
+.SecurityLabel { 
+    margin-top: 4px !important;
+}
+
+.EditButton {
+    padding: 0px !important;
+    svg path {
+        fill: none !important;
+        stroke: $gray-v101 !important;
+    }
+}
+
+.ResponsiveFlexContainer {
+    display: flex;
+    align-items: center;
+    @include responsive-layout {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+.PolicyContainer {
+    border-radius: 3px;
+    border: 1px solid $gray-v108;
+    background-color: $white;
+    padding: 16px;
+}
+
+
+.TableSecuritySummary {
+    border-radius: 3px;
+    border: 1px solid $gray-v108;
+  
+    thead tr th {
+        border-bottom: 1px solid $gray-v108 !important;
+        background: $gray-v109 !important;
+    }
+  
+    tbody tr {
+      &:hover {
+        td {
+            background: $blue-v47;
+        }
+      }
+    }
+  }

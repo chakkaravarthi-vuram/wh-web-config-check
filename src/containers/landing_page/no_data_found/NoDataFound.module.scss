@@ -1,0 +1,23 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.Container {
+  height: 48px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.04);
+  background-color: $white;
+  width: 100%;
+  padding-inline: 10px;
+
+  p {
+    margin-bottom: 0;
+    color: $gray-v53;
+
+    span {
+      color: $blue-v21;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

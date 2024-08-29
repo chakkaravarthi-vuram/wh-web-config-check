@@ -1,0 +1,17 @@
+@import '../../../../../../scss/constants';
+@import '../../../../../../scss/utilities';
+
+.RetryLabel label {
+  color: $gray-v104 !important;
+  font-size: $font-size-sm !important;
+  font-weight: $fw-semibold !important;
+}
+
+.RetryOptions {
+  gap: 24px !important;
+}
+
+.EachOption {
+  color: $gray-v3 !important;
+  font-size: $font-size-mdt !important;
+}

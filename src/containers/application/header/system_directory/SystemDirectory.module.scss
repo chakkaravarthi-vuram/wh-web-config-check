@@ -1,0 +1,183 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.Header{
+    padding: 24px 40px 0 40px;
+    position: relative;
+
+    .Title{
+        color: $black-v12;
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    .CloseBtn{
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        padding: 8px;
+    }
+
+}
+
+.TabsContainer {
+    padding: 16px 40px 0 40px;
+    border-bottom: 1px solid $gray-v102;
+    .TabUnderLine{
+        height: 4px;
+    }
+}
+
+.InputContainer{
+    padding: 16px 40px;
+
+    .SearchInput{
+        font-size: 13px;
+        padding-right: 0px !important;
+        > div {
+            @include responsive-layout {
+                padding-right: 0px !important
+            }
+        }
+    }
+    .SearchIcon{
+        width: 16px;
+        height: 16px;
+        path{
+            fill: $gray-v98;
+        }
+    }
+}
+
+.MainContent{
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    height: 100%;
+}
+
+.ResultContainer{
+    flex: 1;
+    overflow-y: auto;
+    position: relative;
+}
+
+.GroupTitle{
+    position: sticky;
+    top: 0;
+    padding: 4px 40px;
+    color: $gray-v98;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: white;
+    margin-top: 12px;
+}
+
+.Loader{
+    margin: 16px 40px 0px;
+    height: 30px;
+}
+
+.Result{
+    padding: 16px 40px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .Content{
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .Icon {
+        flex-shrink: 0;
+        width: 16px !important;
+        height: 16px !important;
+    }
+
+    h3 {
+        color: $black-v12;
+        font-size: 12px;
+        font-weight: 500;
+        margin-left: 8px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 30ch;
+        flex-shrink: 0;;
+    }
+    p {
+        color: $gray-v101;
+        font-size: 12px;
+        font-weight: 400;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-left: 12px;
+        margin-left: 12px;
+    }
+
+    .Btn{
+        display: none;
+        margin-left: 16px;
+    }
+
+    &:hover{
+        background-color: #E9F2FE;
+
+        .Content{
+            min-width: 76%;
+        }
+
+        .Btn{
+            display: block;
+        }
+    }
+}
+
+.NoDataFound {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: $black-v21;
+    text-align: center;
+}
+
+.H40 {
+    height: 40px;
+}
+
+.PlusIcon {
+    path {
+        stroke: $white !important;
+    }
+}
+
+.BtnTeam {
+    display: none;
+    margin-left: 16px;
+}
+
+.RowContainer {
+    &:hover{
+        background-color: $blue-v49;
+
+        .BtnTeam {
+            display: block;
+            position: absolute;
+            right: 24px;
+            top: 8px;
+        }
+    }
+}
+
+.TeamsContent {
+    overflow: unset !important;
+}
+
+.MaxTeamContent {
+    min-width: calc(100% - 250px);
+}

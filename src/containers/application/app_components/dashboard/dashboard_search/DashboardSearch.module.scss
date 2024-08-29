@@ -1,0 +1,46 @@
+@import '../../../../../scss/constants';
+@import '../../../../../scss/utilities';
+
+.SearchContainer {
+  width: 75%;
+  .SearchIcon {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    z-index: 1;
+  }
+  .SearchBar {
+    width: 100%;
+  }
+
+  .SearchInput {
+    width: 100%;
+    border-radius: 2px;
+    padding: 3px 8px 3px 25px;
+    height: 40px;
+    border: none;
+    @include transition(0.3s);
+    &::placeholder {
+      color: $gray-v6;
+      opacity: 1;
+    }
+    color: $gray-v3;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.CloseIcon {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  stroke-width: 30px;
+  opacity: 0.9;
+  &:focus {
+    outline: none;
+  }
+}

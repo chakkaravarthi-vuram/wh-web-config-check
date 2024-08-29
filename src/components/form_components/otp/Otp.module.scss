@@ -1,0 +1,65 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+$otp-box-width: 45px;
+$otp-box-mobile-width: 35px;
+$otp-box-height: 58px;
+
+.Wrap {
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  position: relative;
+  display: flex;
+}
+.Input {
+  position: absolute;
+  border: none;
+  font-size: 32px;
+  text-align: center;
+  background-color: transparent;
+  outline: none;
+}
+.Display {
+  border-width: 1px 1px 1px 0px;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-style: solid;
+  width: $otp-box-width;
+  height: $otp-box-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  position: relative;
+  @include for-phone-and-tab {
+    width: $otp-box-mobile-width;
+  }
+}
+.Display:last-child {
+  border-right: none;
+}
+.Shadows {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  bottom: -1px;
+  right: -1px;
+  border: 1px solid $blue-v39;
+  z-index: 2;
+}
+.Splitter {
+  width: 28px;
+  height: $otp-box-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  position: relative;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+.OtpPlaceholder {
+  color: #d1d6de;
+}
+.BorderColor {
+  border-color: $red;
+}

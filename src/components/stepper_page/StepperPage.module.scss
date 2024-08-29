@@ -1,0 +1,70 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+.LCContainer {
+  overflow: hidden;
+  display: flex;
+  height: inherit;
+  // min-height: inherit;
+  position: relative;
+  @include for-phone-and-tab {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 3;
+  }
+
+  & .LeftContainer {
+    width: 31%;
+    max-width: 314px;
+    height: 100vh;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    @include for-phone-and-tab {
+      width: 100vw;
+      height: fit-content;
+      padding: 30px 30px 0 30px;
+    }
+  }
+  & .VLine{
+   width: 1px;
+   height: inherit;
+   box-shadow: -3px 0 6px 0 rgab(218,233,231,0.3);
+   background-color: $gray-v68;
+  }
+  & .RightContainer {
+    flex: 1;
+    background-color: $white;
+    // z-index: 2;
+    position: relative;
+    @include for-phone-and-tab {
+      width: 100vw;
+      height: fit-content;
+    }
+  }
+  & .RightContainerScrollableArea {
+    // padding: 20px 51px 0px 48px;
+    padding: 40px 30px 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    @include for-phone-and-tab {
+      padding: 20px 30px 0 30px;
+    }
+  }
+}
+
+.CloseButton {
+  height: 15px;
+  width: 15px;
+  top: 20px;
+  right: 20px;
+}
+
+.ButtonContainer {
+  height: 84px;
+}

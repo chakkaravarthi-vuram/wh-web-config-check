@@ -1,0 +1,12 @@
+.CustomFilterIconContainer {
+  border-width: 1px;
+  border-style: solid;
+  height: 32px;
+  width: 32px;
+  border-radius: 4px;
+
+  & .CustomFilterIcon {
+    height: 16px;
+    width: 16px;
+  }
+}

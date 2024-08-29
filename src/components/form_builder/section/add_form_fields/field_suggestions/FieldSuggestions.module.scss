@@ -1,0 +1,18 @@
+@import '../../../../../scss/constants';
+
+.Container {
+  width: 275px;
+  height: 375px;
+  border-radius: 3px;
+  background-color: $white;
+}
+
+.Header {
+  padding: 10px 15px 0px 15px;
+}
+
+.FieldContainer {
+  border-bottom: solid 1px $gray-v1;
+  padding: 10px 15px;
+  list-style: none;
+}

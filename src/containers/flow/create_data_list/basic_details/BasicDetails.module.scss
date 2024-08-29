@@ -1,0 +1,31 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.CatergoryContainerClass {
+  max-width: 100% !important;
+}
+.PopperClass {
+  width: 100%;
+}
+.GradientSwatchPicker {
+  width: 48px;
+  height: 36px;
+  border-radius: 3px;
+  background-color: $gray-v6;
+}
+.LableClass {
+  @extend %FS13;
+  font-weight: $fw-medium;
+  color: $black-v13 !important;
+  margin-bottom: 0px !important;
+}
+.TextAreaClass {
+  resize: none;
+  height: 90px !important;
+}
+.InputPadding {
+  padding-right: 50px;
+  @include for-small-device {
+    padding-right: 5px;
+  }
+}

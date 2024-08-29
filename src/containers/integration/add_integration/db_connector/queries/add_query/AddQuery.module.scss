@@ -1,0 +1,70 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.LabelClassName {
+  label {
+    color: $black-v13;
+    font-size: $font-size-mdt;
+  }
+}
+
+.SectionLabelClassName {
+  label {
+    @extend %FTwo18;
+    @extend %BlackV12;
+  }
+}
+
+.FooterContent {
+  height: 110px;
+}
+
+.LeftIcon {
+  width: 10px !important;
+  height: 13px !important;
+}
+
+.Icon {
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.FieldNameColumn {
+  width: 30% !important;
+}
+.FieldTypeColumn {
+  width: 20% !important;
+}
+.TypeCastColumn,
+.OperatorColumn {
+  width: 30% !important;
+}
+.DisplayNameColumn,
+.ValuesColumn {
+  width: 20% !important;
+}
+
+.InputTree {
+  & > li {
+    @extend %InputBorder;
+    border-bottom: none;
+    &:last-child {
+      border-bottom: 1px solid $gray-v1 !important;
+    }
+  }
+}
+
+.NumberInput {
+  // hiding firefox spin arrows
+  -moz-appearance: textfield;
+  // hidden spin arrows for number type input
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.DuplicateRowError {
+  background-color: $orange-v9;
+}

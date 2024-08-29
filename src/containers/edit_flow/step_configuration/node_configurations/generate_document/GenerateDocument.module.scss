@@ -1,0 +1,158 @@
+@import '../../../../../scss/constants';
+@import '../../../../../scss/utilities';
+
+.FieldLabel {
+  font-size: $font-size-mdt !important;
+  color: $black-v20 !important;
+  font-weight: $fw-semibold !important;
+  margin-bottom: 0px;
+}
+.InfoTooltip {
+  max-width: 210px;
+}
+.InfoIcon {
+  width: 18px;
+  height: 18px;
+}
+.DocTypeContainer {
+    border-radius: 8px;
+    border: 1px solid $orange-v38;
+    background-color: $orange-v37;
+    padding: 12px 16px;
+    display: flex;
+    gap: 8px;
+}
+
+.DocInstructionLabel {
+    color: $gray-v89 !important;
+    font-size: $font-size-mdt !important;
+}
+
+.StoreField {
+  display: flex;
+  // justify-content: space-between;
+  gap: 16px;
+  margin-top: 6px;
+  > div {
+    width: 40%;
+    z-index: 2 !important;
+    > button {
+      width: 100%;
+    }
+  }
+  // width: 70%;
+}
+
+.Button {
+  width: fit-content;
+  font-size: $font-size-mdt;
+  color: $blue-v39;
+  display: flex;
+  gap:4px;
+  align-items: center;
+  font-weight: $fw-semibold;
+}
+
+.CreateField {
+  padding: 0px !important;
+  div {
+    color: $blue-v39 !important;
+    font-size: $font-size-mdt !important;
+    font-weight: $fw-semibold !important;
+    letter-spacing: 0.1px;
+  }
+}
+
+.DocumentNameLabel > label { 
+  color: $black-v20 !important;
+  font-size: $font-size-sm !important;
+  font-weight: $fw-semibold !important;
+}
+
+.HeaderContainter {
+  padding: 24px 32px 0px 32px;
+  border-bottom: solid 1px $gray-v1;
+
+  .CloseIcon {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+  }
+}
+
+.MainContent {
+  padding: 24px 32px;
+  height: 40vh !important
+}
+
+.CloseIcon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.TableColumns {
+  margin-bottom: 6px;
+  > label {
+    color: $black-v13;
+    font-size: 13px;
+    @extend %FontWeight500;
+  }
+}
+
+.SearchInput {
+  padding-right: 2px !important
+}
+
+.SearchLabel {
+  color: $black-v18 !important;
+  font-size: $font-size-sm !important;
+  font-weight: $fw-semibold !important;
+}
+
+.InsertDropdown {
+  top: 0px;
+  right: 0px;
+  width: 160px;
+  z-index: 2;
+  >button {
+    background-color: $blue-v47 !important;
+    border: none !important;
+  }
+  >div {
+    >div {
+      padding: 0 !important;
+    }
+  } 
+}
+
+.ViewContainer {
+  text-align: left;
+  &:hover {
+      background-color: $gray-v109;
+  }
+  .FlowOrDlLabel {
+      color: $gray-v115; 
+  }
+}
+
+.SecondNestedView {
+  background-color: $white;
+  border: 1px solid $gray-v102;
+
+  & .Dropdown{
+      width: 100%;
+  }
+}
+
+.TemplateField {
+  height: 36px;
+  width: 100%;
+  border: 1px solid $gray-v112;
+  padding: 5px 12px 
+}
+
+.ChipTextStyle {
+  color: $blue-v39 !important;
+  font-size: $font-size-smt !important;
+}

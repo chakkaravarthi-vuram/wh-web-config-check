@@ -1,0 +1,13 @@
+@import 'scss/constants';
+
+.WarningText {
+    background-color: $orange-v39;
+    color: $gray-v89;
+    padding: 12px 16px;
+    border: 1px solid $orange-v36;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}

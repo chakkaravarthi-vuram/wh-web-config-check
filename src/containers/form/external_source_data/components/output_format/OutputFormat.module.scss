@@ -1,0 +1,38 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.KeyInput {
+  width: 35% !important;
+  p {
+    @extend %FTwo13Important;
+    @extend %BlackV25Imp;
+    @extend %FontWeight600Imp;
+  }
+}
+.TypeDropdown {
+  width: 30% !important;
+  p {
+    @extend %FTwo13Important;
+    @extend %BlackV25Imp;
+    @extend %FontWeight600Imp;
+  }
+}
+.NameInput {
+  width: 25% !important;
+  p {
+    @extend %FTwo13Important;
+    @extend %BlackV25Imp;
+    @extend %FontWeight600Imp;
+  }
+}
+.DeleteIcon {
+  width: 10% !important;
+  padding: 0 !important;
+}
+.Icon {
+  width: 12px !important;
+  height: 12px !important;
+}
+.DuplicateRowError {
+  background-color: $orange-v9;
+}

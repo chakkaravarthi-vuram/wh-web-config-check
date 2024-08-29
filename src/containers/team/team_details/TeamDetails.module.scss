@@ -1,0 +1,97 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.SearchIcon {
+  cursor: pointer;
+  outline: none;
+  path {
+    fill: $gray-v101;
+  }
+}
+
+.ToolTipClass {
+  z-index: 10;
+}
+
+.PopperStyles {
+  z-index: 10;
+  background: $white;
+  box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.03), 0px 12px 16px -4px rgba(16, 24, 40, 0.08);
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 12px;
+}
+
+.SettingsOption {
+  padding: 10px 12px !important;
+  display: flex;
+  font-size: $font-size-mdt;
+  width: 140px;
+  align-items: center;
+  &:hover {
+    background-color: $blue-v41;
+  }
+}
+
+.Thumbnail label {
+  margin-bottom: 0;
+}
+
+.TeamsDetailsListing {
+  height: calc(100vh - 215px);
+  overflow-y: auto;
+}
+
+.TeamName {
+  white-space: nowrap;
+  width: 40vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.TeamDesc {
+  color: $gray-v98;
+  width: 40vw;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.TableManageMember {
+  border-radius: 3px;
+  border: 1px solid $gray-v1;
+
+  thead tr th {
+      border-bottom: 1px solid $gray-v108 !important;
+      background: $gray-v109 !important;
+      font-size: 12px;
+      color: $black-v20;
+  }
+
+  tbody tr {
+    &:hover {
+      td {
+          background: $blue-v47;
+      }
+    }
+  }
+}
+
+.MembersHeader {
+  background-color: $white;
+  @include responsive-layout {
+    flex-direction: column;
+    > h5, div, button {
+      padding-bottom: 8px;
+      align-self: flex-start;
+    }
+  }
+}
+
+.ResponsiveHeader {
+  @include responsive-layout {
+    flex-direction: column;
+    > div {
+      align-self: flex-start;
+    }
+  }
+}

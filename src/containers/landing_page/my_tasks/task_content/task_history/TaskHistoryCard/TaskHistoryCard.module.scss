@@ -1,0 +1,153 @@
+@import '../../../../../../scss/constants';
+@import '../../../../../../scss/utilities';
+.Container {
+  width: 100%;
+  // word-wrap: break-word;
+  // border-radius: 6px;
+  // border: solid 1px $gray-v1;
+  @include for-desktop {
+    padding: 0px 24px 0px 16px;
+  }
+  @include for-phone-and-tab {
+    padding: 0px 8px 0px 8px;
+  }
+}
+.Comment {
+  width: 75%
+}
+.UserImage {
+  width: 24px;
+  height: 24px;
+  background-color: $gray-v13 !important;
+  &::after {
+      position: absolute;
+      width: 2px; /* Line width */
+      height: 20px; /* Line height */
+      background-color: #000; /* Line color */
+      top: calc(100% + 10px); /* Adjust for spacing */
+      left: 50%;
+      transform: translateX(-50%);
+  }
+}
+
+.ActionHistory {
+  // max-width: 200px;
+  span {
+    color: $black-v15;
+  }
+}
+
+.TriggerTask {
+  // max-width: 200px;
+  word-wrap: break-word;
+  margin-top: -6px;
+  span {
+    color: $black-v15;
+  }
+}
+
+.link:hover {
+  color: $blue-v39;
+}
+
+.ActionHistoryContent {
+  margin-left: -12px !important;
+  flex-basis: 100% !important;
+  width: 34vw !important;
+}
+
+.Border {
+  border-left: 2px solid $gray-v1 !important;
+}
+
+.Content > div > span > div {
+  max-width: 18vw;
+  @include for-phone-and-tab {
+    max-width:  80vw !important;
+  }
+}
+
+.Content :nth-child(2) {
+  overflow: inherit;
+}
+
+.Content > :nth-child(2) span > div {
+  max-width: 25vw !important;
+}
+
+.TaskActionTitle {
+  margin-top: -4px;
+}
+
+.ActionHistoryData {
+  flex-basis: 100%;
+  flex-wrap: wrap !important;
+}
+
+.UserList  > div > span > div > span {
+  color: $gray-v3 !important;
+}
+
+.UserImage ::after {
+  position: absolute;
+  width: 2px; /* Line width */
+  height: 20px; /* Line height */
+  background-color: #000; /* Line color */
+  top: calc(100% + 10px); /* Adjust for spacing */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ChipClass {
+  border-radius: 3px !important;
+  padding: 6px 8px;
+  height: 100% !important;
+  display: block !important;
+}
+
+.ChipClass > div {
+  display: block !important;
+}
+
+.Comments {
+  cursor: text !important;
+  overflow: hidden;
+  word-break: break-word;
+  white-space: normal;
+  font-weight: 400;
+  margin: revert !important;
+  padding: revert !important;
+  list-style: revert !important;
+}
+
+.Comments > p {
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.SnoozedCommentBorder {
+  border: 1px solid $gray-v107;
+}
+
+.Comments > ul {
+  margin: revert !important;
+  padding: revert !important;
+  list-style: revert;
+}
+
+.Comments > ol {
+  margin: revert !important;
+  padding: revert !important;
+  list-style: revert;
+}
+
+.Comments h1,
+.Comments h2,
+.Comments h3,
+.Comments h4,
+.Comments h5,
+.Comments h6 {
+  margin: revert !important;
+  padding: revert !important;
+  font-size: revert;
+}

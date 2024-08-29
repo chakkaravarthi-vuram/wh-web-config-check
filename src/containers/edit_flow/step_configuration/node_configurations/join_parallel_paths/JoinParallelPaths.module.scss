@@ -1,0 +1,57 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.SpecifiedMaxWidth {
+    width: 150px;
+}
+.TitleClass {
+    color: $gray-v3;
+}
+.RadioGroupOptions label {
+    color: $gray-v90;
+}
+.CheckBoxGroupLabel label {
+    color: $black-v12;
+}
+.EachRow {
+    border: 1px solid $gray-v1;
+    border-radius: 4px;
+    margin-top: 8px;
+    padding: 6px 12px;
+  }
+  .ChipContainer {
+    width: 50%;
+  }
+  .FieldChip {
+    background-color: $blue-v49;
+    border-radius: 16px;
+    color: $blue-v39;
+    padding: 1px 16px;
+  }
+
+.DeleteStepButton {
+  color: $red-v25 !important;
+}
+
+.NoInputSteps {
+  border-radius: 8px;
+  border: 1px solid $gray-v108;
+  background-color: $gray-v109;
+  padding: 12px 16px;
+  display: flex;
+  gap: 8px;
+  width: fit-content;
+  svg {
+    g {
+      path {
+        stroke: $gray-v87;
+      }
+    }
+  }
+}
+
+.NoInputStepsLabel > label { 
+  color: $black-v20 !important;
+  font-size: $font-size-sm !important;
+  font-weight: $fw-semibold !important;
+}

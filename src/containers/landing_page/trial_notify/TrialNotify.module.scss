@@ -1,0 +1,24 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+@import '../../../scss/Typography.module.scss';
+
+.Container {
+    background-color: $red-v14!important;;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    color: $red-v12!important;
+}
+
+.CloseIcon {
+    fill: $red-v18;
+}
+
+.WarningTrailIcon {
+    fill: $red-v18;
+}
+
+.ButtonContainer {
+    height: 28px!important;
+}

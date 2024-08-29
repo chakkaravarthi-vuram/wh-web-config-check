@@ -1,0 +1,154 @@
+@import '../../scss/utilities';
+@import '../../scss/constants';
+.Table {
+  margin-bottom: 0;
+  // border: 1px solid #000;
+  border: 1px solid #dadfe7;
+  // overflow: hidden;
+  & td {
+    vertical-align: top; // For Date pickers
+    max-width: 100%;
+    // white-space: nowrap; commented out to wrap long text in dashboard
+    // border-top: 0;
+    // border-bottom: 1px solid #dadfe7;
+
+    // padding: 10px 15px;
+    @extend %FTwo13;
+    @extend %GrayV3;
+  }
+  & thead {
+    border: 1px solid #dadfe7;
+    // border-top-left-radius: 2px;
+    // border-top-right-radius: 2px;
+    // border-bottom: solid 1px $gray-v1;
+    // border: none !important;
+    white-space: nowrap;
+    & tr {
+      background-color: $gray-v6;
+    }
+    & td {
+      background-color: #f6f9fb;
+      @extend %FTwo13Important;
+      // @extend %BlackV25Imp;
+      // @extend %FontWeight600Imp;
+    }
+  }
+  & tbody {
+    margin-top: -1px;
+    // td {
+    // vertical-align: top;
+    // background-color: #ffffff !important ;
+    // }
+  }
+}
+
+.TableRow thead td {
+  position: sticky; 
+  top: 0px;
+}
+
+.TableDashboardBorder {
+  // border-collapse: separate;
+  border-spacing: 0 0;
+}
+.TableRow tr td:first-child {
+  border-radius: 0px 0px 0px 0px;
+  border-left: 1px solid #dadfe7;
+}
+// .TableRow tr td:last-child {
+//   border-radius: 0px 0px 0px 0px;
+//   // border-radius: 6px 0px 0px 6px;
+//   border-right: 1px solid #dadfe7;
+//   // border-bottom: 1px solid #dadfe7;
+// }
+.Table tr {
+  border: none;
+  background-color: $white;
+}
+.TableRow tbody tr:hover {
+  border-radius: 6px !important;
+  box-shadow: 6px 4px 6px px rgb(155, 153, 153) !important;
+  border: solid 1px #dadfe7;
+  background-color: #f6f9fb;
+}
+.TableRowBorder {
+  & tbody {
+    & tr {
+      border-bottom: 1px solid $gray-v32;
+    }
+    & tr:last-child {
+      border-bottom: 0;
+    }
+    & thead {
+      // border: none !important;
+      border: 1px solid #dadfe7;
+    }
+  }
+}
+.TableError {
+  border: 1px solid red;
+  border-right: 0px;
+}
+.FixedLastColumn {
+  & td:last-child {
+    position: sticky;
+    right: 0;
+  }
+  // & td {
+  //   // border-bottom: 1px solid $gray-v32;
+  // }
+}
+.FixedFirstColumn {
+  & td:first-child {
+    // position: sticky;
+    left: 0;
+  }
+  // & td {
+  //   // border-bottom: 1px solid $gray-v32;
+  // }
+}
+.Table.FixedFirstColumn {
+  // border-collapse: separate;
+  border-spacing: 0;
+}
+.Dropdown {
+  width: 203px;
+  max-height: none !important;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 0px !important;
+}
+// .Border {
+//   border: 1px solid #000;
+
+// }
+.Popper {
+  margin-top: -20px;
+  margin-bottom: -20px;
+  // box-shadow: 4px 4px 12px 0 rgba(0, 0, 0, 0.2);
+  // border-radius: 12px;
+}
+.MenuIcon {
+  fill: $gray-v25 !important;
+}
+.PopperRow {
+  min-width: 0.1px !important;
+  max-width: 0.1px !important;
+}
+.AddedCard {
+  background-color: #f0faf1 !important ;
+}
+.EditedCard {
+  background-color: #fdf4ed !important;
+}
+.DeletedCard {
+  background-color: #fcf0f0 !important;
+}
+.ErrorRow {
+  background-color:  #FEF2F2 !important;
+  &:hover{
+    td{
+    background-color:  #FEF2F2 !important;
+    }
+  }
+}

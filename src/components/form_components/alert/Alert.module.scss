@@ -1,0 +1,15 @@
+@import '../../../scss/constants';
+
+%Padding {
+  padding: 9px 15px 11px 15px;
+}
+
+.Alert {
+  @extend %Padding;
+  background-color: $red-v3;
+}
+
+.AlertV2 {
+  @extend %Padding;
+  background-color: $green-v6;
+}

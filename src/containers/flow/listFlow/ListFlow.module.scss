@@ -1,0 +1,195 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.FlowListingContainer {
+  position: relative;
+  overflow: hidden;
+}
+
+.FlowCardContainer {
+  height: 48px;
+  margin: 5px 0px;
+  padding: 4px 15px;
+}
+
+.SearchSortContainer {
+  height: 48px;
+  position: relative;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.04);
+  padding: 12px 30px;
+  background-color: $white;
+  border-top: none !important;
+
+  .SearchContainer {
+    flex: 1;
+  }
+  .SearchContainer,
+  .SortContainer {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.SearchContainer,
+.SortContainer {
+  display: flex;
+  align-items: center;
+}
+
+.SearchSortContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.DropdownList {
+  position: relative;
+  width: 160px !important;
+  height: 100% !important;
+  border-radius: 6px !important;
+  top: -30px;
+  left: -70px;
+  padding: 4px 10px;
+  box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.25);
+}
+
+.TabTextClassName {
+  margin-top: 4px;
+  font-size: 13px;
+  & span {
+    bottom: -13px !important;
+  }
+}
+
+.maxWidth20 {
+  max-width: 20%;
+}
+
+@include for-small-device {
+  .FlowListingContainer {
+    padding-inline: 15px;
+  }
+}
+
+.TitleDescDivider {
+  width: 1px;
+  height: 16px;
+  margin: 0 8px;
+  background-color: $gray-v1;
+}
+
+.FlowTitleContainer {
+  width: 300px;
+}
+
+@include for-hd-very-big-screen {
+  .FlowTitleContainer {
+    width: 500px;
+  }
+}
+
+.TaskDefinition {
+  max-width: 50%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.TabSpacing{
+  & button{
+    padding-right: 12px !important;
+    margin-left: 12px !important;
+  }
+}
+
+.SearchOuterContainer {
+  border-radius: 4px;
+  padding: 4px 0px !important;
+  border: 1px solid $gray-v108;
+  width: 140px;
+  height: 24px;
+  @include transition(0.1s);
+}
+
+.ExpandedSearch {
+  width: 256px !important;
+}
+
+.SearchCloseIcon {
+  &:focus{
+    outline: none;
+  }
+}
+
+.SortContainer {
+  padding: 2px 6px 2px 8px;
+  border-radius: 4px;
+  background-color: $blue-v48;
+}
+
+.TableFlowContainer {
+  border-radius: 6px;
+  overflow-y: auto;
+  height: calc(100vh - 196px);
+  padding: 0px 24px;
+}
+
+.TableTrialContainer {
+  height: calc(100vh - 236px) !important;
+}
+
+.FlowTable{
+  & thead{
+   & tr {
+      & th {
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+      }
+      & th:first-child {
+        padding-left: 12px;
+      }
+      & th:last-child {
+        padding-right: 12px;
+      }
+    } 
+  }
+  & tbody{
+    & tr:hover td:nth-child(1) svg path {
+      fill: none;
+      stroke: $blue-v39;
+    }
+    & td:first-child {
+      padding-left: 12px;
+    }
+    & td:last-child {
+      padding-right: 12px;
+    }
+    & td{
+      padding-top: 12px !important;
+      padding-bottom: 12px !important;
+    }
+  }
+}
+
+.DescWidth {
+  max-width: 33vw;
+
+  @include for-medium-hd-screen {
+    max-width: 30vw;
+  }
+}
+
+.EditIcon:hover{
+  & path{
+     stroke: $blue-v39
+  }
+}
+
+.DraftTable{
+  & tbody{
+     & tr{
+        & td:last-child button{ visibility: hidden;}
+     }
+     & tr:hover{
+        & td:last-child button{ visibility: visible;}
+     }
+  }
+}

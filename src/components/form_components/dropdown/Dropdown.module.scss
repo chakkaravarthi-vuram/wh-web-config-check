@@ -1,0 +1,68 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.ContentContainer {
+  width: calc(100% - 10px);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  @extend %FS13;
+}
+.DisabledDropdown{
+  background-color:$gray-v7
+}
+.DropDownArrowContainer {
+  width: 12px;
+}
+.Placeholder {
+  color: $gray-v6;
+  opacity: 1;
+  font-weight: $fw-normal;
+}
+.NewDropdownContainer {
+  width: auto !important;
+  overflow: hidden !important;
+}
+
+.UserCardDropdownContainer {
+  width: 100%;
+}
+
+.DropdownInputLoader {
+  height: 31px;
+}
+
+.EditableDropdownInput {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.UserDropdown{
+  height: 45px !important;
+}
+.FilterIcon {
+  margin-right: 5px;
+}
+.FilterClear {
+  cursor: pointer;
+  margin-top: 3px;
+  margin-left: 5px;
+}
+
+.OutlineClass {
+  :focus-visible {
+    outline: none !important; 
+  }
+}
+
+.closeIcon {
+  width: 9px;
+  height: 9px;
+  top: 2px;
+  right: 0px;
+}
+
+.ComboBoxFocusVisible{
+border-radius: 4px;
+box-shadow: 0 0 0 0.2rem #1a9cd175;
+outline: none !important;
+} 

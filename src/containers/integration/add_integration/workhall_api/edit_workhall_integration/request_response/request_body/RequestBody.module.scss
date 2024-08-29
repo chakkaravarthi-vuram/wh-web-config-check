@@ -1,0 +1,31 @@
+@import 'scss/constants';
+
+.Icon {
+    width: 12px !important;
+    height: 12px !important;
+}
+.FieldColumn {
+    width: 30% !important;
+}
+.KeyColumn {
+    width: 30% !important;
+}
+.TypeColumn {
+    width: 20% !important;
+}
+.RequiredColumn {
+    width: 15% !important;
+}
+.DeleteColumn {
+    width: 10% !important;
+    justify-content: end;
+}
+.IsMultipleColumn {
+    width: 15% !important;
+}
+.DuplicateRowError {
+    background-color: $orange-v9;
+}
+.ReadOnlyFieldColumn {
+    width: 50% !important;
+}

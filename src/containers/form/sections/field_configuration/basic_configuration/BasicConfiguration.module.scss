@@ -1,0 +1,68 @@
+@import '../../../../../scss/constants';
+@import '../../../../../scss/utilities';
+
+.BasicFieldConfiguration {
+    padding: 24px;
+  }
+
+  .FieldTypeMLInstruction {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .FieldTypeInstruction {
+    font-family: Inter;
+font-size: 11px;
+font-weight: 400;
+line-height: 13px;
+letter-spacing: 0px;
+text-align: left;
+color: #F79009;
+margin-left: 3px;
+margin-top: 2px;
+  }
+  
+  .FieldInput {
+    border-radius: 3px;
+  }
+  
+  .FieldTypeLabel {
+    margin-top: 16px;
+  }
+  .FieldReadOnlyLabel {
+    margin-top: 16px;
+  }
+  
+  .FieldRequiredLabel {
+    margin-top: 16px;
+  }
+
+  .FieldLabelSuggestionPopper {
+    position: absolute;
+    z-index: 3;
+  }
+
+  .PickerInformation{
+    color: $orange-v14;
+    background-color: $orange-v13;
+    padding: 10px 13px;
+    list-style: disc;
+    list-style-position: inside;
+    border-radius: 4px;
+    & li{
+      display: list-item;
+    }
+    & li::marker{
+      font-size: 12px;
+    }
+  }
+
+  .W288 {
+    width: 288px;
+  }
+
+  .CheckboxClass {
+    margin-bottom: 0 !important;
+    margin-left: 12px !important;
+  }

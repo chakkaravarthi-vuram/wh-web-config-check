@@ -1,0 +1,17 @@
+.photo-viewer-container {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.photo {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.react-pdf__Page__textContent,
+.react-pdf__Page__annotations {
+  display: none;
+}
+.react-pdf__Page {
+  margin-bottom: 30px;
+}

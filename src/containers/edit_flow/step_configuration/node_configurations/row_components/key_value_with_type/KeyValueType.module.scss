@@ -1,0 +1,29 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.InputColumn {
+  max-width: 15vw;
+  width: 100%;
+  margin-right: 16px;
+  flex-shrink: 0 !important;
+}
+.TypeColumn {
+  width: 15% !important;
+  margin-right: 16px;
+  flex-shrink: 0 !important;
+}
+.TypeColumnMargin {
+  margin-bottom: auto;
+}
+.OutputColumn {
+  flex-grow: 1;
+  margin-right: 16px;
+  width: min-content !important;
+  flex-shrink: 0 !important;
+}
+.Required {
+  color: $red;
+}
+.DeleteColumn {
+  width: 5%;
+}

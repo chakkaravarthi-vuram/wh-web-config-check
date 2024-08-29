@@ -1,0 +1,18 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.ReportDDListPopper {
+  height: 300px !important;
+  overflow: hidden;
+  overflow-y: auto;
+  border-bottom: 1px solid $gray-v111;
+  border-radius: 3px;
+}
+
+.ParentWidth {
+  width: 88%;
+}
+
+.CancelButton {
+  color: $gray-v3 !important;
+}

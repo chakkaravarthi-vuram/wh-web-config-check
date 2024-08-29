@@ -1,0 +1,27 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.TableColumn {
+  width: 200px;
+}
+
+.HeadersTable {
+  & thead {
+    & th {
+      color: $black-v20 !important;
+      font-size: 12px !important;
+      background-color: $gray-v108 !important;
+    }
+  }
+  & tbody {
+    & tr {
+      &td:last-child {
+        border-bottom: none !important;
+      }
+      & td {
+        color: $gray-v89 !important;
+      }
+    }
+  }
+  border: 1px solid $gray-v108;
+}

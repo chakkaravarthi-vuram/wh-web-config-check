@@ -1,0 +1,109 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.AddButton {
+    height: 36px;
+    background: $white;
+    border-radius: 2px;
+    // width to be passed through className prop
+}
+.ButtonText {
+    @extend %FS13;
+    color: $gray-v3;
+}
+.MainButton {
+    max-width: 90%;
+}
+.SearchBar {
+    padding: 10px 16px;
+    border-bottom: 1px solid $gray-v68;
+}
+.ActionButton {
+    min-width: 75px !important;
+}
+.NoDataFound {
+    &:hover {
+        background: none !important;
+    }
+}
+.ErrorMsg {
+    position: relative !important;
+    top: 15px;
+    left: 25px;
+}
+.DropdownContainer {
+    position: relative;
+    background: $white;
+    border: 1px solid $gray-v68;
+    box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    cursor: default;
+}
+.ChevronIcon {
+    width: 12px;
+    height: 12px;
+    &:focus {
+      outline: none;
+    }
+    path {
+      fill: $gray-v87;
+    } 
+}
+.ListOption {
+    @extend %FS13;
+    color: $gray-v3;
+    padding: 12px 16px 12px 16px;
+    margin: 0 5px;
+    &:hover {
+        background: $blue-v41;
+    }
+}
+.CreateNewBtn {
+    @extend %FS13;
+    color: $blue-v39;
+    font-weight: $fw-semibold;
+    padding: 14px 0;
+    text-align: center;
+    border-top: 1px solid $gray-v68;
+}
+.Footer {
+    padding: 16px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid $gray-v88;
+}
+.BackButton {
+    padding: 16px 16px 8px;
+    align-items: center;
+    border-bottom: 1px solid $gray-v88;
+    @extend %FS13;
+    color: $gray-v3;
+    &:hover {
+        color: $blue-v39;
+        .LeftIcon {
+            path {
+                fill: $blue-v39;
+            }
+        }
+    }
+}
+.Input {
+    padding: 24px 24px 12px;
+}
+.DropdownList {
+    max-height: 150px;
+    min-height: 80px;
+    overflow: auto;
+}
+.DisabledDropdown{
+    background-color: $gray-v99;
+    color: $gray-v86 !important;
+    font-size: $font-size-sm;
+    font-weight: $fw-semibold;
+}
+.selectedValueClass {
+    background: $blue-v41;
+    border-left: 3px solid $blue-v39;
+    border-radius: 2px;
+}

@@ -1,0 +1,79 @@
+.react-flow__background {
+  background-color: white;
+}
+.react-flow__edge-textbg {
+  fill: #f3f6f9;
+}
+.react-flow__attribution {
+  display: none;
+}
+.react-flow__pane {
+  cursor: default !important;
+}
+.react-flow__pane.dragging {
+  cursor: grabbing !important;
+}
+.react-flow__edge {
+  pointer-events: all !important;
+}
+.react-flow__node {
+  cursor: default !important;
+}
+.react-flow__node.dragging {
+  cursor: grabbing !important;
+}
+/* Custom edge styles */
+.custom-edge-wrapper:hover .custom-edge-icon,
+.react-flow__edge:focus .custom-edge-icon {
+  display: block;
+  /* visibility: visible; */
+}
+
+.react-flow__edge:focus .custom-edge-style {
+  display: flex !important;
+  /* visibility: visible; */
+}
+/* .react-flow__edge:focus .custom-edge-wrapper{ 
+  width: 70px;
+} */
+.custom-edge-icon {
+  display: none;
+  /* visibility: hidden; */
+}
+.custom-edge-style {
+  display: none !important;
+  /* visibility: hidden; */
+}
+
+.react-flow__edge:focus .label-wrapper {
+  width: auto;
+}
+.label-wrapper {
+  width: fit-content;
+}
+
+.react-flow__handle {
+  background: #d8dee9 !important;
+  border: 1px solid #d8dee9 !important;
+}
+.react-flow__custom-right,
+.react-flow__custom-left {
+  top: 27% !important;
+}
+
+.react-flow__custom-special-with-text {
+  left: 23px !important;
+  background: #d92d20 !important;
+  border: 1px solid #d92d20 !important;
+}
+
+.react-flow__node.react-flow__node-start,
+.react-flow__node.react-flow__node-end {
+  button {
+    svg {
+      path {
+        stroke: white;
+      }
+    }
+  }
+}

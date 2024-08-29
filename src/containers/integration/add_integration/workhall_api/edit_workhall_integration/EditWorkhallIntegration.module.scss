@@ -1,0 +1,32 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.MainContainer {
+  overflow-y: auto;
+  height: calc(100vh - 62px);
+}
+.SectionTitle {
+  color: $gray-v3;
+  font-size: $font-size-xl;
+  font-weight: $fw-semibold;
+}
+.ReadOnlyMainContainer {
+  overflow-y: auto;
+  height: calc(100vh - 238px);
+}
+.OuterContainer {
+  background-color: $white;
+  padding: 32px;
+}
+.ActiveTab {
+  height: 4px;
+}
+.CredPreFixText {
+  width: fit-content;
+}
+.ApiMethod {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

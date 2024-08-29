@@ -1,0 +1,23 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+@import '../../../scss/Typography.module.scss';
+
+.BillingHeader {
+    @extend .PL30;
+    box-shadow: 0 4px 4px 0 $gray-v64;
+    border-bottom: solid 1px $gray-v68;
+    background-color: $white;
+    top: 0;
+
+    h2 {
+        color: $gray-v3;
+    }
+}
+
+.MenuToggleDisplay {
+    display: none;
+
+    @include for-phone-and-tab {
+        display: block;
+    }
+}

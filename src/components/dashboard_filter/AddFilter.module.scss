@@ -1,0 +1,170 @@
+@import '../../../src/scss/constants';
+@import '../../../src/scss/utilities';
+
+.FilterBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 12px;
+    position: relative;
+    background: $white;
+    border: 1px solid $gray-v1;
+    border-radius: 2px;
+    height: 36px;
+
+    .FilterText {
+        color: $blue-v39;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 16px;
+        height: 36px;
+    }
+
+    .FilterTextCompleted {
+        @extend .FilterText;
+        color: $gray-v3;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        & > div {
+            max-width: 270px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .closeBtn {
+            border-radius: 50%;
+            padding: 1px 6px 3px 6px;
+            background-color: $white;
+        }
+    }
+}
+
+.SelectedField {
+    padding: 0;
+
+    .FilterTextCompleted {
+        padding: 10px 12px;
+        &:hover {
+            background-color: $blue-v41;
+            color: $blue-v39;
+            svg > path {
+                fill: $blue-v39;
+            }
+        }
+    }
+}
+
+.FilterDropdown {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    background: $white;
+    border: 1px solid $gray-v68;
+    box-shadow: 0px 4px 15px rgba_func($black, 0.15);
+    border-radius: 2px;
+    z-index: 5;
+
+    &.Completed {
+        top: 42px;
+        padding-top: 8px;
+        z-index: 5;
+    }
+}
+
+.FieldType {
+    padding: 8px 6px;
+}
+
+.FieldTypeItem {
+    border-left: 3px solid transparent;
+    border-radius: 2px;
+    padding: 12px 9px;
+    font-size: 13px;
+    line-height: 17px;
+
+    .Text {
+        width: 85%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &.Selected {
+        background: $blue-v41;
+        border-left: 3px solid $blue-v39;
+    }
+
+    &:hover {
+        background: $blue-v41;
+    }
+
+    .Count {
+        color: $gray-v86;
+        margin-right: 6px;
+    }
+}
+
+.BackBtn {
+    font-size: 13px;
+    color: $gray-v90;
+    margin-left: 16px;
+    margin-right: 16px;
+    width: 100%;
+
+    .Text {
+        width: 80%;
+    }
+    
+    &:hover {
+        color: $blue-v39;
+
+        svg path {
+            fill: $blue-v39;
+        }
+    }
+}
+
+.Divider {
+    height: 1px;
+    background-color: $gray-v68;
+}
+
+.FieldList {
+    padding: 16px 0;
+
+    .FieldListItems {
+        max-height: 268px;
+        overflow: auto;
+        .Category {
+            background: $gray-v40;
+            font-size: 11px;
+            line-height: 13px;
+            color: $gray-v86;
+            padding: 8px 16px
+        }
+        .Option {
+            @extend .FieldTypeItem;
+            margin: 0 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+.FieldConfiguration {
+    padding: 16px 0;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+
+    .FieldContent {
+        flex: 1;
+        overflow-y: auto;
+    }
+}

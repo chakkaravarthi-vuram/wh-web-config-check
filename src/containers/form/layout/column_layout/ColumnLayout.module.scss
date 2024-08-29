@@ -1,0 +1,72 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.PlaceholderText {
+    height: 76px;
+    border: 1px dashed steelblue;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: steelblue;
+    font-size: 12px;
+    width: 100%;
+}
+
+.IconDrag {
+    position: absolute;
+    bottom: -4px;
+    right: 0;
+    font-weight: 500;
+    cursor: nwse-resize;
+    display: none;
+}
+
+.Overlay {
+    display: none;
+}
+
+.ColumnContainer {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    height: min-content;
+    min-height: 74px;
+
+    &:hover {
+        > div > .Overlay {
+            position: absolute;
+            display: flex !important;
+            top: -28px;
+            right: -1px;
+            height: 28px;
+            width: 28px;
+            border-radius: 4px 4px 0px 0px;
+            background: $blue-v39;
+        }
+
+        > div > .IconDrag,
+        > div > div > button {
+            display: block;
+        }
+
+        border-radius: 4px 0px 4px 4px;
+        border-color: $blue-v39;
+    }
+}
+
+.OverlayContainer {
+    position: absolute;
+    height: 100%;
+    background: transparent;
+    z-index: 1;
+}
+
+
+.ExpandIcon {
+    transform: rotate(174deg);
+    height: 14px;
+}
+
+.OverlayColor {
+    background-color: $gray-v102;
+}

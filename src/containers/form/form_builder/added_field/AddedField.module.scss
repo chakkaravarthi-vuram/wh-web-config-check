@@ -1,0 +1,75 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.MainAddedField {
+  overflow: hidden;
+
+  &:hover {
+    overflow: auto;
+  }
+
+  .AddedFieldConfig {
+    &:hover>div {
+
+      &>button,
+      &>div {
+        padding-right: 10px !important;
+      }
+    }
+  }
+}
+
+.FieldHeader {
+  @extend %BlackV12Imp;
+}
+
+.AccordionClassName {
+  border: none;
+  border-bottom: 1px solid $gray-v88;
+  @include border-radius(0px);
+}
+
+.PageFieldButton {
+  @extend %InputBorder;
+  @extend %FTwo13;
+  @extend %BlueV39;
+  @extend %FontWeight500;
+  @extend %DFlex;
+  @extend %AlignItemCenter;
+  @extend %JustifyContentCenter;
+  @include border-radius(3px);
+}
+
+.ExternalAccordionHeader {
+  display: flex;
+  align-content: center;
+  gap: 10px;
+  flex-direction: row-reverse;
+  overflow: hidden;
+  padding: 10px !important;
+  cursor: default;
+
+  p {
+    color: #212529 !important;
+  }
+}
+
+.ExternalAccordionHeaderContent {
+  width: calc(100% - 30px);
+}
+
+.FieldsData {
+  @extend %InputBorder;
+  @include border-radius(3px);
+  @extend %DFlex;
+  @extend %AlignItemCenter;
+  cursor: grab;
+  gap: 8px;
+  padding: 10px 24px 10px 8px;
+
+  .IconClass {
+    @extend %DFlex;
+    @extend %AlignItemCenter;
+    gap: 8px;
+  }
+}

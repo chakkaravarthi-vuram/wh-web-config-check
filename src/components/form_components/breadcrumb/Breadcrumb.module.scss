@@ -1,0 +1,102 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.Container {
+  list-style: none;
+  height: 28px;
+  & li {
+    color: $gray-v3;
+    &:last-child {
+      color:$gray-v53 ;
+      @extend %FontWeight400;
+    }
+    @include for-phone-and-tab{
+      max-width: 15ch;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+  }
+}
+
+.ContainerV1 {
+  list-style: none;
+  :not(:last-child) {
+    margin-right: 8px;
+    text-decoration: none !important;
+    color: $gray-v3 !important;
+  }
+}
+
+.ContainerV1 > li:first-child {
+  div {
+    display: none;
+  }
+}
+
+.ContainerV1 > li a {
+  margin-top: 4px;
+}
+
+.ContainerV1 > li:not(:last-child) a {
+  @extend %FS12;
+  color: $gray-v3;
+  font-weight: 400;
+}
+
+.ContainerV1 > li:last-child {
+  :hover {
+    text-decoration: none !important;
+    cursor: text !important;
+  }
+  a {
+    @extend %FS12;
+    color: $gray-v86;
+    font-weight: 400;
+    max-width: clamp(15ch, 30%, 80ch);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.PrimaryType{
+  min-width: 140px;
+  height: 28px;
+  margin: 0 15px 10px;
+  @include border-radius(4px);
+  border: solid 1px $gray-v68;
+  background-color: #fff;
+  padding: 7px 10px;
+  white-space:nowrap;
+}
+
+.SecondaryType {
+  list-style: none;
+
+  & li {
+    div {
+      color: $gray-v3;
+    }
+    &:last-child {
+      color:$gray-v86;
+    }
+  } 
+}
+
+.Arrow{
+  margin-left: 8px;
+  margin-top: 2px;
+  min-width: 13px;
+}
+.ClickableText {
+  cursor: pointer;
+  :hover{
+    text-decoration: underline;
+  }
+}
+
+.NoTextDecoration :hover{
+    text-decoration: none !important;
+    cursor: text !important;
+}

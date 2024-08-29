@@ -1,0 +1,56 @@
+@import '../../../scss/constants';
+@import 'scss/utilities';
+
+.Container {
+  padding: 5px;
+  line-height: 1;
+  overflow: hidden;
+  & .UploadButton {
+    padding: 6px 13px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    margin-bottom: 0px;
+    font-weight: $fw-semibold;
+  }
+  & .TextContent {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  & .Input {
+    height: 0;
+    width: 0;
+  }
+  & .Disable{
+     color: $gray-v6 !important;
+     border-color: $gray-v6 !important;
+  }
+}
+.AddAttachments {
+  width: 100%;
+  overflow: hidden !important;
+  .NewFile {
+    border: 1px dashed $gray-v68;
+    padding: 15px;
+    min-height: 55px;
+    margin-bottom: 5px;
+  }
+  .ExistingFile {
+    // border: 1px solid #dadfe7;
+    // padding: 11px 15px;
+    height: 55px;
+    margin-bottom: 5px;
+  }
+}
+.CreateForm {
+  color: $blue-v39;
+  letter-spacing: normal;
+  @extend %FS13;
+}
+.Tooltip {
+  color: #888ea4;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+

@@ -1,0 +1,237 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.TestBedContainer {
+  border: 1px solid $orange-v3 !important;
+}
+
+.CardContainer {
+  border-bottom: 2px solid $gray-v59;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  background-color: $white;
+  flex-direction: row;
+  position: relative;
+
+  &:hover {
+    z-index: 1;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+
+    .Thumbnail {
+      background-color: $blue-v39;
+    }
+    .ThumbnailText {
+      fill: $white;
+    }
+    .AdhocTaskIcon {
+      path {
+        fill: $white;
+      }
+    }
+  }
+
+  .CardNameContainer {
+    width: 100%;
+    max-width: 60%;
+    color: $gray-v3;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    & .UserDisplayGroup {
+      display: none;
+    }
+  }
+
+  .AssigneeImage {
+    width: 24px;
+    height: 24px;
+    text-align: right;
+  }
+}
+.Thumbnail {
+  width: 32px;
+  height: 32px;
+  border-radius: 3px;
+  background-color: $blue-v41;
+}
+
+.SendBackThumbnail {
+  padding: 3px !important;
+  background-color: $orange-v31;
+  border-radius: 3px;
+}
+
+.ReviewTaskThumbnail {
+  padding: 3px !important;
+  background-color: $gray-v108;
+  border-radius: 3px;
+}
+
+.ThumbnailText {
+  fill: $blue-v39;
+}
+.TaskStatusContainer {
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  .TaskStatus {
+    height: 24px;
+    min-width: 108px;
+    border-radius: 3px;
+    text-align: center;
+  }
+}
+
+.InProgress {
+  color: $orange-v4;
+  background-color: $gray-v61;
+}
+
+.NoDue {
+  color: $gray-v89;
+  background-color: $gray-v99;
+}
+.OverDue {
+  color: $white;
+  background-color: $red-v8;
+}
+
+.HighPriorityDue {
+  //High priority styles
+  background-color: $red-v17;
+  color: $red-v18;
+}
+.MediumPriorityDue {
+  background-color: $orange-v23;
+  color: $orange-v22;
+}
+.Completed {
+  color: $green-v7;
+  background-color: $green-v8;
+}
+
+.AdhocTaskIcon {
+  fill: $gray-v4;
+  max-width: 50%;
+}
+
+.AssignedOn {
+  color: $gray-v53;
+  padding: 2px 15px;
+  margin-left: 8px;
+  min-width: 118px;
+}
+.AssignedOnCompleted{
+  color: $gray-v53;
+  padding: 2px 15px;
+  min-width: 110px;
+}
+.TaskName {
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.TaskDefinition {
+  max-width: 50%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.TaskDefinition {
+  color: $gray-v86 !important;
+  border-left: 1px solid $gray-v1;
+  padding: 2px 15px 2px 8px;
+  margin-left: 8px;
+}
+
+.TestBedIconContainer {
+  height: 24px;
+  width: 24px;
+  background-color: $orange-v3;
+  padding: 4px;
+  border-radius: 4px;
+}
+.TestBedConfig {
+  border: solid 1px $orange-v3;
+  background: $gray-v52 !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .CardNameContainer {
+    width: 50%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+@include for-phone-and-tab {
+  .TaskDefinition {
+    display: none;
+  }
+}
+
+.width125 {
+  min-width: 125px;
+  max-width: 125px;
+}
+
+@include for-small-device {
+  .CardContainer {
+    height: 78px !important;
+    padding: 12px 15px;
+    .CardNameContainer {
+      & .ThumbnailContainer {
+        align-self: start;
+      }
+      & .UserDisplayGroup {
+        margin-top: 10px;
+        display: flex;
+        text-align: left;
+      }
+    }
+    .TaskStatusContainer {
+      flex-direction: column;
+      align-items: flex-end;
+
+      & .UserDisplayGroup {
+        display: none;
+      }
+
+      & .AssignedOn {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 10px;
+        min-width: auto;
+        max-width: auto;
+      }
+    }
+  }
+}
+
+.AttachmentIcon {
+  width: 11px;
+  height: 12px;
+}
+.AttachmentCount {
+  font-size: 12px;
+  font-weight: 500;
+  color: $gray-v53;
+}
+.MW50 {
+  max-width: 50%;
+}
+.ML20{
+  margin-left: 20px !important;
+}
+.MediumPriorityDueFlag {
+  path {
+  fill: $orange-v4;
+  }
+}

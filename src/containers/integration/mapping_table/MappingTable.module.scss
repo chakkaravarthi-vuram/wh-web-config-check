@@ -1,0 +1,110 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.MappingTable {
+  border: none !important;
+  border-collapse: collapse;
+  table-layout: fixed;
+  & thead {
+    border-left: none !important;
+    border-right: none !important;
+    & tr:hover {
+      border: none;
+    }
+    & td {
+      padding: 10px 0;
+      background-color: transparent;
+      border: none !important;
+    }
+    & td:first-child {
+      border: none !important;
+      width: 120px !important;
+    }
+    & td:last-child {
+      width: 30px !important;
+    }
+    & td:nth-child(3) {
+      width: 120px !important;
+    }
+    & td:nth-child(2) {
+      width: 120px !important;
+    }
+    & td:hover {
+      background-color: transparent;
+      border: none !important;
+    }
+  }
+  & tbody {
+    margin-top: 15px;
+    & tr:hover {
+      border: none;
+    }
+    & td {
+      padding: 0;
+      background-color: transparent;
+      border: none !important;
+    }
+    & td:first-child {
+      border: none !important;
+      width: 120px !important;
+    }
+    & td:last-child {
+      width: 30px !important;
+    }
+    & td:nth-child(3) {
+      width: 120px !important;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      width: 100% !important;
+      height: 50px;
+    }
+    & td:nth-child(2) {
+      width: 120px !important;
+    }
+    & td:hover {
+      background-color: transparent;
+      border: none !important;
+    }
+  }
+  & tbody {
+    & td {
+      padding-top: 5px;
+      padding-right: 20px;
+      vertical-align: top;
+    }
+    & tr {
+      & td {
+        padding-top: 15px;
+      }
+    }
+  }
+}
+.AddMoreIcon {
+  width: fit-content;
+  svg {
+    width: 12px;
+    height: 12px;
+  }
+}
+.AddMoreText {
+  color: $blue-v39;
+}
+.Header {
+  font-weight: $fw-medium;
+  padding: 10px 12px;
+  @extend %FS13;
+  color: $gray-v89;
+  &:first-child {
+    width: 35%;
+  }
+  &:nth-child(2) {
+    width: 28%
+  }
+  &:nth-child(3) {
+    width: 20%;
+  }
+  &:last-child {
+    width: 15%;
+  }
+}

@@ -1,0 +1,35 @@
+@import '../../scss/utilities';
+
+.OuterContainer {
+  padding: 20px 54px 20px 54px;
+  flex-direction: column;
+  @include for-phone-and-tab {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  @include for-small-device {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.AreYouSureLabel {
+  font-size: 19px;
+  font-weight: 600;
+  @include for-phone-and-tab {
+    font-size: 13px;
+    font-weight: 600;
+    white-space: normal !important;
+  }
+}
+.SaveAsDraftLabel {
+  font-size: 13px;
+  font-weight: normal;
+  color: #7c8399;
+  text-align: center;
+}
+
+.MdCancelBtn {
+  border: none;
+  color: $gray-v89;
+}

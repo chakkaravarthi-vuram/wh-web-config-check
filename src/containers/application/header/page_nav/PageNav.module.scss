@@ -1,0 +1,94 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.PageNav{
+    width: 100%;
+    background-color: white;
+    padding: 0 24px;
+    z-index: 3;
+
+    @include responsive-layout {
+        background-color: transparent;
+    }
+
+    .TitleData {
+        font-size: 24px !important;
+        padding-top: 12px;
+
+        @include responsive-layout {
+            font-size: 16px !important;
+            padding-top: 0px;
+            height: 24px;
+        }
+    }
+}
+
+.PageLink {
+    padding: 4px 0;
+    cursor: pointer;
+    font-size: 13px;
+    position: relative;
+    color: $black-v12;
+    text-decoration: none !important;
+
+     &:hover{
+        color: $blue-v39;
+    }
+
+    &.Selected{
+        opacity: 1;
+        position: relative;
+        color: $blue-v39;
+
+        &::after{
+            position: absolute;
+            background-color: $blue-v39;
+            content: "";
+            height: 4px;
+            width: 100%;
+            left: 0;
+            display: block;
+            bottom: -6px;
+        }
+    }
+}
+
+.TabText {
+    margin-left: 0 !important;
+    font-size: 13px;
+    color: $black-v12;
+}
+
+.TabTextClass {
+    margin: 10px 0px 10px 0px !important;
+}
+
+.highlightClass {
+    height: 4px;
+    bottom: 0px;
+}
+
+.moreIcon {
+    height: 15px;
+    display: flex;
+    margin-left: 10px;
+    margin-top: 12px;
+}
+
+.fillWhite {
+    fill: $white !important;
+    margin-top: 0;
+}
+
+.multiColor {
+    fill: $gray-v3;
+}
+
+.TabSticky {
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+    background-color: $white;
+    padding: 0px 24px;
+    border-bottom: 1px solid $gray-v103;
+}

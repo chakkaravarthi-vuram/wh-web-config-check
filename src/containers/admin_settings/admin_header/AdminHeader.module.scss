@@ -1,0 +1,48 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.AdminConatiner {
+  .Label {
+    display: flex;
+    height: 17px;
+    position: relative;
+    border-right: 1px solid $gray-v65 !important;
+    padding-right: 15px;
+    line-height: 15px !important;
+    display: inline-flex;
+  }
+  .HideLabelBorder {
+    border-right: none !important;
+  }
+  .HideLabelBorder {
+    border-right: none !important;
+  }
+}
+
+.Active {
+  content: '';
+  height: 3px;
+  width: calc(100% - 15px);
+  background-color: $blue-v39;
+  position: absolute;
+  left: 0;
+  bottom: -24px;
+}
+
+.ActiveSvg {
+  svg {
+    path {
+      fill: $blue-v39 !important;
+    }
+  }
+}
+
+.HamburgerAdmin {
+  transform: translateY(2px);
+}
+
+@media only screen and (max-width:1024px) and (min-width:420px) {
+  .Active {
+    bottom: -24px;
+  }
+}

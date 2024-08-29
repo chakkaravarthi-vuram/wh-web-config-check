@@ -1,0 +1,13 @@
+$progress-bar-height : 5px;
+
+.ProgressBar {
+    height: $progress-bar-height;
+    width: 100%;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+}
+
+.Progress {
+    height: $progress-bar-height;
+}

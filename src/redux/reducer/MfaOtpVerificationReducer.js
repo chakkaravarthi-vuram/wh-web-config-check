@@ -1,0 +1,34 @@
+import { MFA_OTP_VERIFICATION } from '../actions/ActionConstants';
+import { EMPTY_STRING } from '../../utils/strings/CommonStrings';
+
+const initialState = {
+  otp: EMPTY_STRING,
+  otp_message_or_error_text: null,
+  is_resend_enabled: true,
+  block_resend: false,
+  is_data_loading: false,
+};
+
+export default function MfaOtpVerificationReducer(state = initialState, action) {
+  switch (action.type) {
+    case MFA_OTP_VERIFICATION.STARTED:
+      return {
+        ...state,
+        is_data_loading: true,
+      };
+    case MFA_OTP_VERIFICATION.SUCCESS:
+    case MFA_OTP_VERIFICATION.CANCEL:
+      return {
+        ...state,
+        is_data_loading: false,
+      };
+    case MFA_OTP_VERIFICATION.SET_STATE:
+      return { ...state, ...action.payload };
+    case MFA_OTP_VERIFICATION.CLEAR:
+      return {
+        ...initialState,
+      };
+    default:
+      return state;
+  }
+}

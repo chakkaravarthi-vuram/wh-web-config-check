@@ -1,0 +1,96 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.CloseIcon {
+    width: 10px;
+    height: 10px;
+    margin: 15px 15px 15px;
+    fill: $gray-v101 !important;
+}
+
+.MfaMainContent {
+    height: 78vh !important;
+    padding: 0px 40px;
+    overflow-x: hidden !important;
+}
+
+.DisableMfaMainContent {
+    height: fit-content !important;
+    padding: 40px 40px;
+    overflow: hidden !important;
+}
+
+.MfaFooterContent {
+    padding: 10px 15px;
+}
+
+.CenteredText {
+    text-align: center;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.ResendStyle {
+    color: $blue-v39 !important;
+    font-family: Inter;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.ResendTest {
+    font-family: Inter;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+
+.MfaWarningText {
+    background-color: $orange-v34;
+    color: $orange-v33;
+    padding: 5px 20px;
+    border-radius: 4px;
+    margin-left: 20px;
+}
+
+.CircleEmailIcon {
+    width: 40px;
+    height: 40px;    
+    // background-color: $gray-v1;
+    border: 1px solid;
+    border-radius: 50%;
+    border-color: $gray-v1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.CircleNumber {
+    width: 25px;
+    height: 25px;    
+    // background-color: $gray-v1;
+    color: $gray-v89;
+    border: 1px solid;
+    border-radius: 50%;
+    border-color: $gray-v1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.MfaEmailText {
+    color: red;
+}
+
+.QRCode {
+    height: 'auto'; 
+    maxWidth: '100%'; 
+    width: '20%';
+}

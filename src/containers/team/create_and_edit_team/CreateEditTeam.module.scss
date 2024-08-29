@@ -1,0 +1,155 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.StepperClass {
+    padding: 14px 10px 10px 0px !important;
+}
+
+.FooterContainer {
+    height: 64px;
+    box-shadow: 0 -4px 20px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 0px 0px 6px 6px;
+    padding-right: 14px;
+    justify-content: end;
+
+    .CancelButton {
+        color: $gray-v3 !important;
+    }
+}
+
+.ActiveBar {
+    height: 4px;
+}
+
+.AddMemberButton {
+    div svg path {
+        fill: none !important;
+    }
+
+    &:hover {
+        div svg path {
+            stroke: $white !important;
+        }
+    }
+}
+
+.SearchIcon {
+    outline: none;
+    opacity: 0.4;
+    & > path{
+        fill: $gray-v101;
+    }
+}
+
+.DeleteIcon {
+    &:focus {
+        outline: none;
+    }
+}
+
+.DeleteButton {
+    border-color: $red-v22 !important;
+    color: $red-v22 !important;
+
+    div svg path {
+        fill: none !important;
+        stroke: $red-v22 !important;
+    }
+
+    &:hover {
+        background-color: $red-v22 !important;
+        color: $white !important;
+        div svg path {
+            stroke: $white !important;
+        }
+    }
+}
+
+.MemberValidation {
+    color: $red-v22 !important;
+}
+
+.ValidationMessage {
+    color: $red-v22 !important;
+}
+
+.ManageButtonContainer {
+    right: 0px;
+    top: -12px;
+}
+
+.ManageContainer {
+    border: 1px solid $gray-v1;
+    background-color: $white;
+    border-radius: 2px;
+    padding: 24px 40px 40px 40px;
+}
+
+.TableManageMember {
+    border-radius: 3px;
+    border: 1px solid $gray-v1;
+
+    thead tr th {
+        border-bottom: 1px solid $gray-v108 !important;
+        background: $gray-v109 !important;
+    }
+
+    tbody tr {
+        td button svg {
+            visibility: hidden;
+        }
+        &:hover {
+            td {
+                background: $blue-v47;
+                button svg {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}
+
+.TeamIconContainer {
+    &:hover {
+        div svg path {
+            fill: $white !important;
+        }
+    }
+}
+
+.SearchIconClass {
+    cursor: pointer;
+    outline: none;
+  }
+  
+.Search {
+    border-radius: 3px;
+}
+
+.TabPosition {
+    top: 25px;
+}
+
+.SecurityTitle label {
+    color: $black-v20 !important;
+}
+
+.CreateMaxWidth {
+    width: 60%;
+}
+.SloveneText {
+    text-align: center;
+}
+
+.ResponsiveTeamDetailsHeader {
+    @include responsive-layout {
+        flex-direction: column;
+    }
+}
+
+.ResponsiveAlign {
+    @include responsive-layout {
+        align-self: flex-start !important;
+        padding-bottom: 8px;
+    }
+}

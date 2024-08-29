@@ -1,0 +1,395 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.EventsContainer, .NoDataEventsContainer {
+  background-color: $white;
+  padding: 32px;
+}
+.ViewHeight {
+  height: calc(100vh - 180px);
+}
+.EventError {
+  padding-bottom: 5px !important;
+}
+.ActionHeader {
+  min-height: 37px;
+}
+.EditHeight {
+  height: calc(100vh - 62px);
+}
+.HeaderTitle {
+  font-weight: $fw-medium;
+  font-size: $font-size-mdt;
+  line-height: 16px;
+  color: $gray-v89;
+}
+.TableHeader {
+  padding: 16px 12px !important;
+  &:nth-child(2) {
+    padding-left: 0 !important;
+  }
+}
+.TableRow {
+  padding-top: 12px;
+  border-bottom: 1px solid $gray-v1;
+}
+.CategoryTooltip {
+  max-width: 450px !important;
+}
+.ColMax {
+  width: 40% !important;
+}
+.ColMed {
+  width: 30% !important;
+}
+.HeaderRow {
+  border-top: 1px solid $gray-v1;
+  border-bottom: 1px solid $gray-v1;
+}
+.EndPoint {
+  font-size: $font-size-mdt;
+  line-height: 16px;
+  color: $gray-v90;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+          line-clamp: 2; 
+  -webkit-box-orient: vertical;
+}
+.CategoryName {
+  max-width: 95%;
+}
+.CategoryDropdownPopper {
+  min-width: 300px;
+  margin-left: 50px;
+}
+.EventDetailsModal {
+  width: 60vw;
+}
+.EventDetailsHeader {
+  padding-left: 40px;
+}
+.EventDetails {
+  background: $gray-v99;
+  padding: 32px 9px 24px 9px;
+  margin: 0px;
+  border: 1px solid $gray-v1;
+}
+.EventColumnMax {
+  width: 35%;
+  padding-left: 8px;
+}
+.EventColumnMin {
+  width: 15%;
+  margin-left: 8px;
+}
+.EditCategory {
+  padding: 12px 16px 12px 8px;
+  height: 42px;
+}
+.EventColumn {
+  width: 25%;
+  margin-left: 8px;
+}
+.CategoryError {
+  padding-top: 50px !important;
+}
+.InputClass {
+  margin: 10px 0 0 !important;
+}
+.SearchTab {
+  width: 100%;
+  border-bottom: 1px solid $gray-v68;
+  border-radius: 2px;
+}
+.SearchEvent {
+  margin-bottom: 0px !important;
+}
+.CategoryDropdown {
+  width: 210px;
+  position: relative !important;
+  margin-bottom: 0 !important;
+  top: 18px;
+  left: 25px;
+  background: $white;
+}
+.ErrorContainer {
+  background: $orange-v30;
+  border-radius: 6px;
+  padding: 4px 5px;
+}
+.ErrorMsg {
+  font-size: $font-size-smt;
+  color: $red-v28;
+}
+.ErrorTitle {
+  font-size: $font-size-md;
+  color: $red-v20;
+  font-weight: $fw-medium;
+}
+.EventTitle {
+  display: inline-block;
+  font-size: $font-size-lg;
+  color: $gray-v3;
+  font-weight: $fw-semibold;
+}
+.FieldContainer {
+  background-color: $white;
+}
+.LabelClassName {
+  label {
+    color: $black-v13;
+    font-size: $font-size-mdt;
+    font-weight: 600;
+  }
+}
+.AddMoreIcon {
+  svg {
+    width: 12px;
+    height: 12px;
+  }
+}
+.AddMoreText {
+  cursor: pointer;
+  color: $blue-v39;
+  font-size: $font-size-mdt;
+  margin-left: 3px;
+  font-weight: $fw-semibold;
+}
+.CreationContainer {
+  position: relative;
+  transition: ease all 0.5s;
+}
+.EventRow {
+  padding: 12px 0;
+  border-bottom: 1px solid $gray-v1;
+}
+.ConfigurationHeader {
+  height: 61px;
+  padding: 16px 24px;
+  background: $white;
+}
+.ComponentContainer {
+  background-color: $white;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 0px 24px 50px 24px;
+  min-height: 500px;
+}
+.ConfigurationFooter {
+  position: absolute;
+  bottom: 0;
+  height: 67px;
+  border-right: 1px solid $gray-v68;
+  background-color: $white;
+}
+.QueryParamSubTitle {
+  color: $gray-v3;
+  font-size: $font-size-sm;
+}
+.DeleteIcon {
+  cursor: pointer;
+}
+.EditIcon {
+  cursor: pointer;
+  margin-right: 13px;
+}
+.Table {
+  border-spacing: 0 8px !important;
+  border: none;
+
+  &.GeneralTable {
+    overflow: initial;
+  }
+
+  thead {
+    border: none;
+    & td:not(:first-child) {
+      padding-left: 0px !important;
+    }
+    & td {
+      border-top: none !important;
+      border-bottom: 1px solid $gray-v1;
+      background: none;
+    }
+  }
+
+  tbody {
+    & td:first-child {
+      padding-left: 12px !important;
+    }
+    & tr:first-child {
+      & td {
+        padding-top: 12px !important;
+      }
+    }
+    & td {
+      padding-bottom: 12px !important;
+      border-bottom: 1px solid $gray-v1;
+    }
+    & tr {
+      &:hover {
+        border: none;
+      }
+    }
+  }
+
+  .TableCustomHeaderPadding {
+    padding: 0 30px 8px 30px !important;
+  }
+
+  tr {
+    padding: 8;
+    transform: none !important;
+    border-radius: 3px !important;
+
+    &:hover {
+      transform: none !important;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15) !important;
+      border: none;
+
+      .Thumbnail {
+        background-color: $blue-v39 !important;
+      }
+
+      .ThumbnailIcon {
+        fill: $white;
+      }
+    }
+
+    td {
+      min-width: 0px !important;
+    }
+  }
+}
+.EventTableColumnWidth {
+  width: 25%;
+  &:last-child {
+    width: 15%;
+  }
+  &:nth-child(3) {
+    width: 35%;
+  }
+}
+.HeaderStyle {
+  font-size: $font-size-mdt;
+  color: $gray-v89;
+  font-weight: $fw-medium;
+  padding: 16px 0 12px 8px;
+  border-bottom: 1px solid $gray-v1;
+}
+.CategoryReadonly {
+  background-color: $gray-v99;
+  padding: 12px 8px;
+  @extend %FS13;
+  font-weight: $fw-semibold;
+  width: 300px;
+}
+.EventName {
+  display: inline-block;
+  width: 20ch;
+}
+.EventCategory {
+  display: inline-block;
+  width: 15ch;
+}
+.EventEndPoint {
+  display: inline-block;
+  width: 15ch;
+}
+.EventMethod {
+  color: $gray-v3;
+  font-size: $font-size-sm;
+  font-weight: $fw-semibold;
+  border: 1px solid $gray-v1;
+  border-radius: 20px;
+  padding: 4.5px 8px;
+  width: 10ch;
+}
+.CancelButton {
+  cursor: pointer;
+  font-size: $font-size-mdt;
+  font-weight: $fw-semibold;
+  color: $gray-v89;
+}
+.UpdateButton {
+  cursor: pointer;
+  font-size: $font-size-mdt;
+  font-weight: $fw-semibold;
+  color: $blue-v39;
+}
+.MoreInfoText {
+  cursor: pointer;
+  font-size: $font-size-mdt;
+  color: $blue-v39;
+  padding-right: 16px;
+}
+.TitleWrapper{
+  width: 40%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+          line-clamp: 2; 
+  -webkit-box-orient: vertical;
+}
+.EndPointToolTip{
+  margin-left: 35px;
+}
+.FooterClass {
+  height: 64px;
+  display: flex;
+  background-color: $white;
+  padding: 10px 15px 10px 15px;
+  border-radius: 0px 0px 6px 6px;
+  align-items: center;
+}
+.AddEventModal {
+  width: 84vw !important;
+}
+.EventsListTable {
+  & thead {
+      & th {
+        font-size: 12px !important;
+        background-color: $gray-v108 !important;
+      }
+    }
+  & tbody {
+      & tr {
+          & td:last-child div .ActionButtons {
+            border-bottom: none !important;
+            visibility: hidden;
+          }
+      }
+      & tr:hover {
+          & td:last-child div .ActionButtons { visibility: visible; }
+      }
+      & td {
+        color: $gray-v89 !important;
+      }
+      & tr:last-child {
+        & td {
+          border-bottom: none !important;
+        }
+      }
+  }
+  table {
+    border: 1px solid $gray-v108;
+  }
+}
+.CreateIcon {
+  stroke-width: 0;
+}
+.NoEventTitle {
+  color: $black-v12 !important;
+}
+.NoEventSubTitle {
+  color: $black-v21 !important;
+}
+.EventsListWrapper {
+  height: calc(100vh - 180px);
+}
+
+.ReadOnlyEventsListWrapper {
+  height: calc(100vh - 300px);
+}

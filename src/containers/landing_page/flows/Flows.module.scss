@@ -1,0 +1,118 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.Title {
+  margin-top: 30px;
+  line-height: 18px;
+  span {
+    @extend %FontWeight500;
+    opacity: 0.9;
+  }
+  @include for-hd-screen {
+    margin-top: 20px;
+  }
+}
+
+.Flows {
+  display: flex;
+  list-style-type: none;
+  min-height: 44px;
+  grid-gap: 16px;
+  align-items: flex-start;
+}
+
+.FlowCard {
+  max-width: 200px;
+  border-radius: 6px;
+  background-color: $white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.04);
+  @include transition(0.3s);
+}
+
+.FlowCardText {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  background-color: $blue-v41;
+
+  .Thumbnail {
+    fill: $blue-v39;
+  }
+}
+
+.MoreCard {
+  text-align: center;
+  color: $blue-v39;
+  font-size: $font-size-md;
+  background-color: $white;
+  border: 1px solid $blue-v39;
+  border-radius: 6px;
+  &:hover {
+    background-color: $blue-v40;
+    color: $white;
+  }
+}
+
+.CountColor {
+  color: $gray-v53;
+}
+
+.NoDataDisplay {
+  display: block !important;
+}
+
+.FixedWidth {
+  width: 72px;
+  color: $gray-v3;
+}
+
+.FlowCardList {
+  width: 72px;
+  &:hover {
+    .FlowCard {
+      background-color: $blue-v40;
+      .FlowCardText {
+        background-color: $blue-v40;
+        .Thumbnail {
+          fill: $white;
+        }
+      }
+    }
+  }
+}
+
+.FlowCardContainer {
+  cursor: pointer;
+  transition: all 0.3s;
+  max-width: 200px;
+  text-overflow: ellipsis;
+  border-radius: 6px;
+  background-color: $white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.04);
+  color: $gray-v3;
+
+  &:hover {
+    background-color: $blue-v39;
+    color: $white !important;
+  }
+}
+
+.FlowIconContainer {
+  min-width: 32px;
+  height: 32px;
+  border-radius: 3px;
+  background-color: $blue-v41;
+}
+
+.ContentSpacing {
+  padding: 12px;
+  height: 48px;
+}
+
+.Max200 {
+  max-width: 200px;
+}
+
+.DuplicateContainer {
+  padding: 12px 12px 12px 52px;
+}

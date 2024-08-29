@@ -1,0 +1,141 @@
+@import '../../../scss/constants';
+@import '../../../scss//utilities';
+
+$iconWidth: 16px;
+
+.DatePickerModal{
+  height: 450px;
+  width: 410px;
+  background-color: transparent !important;
+}
+
+.ReadOnly {
+  white-space: nowrap;
+}
+.calendervisible{
+  width: 0px;
+}
+.Icon {
+  width: 16px;
+  position: relative;
+  bottom: 30px;
+  left: 125px;
+}
+.IconTablePosition{
+  bottom: 28.5px;
+}
+
+.IconWithTime {
+  width: 16px;
+  position: relative;
+  bottom: -6px;
+  left: -25px;
+}
+.IconTablePositionWithTime{
+  bottom: -8px;
+}
+
+.InputTextStyle {
+  border: none;
+  height: 24px;
+  &::placeholder {
+    @extend %GrayV6;
+    opacity: 1;
+    font-weight: 400;
+  }
+  // margin-top: -1.5px;
+}
+.ErrorMessage {
+  border: none;
+}
+
+.TimeDropdown {
+  width: 125px;
+}
+.TimeDropdownPopper {
+  width: 125px !important;
+  height: 200px !important;
+  // overflow-y: auto !important;
+  border: solid 1px #dadfe7;
+}
+
+.DatepickerContainer {
+  border-radius: 4px;
+  border: solid 1px #d8dee9;
+  justify-content: space-between;
+  background-color: $white !important;
+}
+.PlaceholderPadding {
+  padding: 5px 22px 5px 7px;
+  height: 36px;
+}
+
+.DashSpan {
+  color:$gray-v1;
+}
+
+.Disabled{
+  background-color: $gray-v7 !important;
+}
+
+.ReadAlone {
+  cursor: default;
+  background-color: $gray-v7!important;
+  & + label {
+    cursor: default;
+  }
+}
+
+.CalendarContainer{
+  padding: 15px;
+}
+.CalendarContainerWidth{
+  width: 400px;
+}
+
+.weekDay{
+  font-family: $font-family-2 !important;
+  font-size: 11px !important;
+  font-weight: 400;
+  color: #666666 !important;
+}
+.DisableDay{
+  pointer-events: none;
+  color: #cccccc !important;
+}
+.RemovePopper{
+  position: relative !important;
+}
+.MsgContainer{
+  position: absolute;
+  top: 35px;
+}
+.MsgContainer2{
+  position: relative;
+  top: -20px;
+}
+.MsgContainer3{
+  position: relative;
+  p{
+    margin-bottom: 0rem !important;
+  }
+}
+.LastColumnCalendarContainer{
+  padding: 15px;
+  right:100px;
+}
+.TransparentBtn {
+  background-color: transparent;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.inputNum{
+  font-size: 12px;
+  ::placeholder{
+    font-size: 11px;
+  }
+}

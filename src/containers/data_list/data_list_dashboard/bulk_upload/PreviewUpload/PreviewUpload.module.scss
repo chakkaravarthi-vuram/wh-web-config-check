@@ -1,0 +1,36 @@
+@import '../../../../../scss/constants';
+@import '../../../../../scss/utilities';
+
+.Table {
+  tr {
+    & td:first-child {
+      padding-left: 30px;
+    }
+  }
+}
+
+.RowsPerPage {
+  font-size: 13px;
+  color: $gray-v12;
+  margin-right: 10px;
+  margin-left: 20px;
+  margin-top: 7px;
+}
+
+.ValidationContainer {
+  width: 100%;
+  border-radius: 4px;
+  margin: 30px auto 0;
+  background-color: rgba(240, 174, 69, 0.3);
+  color: $orange-v8;
+  padding: 18px;
+
+  p {
+    margin: 0;
+  }
+}
+
+.WarningTrailIcon {
+  fill: $orange-v7;
+  width: 45px;
+}

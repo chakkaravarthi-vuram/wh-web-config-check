@@ -1,0 +1,31 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.FileUpload {
+  width: 95% !important
+}
+
+.ExistingFile {
+  height: 55px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.NameIconComponent {
+  border: solid 1px $gray-v68;
+  background-color: $gray-v114;
+  height: 54px;
+  border-radius: 2px;
+  box-shadow: 3px 2px 5px 0 rgba($black, 0.11);
+}
+
+.IconContainer {
+  background-color: $white !important;
+  border-radius: 2px;
+  width: 54px;
+  height: 52px;
+}
+
+.ChooseField {
+  width: 300px;
+}

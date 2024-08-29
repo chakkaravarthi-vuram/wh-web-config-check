@@ -1,0 +1,75 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.Configuration {
+    height: 100%;
+    overflow-y: auto;
+    background-color: $white;
+    padding: 32px;
+    & .DueDateSection{
+        margin-bottom: 30px;
+    }
+}
+
+.InputDropdown{
+    width: 151px;
+    height: 36px !important;
+    font-size: 12px !important;
+    color: $black-v13 !important;
+}
+.DeleteButton {
+    font-size: $font-size-mdt;
+    color: $red-v25 !important;
+    padding: 8px 16px;
+    height: 36px;
+    cursor: pointer;
+    &:hover {
+      background: $red-v26;
+    }
+}
+.SaveButton {
+    height: 36px; 
+}
+.CancelButton {
+    font-size: $font-size-mdt;
+    color: $gray-v93;
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: var(--gray-50, $gray-v109) !important;
+    padding: 8px 16px;
+    height: 36px;
+    &:hover {
+      color: $black-v18 !important;
+    }
+}
+.StartNodeModal {
+    width: 50vw;
+}
+.ModalFooter {
+    display: flex;
+    justify-content: flex-end !important;
+}
+.DropDownWidth{
+    // width: 340px;
+    width: 151px;
+}
+
+.DropdownList{
+    border-radius: 4px ;
+    width: 340px;
+    padding:10px;
+}
+.InputDropdownList{
+    border-radius: 4px ;
+    width: 69px;
+    padding:5px;
+}
+
+.PB10{
+    padding-bottom: 10px !important;
+}
+.MainContentClass {
+    padding: 30px 50px 50px 50px !important;
+    overflow: scroll;
+    position: relative;
+}

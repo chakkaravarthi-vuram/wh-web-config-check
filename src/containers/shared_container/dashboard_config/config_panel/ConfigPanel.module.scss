@@ -1,0 +1,146 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.ConfigPanel {
+  width: 30%;
+  max-width: 356px;
+  height: 100%;
+  overflow-y: auto;
+  background-color: $white;
+  border-left: 1px solid $gray-v108;
+}
+
+.SelectedColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.EachSelectedColumn {
+  border: 1px solid $gray-v1;
+  color: $black-v20;
+  border-radius: 4px;
+  padding: 7px 12px;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+  cursor: move;
+
+  &:hover {
+    background-color: $blue-v41;
+    color: $blue-v39;
+
+    .EditDeleteIcons {
+      display: flex;
+    }
+  }
+
+  .EditDeleteIcons {
+    display: none;
+  }
+
+  .LeftSideItem {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    overflow: hidden;
+    flex-grow: 1;
+  }
+}
+
+.AddColumn {
+  width: 100%;
+  border: 1px solid $gray-v1;
+  border-radius: 4px;
+  color: $blue-v39;
+  font-size: 13px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AddFieldPopper {
+  background: $white;
+  border: 1px solid $gray-v68;
+  box-shadow: 0px 4px 15px rgba($black, 0.15);
+  border-radius: 4px;
+  z-index: 5;
+  width: 100%;
+  transform: translateX(0px) !important;
+}
+
+.FieldListSearch {
+  &:focus-within {
+    border-color: transparent !important;
+    border-width: 0px !important;
+  }
+
+  &>div {
+    gap: 10px;
+  }
+}
+
+.Divider {
+  height: 1px;
+  background-color: $gray-v68;
+}
+
+.FieldListItems {
+  max-height: 268px;
+  overflow: auto;
+
+  .Category {
+    @extend %FTwo11;
+    background: $gray-v99;
+    line-height: 13px;
+    color: $gray-v98;
+    padding: 8px 16px;
+  }
+
+  .FieldListOption {
+    @extend %FTwo13;
+    padding: 12px 9px;
+    line-height: 17px;
+
+    &.SelectedField {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: $blue-v47;
+      cursor: default;
+
+      &:hover {
+        background-color: $blue-v47;
+      }
+    }
+
+    &:hover {
+      background-color: $blue-v41;
+    }
+  }
+}
+
+.CloseModelIcon {
+  width: 14px;
+  height: 14px;
+}
+
+.TableColumnConfig {
+  width: 100%;
+}
+
+.FooterClassName {
+  border-top: 1px solid $gray-v119;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.DragIcon path {
+  stroke: $gray-v121 !important;
+  fill: $gray-v121 !important;
+}

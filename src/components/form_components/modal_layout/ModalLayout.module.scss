@@ -1,0 +1,76 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.ModalContent {
+  width: 60vw;
+  overflow: hidden !important;
+  @include border-radius(6px);
+  @include for-phone-and-tab {
+    width: 100%;
+  }
+  @include for-desktop {
+    // margin: 15px 15px 15px 0;
+    padding-bottom: 15px;
+    overflow: initial;
+    border-radius: 0px;
+  }
+  overflow: -moz-hidden-unscrollable !important;
+}
+.Close {
+  width: 28px;
+  height: 28px;
+  padding: 0px !important;
+}
+.ModalContainer {
+  @include for-phone-and-tab {
+    padding: 60px 15px 20px 15px;
+  }
+}
+.HeaderContent {
+  display: flex;
+  align-items: center;
+  width: 90%;
+}
+.Container {
+  height: 100%;
+  @include border-radius(6px);
+  @include for-phone-and-tab {
+    width: 100%;
+  }
+  background-color: $white;
+}
+
+.Header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  padding: 15px 15px 11px 30px;
+  background-color: $gray-v63;
+  border: solid 1px $gray-v68;
+}
+
+.ContentContainer {
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 30px 50px 0px 50px;
+  height: fit-content;
+
+  @include for-small-device {
+    padding: 10px !important;
+  }
+}
+.ButtonContainer {
+  height: 64px;
+  display: flex;
+  box-shadow: 0 -4px 20px 0 rgba(0, 0, 0, 0.1);
+  background-color: $white;
+  padding: 10px 15px 10px 15px;
+  border-radius: 0px 0px 6px 6px;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  @include for-phone-and-tab {
+    //   position: fixed;
+  }
+}

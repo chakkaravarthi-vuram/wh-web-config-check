@@ -1,0 +1,177 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+// $container-height: 422px;
+// .FieldConfigContainer{
+//   width: 100%;
+// }
+// .Container {
+//   background-color: $white;
+//   box-shadow: 0 2px 10px 0 #0000004c;
+//   border-radius: 4px;
+//   width: 401px;
+//   height: 412px;
+//   overflow-y: hidden;
+//   @include for-hd-screen {
+//     width: 375px;
+//   }
+//   @include for-phone-and-tab {
+//     width: calc(100vw - 60px);
+//   }
+// }
+// .Content {
+//   padding: 20px 20px 0px 20px;
+//   flex: 1 1 auto;
+//   overflow-y: auto;
+// }
+// .Header {
+//   padding: 24px 20px 0px 20px;
+//   border-bottom: 1px solid $gray-v1;
+//   @extend %TabHeader;
+// }
+// .Footer {
+//   padding: 12.5px 30px;
+//   background-color: rgba(237, 237, 242, 0.3);
+//   & button {
+//     padding: 8px 30px;
+//   }
+// }
+
+// .FieldsContainer {
+//   z-index: 100;
+//   margin-top: -10px;
+//   position: absolute;
+// }
+// .DropdownPopper {
+//   width: 361px;
+//   overflow-y: hidden;
+//   @include for-hd-screen {
+//     width: 335px;
+//   }
+// }
+// .DropdownWidth{
+//   width: 162px;
+// }
+// .ActiveCheckboxLabel{
+//   color: $gray-v3 !important;
+// }
+.InputContainer{
+  height: 38px;
+  width: 50px;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 5px 2px;
+}
+.DateValidationOption{
+  margin-right: 0px !important;
+}
+.ContentModal{
+  width: 650px !important;
+  @include for-desktop{
+    margin:20px 20px 20px 0px !important;
+  }
+  @include border-radius(6px);
+}
+.ModalContainerClass{
+  width: 650px !important;
+  // @include for-desktop{
+  //   margin:20px 20px 20px 0px !important;
+  // }
+  @include border-radius(6px);
+}
+.ContentContainer {
+  overflow-y: scroll !important;
+  // overflow-x: hidden;
+  padding: 30px 50px 30px 50px;
+  // margin-bottom: 30px !important;
+  height: fit-content;
+ // overscroll-behavior: contain;
+
+  @include for-phone-and-tab {
+    padding: 20px;
+  }
+}
+.Conntainer{
+    height: 100%;
+    width: 100%;
+    @include border-radius(6px);
+    @include for-phone-and-tab {
+      // width: calc(100vw - 60px);
+      // height: 100%;
+      width: 100%;
+      z-index: 6;
+      // margin-bottom: 30px;
+      // padding: 20px 15px 20px ;
+    }
+    background-color: $white;
+  }
+.header{
+  width: 100%;
+}
+.TableFieldCloseIcon {
+  margin: 15px 15px 0px;
+  padding: 3px 7.6px 0px 7.6px !important;
+  @include border-radius(4px);
+  border: solid 1px #dadfe7;
+  background-color:$white;
+  fill: #6c727e;
+}
+.ButtonContainer{
+  height: 64px;
+  width: 100%;
+ // margin-left: 15px;
+ // box-shadow: 0 -4px 20px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+.Save{
+  width: 100px;
+  height: 38px !important;
+}
+.SecondaryButton {
+  height: 38px;
+}
+.HeaderClassName{
+  height: 70px !important;
+}
+
+.HeaderSelect {
+  cursor: text;
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+}
+.BtnCommonConfig{
+  height: 38px;
+}
+.MainContentClass {
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 30px 50px 30px 50px !important;
+  height: fit-content;
+}
+.FixedDateRangeContainer {
+  height: 75px;
+}
+
+.DefaultCalculationConfirmationModal{
+    inset: 0;
+    z-index: 2;
+    border-radius: 4px;
+
+      & .ModalContent{
+        padding: 20px;
+        border-radius: 6px;
+        box-shadow: 0 3px 14px 0 rgba(0, 0, 0, 0.27);
+        background-color: $white;
+        text-align: center;
+    
+        & .ConfirmButton {
+          height: 28px !important;
+          padding: 3px 8px !important;
+        }
+    }
+
+}
+.DefaultCalculationBlurEffect{
+  filter: blur(1.3px);
+}

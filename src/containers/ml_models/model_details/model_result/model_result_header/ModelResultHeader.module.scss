@@ -1,0 +1,11 @@
+@import '../../../../../scss/constants';
+@import '../../../../../scss/utilities';
+
+.Tab {
+    border-bottom: 1px solid $gray-v102;
+    padding: 12px 24px 0 24px;
+  }
+  .TabText {
+    margin-left: 0 !important;
+    margin-bottom: 10px;
+  }

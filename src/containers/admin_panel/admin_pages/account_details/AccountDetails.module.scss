@@ -1,0 +1,136 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.DetailsContainer {
+  background-color: $white;
+  border-radius: 6px;
+  padding: 30px 61px 50px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.04);
+}
+.ScrollContainer {
+  height: calc(100vh - 174px);
+  padding: 30px;
+  overflow: auto;
+}
+.UsageSummaryHeader td,
+.HeaderContainer td {
+  font-size: 10px !important;
+}
+.NoValuesTable {
+  min-width: 120px;
+}
+.ContentClass {
+  font-size: $font-size-sm;
+}
+.HeaderOuterDiv {
+  background-color: $white;
+  padding: 15px 30px;
+  height: 110px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.04);
+}
+.SubHeadingClass {
+  font-size: 12px;
+}
+.BackToAccountsTxt {
+  margin-left: 7px;
+  margin-bottom: 14px;
+  font-size: 12px;
+  color: $blue-v25;
+}
+.BackIcon {
+  margin-top: 3px;
+}
+.CompanyLogoDiv {
+  width: 100px;
+  height: 50px;
+  margin-right: 20px;
+}
+.CompanyLogo {
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+}
+.BorderRight {
+  border-right: 1px solid $gray-v68;
+  margin: 0px 10px;
+  height: 16px;
+}
+.CompanyName {
+  font-size: 20px;
+  color: $blue-v25;
+}
+.CompanyUrl {
+  a {
+    font-size: 12px;
+    color: $blue-v39;
+    &:hover {
+      text-decoration: none;
+      color: $blue-v39;
+    }
+  }
+}
+.CompanyType {
+  display: flex;
+  color: $blue-v25;
+  font-size: 12px;
+}
+.CompanyAddress {
+  color: $black-v13;
+  font-size: 12px;
+}
+.PlusButton {
+  width: 24px;
+  height: 24px;
+  color: $black-v4;
+  background-color: $gray-v13;
+  margin-left: 6px;
+  border-radius: 50%;
+}
+.DropdownList {
+  position: relative;
+  top: -36px;
+  right: -4px;
+  border-radius: 6px !important;
+}
+.OptionList {
+  background-color: inherit !important;
+  div div {
+    color: $black-v4 !important;
+  }
+  &:hover {
+    cursor: default;
+    background-color: inherit !important;
+    div div {
+      color: $black-v4 !important;
+    }
+  }
+}
+.OutlinePrimaryButton {
+  height: 38px !important;
+  width: 110px !important;
+}
+@include for-phone-and-tab {
+  .EachSection {
+    width: 100% !important;
+  }
+  .BorderRight {
+    display: none;
+  }
+  .ScrollContainer {
+    height: calc(100vh - 214px);
+    padding: 15px;
+  }
+  .HeaderOuterDiv {
+    height: 150px;
+  }
+  .DetailsContainer {
+    background-color: $white;
+    border-radius: 6px;
+    padding: 15px 15px 30px;
+  }
+  .CompanyDetails,
+  .BasicDetails {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+}

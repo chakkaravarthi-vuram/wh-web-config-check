@@ -1,0 +1,53 @@
+@import '../../../../../scss/constants';
+@import '../../../../../scss/utilities';
+
+.TitleCalss {
+  font-size: 14px;
+  color: #1f243d !important;
+  margin-top: 20px;
+}
+
+.ClickableElement {
+  background-color: transparent;
+  outline: none !important;
+  text-align: left;
+  border: 0;
+  padding: 0;
+}
+
+.ContextFieldContainer {
+  border: 1px solid $gray-v1;
+  padding: 7px 15px;
+  @include border-radius(4px);
+  margin: 10px 10px 5px 0;
+  border: 1px dashed #bbb;
+  width: 140px;
+  height: 70px;
+
+  &:hover {
+    transform: scale(1.005);
+    border-radius: 4px;
+    box-shadow: 0 4px 20px #00000026;
+    background-color: #fff;
+    border: white;
+    .LableClass {
+      color: $blue-v21;
+    }
+  }
+}
+
+.LableClass {
+  font-size: 12px;;
+  color: #1f243d;
+}
+
+.FieldTypeClass {
+  font-size: 11px;
+  font-style: italic;
+  color: #888ea4;
+}
+
+.HideTextClass {
+  font-size: 12px;
+  color: #1a9cd1;
+}

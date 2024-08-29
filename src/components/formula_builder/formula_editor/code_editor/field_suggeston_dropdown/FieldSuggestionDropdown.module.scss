@@ -1,0 +1,30 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.Container {
+    border: 1px solid #d3dfe6;
+    width: 200px;
+    @extend %FTwo;
+
+    li button {
+        width: 100%;
+        text-align: left;
+        @extend %FontWeight500; 
+    }
+
+    .Focus {
+        background-color: #0057c8 !important;
+        color: $white;
+    }
+}
+
+.DisplayNone {
+    visibility: hidden;
+}
+
+.InputElement {
+    border: none;
+    padding: 0;
+    // visibility: hidden;
+    display: none;
+}

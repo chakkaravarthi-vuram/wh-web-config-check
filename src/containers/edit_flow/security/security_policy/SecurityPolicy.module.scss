@@ -1,0 +1,47 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.CondtionBasedPolicy{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    & .Title {
+        font-weight: 500;
+        color: $black-v20;
+    }
+
+    & .PolicyList{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    & .EachPolicyAccessContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    & .AccessTo {
+        font-weight: 600;
+        color: $black-v13;
+    }
+
+    & .AddPolicy{
+        width: fit-content;
+        font-size: 13px;
+        color: $blue-v39;
+        display: flex;
+        gap:4px;
+        align-items: center;
+    }
+}
+.Title {
+  font-weight: 500;
+  color: $black-v20;
+}
+
+.SecurityContainer {
+    border-radius: 4px;
+    background: $gray-v109;
+}

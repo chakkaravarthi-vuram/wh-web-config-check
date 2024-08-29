@@ -1,0 +1,40 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.W10 {
+  width: 10%;
+}
+.RequestBodyFields {
+  padding-right: 36px;
+}
+.TypeDropdown {
+  width: 28%;
+}
+.ColMax {
+  width: 35%;
+}
+.ColMini {
+  width: 20%;
+}
+.KeyColumn {
+  width: 35% !important;
+  p {
+    padding-right: 36px;
+  }
+}
+.TypeColumn {
+  width: 28% !important;
+}
+.MultipleCheckColumn {
+  width: 20% !important;
+}
+.RequiredColumn {
+  width: 22% !important;
+}
+.Icon {
+  width: 12px !important;
+  height: 12px !important;
+}
+.DuplicateRowError {
+  background-color: $orange-v9;
+}

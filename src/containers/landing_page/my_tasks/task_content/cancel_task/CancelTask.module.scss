@@ -1,0 +1,25 @@
+@import '../../../../../scss/constants';
+@import '../../../../../scss/utilities';
+
+.CancelTaskBoxContainer {
+  padding: 25px 20px;
+  border-radius: 6px;
+}
+
+.BackToTask {
+  padding: 0px 15px;
+}
+
+.CancelTaskFormButton {
+  padding: 0px !important;
+  width: 170px !important;
+}
+
+.CancelTaskModal {
+  width: 45vw;
+  padding: 27px 60px 0 60px !important;
+}
+
+.CancelTaskFormMessage {
+  min-height: 120px;
+}

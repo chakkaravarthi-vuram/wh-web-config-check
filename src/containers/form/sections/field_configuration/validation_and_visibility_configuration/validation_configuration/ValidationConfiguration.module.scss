@@ -1,0 +1,23 @@
+.TextField {
+    -webkit-appearance: textfield; /* Safari and Chrome */
+    -moz-appearance: textfield;    /* Firefox */
+    appearance: textfield; /* Standard */
+}
+
+.CheckboxClass {
+    margin-bottom: 0 !important;
+    margin-left: 12px !important;
+}
+
+.TableValidationConfig{
+
+    & .CheckboxGroup{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    & .Field{
+        max-width: 250px
+    }
+}

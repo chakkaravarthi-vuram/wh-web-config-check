@@ -1,0 +1,21 @@
+@import '../../../../../../scss/constants';
+@import '../../../../../../scss/utilities';
+
+.LastActivity{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    svg {
+        margin-right: 8px;
+    }
+
+}
+
+.Assignees {
+    padding-right: 12px;
+    border-right: 1px solid $gray-v1;
+}
+
+.HideAddAssignee > div:nth-child(2) {
+    display: none;
+}

@@ -1,0 +1,40 @@
+@import 'scss/constants';
+@import 'scss/utilities'; 
+
+.FieldContainer {
+    // width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    font-weight: $fw-semibold;
+    border: solid 1px $gray-v68;
+    text-align: center;
+    &:hover {
+        border: solid 1px $blue-v21;
+        background-color: $blue-v7;
+        .FieldLabel {
+            color: $blue-v21;
+        }
+    }
+}
+.FieldCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 30px;
+    background-color: $white;
+}
+.Header {
+    padding: 20px 20px 0;
+    border-bottom: solid 1px $gray-v68;
+}
+.FieldLabel {
+    @extend %FS13;
+    color: $blue-v25;
+}
+.FieldCardWidth {
+    width: 152px;
+}
+.NoDataFound {
+    padding: 20px;
+    height: 70vh;
+}

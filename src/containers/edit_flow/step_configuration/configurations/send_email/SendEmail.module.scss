@@ -1,0 +1,97 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.AutomatedAction {
+  width: 125px;
+  height: 18px;
+  font-size: 14px;
+  color: #6767b4;
+  margin-bottom: 5px !important;
+}
+
+.ConfigureSystem {
+  width: 603px;
+  height: 18px;
+  font-size: 13px;
+  font-style: italic;
+  color: #adb6c7;
+}
+.RectangleCopy16 {
+  padding: 20px;
+  border-radius: 4px;
+  border: solid 1px $gray-v1;
+  background-color: #fff;
+}
+.EmailInfo {
+  width: 331px;
+  height: 18px;
+  margin: 17px 217px 15px 9px;
+  font-size: 13px;
+  font-style: italic;
+  color: #adb6c7;
+}
+
+.FlexImportIcon {
+  display: flex;
+  flex-direction: row;
+}
+
+.SelectedOptionTag {
+  border-radius: 20px;
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.AddActorsContainer {
+  margin-top: 12px;
+  padding: 10px 15px;
+  max-height: 36px;
+}
+.AddIconClass {
+  background-color: transparent !important;
+  fill: $blue-v21;
+  width: 16px;
+  height: 16px;
+}
+.textClass {
+  margin-left: 3px !important;
+}
+.DropDownTitle {
+  // paddinuoouto9gu: 6.5px 15px;
+  border-bottom: 1px solid $gray-v1;
+  background-color: $gray-v49 !important;
+  width: 100%;
+  border-right: 0;
+  border-top: 0;
+  border-left: 0;
+  font-size: 12px !important;
+  font-weight: 600;
+  cursor: context-menu !important;
+  :hover {
+    background-color: $gray-v49 !important;
+  }
+}
+.FieldWithDelete {
+  width: calc(100% - 30px) !important;
+}
+
+.EmailAttachmentClass {
+  border: none !important;
+  padding-left: 5px !important;
+}
+
+.BlueIconButton {
+  color: $blue-v39;
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+
+  svg {
+      margin-right: 8px;
+      path {
+          fill: $blue-v39;
+      }
+  }
+}

@@ -1,0 +1,39 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.ModalBg {
+  display: flex;
+  // overflow: auto;
+  // z-index: 100;
+  cursor: auto !important;
+
+  & .ModalContent {
+    position: relative;
+    background-color: $white;
+    overflow: auto;
+
+    & .ModalPadding {
+      padding: 40px 80px;
+    }
+  }
+  & .CloseIconContainer {
+    z-index: 1;
+    margin: 0 15px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    top: 11px;
+    right: 0px;
+  }
+  & .CloseIcon {
+    width: 12px;
+    height: 12px;
+    fill: #6c727e;
+    @include border-radius(1px);
+  }
+}
+
+.OverFlowHidden {
+  overflow: hidden !important;
+}

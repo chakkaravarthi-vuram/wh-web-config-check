@@ -1,0 +1,27 @@
+@import '../../../../../../../scss/constants';
+@import '../../../../../../../scss/utilities';
+
+.CloseIcon {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  opacity: 0.9;
+  &:focus {
+    outline: none;
+  }
+}
+
+.SearchInputContainer {
+  border-bottom: 1px solid $gray-v103;
+  height: 32px !important;
+}
+
+.SearchWidth {
+  width: 75px;
+}
+.DataListDashboardActions {
+  @include responsive-layout {
+    width: 100%;
+    padding-top: 10px;
+  }
+}

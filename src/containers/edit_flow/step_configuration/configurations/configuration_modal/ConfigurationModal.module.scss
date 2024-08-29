@@ -1,0 +1,60 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.Button{
+    padding: 0;
+    height: 38px;
+    width: 100px !important;
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+}
+.W70 {
+  width: 70vw;
+}
+.ModalContent{
+    width: 66vw !important;
+    @include for-small-device {
+        width: 100vw !important;
+    }
+}
+.DocumentModalContent {
+  width: 806px !important;
+  @include for-small-device {
+      width: 100vw !important;
+  }
+}
+
+.MainContentClassName {
+    @include for-small-device {
+      padding: 15px !important;
+    }
+  }
+  
+.ModalCustomContainerClass {
+    justify-content: right !important;
+  }
+  
+  .CloseIcon {
+    margin: 16px;
+    width: 16px;
+    height: 16px;
+    fill: $gray-v101 !important;
+    outline: none;
+}
+
+.Footer {
+  background: #FFF;
+  box-shadow: 0px -1px 4px 0px rgba(16, 24, 40, 0.08);
+  padding: 16px 24px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  .Button {
+    font-size: $font-size-mdt;
+    padding: 8px 16px;
+    height: 36px;
+    font-weight: 500;
+  }
+}

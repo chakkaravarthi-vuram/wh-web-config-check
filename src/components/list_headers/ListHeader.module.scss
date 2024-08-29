@@ -1,0 +1,97 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+.TaskCardContainer{
+    padding: 10px 15px 0px;
+    color: $gray-v66;
+
+    & .TaskStart{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 60%;
+
+        .Symbol{
+          margin:0 4px;
+
+        }
+
+    @include for-phone-and-tab{
+        .Symbol, .Description{
+          display: none;
+        }
+      }
+    }
+
+    & .TaskEnd{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: auto;
+
+        & .CreatedBy{
+            min-width:125px;
+        }
+        & .CreatedOn{
+            min-width:118px;
+            margin-left: 8px;
+            margin-right: 15px;
+            padding:0 15px;
+        }
+        & .DueDate{
+            min-width:90px;
+        }
+    }
+}
+.DataListContainer,
+.FlowContainer{
+    padding: 10px 0px 8px;
+    color: $gray-v89;
+
+    & .CreatedOn{
+      margin: 0 7px;
+    }
+
+    & .Action{
+      padding: 0 10px;
+      text-align: center;
+    }
+}
+
+.PR15{
+  padding-right: 15px;
+}
+
+.scrollPadding{
+      padding-right: 25px;
+      padding-left: 15px;
+      @include for-phone-and-tab{
+         padding-right: 15px;
+      }
+    }
+
+@media print and (-webkit-min-device-pixel-ratio:0) {
+    .scrollPadding{
+      padding-right: 15px;
+    }
+}
+
+.TitleWidth {
+  width: 300px;
+}
+
+@include for-hd-very-big-screen {
+  .TitleWidth {
+    width: 500px;
+  }
+}
+
+.TaskTitleSelectContainer {
+  width: 500px;
+}
+
+@include for-hd-very-big-screen {
+  .TaskTitleSelectContainer {
+    width: 700px;
+  }
+}

@@ -1,0 +1,43 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.TextStyling{
+    overflow: auto;
+    max-width: 100% !important;
+    padding: 24px;
+    height: 100%;
+    @include border-radius(6px);
+
+    li {
+        margin: 0 0 0 !important;
+    }
+
+    ul, ol {
+        margin: 0 0 8px !important;
+    }
+
+    ul {
+        list-style: inherit;
+        padding-inline-start: 40px;
+    }
+
+    ol {
+        list-style: auto;
+        padding-inline-start: 40px;
+    }
+
+    blockquote {
+        display: block;
+        border-left: 2px solid #ccc;
+        margin-left: 24px !important;
+        margin-top: 14px !important;
+        margin-bottom: 14px !important;
+        padding-left: 1rem !important;
+        margin-inline-end: 40px !important;
+    }
+
+    strong{
+        font-weight: bold;
+        color: inherit;
+    }
+}

@@ -1,0 +1,66 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.FormFieldInput {
+  width: calc(100% - 20px);
+  height: 36px;
+  margin-right: 15px !important;
+  border-radius: 4px;
+  background-color: $white !important;
+}
+
+.NoDataFound{
+  border: solid 1px $gray-v68;
+  padding: 12px 24px;
+}
+
+.AddNewOccasionClass {
+  border: solid 1px $gray-v68;
+  border-radius: 3px;
+  border-style: dashed;
+  padding: 16px 0px;
+  width: 100%;
+  margin-top: 10px;
+}
+.TextInput{
+  max-width: 300px !important;
+  min-width: 300px !important;
+}
+.DateInput{
+  width: 100% !important;
+}
+.CorrectIcon {
+  fill: $gray-v87;
+}
+.DeleteIcon{
+  fill: $gray-v87;
+}
+.DeleteIconContainer{
+  height: 24px;
+  width: 24px;
+  @include border-radius(4px);
+  &:hover{
+    background-color: $white;
+  }
+}
+.HeaderParamTable {
+  & thead {
+    & th {
+      color: $black-v20 !important;
+      font-size: 12px !important;
+      background-color: $gray-v108 !important;
+    }
+  }
+  & tbody {
+    & tr {
+      &td:last-child {
+        border-bottom: none !important;
+      }
+      & td {
+        color: $gray-v89 !important;
+      }
+    }
+  }
+  border: 1px solid $gray-v108;
+  
+}

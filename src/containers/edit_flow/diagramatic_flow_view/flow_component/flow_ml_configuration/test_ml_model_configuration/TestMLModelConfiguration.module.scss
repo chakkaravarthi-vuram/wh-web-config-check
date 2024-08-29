@@ -1,0 +1,80 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.TestConfirmation {
+    height: 64px !important;
+    background: $gray-v99;
+    border: 1px solid $gray-v1;
+    padding: 15px 0 15px 24px;
+}
+.FormFieldRadio {
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    border: 1px solid $gray-v1;
+    cursor: pointer;
+}
+.RadioSelectedStyle {
+height: 12px !important;
+width: 12px !important;
+border-radius: 9px;
+}
+.TestResponseSuccess {
+    background-color: $green-v19 !important;
+    width: 766px;
+    height: 49px;
+    padding: 16px;
+}
+.TestResponse {
+    overflow-y: auto !important;
+    box-sizing: border-box;
+    width: 766px !important;
+    max-height: 152px !important;
+    height: 152px !important;
+    background: $gray-v1 !important;
+    opacity: 0.5;
+    border: 1px solid $gray-v1;
+    border-radius: 3px;
+    color: $gray-v90 !important;
+}
+.TestResponseFailure {
+    width: 766px;
+    height: 49px;
+    padding: 16px;
+    background-color: $red-v17;
+}
+.Code {
+    padding-right: 15px;
+    border-right: 1px solid $green-v21;
+}
+.KeyName{
+    border-radius: 3px;
+    height: 36px;
+    padding: 5px 10px;
+    border: 1px solid $gray-v1;
+    margin-right: 36px;
+    margin-bottom: 12px !important;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+}
+.Required {
+    color: $red;
+}
+.ColMax {
+    width: 33% !important;
+    padding-left: 0px !important;
+}
+.Header {
+    width: 33% !important;
+    padding-left: 0 !important;
+    margin-right: 24px;
+    &:last-child {
+        margin-right: 0 !important;
+    }
+}
+
+.DDField {
+    width: 320px !important;
+  }

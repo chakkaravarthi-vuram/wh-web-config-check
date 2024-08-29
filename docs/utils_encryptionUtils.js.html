@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: utils/encryptionUtils.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: utils/encryptionUtils.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import crypto from 'crypto';
+import CryptoJS from 'crypto-js';
+import getEncryptionDetailsThunk from '../axios/apiService/encryption.apiService';
+import { GET_CHAT_ENCRYPT_DETAILS } from '../urls/ApiUrls';
+import { ENCRYPTION_AES_ENC_KEY_OPTIONS, ENCRYPTION_RSA_ENC_FORMAT, ENCRYPTION_RSA_ENC_KEY_OPTIONS } from './Constants';
+import jsUtils from './jsUtility';
+
+/** @module encryption * */
+/**
+ * @memberof encryption
+ */
+/**
+ * @function generateAesKey
+ * @description To generate aes key
+ * @return  {string} aes key
+ */
+export const generateAesKey = () => {
+    const aesSalt = CryptoJS.lib.WordArray.random(16);
+    const keyPassPhrase = CryptoJS.lib.WordArray.random(16).toString();
+    const aesKey = CryptoJS.PBKDF2(
+      keyPassPhrase,
+      aesSalt,
+      ENCRYPTION_AES_ENC_KEY_OPTIONS,
+    );
+    const aesKeyString = aesKey.toString();
+    return aesKeyString;
+  };
+/**
+ * @memberof encryption
+ */
+  /**
+ * @function encryptAesKey
+ * @param {string} publicKey public key sent from the server
+ * @param {string} aesKey generated aes key
+ * @description To encrypt aes key using RSA public key
+ * @return  {string} encrypted aes key
+ */
+  export const encryptAesKey = (publicKey, aesKey) => {
+    const aesEncrypted = crypto.publicEncrypt(
+      {
+        key: publicKey,
+        ...ENCRYPTION_RSA_ENC_KEY_OPTIONS,
+      },
+      Buffer.from(aesKey),
+    );
+    const aesEncrypt = aesEncrypted.toString(ENCRYPTION_RSA_ENC_FORMAT);
+    return aesEncrypt;
+  };
+/**
+ * @memberof encryption
+ */
+    /**
+ * @function decryptAesEncryptionData
+ * @param {string} data raw request json
+ * @param {string} aesKey generated aes key
+ * @description To encrypt request data using encrypted aes key and send to server
+ * @return  {Object} encrypted request data
+ */
+     export const enryptAesEncryptionData = (data, aesKey) => {
+        const responseJsonString = JSON.stringify(data);
+        const encryptedData = CryptoJS.AES.encrypt(responseJsonString, aesKey);
+        const encryptedDataString = encryptedData.toString();
+        return encryptedDataString;
+      };
+/**
+ * @memberof encryption
+ */
+ /**
+ * @function decryptAesEncryptionData
+ * @param {string} data encrypted response from server
+ * @param {string} aesKey generated aes key
+ * @description To decrypt the encrypted response sent from server
+ * @return  {Object} response data
+ */
+  export const decryptAesEncryptionData = (data, aesKey) => {
+    const decryptedData = CryptoJS.AES.decrypt(data, aesKey);
+    const dataJsonString = decryptedData.toString(CryptoJS.enc.Utf8);
+    const dataJson = JSON.parse(dataJsonString);
+    return dataJson;
+  };
+/**
+ * @memberof encryption
+ */
+/**
+ * @function getChatCredentialAndQueryVariables
+ * @param {Object} chatEncryptionDetails chat encryption details
+ * @param {string} query
+ * @param {Object} variables
+ * @description Get chat credential and query variables
+ * @return  {Object}
+ */
+  export const getChatCredentialAndQueryVariables = (chatEncryptionDetails, query, variables) => {
+    if (!jsUtils.isEmpty(chatEncryptionDetails)) {
+      return {
+        credentials: {
+          session_id: chatEncryptionDetails.session_id,
+          aes_enc_key: chatEncryptionDetails.aes_enc_key,
+        },
+        encryptQuery: enryptAesEncryptionData(
+          query,
+          chatEncryptionDetails.aes_key,
+        ),
+        encryptVariable: enryptAesEncryptionData(
+          variables,
+          chatEncryptionDetails.aes_key,
+        ),
+      };
+    }
+  };
+  /**
+ * @memberof encryption
+ */
+  /**
+ * @function getChatCredentialWithEncryptQueryVariables
+ * @param {Object} chatEncryptionDetails chat encryption details
+ * @param {string} query
+ * @param {Object} variables
+ * @description Get encrypted chat credential and query variables
+ * @return  {Object}
+ */
+  export const getChatCredentialWithEncryptQueryVariables = async (query, variables) => {
+    const localChatEncryptionDetails = JSON.parse(
+      localStorage.getItem('chat_service_encryption_details'),
+    );
+    if (
+      localChatEncryptionDetails
+      &amp;&amp; localChatEncryptionDetails.session_id
+      &amp;&amp; localChatEncryptionDetails.public_key
+      &amp;&amp; localChatEncryptionDetails.aes_key
+      &amp;&amp; localChatEncryptionDetails.aes_enc_key
+    ) {
+      return getChatCredentialAndQueryVariables(
+        localChatEncryptionDetails,
+        query,
+        variables,
+      );
+    }
+    const thunkChatEncryptionDetails = await getEncryptionDetailsThunk(
+      GET_CHAT_ENCRYPT_DETAILS,
+    );
+    return getChatCredentialAndQueryVariables(
+      thunkChatEncryptionDetails,
+      query,
+      variables,
+    );
+  };
+  /**
+ * @memberof encryption
+ */
+   /**
+ * @function getChatCredentialWithEncryptQueryVariables
+ * @param {Object} responseData descrypted server response
+ * @description decrypt chat response from server
+ * @return  {Object}
+ */
+  export const getChatDecryptionResponseData = (responseData) => {
+    const localChatEncryptionDetails = JSON.parse(
+      localStorage.getItem('chat_service_encryption_details'),
+    );
+    if (localChatEncryptionDetails) {
+      const clonedResponseData = jsUtils.cloneDeep(responseData);
+      return decryptAesEncryptionData(
+        clonedResponseData,
+        localChatEncryptionDetails.aes_key,
+      );
+    }
+    return responseData;
+  };
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-date%2520_.html">date *</a></li><li><a href="module-encryption%2520_.html">encryption *</a></li><li><a href="module-getter&generator%2520_.html">getter&generator *</a></li><li><a href="module-helper%2520_.html">helper *</a></li><li><a href="module-imagehelper%2520_.html">imagehelper *</a></li><li><a href="module-joi%2520_.html">joi *</a></li><li><a href="module-loader%2520_.html">loader *</a></li><li><a href="module-popover%2520_.html">popover *</a></li><li><a href="module-profile%2520_.html">profile *</a></li></ul><h3>Global</h3><ul><li><a href="global.html#generateActionName">generateActionName</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Thu Aug 12 2021 18:35:32 GMT+0530 (India Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

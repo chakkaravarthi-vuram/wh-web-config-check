@@ -1,0 +1,71 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.RowsPerPage {
+  font-size: 13px;
+  color: $gray-v12;
+  margin-right: 10px;
+  margin-top: 7px;
+}
+
+.AddCategoryModalContainer {
+  width: 45vw;
+}
+
+.RowContainer {
+  white-space: nowrap;
+  background-color: $white;
+  padding: 11px 180px 11px 19px !important;
+  height: 50px !important;
+  max-width: '300px';
+
+  .IconContainer {
+    opacity: 0;
+  }
+
+  &:hover {
+    background-color: $gray-v7;
+    .IconContainer {
+      opacity: 1;
+    }
+    .EditIconContainer{
+      opacity:1;
+    }
+  }
+
+  .IconContainer:focus-within{
+    opacity: 1;
+  }
+}
+
+.IconContainer {
+  float: right;
+}
+
+.EditIconContainer {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background-color: #fff;
+  opacity: 0;
+  margin-left: 6px;
+  cursor: pointer;
+  & .EditIcon , & .DeleteIcon{
+    path {
+      fill: $gray-v87;
+    }
+  }
+  &:hover {
+    background-color: $gray-v96;
+  }
+}
+
+
+.TableBodyContainer {
+  & tr:hover td {
+    background-color: $gray-v63 !important;
+  }
+}
+.AddButton {
+  height: 36px !important;
+}

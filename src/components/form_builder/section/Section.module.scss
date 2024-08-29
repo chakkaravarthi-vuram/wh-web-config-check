@@ -1,0 +1,156 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+.Container {
+  // padding: 16px 30px;
+  box-shadow: none;
+  // margin-bottom: 25px;
+  // margin-top: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.Input div {
+  padding: 0px !important;
+}
+
+.Input {
+  width: calc(100% - 20px);
+}
+
+.AddButtonContainer {
+  margin: 25px 0;
+}
+.SectionName {
+  height: 47px;
+  background-color: $grav-v83;
+  padding: 10px;
+  width: 100%;
+
+}
+.DropdownWidth {
+  width: 30px;
+}
+.ChevronIcon {
+  width: 18px;
+  height: 18px;
+  &:focus {
+    outline: none;
+  }
+  path {
+    fill: $gray-v53;
+  } 
+}
+.SectionHr {
+  height: 1px;
+  background-color: $gray-v1;
+}
+
+.CheckBox * {
+  margin-right: 0px;
+}
+.CheckBoxClass{
+ height: 24px;
+ width: 24px;
+}
+
+.Hr {
+  height: 1px;
+  opacity: 0.3;
+  background-color: $gray-v16;
+  margin-bottom: 2px;
+}
+
+.MoreIcon {
+  transform: rotate(90deg);
+  fill: $gray-v25;
+}
+.ErrorField {
+  border: 1px dashed $red !important;
+  max-width:450px;
+  padding:0;
+  margin: 0 7.5px;
+  border-radius: 4px;
+  flex:1;
+  user-select: none;
+  -webkit-user-select: none;
+    @include for-desktop {
+  &:hover {
+    border: 1px dashed $red !important;
+  }
+}
+}
+.field {
+  background-color: $white;
+  padding:0;
+  margin: 0 8px;
+  // border: 1px dashed $gray-v67;
+  border-radius: 4px;
+  flex:1;
+  user-select: none;
+  -webkit-user-select: none;
+  @include for-desktop {
+    &:hover {
+      border: none !important; //Dashed border removed on hover
+    }
+}
+}
+.fieldWidth {
+  max-width:450px;
+}
+.field-bg {
+  width: 100%;
+  // padding:2px;
+  border-radius: 4px;
+}
+.fieldlist{
+  width: 100%;
+  padding: 7.5px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.field-active {
+  border: 2.5px dashed $gray-v6;
+  border-radius: 4px;
+}
+.fieldList-active {
+  border-top: 2.5px dashed $gray-v6;
+}
+// .fieldList-Inactive {
+//   // border-top: 2.5px dashed $white; commnented to remove the bottom border in table 
+// }
+
+.DraggableElement{
+   background-color: $gray-v10;
+   height:108px;
+}
+
+.TwoColumnAddFormFieldButton{
+  width: 100% !important;
+  border: 0;
+}
+.Height90{
+  height:90px;
+}
+.FieldEmpty {
+  padding:0;
+  margin: 8px;
+  flex:1;
+}
+
+.HLine{
+  height: 1px;
+  margin-right: 5px;
+  margin-left: 10px;
+  background-color: #d8dee9;
+}
+.ImportField{
+  @extend %FS13;
+  // margin-left: 20px;
+  // margin-top: 20px;
+  // margin-left:20px;
+  // margin-bottom: 50px;
+  font-weight: $fw-semibold;
+  color: $blue-v39;
+}

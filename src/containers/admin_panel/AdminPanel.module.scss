@@ -1,0 +1,16 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+.AdminPanelContainer {
+  position: relative;
+}
+.LeftContainer {
+  width: 260px;
+}
+.BgHeader {
+  position: absolute;
+  height: 200px;
+  padding: 18px 30px 7px;
+  background-color: #373b72;
+  z-index: -1;
+}

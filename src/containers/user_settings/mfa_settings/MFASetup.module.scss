@@ -1,0 +1,61 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.CloseIcon {
+    width: 12px;
+    height: 12px;
+    margin-top: 3px;
+    fill: $gray-v101 !important;
+}
+
+.MfaDisabled{
+    color: $red-v25;
+    background-color: $red-v24;
+    padding: 4px 10px 4px 10px;
+    border-radius: 16px;
+    width: fit-content;
+}
+
+.MfaEnableDisableContent {
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.MfaEnabled{
+    color: $green-v27;
+    background-color: $green-v24;
+    padding: 4px 10px 4px 10px;
+    border-radius: 16px;
+    width: fit-content;
+}
+
+.MfaActivatedText{
+    color: $green-v27;
+    background-color: $white;
+    border-radius: 16px;
+    margin-left: 15px;
+    padding: 0px 5px;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.MfaInActivatedText{
+    color: $red-v25;
+    background-color: $white;
+    border-radius: 16px;
+    margin-left: 15px;
+    padding: 0px 5px;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.modal {
+    padding: 70px;
+}
+
+.HelpIcon {
+    max-width: 500px !important;
+}

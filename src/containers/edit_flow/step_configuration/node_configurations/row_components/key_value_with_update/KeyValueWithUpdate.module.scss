@@ -1,0 +1,28 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.InputColumn {
+  width: 20% !important;
+  margin-right: 16px;
+}
+.ChooseDropdown {
+  min-width: 130px;
+}
+.TypeColumnMargin {
+  margin-bottom: auto;
+}
+.TypeColumn {
+  width: 15% !important;
+  margin-right: 16px;
+}
+.UpdateColumn {
+  width: 20% !important;
+  margin-right: 16px;
+}
+.OutputColumn {
+  flex-grow: 1;
+  margin-right: 16px;
+}
+.DeleteColumn {
+  width: 5%;
+}

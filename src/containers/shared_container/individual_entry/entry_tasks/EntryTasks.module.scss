@@ -1,0 +1,69 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.TaskTypeDropdown {
+  width: 82px;
+}
+
+.Divider {
+  border-left: 1px solid $gray-v1;
+  height: 36px;
+  border-radius: 2px;
+}
+
+.ContainerClass {
+  width: 584px;
+  border-radius: 6px;
+}
+
+.ModalContentStyles {
+  color: $gray_v89;
+}
+
+.MainContentClassName {
+  height: 455px !important;
+  padding-left: 40px;
+  padding-top: 0;
+}
+
+.HeaderClass {
+  border: none;
+  background-color: $white;
+  padding-left: 40px;
+  padding-top: 20px;
+  font-size: 18px;
+}
+
+.IconClass {
+  border: none !important;
+}
+
+.WarningTxt {
+  border-radius: 3px;
+  background-color: $orange-v23;
+  text-align: left;
+  color: $orange-v24;
+  padding: 10px 10px;
+  font-size: 13px;
+}
+
+.ModalFooter {
+  justify-content: space-between !important;
+}
+
+.FooterCTAClass {
+  position: relative;
+  bottom: -20px;
+}
+.IconMinWidth {
+  min-width: 20px;
+}
+.ReasonDescription {
+  min-height: 55px;
+  height: 55px;
+  resize: vertical;
+  &::placeholder {
+    @extend %GrayV6;
+    opacity: 1;
+  }
+}

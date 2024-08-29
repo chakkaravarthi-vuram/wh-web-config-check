@@ -1,0 +1,86 @@
+@import '../../../../../scss/Typography.module.scss';
+@import '../../../../../scss/constants';
+@import '../../../../../scss/utilities';
+
+.ErrorMessage{
+  color: $red-v22;
+  margin-top: 4px;
+  font-weight: 400;
+}
+
+.ActionContainer{
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.ColumnConfig{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.Link{
+  @extend .BlueIconBtn
+}
+
+.AllColumn{
+  display: flex;
+  flex-direction: column;
+  gap:8px;
+  border-bottom: 1px solid $gray-v1;
+  padding-bottom: 8px;
+}
+
+.EachColumn{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+    border-radius: 4px;
+    border: 1px solid $gray-v1;
+    background: $white;
+    padding: 8px 16px;
+
+    & .EachValue{
+      width: 30%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    & .ButtonContainer{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    & .Button{
+        padding: 0 !important;
+    }
+}
+
+.ColumnHeader {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 16px;
+  padding: 8px 16px;
+  border-bottom: 1px solid $gray-v1;
+  margin-bottom: 8px;
+
+  & .EachValue{
+    width: 30%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.EmptyDiv {
+  display: flex;
+  align-items: center;
+  min-width: 32px;
+  height: 32px;
+  gap: 8px;
+}

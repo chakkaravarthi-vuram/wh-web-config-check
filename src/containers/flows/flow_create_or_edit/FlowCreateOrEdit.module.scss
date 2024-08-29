@@ -1,0 +1,141 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+
+.HeaderContainer {
+    height: 60px;
+    border-bottom: solid 1px $gray-v108;
+    position: sticky;
+    top: 0;
+    background-color: $white;
+    z-index: 10;
+}
+
+.TableSecuritySummary {
+    border-radius: 3px;
+    border: 1px solid $gray-v108;
+
+    thead tr th {
+        border-bottom: 1px solid $gray-v108 !important;
+        background: $gray-v109 !important;
+    }
+
+    tbody tr {
+        &:hover {
+            td {
+                background: $blue-v47;
+            }
+        }
+    }
+}
+
+.FieldLabel label {
+    margin-bottom: 0px;
+}
+
+.DropdownWidth {
+  width: 172px;
+}
+
+.LanguageContainer {
+  padding: 24px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.UniqueIdentifierTitle {
+  color: $gray-v3;
+}
+.IdentifierDropdown > label {
+  color: $black !important;
+  font-weight: 500 !important;
+  line-height: 18px;
+}
+.ConfigureClass {
+  color: $black !important;
+  font-weight: 500 !important;
+  line-height: 18px;
+}
+.DropdownWrapper {
+  width: 200px;
+}
+.TranslateAgain {
+  padding: 6px 12px !important;
+  border-radius: 3px !important;
+}
+.TechnicalConfiguration {
+  color: $gray-v3;
+}
+.ProgressContainer {
+  width: 100%;
+  height: 12px;
+  width: 280px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: $gray-v107;
+}
+
+.ProgressBar {
+  height: 100%;
+  transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  background-color: $blue-v39;
+  border-radius: 4px;
+}
+.TranslationTable{
+  & tbody{
+       & tr {
+         height: 44px !important;
+       }
+       & td {
+         padding: 0px 12px 0px 24px !important;
+         vertical-align: middle;
+       }
+       & td:last-child{
+         width: 12% !important;
+       }
+       & td:nth-child(2) {
+         width: 50% !important;
+       }
+     
+  }
+  & thead {
+   border-bottom: 1px solid $gray-v108;
+   background: $gray-v109;
+  }
+}
+.ShortCodeLabel > label {
+color: $black !important;
+font-weight: 500 !important;
+}
+.UniqueDropdown {
+background: $gray-v102;
+pointer-events: none;
+}
+.OptionLabelClass {
+  color: $gray-v89;
+}
+.FlowName {
+  width: 185px;
+  white-space: nowrap;
+}
+
+.UniqIdentifierView > div > div > div > div {
+  max-width: 132px;
+}
+
+.EntireOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.PublishingLoader {
+  @extend .EntireOverlay;
+  position: absolute;
+  display: grid;
+  place-items: center;
+  background-color: #ffffffa6;
+  z-index: 10;
+}

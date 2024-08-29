@@ -1,0 +1,41 @@
+.TestAssigneeContainer {
+  width: 100%;
+}
+.AddDropdown {
+  width: 575px;
+}
+.AddMemberContainerWidth {
+  max-width: 70%;
+}
+@media screen and (min-width: 1920px) {
+  .AddDropdown {
+    width: 950px;
+  }
+  .AddMemberContainerWidth {
+    width: 950px;
+  }
+}
+@media only screen and (min-width: 1095px) and (max-width: 1365px) {
+  .AddDropdown {
+    width: 550px;
+  }
+  .AddMemberContainerWidth {
+    width: 550px;
+  }
+}
+@media only screen and (min-width: 426px) and (max-width: 1094px) {
+  .AddDropdown {
+    width: 400px;
+  }
+  .AddMemberContainerWidth {
+    width: 400px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .AddDropdown {
+    width: 300px;
+  }
+  .AddMemberContainerWidth {
+    width: 300px;
+  }
+}

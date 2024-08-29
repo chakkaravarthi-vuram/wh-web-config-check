@@ -1,0 +1,48 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.ReportConfigModal {
+  z-index: 152 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  border: 1px solid $gray-v1;
+
+  &:first-child {
+    width: 100vw !important;
+  }
+}
+
+.ReportConfigHeader {
+  background: none !important;
+  border: none !important;
+}
+
+.Content {
+  padding-top: 35px !important;
+  margin: 0 !important;
+}
+
+.ReportConfigName {
+  margin-top: 32px;
+}
+
+.InputClass {
+  width: 60vw !important;
+}
+
+.ReportConfigAdmins {
+  width: 60vw !important;
+}
+
+.CloseIcon {
+  width: 16px;
+  height: 16px;
+  margin-top: 3px;
+  fill: $gray-v101 !important;
+  outline: none;
+}
+
+.ReportView {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}

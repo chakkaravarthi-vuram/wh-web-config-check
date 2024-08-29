@@ -1,0 +1,36 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+
+.ModalWidth {
+    width: 60vw;
+    @include for-medium-height-device {
+        width: 100vw;
+    }
+}
+
+.HeaderContainter {
+    padding: 24px 32px 0px 32px;
+    border-bottom: solid 1px $gray-v1;
+
+    .CloseIcon {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+    }
+}
+
+.FooterContainer {
+    border-top: 1px solid $gray-v1;
+    padding: 16px 24px;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+.MainContent {
+    padding: 24px 32px
+}
+
+.ErrorTab {
+    color: $red-v22 !important;
+}

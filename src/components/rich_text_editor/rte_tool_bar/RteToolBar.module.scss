@@ -1,0 +1,33 @@
+@import '../../../scss/constants';
+%selected-hover-bg {
+  background-color: $gray-v18;
+}
+.IconList {
+  padding: 6px 2.5px;
+  & .IconContainer {
+    height: 28px;
+    width: 28px;
+    border-radius: 2px;
+    margin-left: 2px;
+    &:hover {
+      @extend %selected-hover-bg;
+    }
+    & .Icon {
+      height: 12px;
+      width: 12px;
+    }
+  }
+}
+
+.SelectedIconContainer {
+  @extend %selected-hover-bg;
+}
+
+.Container {
+  background-color: $gray-v19;
+  border-bottom: 1px solid $gray-v1;
+}
+.Dropdown {
+  min-width: 100px;
+  border-right: 1px solid $gray-v1;
+}

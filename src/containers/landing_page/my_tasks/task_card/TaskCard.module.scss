@@ -1,0 +1,117 @@
+@import '../../../../scss/constants';
+
+.DueBox {
+  padding: 5px 11px;
+  border-radius: 12px;
+  white-space: nowrap;
+  height: 26px;
+  min-width: 110px;
+}
+
+.DueCircle {
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+}
+.AssignedOnTimeOrDate {
+  width: 48px;
+  height: 15px;
+  margin: 14px 10px 10px 10px;
+  font-size: $font-size-smt;
+  text-align: right;
+  color: #9ba6b1;
+}
+
+.HighPriorityDueBox {
+  background-color: $red-v6;
+}
+.MediumPriorityDueBox {
+  background-color: $orange-v1;
+}
+.LowPriorityDueBox {
+  background-color: $green-v3;
+}
+.NoDueBox {
+  background-color: $gray-v26;
+}
+
+.HighPriorityDueCircle {
+  background-color: $red-v7;
+}
+.MediumPriorityDueCircle {
+  background-color: $orange-v2;
+}
+.LowPriorityDueCircle {
+  background-color: $green-v4;
+}
+.NoDueCirlce {
+  background-color: $gray-v38;
+}
+.OverDueCircle {
+  background-color: $red-v8;
+}
+
+.TaskTitle {
+  display: block;
+  flex: 1 auto;
+  min-height: 19px;
+}
+
+.NoDueText {
+  color: $gray-v38;
+}
+
+.OverDueBox {
+  background-color: $red-v8;
+}
+
+.ViewedTaskOpacity {
+  opacity: 0.75;
+}
+
+.NotificationDot {
+  width: 16px;
+  height: 16px;
+  border-radius: 7.5px;
+  background-color: $orange-v3;
+}
+
+.AdhocTaskIcon {
+  fill: $gray-v38;
+}
+
+.Container {
+  &:hover {
+    .HighPriorityDueBox {
+      background-color: $red-v7;
+    }
+    .MediumPriorityDueBox {
+      background-color: $orange-v2;
+    }
+    .LowPriorityDueBox {
+      background-color: $green-v4;
+    }
+    .NoDueBox {
+      background-color: $gray-v38;
+    }
+    .DueDaysText {
+      color: $white;
+    }
+    .Thumbnail {
+      background-color: $blue-v2;
+    }
+    .TaskName {
+      color: $blue-v2;
+    }
+    .ThumbnailText {
+      color: $white;
+      opacity: 1;
+    }
+    .TaskTitle {
+      color: $blue-v2;
+    }
+    .AdhocTaskIcon {
+      fill: $gray-v50;
+    }
+  }
+}

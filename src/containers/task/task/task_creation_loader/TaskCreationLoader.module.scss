@@ -1,0 +1,11 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+
+.CloseIcon {
+    width: 12px;
+    height: 12px;
+    margin-top: 20px;
+    margin-right: 20px;
+    fill: $gray-v101 !important;
+}

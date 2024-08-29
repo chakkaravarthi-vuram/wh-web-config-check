@@ -1,0 +1,153 @@
+@import '../../../../../../scss/utilities';
+@import 'scss/constants';
+$step-circle-height: 28px;
+
+.Metric{
+  .Icon{
+    visibility: hidden;
+  }
+   &:hover, &:focus-within {
+     .Icon{
+        visibility: visible;
+      }
+  }
+}
+
+.Container {
+  border-radius: 4px;
+  background-color: $white;
+  :hover {
+    .StepNumber{
+      background-color: $blue-v39;
+      color: $white;
+    }
+  }
+}
+.Container:hover{
+  background-color: $gray-v69;
+}
+
+.InnerContainer {
+  padding: 18px 30px;
+  @include for-phone-and-tab {
+    padding: 18px 30px;
+  }
+}
+
+.Header {
+  padding: 10px 15px;
+}
+.ActiveHeader {
+  background-color: $gray-v7;
+  border-bottom: 1px solid $gray-v1;
+}
+
+.StepNumber {
+  height: $step-circle-height;
+  width: $step-circle-height;
+  border-radius: 50%;
+  background-color: $gray-v6;
+  color: $black-v10;
+}
+
+.Edit {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: $gray-v6;
+}
+
+.Hr {
+  height: 1px;
+  background-color: $gray-v1;
+}
+
+.ProgressBar {
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  background-color: $gray-v1;
+  overflow: hidden;
+}
+.Progress {
+  height: inherit;
+  background-color: $green-v6;
+}
+
+.CreateTeamModal {
+  width: 700px;
+}
+.ActionContainer {
+  padding: 30px 40px;
+}
+
+
+.FormSourceCircle {
+  background-color: $gray-v10;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.AddIcon {
+  width: 16px;
+  height: 16px;
+}
+.CopyImportIcon {
+  width: 32px;
+  height: 32px;
+}
+.ImportIcon {
+  width: 13px;
+  height: 16px;
+}
+.FormSourceContainer {
+  padding: 14px 20px;
+  border: 1px dashed $gray-v1;
+}
+.ImportFormPopUpContainer {
+  width: 50vw;
+}
+
+.Icon{
+  padding: 3px;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  path {
+    fill: $gray-v87;
+  }
+}
+.EditContainer:hover{
+  background-color: white;
+}
+.DeleteContainer:hover{
+  background-color: white;
+}
+.ActionBtn{
+  font-size: $font-size-sm;
+  height: 32px;
+  min-width: 70px;
+}
+.FieldCommonProperties{
+  height: 32px !important;
+}
+.MetricMainContent{
+  width: 92%;
+}
+.Input,
+.Dropdown {
+  width: 35%;
+}
+@include for-phone-and-tab{
+  .MetricMainContent{
+      flex-wrap: wrap;
+      gap: 10px;
+      
+      & .Dropdown,
+      & .Input{
+          width: 90%;
+          margin-right: 0;
+        }
+  }
+}

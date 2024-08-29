@@ -1,0 +1,117 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.SectionContainer {
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 4px;
+}
+.Padding24 {
+  padding: 24px !important;
+}
+
+.Accordion {
+  overflow: initial;
+  position: relative;
+}
+
+.SectionTitle {
+  z-index: 1;
+  height: 24px;
+  flex-basis: 100%;
+  margin-bottom: 1rem;
+}
+
+.SectionText {
+  font-weight: 500;
+  line-height: 24px;
+  font-size: 16px;
+  color: $gray-v3;
+  height: 24px;
+  text-align: left;
+}
+
+.AccordionHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 10px;
+  user-select: none;
+}
+
+.SectionOptions {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.Chevron {
+  transition: transform 0.2s ease;
+  &:focus {
+    outline: none;
+  }
+  cursor: pointer;
+}
+
+.AccordionContent {
+  padding: 10px;
+  max-height: 1000px;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.SectionIcons {
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+}
+
+.IconContainer {
+  height: 32px;
+  width: 32px;
+}
+
+.PlusIcon {
+  height: 20px;
+  width: 20px;
+}
+
+.ButtonText {
+  color:  $blue-v39;
+  font-weight: 500;
+  line-height: 20px;
+  text-wrap: nowrap ;
+}
+
+.AddSectionButton {
+  margin: 6px 8px;
+  white-space: nowrap;
+}
+
+.Lines {
+  border-top: 1px solid $gray-v1;
+  margin-top: 15.5px;
+  width: 100%;
+}
+
+.AllSectionsContainer {
+  border-radius: 4px;
+  background-color: $white;
+}
+
+.LayoutSettingsDropdown {
+  &:first-child:hover {
+    svg path {
+        fill: none !important;
+        stroke: $blue-v39;
+      }
+  }
+}
+
+.OptionIconStyle {
+  display: flex !important;
+  align-items: center;
+}
+
+.ErrorBorder {
+  border-bottom: 1px solid #D83A52;
+}

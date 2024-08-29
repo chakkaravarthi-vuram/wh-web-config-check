@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component has been rendered correctly 1`] = `
+<TabViewLayout
+  className=""
+  currentComponent={<withRouter(Connect(AccountSettings)) />}
+  onTabChange={[Function]}
+  pageTitle="Admin Settings"
+  selectedTabIndex={1}
+  tabList={
+    Array [
+      Object {
+        "INDEX": 1,
+        "TEXT": "Account Settings",
+      },
+      Object {
+        "INDEX": 2,
+        "TEXT": "User Management",
+      },
+      Object {
+        "INDEX": 3,
+        "TEXT": "Language & Calendar",
+      },
+      Object {
+        "INDEX": 4,
+        "TEXT": "Other Settings",
+      },
+    ]
+  }
+/>
+`;

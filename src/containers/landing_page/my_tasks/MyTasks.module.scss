@@ -1,0 +1,558 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.ScrollBar {
+  flex: 1 1 auto;
+  overflow: auto;
+  padding-right: 30px;
+  margin-right: 2px;
+  @include border-radius(3px);
+}
+.Title {
+  span {
+    color: $gray-v57;
+  }
+}
+.TaskListView {
+  overflow: inherit !important;
+  padding: 15px 20px 10px;
+}
+.TaskContentContainer {
+  height: 100% !important;
+}
+
+.TaskContentContainer >  div {
+  min-height: 100% !important;
+}
+
+.MyTasksContainer {
+  position: relative;
+  overflow: hidden;
+}
+.SearchSortContainer {
+  height: 40px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.04);
+  border-top: none !important;
+  padding: 12px 30px;
+  background-color: $white;
+
+  .SearchContainer {
+    flex: 1;
+  }
+  .SearchContainer,
+  .SortContainer {
+    display: flex;
+    align-items: center;
+  }
+  .RefreshIcon {
+    border-radius: 2px;
+    margin-top: -4px;
+    margin-bottom: -3px;
+  }
+}
+.OpenTaskModalContainer {
+  width: 60vw;
+  // height: 100%;
+  // margin: 30px 0px !important;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+  @include border-radius(6px);
+  @include for-phone-and-tab {
+    width: 100%;
+  }
+  @include for-desktop {
+    margin: 15px 15px 15px 0px !important; //Margin for create task modal
+  }
+  // @include transition(.3s);
+  @include transition(0.3s);
+  position: fixed;
+}
+.TaskContentModal {
+  // width: 100%;
+  height: 100%;
+  // margin: 30px 0px !important;
+  overflow-x: hidden !important;
+  @include border-radius(6px);
+  @include for-phone-and-tab {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+  }
+  @include for-desktop {
+    width: calc(100% - 60px);
+    height: calc(100% - 60px);
+  }
+  position: fixed;
+}
+// .OpenTaskModalContainer {
+//   width: 45vw;
+//   overflow-x: hidden !important;
+//   border-radius: 6px;
+//   @include for-phone-and-tab {
+//     width: 100%;
+//   }
+// }
+.ModalCotainerClass {
+  // margin:30px;
+  @include for-desktop {
+    width: 100%;
+    height: 100%;
+  }
+  @include for-phone-and-tab {
+    margin: 0 !important;
+  }
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.TaskCardContainer {
+  height: 48px;
+  margin-bottom: 5px;
+  padding: 4px 15px;
+
+  &:first-child:hover {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+.SearchSortContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.CreateButton {
+  color: $blue-v21;
+  background-color: $white;
+  @include border-radius(4px);
+  border: 2px solid transparent;
+  padding: 6px 16px;
+  align-items: center;
+  margin-left: auto;
+  text-transform: uppercase;
+  cursor: pointer;
+  max-height: 38px;
+  height: 100%;
+  display: flex;
+  min-width: 90px;
+
+  @include for-small-device {
+    padding: 6px 8px;
+  }
+}
+.DropdownList {
+  position: relative;
+  width: 170px !important;
+  height: 100% !important;
+  border-radius: 6px !important;
+  top: -30px;
+  left: -60px;
+  z-index: 3 !important;
+  box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+}
+.MoreItems {
+  position: relative;
+  .LineMarker {
+    position: absolute;
+    height: 1px;
+    // width: calc(100% - 24px);
+    width: 100%;
+    top: 50%;
+    left: 0;
+    background-color: $gray-v52;
+    z-index: -1;
+  }
+  button {
+    position: relative;
+    z-index: 0;
+    text-transform: capitalize;
+    padding: 6px 16px;
+    @include border-radius(4px);
+    cursor: pointer;
+    height:44px !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .MyTasksContainer {
+    padding: 20px;
+    max-height: 100%;
+  }
+  .OpenTaskModalContainer {
+    width: 100%;
+  }
+}
+@include for-small-device {
+  .TaskHeader {
+    display: none;
+  }
+  .TaskListView {
+    overflow: inherit !important;
+    padding: 4px !important;
+  }
+  .MyTasksContainer {
+    padding-inline: 15px;
+  }
+}
+
+.Scrollable {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 70vh;
+
+  @include for-desktop {
+    transform: translateX(-20px);
+    width: calc(100% + 50px);
+  }
+}
+.overflowScroll {
+  overflow: scroll;
+}
+
+.MyTasksContainerWithFilter {
+  height: calc(100vh - 160px);
+}
+
+.FilterClass {
+  @extend %FS13;
+  font-weight: $fw-semibold !important;
+  color: $blue-v25 !important;
+}
+
+.MoreIcon {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.MoreIconBlue {
+  stroke: #1a9cd1;
+  fill: #1a9cd1;
+}
+
+.SortByClass {
+  @extend %FS13;
+  color: $gray-v53;
+}
+.HoverStyleClass {
+  &:hover {
+    cursor: pointer;
+  }
+}
+.RadioInnerClass {
+  font-family: $font-family-2;
+  font-size: 16px;
+  color: $blue-v25;
+}
+
+.FilterContainerClass {
+  margin: 15px 5px 0px 0px;
+  padding: 0px 10px;
+  @include border-radius(4px);
+  border: solid 1px $blue-v39;
+  background-color: #f5fcff;
+  height: 30px;
+  align-items: center;
+  display: flex;
+}
+
+.appliedFont {
+  font-size: $font-size-smt;
+  font-weight: 500;
+  color: #1f243d;
+}
+
+.closeIcon {
+  width: 9px;
+  height: 9px;
+  margin-top: 3px;
+}
+
+.ModalContainerClass {
+  width: 30vw !important;
+}
+
+.CleareAllClass {
+  font-family: $font-family-2;
+  font-size: 13px;
+  font-weight: 500;
+  color: $blue-v39;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.TableTaskContainer {
+  border-radius: 6px;
+  overflow-y: auto;
+  height: calc(100vh - 196px);
+  padding: 0px 24px;
+}
+
+.TableTrialContainer {
+  height: calc(100vh - 236px) !important;
+}
+
+.RowContainer {
+  white-space: nowrap;
+  height: 48px;
+  cursor: pointer;
+}
+
+.Table {
+
+  thead {
+    & td:not(:first-child) {
+      padding-left: 0px !important;
+    }
+
+    & td:first-child {
+      width: 72%;
+    }
+
+    td {
+      padding: 0px !important;
+      min-width: 0px;
+    }
+  }
+
+  .TableCustomHeaderPadding {
+    padding: 0 30px 8px 30px !important;
+  }
+
+  tr {
+
+    & td:first-child {
+      width: 72%;
+    }
+
+    &:hover {
+      .Thumbnail {
+        background-color: $blue-v39 !important;
+      }
+
+      .ThumbnailIcon {
+        fill: $white;
+      }
+    }
+
+    td {
+      padding: 0px !important;
+      min-width: 0px;
+    }
+  }
+}
+
+.TwoColumnTable {
+  tr {
+    & td:first-child {
+      width: 80% !important;
+    }
+  }
+}
+
+.TableHeader {
+  th {
+    @extend %FTwo13;
+    @extend %FontWeight500;
+  }
+}
+
+.TitleDescDivider {
+  width: 1px;
+  height: 16px;
+  margin: 0 8px;
+  background-color: $gray-v1;
+}
+
+
+.Thumbnail {
+  padding: 8px;
+  background-color: $blue-v41;
+  border-radius: 3px;
+}
+
+.SendBackThumbnail {
+  padding: 3px !important;
+  background-color: $orange-v31;
+  border-radius: 3px;
+}
+
+.ReviewTaskThumbnail {
+  padding: 3px !important;
+  background-color: $gray-v108;
+  border-radius: 3px;
+}
+
+.ThumbnailIcon {
+  fill: $blue-v39;
+}
+
+.InProgress {
+  color: $orange-v4;
+  background-color: $gray-v61;
+}
+
+.NoDue {
+  color: $gray-v89;
+  background-color: $gray-v99;
+}
+.OverDue {
+  color: $white;
+  background-color: $red-v18;
+}
+
+.HighPriorityDue {
+  //High priority styles
+  background-color: $red-v17;
+  color: $red-v18;
+}
+.MediumPriorityDue {
+  background-color: $orange-v23;
+  color: $orange-v22;
+}
+.Completed {
+  color: $green-v7;
+  background-color: $green-v8;
+}
+
+.TaskStatus {
+  height: 25px;
+  width: 108px;
+  border-radius: 3px;
+}
+
+.TaskTitleContainer {
+  width: 300px;
+}
+
+.TaskTitleSelectContainer {
+  width: 500px;
+}
+
+@include for-hd-very-big-screen {
+  .TaskTitleSelectContainer {
+    width: 700px;
+  }
+}
+
+@include for-hd-very-big-screen {
+  .TaskTitleContainer {
+    width: 500px;
+  }
+}
+
+.TestBedIconContainer {
+  height: 24px;
+  width: 24px;
+  background-color: $red-v18;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.TableRowSpacing {
+  tr {
+    margin-bottom: 8px !important;
+  }
+}
+
+.TaskDefinition {
+  max-width: 50%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.MaxUserWidth {
+  max-width: 138px !important;
+}
+
+.TaskTabNameClass {
+  max-width: clamp(16ch, 10%, 80ch) !important;
+}
+
+.TaskTable{
+  & thead{
+   & tr {
+      & th {
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+      }
+      & th:first-child {
+        padding-left: 12px;
+      }
+      & th:last-child {
+        padding-right: 12px;
+      }
+   } 
+  }
+  & tbody{
+    & tr:hover td:nth-child(1) svg path {
+      fill: none;
+      stroke: $blue-v39;
+    }
+    & td:first-child {
+      padding-left: 12px;
+    }
+    & td:last-child {
+      padding-right: 12px;
+    }
+    & td{
+      padding-top: 12px !important;
+      padding-bottom: 12px !important;
+    }
+  }
+}
+
+.SearchOuterContainer {
+  border-radius: 4px;
+  padding: 4px 0px !important;
+  border: 1px solid $gray-v108;
+  width: 140px;
+  height: 24px;
+  @include transition(0.1s);
+}
+
+.ExpandedSearch {
+  width: 256px !important;
+}
+
+.SearchCloseIcon {
+  &:focus{
+    outline: none;
+  }
+}
+
+.SortContainer {
+  padding: 2px 6px 2px 8px;
+  border-radius: 4px;
+  background-color: $blue-v48;
+}
+
+.FilterChip {
+  width: 32px;
+  height: 22px;
+  background-color: $blue-v41;
+  border-radius: 16px;
+}
+
+.DraftTable{
+  & tbody{
+     & tr{
+        & td:last-child button{ visibility: hidden;}
+     }
+     & tr:hover{
+        & td:last-child button{ visibility: visible;}
+     }
+  }
+}
+
+.EditIcon:hover{
+  & path{
+     stroke: $blue-v39
+  }
+}
+
+.AssignedToOthersTrial {
+  height: calc(100vh - 224px);
+}
+
+.AssignedToOthersNormal {
+  height: calc(100vh - 186px);
+}

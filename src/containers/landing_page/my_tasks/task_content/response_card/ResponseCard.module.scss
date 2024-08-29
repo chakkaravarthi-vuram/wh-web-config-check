@@ -1,0 +1,38 @@
+@import '../../../../../scss/constants';
+@import '../../../../../scss/utilities';
+
+.Container {
+  border-radius: 4px;
+  border: solid 1px #cdeddd;
+  padding: 15px 20px;
+  flex-wrap: wrap;
+}
+
+.UserImage {
+  width: 32px;
+  height: 32px;
+}
+
+.CorrectIcon {
+  width: 8px;
+  height: 7px;
+  fill: $white;
+}
+
+.CorrectIconCircleBG {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  @extend %FlexShrink0;
+  background-color: $green-v6;
+}
+.TabBorder{
+  border-bottom: 1px solid $gray-v1;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.InProgressIcon{
+  width: 16px;
+  height: 16px;
+  fill: $white;
+}

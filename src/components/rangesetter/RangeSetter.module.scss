@@ -1,0 +1,15 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+.ParentContainer{
+    
+}
+.NumberInput {
+  // hiding firefox spin arrows
+  -moz-appearance: textfield;
+  // hidden spin arrows for number type input
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}

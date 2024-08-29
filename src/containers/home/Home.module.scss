@@ -1,0 +1,83 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+// header
+.Header {
+  padding: 15px 30px;
+  height: 70px;
+  z-index: 1;
+}
+.Logo {
+  height: 24px;
+  @include for-small-device {
+    display: none;
+  }
+}
+.SmallLogo {
+  height: 24px;
+  display: none;
+  @include for-small-device {
+    display: block;
+  }
+}
+.Button {
+  margin: 0;
+  @include for-phone-and-tab {
+    padding-left: 17px;
+    padding-right: 16px;
+  }
+}
+
+.Container {
+  height: calc(100vh - 140px);
+}
+.InnerContainer {
+  width: 85%;
+  @include for-phone-and-tab {
+    width: 100%;
+  }
+}
+.LeftContainer {
+  padding-bottom: 50px;
+}
+.BannerImage {
+  max-width: 600px;
+
+  @include for-desktop {
+    height: 55vh;
+  }
+}
+
+.NavList {
+  list-style: none;
+  & a {
+    margin-right: 15px;
+    text-decoration: none;
+    line-height: 1;
+    &:last-of-type {
+      margin-right: 0px;
+    }
+  }
+}
+
+// .Logo {
+//   height: 24px;
+// }
+// .NavContainer {
+//   padding: 15px 70px;
+//   z-index: 1;
+//   & .NavList {
+//     list-style: none;
+//     & a {
+//       margin-right: 30px;
+//       text-decoration: none;
+//       line-height: 1;
+//       &:last-of-type {
+//         margin-right: 0px;
+//       }
+//     }
+//   }
+//   & .Link {
+//     padding: 12px 0px;
+//   }
+// }

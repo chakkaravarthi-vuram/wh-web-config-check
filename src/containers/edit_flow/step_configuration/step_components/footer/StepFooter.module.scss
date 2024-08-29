@@ -1,0 +1,54 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.FooterContainer {
+  padding: 0px 24px;
+}
+.PrimaryButtonContainer{
+  flex-grow: 1;
+  text-align: right;
+}
+.ButtonPadding{
+  padding: 0px 10px !important;
+}
+.NextButton {
+  margin-left: 16px !important;
+  height: 36px;
+  min-width: 82px;
+}
+.DeleteButton {
+  font-size: $font-size-mdt;
+  color: $red-v25 !important;
+  padding: 8px 16px;
+  height: 36px;
+  cursor: pointer;
+  &:hover {
+    background: $red-v26;
+  }
+}
+.SaveButton {
+  font-size: $font-size-mdt;
+  color: $gray-v93;
+  cursor: pointer;
+  padding: 8px 16px;
+  height: 36px;
+  border-radius: 3px;
+  border: 1px solid var(--gray-300-border, $gray-v1);
+  background: var(--gray-white, $white);
+  &:hover {
+    color: $black-v18 !important;
+  }
+}
+.BackButton {
+  font-size: $font-size-mdt;
+  color: $gray-v93;
+  cursor: pointer;
+  padding: 8px 16px;
+  height: 36px;
+  border-radius: 3px;
+  border: 1px solid var(--gray-300-border, $gray-v1);
+  background: var(--gray-white, $white);
+  &:hover {
+    color: $black-v18 !important;
+  }
+}

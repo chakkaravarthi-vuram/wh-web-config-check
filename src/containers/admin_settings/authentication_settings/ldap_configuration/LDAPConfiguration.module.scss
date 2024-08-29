@@ -1,0 +1,64 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.ModalClass {
+    z-index: 152 !important;
+    margin: 0px !important;
+    width: 100% !important;
+    border: 1px solid $gray-v1;
+}
+
+.FooterContent {
+  height: 60px !important;
+  border-radius: 0px 0px 3px 3px;
+  background: $white;
+  box-shadow: 0px -1px 4px 0px rgba(16, 24, 40, 0.08);
+  align-items: center;
+  display: flex;
+}
+
+.CloseIcon {
+  position: absolute !important;
+  right: 15px;
+  width: 16px;
+  height: 16px;
+  fill: $gray-v101 !important;
+}
+
+.LinkRow {
+  display: block !important;
+}
+
+.InputColMax {
+  width: 50%;
+  padding-left: 0;
+}
+
+.InputColHeader {
+  width: 50% !important;
+  padding-left: 0 !important;
+  padding-bottom: 5px !important;
+  &:first-child {
+      margin-right: 24px !important;
+    }
+}
+
+.CheckBoxStyle{
+  div[role='checkbox'] {
+    align-self: flex-start;
+  }
+  div[class='flex flex-col flex-wrap gap-8'] {
+    gap: 16px;
+  }
+  p {
+    margin-left: 16px !important;
+  }
+}
+
+.SearchUser {
+  font-weight: $fw-normal !important;
+}
+
+.ChooseFile {
+  padding: 0px !important;
+}

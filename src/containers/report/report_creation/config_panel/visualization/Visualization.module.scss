@@ -1,0 +1,63 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.Visualization{
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding: 0 8px 8px 0;
+    z-index: 5;
+
+    .VisualizationButton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        gap: 8px;
+        flex-shrink: 0;
+        border-radius: 3px;
+        border: 1px solid $gray-v1;
+        background: $white;
+
+        svg {
+            pointer-events: none;
+        }
+
+        &:hover:not(:disabled){
+            border: 1px solid  $blue-v39;
+            background: $blue-v47;
+
+            svg path {
+                fill: $blue-v39;
+            }
+            svg[specialIcon=true] { 
+                path {
+                fill: none;
+                stroke: $blue-v39;
+            }
+            }
+        }
+
+        &:disabled{
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        &.Selected {
+            border: 1px solid $blue-v39;
+            background: $blue-v47;
+
+            svg path {
+                fill: $blue-v39;
+            }
+            svg[specialIcon=true] { 
+                path {
+                fill: none;
+                stroke: $blue-v39;
+            }
+            }
+        }
+
+    }
+}

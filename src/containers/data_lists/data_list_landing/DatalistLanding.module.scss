@@ -1,0 +1,25 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+
+.TextColor {
+    color: $gray-v91;
+}
+
+.HeadingColor {
+    color: $gray-v3;
+}
+.CancelButton {
+    color: $black-v20;
+    margin-right: 0px !important;
+}
+.CloseIcon {
+    width: 12px;
+    height: 12px;
+    margin: 7px 3px !important;
+    fill: $gray-v101 !important;
+    outline: none;
+}
+.ModalClassName {
+    height: auto !important;
+  }

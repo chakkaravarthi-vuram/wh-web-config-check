@@ -1,0 +1,117 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.PopUpHeaderContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 15px 15px 11px 25px;
+  background-color: #f3f6f9;
+  border: solid 1px #dadfe7;
+  border-radius: 0px !important;
+}
+
+.PopUpHeaderTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #1f243d;
+}
+
+.BottomBorderLine {
+  border-bottom: solid 1px #dcdcdc;
+}
+
+.DownloadListCardContainer {
+  background-color: #fff;
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  margin-right: 20px;
+
+  .CardTextContainer {
+    max-width: 80%;
+  }
+
+  .CardTitleContainer {
+    max-width: 90%;
+  }
+
+  .CardTitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #1f243d;
+  }
+
+  .CardSubTitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #6c727e;
+  }
+
+  .CardTime {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: #6c727e;
+  }
+}
+
+.DownloadNotificationContent {
+  height: 100% !important;
+  padding: 20px 0px 0px 0px !important;
+  overflow-x: hidden !important;
+}
+
+.ContentModal {
+  width: 40vw;
+  border-radius: 0px !important;
+  box-shadow: -9px 2px 27px 0 rgba(0, 0, 0, 0.18);
+  overflow: -moz-hidden-unscrollable !important;
+  @include border-radius(6px);
+  @include for-phone-and-tab {
+    width: 100%;
+  }
+  @include for-desktop {
+    margin: 0px !important;
+    padding: 0px 0px 30px 0px !important;
+    overflow: initial !important;
+  }
+}
+
+.BackgroundNone {
+  background: none !important;
+}
+
+.AllNotifications {
+  overflow-x: hidden !important;
+}
+.NoDownloadIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.NoDownloadIconHeight {
+  height: 86vh !important;
+}

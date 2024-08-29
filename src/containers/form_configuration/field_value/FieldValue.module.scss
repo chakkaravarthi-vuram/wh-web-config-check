@@ -1,0 +1,486 @@
+@import 'scss/utilities';
+@import 'scss/constants';
+
+.MainContainer {
+  height: calc(100vh - 164px);;
+  font-family: Inter;
+}
+
+.MainContent {
+  height: 100%;
+  background-color: $white;
+  
+  height: calc(100vh - 164px);
+  padding: 0px !important;
+  border: 1px solid $gray-v1;
+}
+
+.TableContainer{
+  height: 100%;
+
+  margin: 0px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.RuleListTable{
+  & thead{
+    & th{
+      z-index: 4 !important;
+      background-color: $gray-v109 !important;
+      padding: 12px 16px !important;
+    }
+  }
+  & tbody{
+     & tr{
+        & td:last-child div{ visibility: hidden;}
+     }
+     & tr:hover{
+        & td:last-child div{ visibility: visible;}
+     }
+     & td{
+      padding: 12px 16px !important;
+     }
+  }
+}
+
+.ImportTable {
+  & thead{
+    & th{
+      background-color: $gray-v109 !important;
+      padding: 12px 16px !important;
+    }
+  }
+  & tbody{
+    & td{
+     padding: 12px 16px !important;
+    }
+ }
+}
+
+.OverFlowInherit{
+  overflow: inherit !important;
+  overflow-x: auto !important;
+}
+
+.bgWhite{
+  background-color: white;
+}
+
+.RuleName {
+  color: $gray-v89;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  width: 85%;
+}
+
+.Ruletype {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  padding: 2px 8px;
+  border-radius: 16px;
+}
+
+.ExistingConfig {
+  color: $black-v20;
+  background-color: $gray-v107;
+}
+
+.NewConfig {
+  color: $blue-v69;
+  background-color: $blue-v48;
+}
+
+.Showing {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.AddSearchContainer {
+  height: 36px;
+}
+
+.SearchContainer {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  width: 300px;
+  justify-content: flex-end;
+}
+
+.SearchIconContainer {
+  margin: 6px;
+}
+
+.SearchIcon {
+  height: 20px;
+  width: 20px;
+  path{
+    fill: $gray-v87;
+  }
+}
+
+.PlusIcon {
+  height: 18px;
+  width: 18px;
+}
+
+.ButtonText {
+  color:  $blue-v39;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px
+}
+
+.EditIcon {
+  &:hover {
+    & path {
+      stroke: $blue-v39;
+      
+    }
+  }
+}
+
+.CopyIcon {
+  &:hover {
+    & path {
+      fill: $blue-v39;
+      
+    }
+  }
+}
+
+.CloseIcon {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  height: 16px;
+  width: 16px;
+  margin: 8px;
+  cursor: pointer;
+}
+
+.NoRuleContainer {
+  height: calc(100vh - 164px);
+  background-color: $white;
+}
+
+.NoRule {
+  color: $black;
+  font-size: 14px;
+}
+
+.NoRuleSub {
+  color: $gray-v98;
+}
+
+.NoRuleButtons {
+  padding: 7px 12px;
+}
+
+//FieldValue Rule Config
+
+.ModalLayoutHeader {
+  padding: 24px 32px;
+}
+
+.HeaderTitle {
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: $gray-v3;
+}
+
+.ModalLayoutContent {
+  padding: 0 32px 41px 32px;
+  overflow-y: scroll;
+}
+
+.ModalContainerClass {
+  width: 90vw;
+}
+
+.ModalFooterClass {
+  padding: 16px 24px;
+  box-shadow: 0px -1px 4px 0px rgba(16, 24, 40, 0.08);
+  .Button{
+    font-size: $font-size-mdt;
+    padding: 8px 16px;
+    height: 36px;
+    font-weight: 500;
+  }
+}
+
+.FlexHome {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.FlexGroup {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  width: 100%;
+}
+
+.FlexItem1 {
+  width: 50%;
+}
+.FlexItem2 {
+  width: 50%;
+}
+.FlexItem4 {
+  padding: 16px;
+  border: 1px solid $gray-v108;
+  border-radius:0px 0px 4px 4px;
+  gap: 36px;
+}
+
+.NormalText {
+  font-size: 12px;
+  line-height: 18px;
+  color: $black-v20;
+  font-weight: 500;
+}
+
+.BigText {
+  font-size: 16px;
+  color: $black-v22;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.RuleInput {
+  width: 346px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+  color: $gray-v3;
+  border: 1px solid $gray-v1;
+  border-radius: 3px;
+  margin-top: 6px;
+}
+
+.RuleOutput {
+  color: $gray-v87;
+  background-color: $gray-v109;
+}
+
+.ConfigBuilder {
+  height: 92px;
+  padding: 16px;
+  border: 1px solid $gray-v108;
+  border-radius:4px 4px 0px 0px;
+  gap: 36px;
+  background-color: $gray-v109;
+}
+
+//Import Config
+
+.StepTabContainer {
+  gap: 8px;
+}
+
+.StepTab {
+  width: 246px;
+  padding: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  color: $gray-v89;
+  background-color: $gray-v109;
+  border: 1px solid $gray-v107;
+  border-radius: 4px;
+}
+
+.SelectedStep {
+  background-color: $blue-v48;
+  color: $blue-v39;
+  border-color: #BDD9FF;
+}
+
+.ImportedModalContent {
+  height: 100%;
+  border: 1px solid $gray-v108;
+}
+
+.SideBar {
+  height: 100%;
+  border-right: 1px solid $gray-v108;
+  border-radius: 4px 0px 0px 4px;
+}
+
+.ImportTableConatiner {
+  width: 100%; 
+  border-radius: 0px 4px 4px 0px;
+  overflow-x: auto;
+}
+
+.SearchInput{
+  font-size: 13px;
+  height: 32px;
+  padding: 6px 12px !important;
+  border: 1px solid $gray-v1 !important;
+  border-radius: 3px !important;
+  width: 246px;
+}
+
+.SearchStepIcon{
+  width: 20px;
+  height: 20px;
+  path{
+      fill: $gray-v87;
+  }
+}
+
+.Warning {
+  color: $orange-v33;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+//Accordion styles
+
+.CombinedAccordionContainer {
+  min-height: 100%;
+  border-left: 1px solid $gray-v1;
+  overflow:hidden;
+  overflow-y: auto;
+  max-width: 320px;
+}
+
+.AccordionContainerClass {
+  width: 320px;
+  padding: 0px 24px;
+
+  border-bottom: 1px solid $gray-v1;
+  border-radius: 0px !important;
+}
+.AccordionChildren {
+  width: 272px;
+}
+
+.Sticky {
+  position: sticky;
+  top: 0px;
+  width: 272px !important;
+  padding: 16px 0px !important;
+  border-radius: 0px !important;
+  z-index: 2;
+  background-color: $white;
+}
+
+.AccordionHeader {
+  line-height: 20px;
+  color: $black-v22 !important;
+}
+
+.ChevronClass {
+  fill: $gray-v101 !important;
+}
+
+.ChevronContainerClass {
+  height: 20px;
+  width: 18px;
+  justify-content: center;
+}
+
+.CardContainerClass {
+  width: 272px;
+  border-radius: 3px;
+  border: 1px solid $gray-v68;
+  background: $white;
+
+  &:first-child {
+    margin-top: 0px !important;
+  }
+}
+
+.CardClass {
+  align-content: center;
+  row-gap: 10px;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: flex-end !important;
+  padding: 8px !important;
+}
+
+.RuleHeader {
+  width: 232px;
+}
+
+.RuleName {
+  color: $black-v22 !important;
+  line-height: 16px;
+}
+
+.FieldCount {
+  color: $gray-v98;
+}
+
+.EachRuleChevronClass {
+  height: 18px;
+  width: 18px;
+}
+
+.AddOrImportButtonClass {
+  width: 272px;
+  button {
+    width: 128px;
+    height: 40px;
+    padding: 11px 12px;
+    gap: 8px;
+    border-radius: 2px;
+    border: 1px solid $gray-v1;
+    background: $white;
+    color: $blue-v39;
+  }
+}
+
+.FieldNameContainer {
+  width: 256px;
+  height: 32px;
+  padding: 8px 4px 8px 12px;
+  border-radius: 3px;
+  background: $gray-v107;
+
+  &:first-child {
+    margin-top: 0px;
+  }
+}
+
+.RuleEditIcon {
+  &:hover {
+    & path {
+      fill: $blue-v39;
+      
+    }
+  }
+}
+
+.RuleNameContainer{
+  padding: 16px;
+  border-radius: 4px 4px 0px 0px;
+  border: 1px solid $gray-v108;
+  width: 100%;
+}
+
+.FieldConditonVisibility {
+  border-radius: 4px;
+  border: 1px solid $gray-v108;
+  padding: 16px;
+  margin: 16px 0px;
+}

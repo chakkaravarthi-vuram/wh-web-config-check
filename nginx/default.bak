@@ -1,0 +1,133 @@
+worker_processes auto;
+pid /run/nginx.pid;
+include /etc/nginx/modules-enabled/*.conf;
+
+events {
+	worker_connections 768;
+	# multi_accept on;
+}
+
+http {
+
+	##
+	# Basic Settings
+	##
+
+	sendfile on;
+	tcp_nopush on;
+	tcp_nodelay on;
+	keepalive_timeout 65;
+	types_hash_max_size 2048;
+	# server_tokens off;
+
+	# server_names_hash_bucket_size 64;
+	# server_name_in_redirect off;
+
+	include /etc/nginx/mime.types;
+	default_type application/octet-stream;
+
+	##
+	# SSL Settings
+	##
+
+	ssl_protocols TLSv1 TLSv1.1 TLSv1.2; # Dropping SSLv3, ref: POODLE
+	ssl_prefer_server_ciphers on;
+
+	##
+	# Logging Settings
+	##
+
+	access_log /var/log/nginx/access.log;
+	error_log /var/log/nginx/error.log;
+
+	##
+	# Gzip Settings
+	##
+
+	gzip on;
+server {
+	gzip on;
+	gzip_static on;
+	gzip_types text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript image/*;
+	gzip_proxied any;
+	gzip_vary on;
+	gzip_comp_level 6;
+	gzip_buffers 16 8k;
+	gzip_http_version 1.1;
+	client_max_body_size 100M;
+	
+	server_name ~^(?<name>.+\.)onething\.io$;
+	if ($name ~* (www\.)+(.*) ) {
+		set $subdomain onething.io;
+		return 302 https://$2$subdomain$request_uri;
+	}
+	root /usr/share/nginx/html;
+	index index.html index.htm index.nginx-debian.html;
+	location /api {
+		proxy_set_header X-Real-IP $remote_addr;
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_set_header X-NginX-Proxy true;
+		proxy_pass http://localhost:3000/api;
+		proxy_set_header Host            $host;
+		access_log off;
+	}
+		location /auth {
+		proxy_set_header X-Real-IP $remote_addr;
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_set_header X-NginX-Proxy true;
+		proxy_pass http://localhost:8005/auth;
+		proxy_set_header Host            $host;
+		access_log off;
+	}
+        location /chat-engine {
+                proxy_http_version 1.1;
+        	proxy_set_header Upgrade $http_upgrade;
+	        proxy_set_header Connection "upgrade";
+                proxy_pass http://localhost:8004;
+                proxy_set_header Host            $host;
+                access_log off;
+        }
+        location /chat-ql {
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_set_header X-NginX-Proxy true;
+                proxy_pass http://localhost:8004;
+                proxy_set_header Host            $host;
+                access_log off;
+        }
+
+	location /robots.txt {
+		root /usr/share/nginx/html;
+		try_files $uri /index.html;
+	}
+	location / {
+		root /usr/share/nginx/html;
+		add_header Cache-Control no-cache;
+		try_files $uri /index.html;
+	}
+	listen [::]:443 ssl ipv6only=on; # managed by Certbot
+	listen 443 ssl;
+#    ssl_certificate /etc/letsencrypt/live/onething.io/fullchain.pem; # managed by Certbot
+#    ssl_certificate_key /etc/letsencrypt/live/onething.io/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/onething.io/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/onething.io/privkey.pem; # managed by Certbot
+
+}
+
+server {
+	listen 80;
+	listen [::]:80 default_server;
+	server_name ~^(www\.)?(\w*\.)*(?<name>.+)\.onething\.io$;
+	#return 302 https://onething.io$request_uri;
+	if ($name = "" ) {
+		return 302 https://onething.io$request_uri;
+	}
+	if ($name = 'www' ) {
+		return 302 https://onething.io$request_uri;
+	}
+	return 302 https://$name.onething.io$request_uri;
+}
+
+}

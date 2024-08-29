@@ -1,0 +1,953 @@
+@import './constants';
+
+@mixin font-styles($fontfamily, $fontsize, $font-color, $font-stretch) {
+  font-family: $fontfamily;
+  font-size: $fontsize;
+  color: $font-color;
+  font-stretch: $font-stretch;
+}
+@mixin normal-font-styles {
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+@mixin transition($sec) {
+  transition: $sec all ease-in-out;
+}
+@mixin border-radius(
+  $top-left: null,
+  $top-right: null,
+  $bottom-right: null,
+  $bottom-left: null
+) {
+  -webkit-border-radius: $top-left $top-right $bottom-right $bottom-left;
+  -moz-border-radius: $top-left $top-right $bottom-right $bottom-left;
+  -ms-border-radius: $top-left $top-right $bottom-right $bottom-left;
+  border-radius: $top-left $top-right $bottom-right $bottom-left;
+}
+
+@mixin padding-styles(
+  $paddingLeft,
+  $paddingRight,
+  $paddingTop,
+  $paddingBottom
+) {
+  padding-left: $paddingLeft;
+  padding-right: $paddingRight;
+  padding-top: $paddingTop;
+  padding-bottom: $paddingBottom;
+}
+
+@mixin margin-styles($marginLeft, $marginRight, $marginTop, $marginBottom) {
+  margin-left: $marginLeft;
+  margin-right: $marginRight;
+  margin-top: $marginTop;
+  margin-bottom: $marginBottom;
+}
+
+//Input templates
+
+%LabelTextStyle {
+  margin-bottom: 8px;
+}
+%Placeholder {
+  @include font-styles($font-family-2, 13px, $gray-v5, normal);
+}
+%PlaceholderOverflow {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+$input-height: 18px;
+
+%InputHeight {
+  height: $input-height;
+}
+
+//center
+%DFlex {
+  display: flex;
+}
+
+%AlignItemCenter {
+  align-items: center;
+}
+
+%DFlexImportant {
+  display: flex !important;
+}
+
+%AlignItemCenterImportant {
+  align-items: center !important;
+}
+
+%JustifyContentCenter {
+  justify-content: center;
+}
+%JustifyContentEnd {
+  justify-content: end;
+}
+
+//font-family
+%FOne {
+  font-family: $font-family-2;
+}
+
+%FTwo {
+  font-family: $font-family-2;
+}
+
+//font sizes
+%FS8 {
+  font-size: 8px;
+}
+%FS9 {
+  font-size: 9px;
+}
+
+%FS10 {
+  font-size: $font-size-xs;
+}
+
+%FS10Important {
+  font-size: $font-size-xs !important;
+}
+
+%FS11 {
+  font-size: $font-size-smt !important;
+}
+
+%FS13 {
+  font-size: 13px;
+}
+
+%FS12 {
+  font-size: $font-size-sm;
+}
+
+%FS13Important {
+  font-size: 13px !important;
+}
+
+%FS12Important {
+  font-size: 12px !important;
+}
+
+%FS14 {
+  font-size: 14px;
+}
+
+%FS15 {
+  font-size: 15px;
+}
+
+%FS16 {
+  font-size: 16px;
+}
+
+%FS19 {
+  font-size: 19px;
+}
+
+%FS18 {
+  font-size: 18px;
+}
+
+%FS22 {
+  font-size: 22px;
+}
+
+%FS24 {
+  font-size: 24px !important;
+}
+
+%FS26 {
+  font-size: 26px;
+}
+
+%FS28 {
+  font-size: 28px;
+}
+
+%FS29 {
+  font-size: 29px;
+}
+
+%FS32 {
+  font-size: 32px;
+}
+
+%FS20 {
+  font-size: 20px;
+}
+
+%FS21 {
+  font-size: 21px;
+}
+
+%FS30 {
+  font-size: 30px;
+}
+
+%FS36 {
+  font-size: 36px;
+}
+
+//COLORS
+
+%GrayV1 {
+  color: $gray-v1;
+}
+
+%GrayV2 {
+  color: $gray-v2;
+}
+
+%GrayV3 {
+  color: $gray-v3;
+}
+%GrayV3Important {
+  color: $gray-v3 !important;
+}
+
+%GrayV4 {
+  color: $gray-v4;
+}
+
+%GrayV5 {
+  color: $gray-v5;
+}
+
+%GrayV6 {
+  color: $gray-v6;
+}
+
+%GrayV7 {
+  color: $gray-v7;
+}
+
+%GrayV8 {
+  color: $gray-v8;
+}
+
+%GrayV9 {
+  color: $gray-v9;
+}
+
+%GrayV10 {
+  color: $gray-v10;
+}
+
+%GrayV11 {
+  color: $gray-v11;
+}
+
+%GrayV12 {
+  color: $gray-v12;
+}
+
+%GrayV14 {
+  color: $gray-v14;
+}
+
+%GrayV17 {
+  color: $gray-v17;
+}
+
+%GrayV91 {
+  color: $gray-v91;
+}
+
+%GrayV20 {
+  color: $gray-v20;
+}
+
+%GrayV24 {
+  color: $gray-v24;
+}
+
+%GrayV27 {
+  color: $gray-v27;
+}
+%GrayV29 {
+  color: $gray-v29;
+}
+
+%GrayV33 {
+  color: $gray-v33;
+}
+
+%GrayV35 {
+  color: $gray-v35;
+}
+
+%GrayV36 {
+  color: $gray-v36;
+}
+%GrayV37 {
+  color: $gray-v37;
+}
+
+%GrayV38 {
+  color: $gray-v38;
+}
+
+%GrayV39 {
+  color: $gray-v39;
+}
+%GrayV42 {
+  color: $gray-v42;
+}
+%GrayV43 {
+  color: $gray-v43;
+}
+
+%GrayV48 {
+  color: $gray-v48;
+}
+
+%GrayV49 {
+  color: $gray-v49;
+}
+
+%GrayV53 {
+  color: $gray-v53;
+}
+
+%GrayV62 {
+  color: $gray-v62;
+}
+%GrayV66 {
+  color: $gray-v66;
+}
+%GrayV68 {
+  color: $gray-v68; //Dashed border radius
+}
+
+%GrayV74 {
+  color: $gray-v74;
+}
+
+%GrayV86 {
+  color: $gray-v86 !important;
+}
+%GrayV87 {
+  color: $gray-v87;
+}
+%GrayV90 {
+  color: $gray-v90;
+}
+
+%GrayV93 {
+  color: $gray-v93;
+}
+
+%GrayV89 {
+  color: $gray-v89;
+}
+
+%GrayV101 {
+  color: $gray-v101;
+}
+
+
+%GrayV104 {
+  color: $gray-v104;
+}
+
+%GrayV89Imp {
+  color: $gray-v89 !important;
+}
+
+%GrayV98{
+  color: $gray-v98;
+}
+
+%GrayV98Imp{
+  color: $gray-v98 !important;
+}
+
+%GrayV102{
+  color: $gray-v102;
+}
+
+// %GrayV78 {
+//   color: $gray-v78;
+// }
+
+%Black {
+  color: $black;
+}
+
+%BlackV1 {
+  color: $black-v1;
+}
+
+%BlackV2 {
+  color: $black-v2;
+}
+
+%BlackV3 {
+  color: $black-v3;
+}
+
+%BlackV4 {
+  color: $black-v4;
+}
+
+%BlackV5 {
+  color: $black-v5;
+}
+
+%BlackV6 {
+  color: $black-v6;
+}
+
+%BlackV7 {
+  color: $black-v7;
+}
+%BlackV8 {
+  color: $black-v8;
+}
+%BlackV9 {
+  color: $black-v9;
+}
+
+%BlackV10 {
+  color: $black-v10;
+}
+
+%BlackV12 {
+  color: $black-v12;
+}
+
+%BlackV12Imp {
+  color: $black-v12 !important;
+}
+
+%BlackV25Imp {
+  color: $black-v25 !important;
+}
+
+%BlackV13 {
+  color: $black-v13;
+}
+
+%BlackV11 {
+  color: $black-v11;
+}
+
+%BlackV15 {
+  color: $black-v15;
+}
+%BlackV17 {
+  color: $black-v17;
+}
+%BlackV18{
+  color: $black-v18;
+}
+
+%BlackV20Normal{
+  color: $black-v20;
+}
+
+%BlackV20{
+  color: $black-v20 !important;
+}
+
+%BlackV21{
+  color: $black-v21 !important;
+}
+
+%BlackV22{
+  color: $black-v22 !important;
+}
+
+%BlackV23{
+  color: $black-v23 !important;
+}
+
+%BlackV27{
+  color: $black-v27 !important;
+}
+
+%Red {
+  color: $red;
+}
+
+%RedV2 {
+  color: $red-v2;
+}
+
+%RedV3 {
+  color: $red-v3;
+}
+%RedV5 {
+  color: $red-v5;
+}
+%RedV7 {
+  color: $red-v7;
+}
+
+%RedV8 {
+  color: $red-v8;
+}
+
+%RedV9 {
+  color: $red-v9;
+}
+%RedV11 {
+  color: $red-v11;
+}
+%RedV12 {
+  color: $red-v12;
+}
+%RedV13 {
+  color: $red-v13;
+}
+%RedV18 {
+  color: $red-v18;
+}
+%RedV20 {
+  color: $red-v20;
+}
+%RedV27 {
+  color: $red-v27;
+}
+
+%RedV28 {
+  color: $red-v28;
+}
+
+%RedV30{
+  color: $red-v30;
+}
+
+%RedV22 {
+  color: $red-v22 !important;
+}
+
+%OrangeV2 {
+  color: $orange-v2;
+}
+
+%OrangeV25 {
+  color: $orange-v25;
+}
+
+%OrangeV11 {
+  color: $orange-v11;
+}
+%OrangeV15 {
+  color: $orange-v15;
+}
+
+%Cyan {
+  color: $cyan;
+}
+
+%BlueV1 {
+  color: $blue-v1;
+}
+
+%BlueV2 {
+  color: $blue-v2;
+}
+
+%BlueV3 {
+  color: $blue-v3;
+}
+
+%BlueV4 {
+  color: $blue-v4;
+}
+
+%BlueV5 {
+  color: $blue-v5;
+}
+
+%BlueV6 {
+  color: $blue-v6;
+}
+
+%BlueV7 {
+  color: $blue-v7;
+}
+
+%BlueV10 {
+  color: $blue-v10;
+}
+
+%BlueV11 {
+  color: $blue-v11;
+}
+%BlueV13 {
+  color: $blue-v13;
+}
+%BlueV16 {
+  color: $blue-v16;
+}
+%BlueV17 {
+  color: $blue-v17;
+}
+%BlueV21 {
+  color: $blue-v21;
+}
+%BlueV24 {
+  color: $blue-v24;
+}
+%BlueV25 {
+  color: $blue-v25;
+}
+%BlueV32 {
+  color: $blue-v32;
+}
+%BlueV39 {
+  color: $blue-v39;
+}
+
+%PurpleV1 {
+  color: $purple-v1;
+}
+
+%GreenV4 {
+  color: $green-v4;
+}
+%GreenV6 {
+  color: $green-v6;
+}
+%Green20 {
+  color: $green-v20;
+}
+%GreenV23 {
+  color: $green-v23;
+}
+
+%GreenV26 {
+  color: $green-v26;
+}
+%GreenV27 {
+  color: $green-v27;
+}
+
+%White {
+  color: $white;
+}
+%WhiteV3 {
+  color: $white-v3;
+}
+%WhiteV4 {
+  color: $white-v4;
+}
+
+//font-size - font-family combo
+//FOne
+%FOne10 {
+  @extend %FOne;
+  @extend %FS10;
+}
+
+%FOne11 {
+  @extend %FOne;
+  @extend %FS11;
+}
+
+%FOne12 {
+  @extend %FOne;
+  @extend %FS12;
+}
+
+%FOne13 {
+  @extend %FOne;
+  @extend %FS13;
+}
+
+%FOne14 {
+  @extend %FOne;
+  @extend %FS14;
+}
+
+%FOne16 {
+  @extend %FOne;
+  @extend %FS16;
+}
+
+%FOne19 {
+  @extend %FOne;
+  @extend %FS19;
+}
+
+%FOne24 {
+  @extend %FOne;
+  @extend %FS24;
+}
+
+%FOne28 {
+  @extend %FOne;
+  @extend %FS28;
+}
+
+//FTwo
+%FTwo8 {
+  @extend %FTwo;
+  @extend %FS8;
+}
+%FTwo9 {
+  @extend %FTwo;
+  @extend %FS9;
+}
+
+%FTwo10 {
+  @extend %FTwo;
+  @extend %FS10;
+}
+
+%FTwo10Important {
+  @extend %FTwo;
+  @extend %FS10Important;
+}
+
+%FTwo11 {
+  @extend %FTwo;
+  @extend %FS11;
+}
+%FTwo12Important {
+  @extend %FTwo;
+  @extend %FS12Important;
+}
+
+%FTwo12 {
+  @extend %FTwo;
+  @extend %FS12;
+}
+
+%FTwo13 {
+  @extend %FTwo;
+  @extend %FS13;
+}
+
+%FTwo13Important {
+  @extend %FTwo;
+  @extend %FS13Important;
+}
+
+%FTwo14 {
+  @extend %FTwo;
+  @extend %FS14;
+}
+
+%FTwo15 {
+  @extend %FTwo;
+  @extend %FS15;
+}
+
+%FTwo16 {
+  @extend %FTwo;
+  @extend %FS16;
+}
+
+%FTwo18 {
+  @extend %FTwo;
+  @extend %FS18;
+}
+
+%FTwo20 {
+  @extend %FTwo;
+  @extend %FS20;
+}
+
+%FTwo21 {
+  @extend %FTwo;
+  @extend %FS21;
+}
+
+%FTwo24 {
+  @extend %FTwo;
+  @extend %FS24;
+}
+
+%FTwo26 {
+  @extend %FTwo;
+  @extend %FS26;
+}
+
+%FTwo28 {
+  @extend %FTwo;
+  @extend %FS28;
+}
+
+%FTwo29 {
+  @extend %FTwo;
+  @extend %FS29;
+}
+
+%FTwo36 {
+  @extend %FTwo;
+  @extend %FS36;
+}
+
+%FontWeight400 {
+  font-weight: 400;
+}
+
+%FontWeight500 {
+  font-weight: 500;
+}
+
+%FontWeight600Imp {
+  font-weight: 600 !important;
+}
+
+%FontWeight600 {
+  font-weight: 600;
+}
+
+%FontWeight700 {
+  font-weight: 700;
+}
+
+%FontWeight500Important {
+  font-weight: 500 !important;
+}
+
+%FontWeight700Important {
+  font-weight: 700!important;
+}
+
+%TabHeader {
+  background-color: rgba(237, 237, 242, 0.3);
+}
+
+%DropdownSelectedBg {
+  background-color: rgba($blue-v21, 0.1);
+}
+%DropdownSelectedBgV2 {
+  background-color: $blue-v39 !important;
+  color: $white !important;
+}
+%DropdownHoverBg {
+  background-color: $blue-v41;
+}
+%SelectedListCard {
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+%SelectedDependencyCard {
+  border-radius: 12px;
+  background-color: $gray-v23;
+}
+
+%InputBorder {
+  border: 1px solid $gray-v1;
+}
+%FlexShrink0 {
+  flex-shrink: 0;
+}
+
+%ScrollYOnHover {
+  &:hover {
+    overflow-y: auto;
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba($black, 0.2);
+      &:hover {
+        background: rgba($black, 0.5);
+      }
+    }
+  }
+}
+
+%ScrollXOnHover {
+  &:hover {
+    overflow-x: auto;
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba($black, 0.2);
+      &:hover {
+        background: rgba($black, 0.5);
+      }
+    }
+  }
+}
+
+@mixin for-small-device {
+  @media (max-width: 575px) {
+    @content;
+  }
+}
+
+@mixin for-very-small-height-device {
+  @media (max-height: 525px) {
+    @content;
+  }
+}
+
+@mixin for-small-height-device {
+  @media (max-height: 600px) {
+    @content;
+  }
+}
+@mixin for-small-to-medium-height-device {
+  @media (max-height: 650px) {
+    @content;
+  }
+}
+@mixin for-tab-portrait {
+  @media (max-height: 768px) {
+    @content;
+  }
+}
+@mixin for-medium-height-device {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+@mixin for-phone-and-tab {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin responsive-layout {
+  @media (min-width: 360px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin for-desktop {
+  @media (min-width: 1025px) {
+    @content;
+  }
+}
+
+@mixin for-medium-hd-screen {
+  @media (max-width: 1180px) {
+    @content;
+  }
+}
+
+@mixin for-hd-screen {
+  @media (max-width: 1280px) {
+    @content;
+  }
+}
+@mixin for-hd-screen-v2 {
+  @media (max-width: 1366px) {
+    @content;
+  }
+}
+
+@mixin for-hd-very-big-screen {
+  @media (min-width: 1366px) {
+    @content;
+  }
+}
+%HeightWidh16 {
+  height: 16px;
+  width: 16px;
+}
+
+@function rgba_func($color, $alpha) {
+  @return rgba(red($color), green($color), blue($color), $alpha);
+}

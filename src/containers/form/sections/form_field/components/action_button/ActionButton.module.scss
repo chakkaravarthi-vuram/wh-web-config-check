@@ -1,0 +1,22 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.LinkStyle {
+  padding: 4px 16px !important;
+  height: 28px !important;
+  width: 100%;
+  @extend %FTwo13;
+  @extend %BlackV12;
+  > div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    width: 100%
+  }
+}
+
+.OutlineButton {
+  color: $blue-v39;
+  border: 1px solid $blue-v39;
+}

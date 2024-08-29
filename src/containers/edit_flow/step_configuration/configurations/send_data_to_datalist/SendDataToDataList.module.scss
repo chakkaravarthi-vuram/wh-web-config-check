@@ -1,0 +1,51 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.TableHeader {
+  margin-right: 24px;
+  &:last-child {
+    margin-right: 0;
+  }
+  p {
+    padding-right: 0 !important;
+  }
+}
+  
+.ChooseSource {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 24px;
+}
+.DataListField,
+.OperatorField {
+  width: 25% !important;
+  p {
+    @extend %FTwo13Important;
+    @extend %BlackV25Imp;
+    @extend %FontWeight600Imp;
+  }
+}
+.FlowField {
+  width: 27% !important;
+  p {
+    @extend %FTwo13Important;
+    @extend %BlackV25Imp;
+    @extend %FontWeight600Imp;
+  }
+}
+.ValueField {
+  width: 20% !important;
+  p {
+    @extend %FTwo13Important;
+    @extend %BlackV25Imp;
+    @extend %FontWeight600Imp;
+  }
+}
+.DeleteColumn {
+  // display: none;
+  width: 3% !important;
+}
+.Icon {
+  width: 12px !important;
+  height: 12px !important;
+}

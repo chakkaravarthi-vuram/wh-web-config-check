@@ -1,0 +1,92 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+$container-height: 422px;
+.Circle1 {
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  @extend %FlexShrink0;
+}
+.TriggerBg {
+  background-color: $green-v6;
+  svg {
+    path {
+      fill: $white;
+    }
+  }
+}
+
+.CancelledTriggerBg {
+  background-color: $red-v5;
+  svg {
+    path {
+      fill: $white;
+    }
+  }
+}
+
+.TriggerIcon {
+  width: 16px;
+  height: 16px;
+}
+.AccTitle {
+  font-size: $font-size-md;
+  font-weight: $fw-semibold;
+  color: $gray-v3;
+}
+.AccsummaryCircle {
+  display: inline-flex;
+  margin-right: 10px;
+  color: $blue-v2;
+  @extend %FS13;
+  font-weight: $fw-semibold;
+}
+.AccnotStartedtxt {
+  @extend %FS13;
+  line-height: normal;
+  color: $green-v6;
+}
+.ChildStepCancelled {
+  @extend %FS13;
+  line-height: normal;
+  color: $red-v5;
+}
+.grayborderCard {
+  margin: 15px 0px;
+  border-radius: 4px;
+  border: solid 1px $gray-v1;
+  background-color: $white;
+  position: unset !important;
+}
+.greenborderCard {
+  margin: 15px 0px;
+  border: 1px solid $green-v6;
+  border-radius: 4px;
+  position: unset !important;
+}
+.cardheaderNobg {
+  background-color: transparent;
+}
+.NewTabText {
+  font-size: $font-size-mdt;
+  font-weight: 500;
+  color: $blue-v39;
+}
+.NewTabLink {
+  cursor: pointer;
+  text-decoration: none !important;
+}
+.FlowName {
+  font-size: $font-size-mdt;
+  color: $gray-v89;
+}
+.TriggerName{
+  max-width: 420px;
+}
+.redBorderCard {
+  margin: 15px 0px;
+  border: 1px solid $red-v5;
+  border-radius: 4px;
+  position: unset !important;
+}

@@ -1,0 +1,79 @@
+@import '../../../scss/constants';
+
+.Container {
+  padding: 10px;
+  border-radius: 4px;
+  height: 36px;
+}
+.ContainerBorderReadonlyView {
+  border: solid 1px $gray-v1;
+  background-color: $gray-v7;
+}
+.ContainerBorderEditableView {
+  border: solid 1px $gray-v1;
+}
+.ContainerRightBorderEditableView {
+  border-right: solid 1px $gray-v1;
+}
+.DeleteContainer {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  &:hover {
+    background-color: $gray-v96;
+  }
+}
+.editContainer{
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  &:hover {
+    background-color: $gray-v96;
+  }
+}
+.EditIcon path{
+  fill: $gray-v87; 
+}
+.DeleteIcon {
+  fill: $gray-v87; 
+}
+.LinkInputContainer {
+  padding: 0px;
+  border: none;
+  height: 19.5px !important;
+}
+.LinkInput {
+  height: 19.5px !important;
+  width: 100%;
+}
+.link {
+  color: $blue-v39;
+}
+
+.ContainerCreationView {
+  border: 1px solid $gray-v1;
+  height: 36px;
+  border-radius: 4px;
+}
+
+.LinkInputCreationView {
+  border: 0;
+  height: 34px !important;
+}
+.LinkInputRightBorderCreationView {
+  border-right: 1px solid $gray-v1;
+}
+
+.W40 {
+  width: 40%;
+}
+
+.W60 {
+  width: 60%;
+}

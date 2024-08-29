@@ -1,0 +1,60 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.PublishAppModal {
+  z-index: 152 !important;
+  margin: 0px !important;
+  width: 100% !important;
+  border: 1px solid $gray-v1;
+}
+.FooterContent {
+  height: 100px !important;
+}
+.AppHeader {
+  background: none !important;
+  border: none !important;
+}
+.Content {
+  padding-right: 40px !important;
+  padding-left: 40px !important;
+  margin: 0 !important
+}
+.AppName {
+  margin-top: 32px;
+  :first-child {
+    width: 58vw !important;
+  }
+}
+.AppAdmins {
+  width: 60vw !important;
+}
+.CloseIcon {
+  position: absolute !important;
+  right: 15px;
+  width: 16px;
+  height: 16px;
+  margin: 15px 0px 15px 15px !important;
+  fill: $gray-v101 !important;
+  outline: none;
+}
+ .FooterClass {
+  padding: 24px !important;
+  bottom:0;
+  right:0;
+  display: flex !important;
+ }
+ .InhertiSecurityContainer {
+  border-radius: 8px;
+  border: 1px solid $gray-v108;
+  background: $white;
+  margin-top: 28px !important;
+}
+.CheckboxChecked {
+  border: 1px solid $blue-v46 !important;
+  background: $blue-v47 !important;
+}
+.InheritOption {
+  line-height: 20px !important;
+  margin-bottom: 0;
+  margin-left: 12px !important;
+}

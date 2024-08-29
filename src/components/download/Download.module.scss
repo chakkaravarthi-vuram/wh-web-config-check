@@ -1,0 +1,45 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+.HeaderContainer {
+  padding-bottom: 4px !important;
+}
+
+.HeaderWidth {
+  width: calc(100% - 54px);
+}
+
+.SelectField {
+  line-height: normal;
+  text-align: justify;
+  color: $gray-v6;
+  @extend %FS13;
+}
+
+.listCheckBox {
+  padding: 9px 0px 9px 9px;
+  border-radius: 4px;
+  border: solid 1px $gray-v71;
+  background-color: $white;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.listDiv {
+  margin-bottom: 50px;
+}
+
+.dimensionDisplayOrder {
+  @extend %FS13;
+  line-height: normal;
+  text-align: justify;
+  color: $gray-v6;
+  margin-right: 5px;
+}
+
+.buttonContainer {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  right: 0;
+}

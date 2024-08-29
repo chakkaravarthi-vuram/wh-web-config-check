@@ -1,0 +1,40 @@
+@import '../../scss/utilities';
+@import '../../scss/constants';
+
+.ArrowBottomShadow {
+  background: none;
+  border-radius: 100px;
+  width: 100%;
+  box-shadow: 0px 91px 12px -82px rgba(0, 0, 0, 0.2);
+}
+
+.Tooltip:after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  transform: rotate(-45deg);
+  background: $white;
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 10px);
+}
+
+.ArrowTop {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid $white;
+}
+
+.ArrowBottom {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid $white;
+}
+
+.HideButton {
+  visibility: hidden;
+}

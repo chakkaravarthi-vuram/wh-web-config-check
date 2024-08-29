@@ -1,0 +1,25 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.AddAttachments {
+    width: 100%;
+    overflow: hidden !important;
+    .NewFile {
+      border: 1px dashed #dadfe7;
+      padding: 15px;
+      height: 55px;
+      margin-bottom: 5px;
+    }
+    .ExistingFile {
+      // border: 1px solid #dadfe7;
+      // padding: 11px 15px;
+      height: 55px;
+      margin-bottom: 5px;
+    }
+  }
+  .ExistingFile {
+    // border: 1px solid #dadfe7;
+    // padding: 11px 15px;
+    height: 55px;
+    margin-bottom: 5px;
+  }

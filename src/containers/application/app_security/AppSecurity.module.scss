@@ -1,0 +1,59 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.CreateAppModal {
+    z-index: 155 !important;
+    width: 65vw !important;
+    height: 100vh !important;
+    border: 1px solid $gray-v1;
+    margin-left: 35vw !important;
+    &:first-child {
+        // position: sticky;
+        width: 65vw !important;
+      }
+}
+
+.AppHeader {
+  background: none !important;
+  border: none !important;
+}
+
+.Content {
+  padding-top: 35px !important;
+  margin: 0 !important
+}
+
+
+// .CloseIcon {
+//   width: 16px;
+//   height: 16px;
+//   margin: 24px 24px 0px 0px;
+//   cursor: pointer;
+//   fill: $gray-v101 !important;
+// }
+
+.AppName {
+  margin-top: 32px;
+  :first-child {
+    width: 58vw !important;
+  }
+}
+
+.AppAdmins {
+  width: 60vw !important;
+}
+
+.CloseIcon {
+  position: absolute !important;
+  right: 15px;
+  width: 16px;
+  height: 16px;
+  margin: 15px 0px 15px 15px !important;
+  fill: $gray-v101 !important;
+}
+ .FooterClass {
+  padding: 24px !important;
+  bottom:0;
+  right:0;
+  display: flex !important;
+ }

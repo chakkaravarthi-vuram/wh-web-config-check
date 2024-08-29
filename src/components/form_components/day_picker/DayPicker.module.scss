@@ -1,0 +1,61 @@
+@import '../../../scss/constants';
+
+%selectedBoxBorder {
+  border: 1px solid $blue-v2;
+}
+
+%selectedBoxBg {
+  background-color: $blue-v7;
+}
+
+%selectedTextColor {
+  color: $gray-v2;
+}
+
+.DayPickerContainer {
+  list-style: none;
+  width: fit-content;
+  margin-bottom: 5px;
+}
+
+.DayBox {
+  padding: 6px 15px;
+  border-right: 1px solid $gray-v1;
+  position: relative;
+  background: transparent;
+  z-index: 1;
+
+  &:last-child {
+    border-right: 0;
+  }
+
+  & .Box {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    border-width: 1px;
+    margin-right: -1px;
+    border-style: solid;
+    visibility: hidden;
+  }
+
+  &:hover {
+    @extend %selectedTextColor;
+
+    & .Box {
+      visibility: visible;
+      z-index: -1;
+    }
+  }
+}
+
+.SelectedDayBox {
+  @extend %selectedTextColor;
+
+  & .Box {
+    visibility: visible;
+  }
+}

@@ -1,0 +1,97 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.stepper {
+  display: flex;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  height: 48px;
+
+}
+
+.stepper__item {
+  flex: 100%;
+  padding: 14px 20px 20px 40px;
+  background: $white;
+  margin: 0 0 0 -18px;
+  border: solid 1px $gray-v68;
+  clip-path: polygon(
+    20px 50%,
+    0% 0%,
+    calc(100% - 20px) 0%,
+    100% 50%,
+    calc(100% - 20px) 100%,
+    0% 100%
+  );
+  -webkit-clip-path: polygon(
+    20px 50%,
+    0% 0%,
+    calc(100% - 20px) 0%,
+    100% 50%,
+    calc(100% - 20px) 100%,
+    0% 100%
+  );
+
+  &.current {
+    background: $blue-v41;
+    color: $blue-v39;
+  }
+
+  &.SavedStep {
+    background: $green-v15;
+    color: $green-v16;
+  }
+
+  &:first-child {
+    clip-path: polygon(
+      0% 0%,
+      calc(100% - 20px) 0%,
+      100% 50%,
+      calc(100% - 20px) 100%,
+      0% 100%
+    );
+    -webkit-clip-path: polygon(
+      0% 0%,
+      calc(100% - 20px) 0%,
+      100% 50%,
+      calc(100% - 20px) 100%,
+      0% 100%
+    );
+  }
+
+  &:last-child {
+    clip-path: polygon(20px 50%, 0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(20px 50%, 0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+.StepperBadge {
+  width: 20px;
+  height: 20px;
+  margin: auto 8px auto 0;
+  padding: 3px 7px;
+  border-radius: 27px;
+  background-color: $gray-v1;
+  color: $white;
+}
+
+.ActiveBadge {
+  background-color: $blue-v39;
+}
+.CurrentProgress {
+  background-color: $blue-v39 !important;
+  border-radius: 12px;
+  width: 24px;
+  height: 24px;
+} 
+.OtherProgress {
+  background-color: $gray-v100 !important;
+  border-radius: 12px;
+  width: 24px;
+  height: 24px;
+}
+.Completed {
+  width: 24px;
+  height: 24px;
+}

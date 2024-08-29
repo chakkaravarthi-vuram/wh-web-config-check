@@ -1,0 +1,99 @@
+@import '../../../../../scss/constants';
+
+label{
+  margin: 0;
+}
+
+.ConfigHeader {
+    & .HeaderTitle{
+      padding: 24px 32px;
+      position: relative;
+    }
+
+    & .Title{
+      color: $gray-v3;
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: -0.2px;
+    }
+
+    & .CloseIcon {
+      padding: 8px;
+      position: absolute;
+      right: 8px;
+      top: 8px;
+    }
+
+    & .HeaderTab{
+      border-bottom: 1px solid $gray-v1;
+      padding: 0 32px 0 32px;
+    }
+
+    & .SelectedTab {
+      border-bottom: 2px solid $blue-v39 !important;
+    }
+    & .FormFieldConfigTabText {
+      font-size: 13px;
+    }
+}
+
+
+.ConfigBody{
+    width: 100%;
+    padding: 16px 32px 8px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    & .ConfigBodySubContainer{
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+    }
+    & .PositionAndColor {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+    }
+}
+
+.ConfigFooter {
+  padding: 10px;
+  border-radius: 0px 0px 3px 3px;
+  background: #fff;
+  box-shadow: 0px -1px 4px 0px rgba(16, 24, 40, 0.08);
+  flex-shrink: 0;
+
+  & .SaveAndCancel{
+     display: flex;
+     gap: 8px;
+  }
+
+  & .Delete {
+    color: #b42318;
+    border: none !important;
+  }
+  & .Delete:hover {
+    color: #b42318 !important;
+  }
+  
+  & .Cancel {
+    border: none !important;
+  }
+}
+
+.ErrorMessage {
+  color: $red-v22;
+  font-weight: 400;
+}
+
+.AddStep{
+  width: fit-content;
+  font-size: $font-size-mdt;
+  color: $blue-v39;
+  display: flex;
+  gap:4px;
+  align-items: center;
+  font-weight: $fw-semibold;
+}

@@ -1,0 +1,166 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.Container {
+  height: 100%;
+  @include border-radius(6px);
+  @include for-phone-and-tab {
+    width: 100%;
+    z-index: 6;
+  }
+  background-color: $white;
+}
+
+.ModalHeader {
+  height: fit-content !important;
+  padding: 0px !important;
+}
+.ContentContainer {
+  height: fit-content;
+  overscroll-behavior: contain;
+
+  @include for-phone-and-tab {
+    padding: 15px;
+  }
+}
+.PageTitle {
+  padding-top: 0px;
+  padding-bottom: 10px;
+  background-color: white;
+}
+
+.Tab {
+  padding: 0 50px;
+}
+
+.ButtonContainer {
+  height: 64px;
+  display: flex;
+  box-shadow: 0 -4px 20px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  bottom: 0;
+  // right: 0;
+  padding: 10px 15px 10px 15px;
+  z-index: 7;
+  position: absolute;
+  @include for-phone-and-tab {
+    // position: fixed;
+    z-index: 7;
+  }
+  @include for-desktop {
+    //  opacity: 0.75;
+  }
+}
+
+.CircularBadge {
+  height: 32px;
+  width: 32px;
+  margin-right: 15px;
+}
+
+.AddForm {
+  padding: 15px 10px;
+  height: 74px;
+  @extend %FS13;
+  text-align: center;
+  color: $gray-v53;
+  border-radius: 3px; //Dashed border radius
+}
+
+.AddAttachments {
+  padding: 15px;
+  height: 100px;
+  font-size: $font-size-sm;
+  text-align: center;
+  color: $gray-v53;
+  border-radius: 3px; //Dashed border radius
+  width: 100%;
+  border: 1px dashed #fff;
+}
+.Header {
+  width: 100%;
+  height: 50px;
+  padding: 11px 0 0;
+  opacity: 0.75;
+  background-color: #f3f6f9;
+}
+.CloseIcon {
+  margin: 11px 15px 10px 0px;
+}
+.CreateForm {
+  color: $blue-v39;
+  letter-spacing: normal;
+  font-weight: $fw-semibold;
+}
+.CreateTaskModal {
+  @include for-phone-and-tab {
+    padding: 0px;
+  }
+}
+.ContentModal {
+  width: 60vw;
+  // overflow-x: hidden !important;
+  // overflow-y: hidden !important;
+  overflow: -moz-hidden-unscrollable !important;
+  @include border-radius(6px);
+  @include for-phone-and-tab {
+    width: 100%;
+  }
+  @include for-desktop {
+    margin: 15px 15px 15px 0px !important; //Margin for create task modal
+    overflow: initial !important;
+  }
+}
+
+.RemoveForm {
+  @extend %FS13;
+  font-weight: $fw-semibold;
+  height: 14px;
+  color: $red-v18;
+}
+.UserIcon2 {
+  height: 32px !important;
+  width: 32px !important;
+  object-fit: cover;
+  background-color: #dee0e4;
+  @include border-radius(50%);
+}
+.DropZone {
+  width: 151px;
+  height: 177px;
+  padding: 64px 25px;
+  border-radius: 6px;
+  border: 1px dashed #bbb;
+  background-color: #fff;
+}
+.UploadedDropZone {
+  width: 151px;
+  height: 177px;
+  // padding: 64px 25px;
+  // padding: 0 0 32px !important;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+  // margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  padding-top: 85px;
+}
+.DeleteIcon {
+  width: 10.3px;
+  height: 12px;
+  fill: #f29494;
+}
+.UserImage {
+  width: 24px;
+  height: 24px;
+  border-radius: 54px;
+  border: solid 1px #fff;
+}
+
+.WarnContainer {
+  @include border-radius(3px);
+  height: 48px;
+  background: $orange-v30;
+  padding: 0px 16px;
+}

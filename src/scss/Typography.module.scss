@@ -1,0 +1,4418 @@
+@import './constants';
+@import './utilities';
+
+//  {
+//   line-height: 1;
+//  }
+
+input,
+textarea {
+  background-color: transparent;
+}
+
+input,
+select,
+textarea,
+button:focus {
+  outline: none;
+}
+button {
+  cursor: pointer;
+}
+
+ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+blockquote {
+  margin: 1rem;
+}
+
+.BodyBackground {
+  background-color: $blue-v9;
+}
+
+.FontWeight400 {
+  @extend %FontWeight400;
+}
+
+.FontWeight500 {
+  @extend %FontWeight500;
+}
+
+.FontWeight500Important {
+  @extend %FontWeight500Important
+}
+
+.FontWeight600 {
+  @extend %FontWeight600;
+}
+
+.FontWeight700 {
+  @extend %FontWeight700;
+}
+
+.FontWeight700Important {
+  @extend %FontWeight700Important;
+}
+
+.Italics {
+  font-style: italic;
+}
+.TextAlignJustify {
+  text-align: justify;
+}
+
+.FontStyleNormal {
+  font-style: normal;
+}
+.LineHeightNormal {
+  line-height: normal;
+}
+
+.LineHeightV1 {
+  line-height: 1.5;
+}
+
+.LineHeightV2 {
+  line-height: 1;
+}
+
+.LineHeightV3 {
+  line-height: 1.33;
+}
+
+.LineHeightV4 {
+  line-height: 1.2;
+}
+
+.LetterSpacingNormal {
+  letter-spacing: normal;
+}
+
+.LetterSpacingV1 {
+  letter-spacing: -1.1px;
+}
+
+.LetterSpacingV2 {
+  letter-spacing: -0.3px;
+}
+
+.LetterSpacingV3 {
+  letter-spacing: -0.27px;
+}
+
+.LetterSpacingV4 {
+  letter-spacing: -0.79px;
+}
+
+.LetterSpacingV5,
+%LetterSpacingV5 {
+  letter-spacing: -0.64px;
+}
+
+.LetterSpacingV6 {
+  letter-spacing: -0.23px;
+}
+
+.LetterSpacingV7 {
+  letter-spacing: -0.36px;
+}
+
+.LetterSpacingV8 {
+  letter-spacing: -0.47px;
+}
+
+.LetterSpacingV9 {
+  letter-spacing: -0.41px;
+}
+
+.LetterSpacingV10 {
+  letter-spacing: -0.44px;
+}
+.LetterSpacingV11,
+%LetterSpacingV11 {
+  letter-spacing: -0.59px;
+}
+.LetterSpacingV12 {
+  letter-spacing: -0.82px;
+}
+.LetterSpacingV13 {
+  letter-spacing: -0.56px;
+}
+.LetterSpacingV14 {
+  letter-spacing: -0.68px;
+}
+.LetterSpacingV15,
+%LetterSpacingV15 {
+  letter-spacing: -0.38px;
+}
+.LetterSpacingV16 {
+  letter-spacing: -0.5px;
+}
+.LetterSpacingV17 {
+  letter-spacing: -0.34px;
+}
+.LetterSpacing3 {
+  letter-spacing: 3px;
+}
+.FontSize {
+  font-size: 13px;
+}
+.FontSize13 {
+  font-size: 13px;
+}
+.FontSize13Imp {
+  font-size: 13px !important;
+}
+.FontSize12 {
+  font-size: 12px !important;
+}
+.FontSize20 {
+  font-size: 20px;
+}
+.FontSize24 {
+  font-size: 24px;
+}
+.Opacity0 {
+  opacity: 0;
+}
+.Opacity2 {
+  opacity: 0.2 !important;
+}
+.Opacity3 {
+  opacity: 0.3;
+}
+.Opacity5 {
+  opacity: 0.5;
+}
+.Opacity7 {
+  opacity: 0.7;
+}
+.Opacity8 {
+  opacity: 0.8;
+}
+.OpacityFull {
+  opacity: 1 !important;
+}
+.M8 {
+  margin: 8px;
+}
+.M5 {
+  margin: 5px;
+}
+.M3 {
+  margin: 3px;
+}
+.M15 {
+  margin: 15px;
+}
+.M24 {
+  margin: 24px;
+}
+.M30 {
+  margin: 30px;
+}
+.MLA {
+  margin-left: auto;
+}
+.MRA {
+  margin-right: auto;
+}
+.ML13 {
+  margin-left: 13px;
+}
+.ML14 {
+  margin-left: 14px;
+}
+.ML16 {
+  margin-left: 16px;
+}
+%ML15 {
+  margin-left: 15px;
+}
+
+%MR15 {
+  margin-right: 15px;
+}
+.MR150 {
+  margin-right: 150px;
+}
+.ML18 {
+  margin-left: 18px;
+}
+.ML24 {
+  margin-left: 24px;
+}
+.ML32 {
+  margin-left: 32px;
+}
+.ML33 {
+  margin-left: 33px;
+}
+.ML34 {
+  margin-left: 34px;
+}
+.ML0 {
+  margin-left: 0px !important;
+}
+.MRA {
+  margin-right: auto !important;
+}
+.MR0 {
+  margin-right: 0px !important;
+}
+.MR2 {
+  margin-right: 2px;
+}
+.MR4 {
+  margin-right: 4px;
+}
+.MR12 {
+  margin-right: 12px;
+}
+.MR14 {
+  margin-right: 14px;
+}
+.MR16{
+  margin-right: 16px;
+}
+.MR22 {
+  margin-right: 22px;
+}
+.MR24 {
+  margin-right: 24px;
+}
+.MR36 {
+  margin-right: 36px;
+}
+.MR50 {
+  margin-right: 50px;
+}
+.MR3{
+  margin-right: 3px;
+}
+.MR40 {
+  margin-right: 40px;
+}
+.MR7 {
+  margin-right: 7px;
+}
+.MR75 {
+  margin-right: 75px;
+}
+.MR80 {
+  margin-right: 80px;
+}
+.MR160 {
+  margin-right: 160px;
+}
+.MR100 {
+  margin-right: 100px;
+}
+.MR320 {
+  margin-right: 320px;
+}
+.P10 {
+  padding: 10px;
+}
+.P12 {
+  padding: 12px !important;
+}
+.P15 {
+  padding: 15px;
+}
+.P16 {
+  padding: 16px !important;
+}
+.P20 {
+  padding: 20px !important;
+}
+.P40 {
+  padding: 40px;
+}
+.P2 {
+  padding: 2px;
+}
+.P20 {
+  padding: 20px;
+}
+.P8 {
+  padding: 8px;
+}
+.P24 {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.P30 {
+  padding: 30px;
+}
+.P32 {
+padding: 32px !important;
+}
+.PX0 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.PX8 {
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+}
+.PX10 {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+.PX12 {
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+}
+.PX15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.PX15Imp {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+.PX16 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.PX17 {
+  padding-left: 17px;
+  padding-right: 17px;
+}
+.PX20 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.PX21 {
+  padding-left: 21px;
+  padding-right: 21px;
+}
+.PX24 {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.PX35 {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+.PX40 {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.PX45 {
+  padding-left: 45px;
+  padding-right: 45px;
+}
+.PX48 {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+.PX50 {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.PY2 {
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+}
+.PY4 {
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
+.PY5 {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+.PY8 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.PY10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.PY12 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.PY14 {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.PY15 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.PY17 {
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+.PY20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.PY24 {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.PY40 {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.PY50 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.PY55 {
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+.P0 {
+  padding: 0px !important;
+}
+.P3 {
+  padding: 3px !important;
+}
+.P4 {
+  padding: 4px !important;
+}
+.P5 {
+  padding: 5px !important;
+}
+.PT0 {
+  padding-top: 0px !important;
+}
+.PT2 {
+  padding-top: 2px !important;
+}
+.PT3 {
+  padding-top: 3px !important;
+}
+.PT4 {
+  padding-top: 4px !important;
+}
+.PT5 {
+  padding-top: 5px;
+}
+.PT6 {
+  padding-top: 6px;
+}
+.PT7 {
+  padding-top: 7px;
+}
+.PT8 {
+  padding-top: 8px;
+}
+.PT10 {
+  padding-top: 10px;
+}
+.PT12 {
+  padding-top: 12px;
+}
+.PT14 {
+  padding-top: 14px;
+}
+.PT20 {
+  padding-top: 20px;
+}
+.PT24 {
+  padding-top: 24px;
+}
+.PT25 {
+  padding-top: 25px;
+}
+.PT26 {
+  padding-top: 26px !important;
+}
+.PT15 {
+  padding-top: 15px;
+}
+.PT16{
+  padding-top: 16px;
+}
+.PT30 {
+  padding-top: 30px;
+}
+.PT32 {
+  padding-top: 32px;
+}
+.PT35 {
+  padding-top: 35px;
+}
+.PT18 {
+  padding-top: 18px;
+}
+.PT40 {
+  padding-top: 40px;
+}
+.PB0 {
+  padding-bottom: 0px !important;
+}
+.PB2 {
+  padding-bottom: 2px;
+}
+.PB3 {
+  padding-bottom: 3px;
+}
+.PB4 {
+  padding-bottom: 4px;
+}
+.PB5 {
+  padding-bottom: 5px;
+}
+.PB6 {
+  padding-bottom: 6px;
+}
+.PB8 {
+  padding-bottom: 8px;
+}
+.PB10 {
+  padding-bottom: 10px !important;
+}
+.PB12 {
+  padding-bottom: 12px !important;
+}
+.PB14 {
+  padding-bottom: 14px;
+}
+.PB15 {
+  padding-bottom: 15px;
+}
+.PB16 {
+  padding-bottom: 16px;
+}
+.PB18 {
+  padding-bottom: 18px !important;
+}
+.PB19 {
+  padding-bottom: 19px !important;
+}
+.PB30 {
+  padding-bottom: 30px !important;
+}
+.PB20 {
+  padding-bottom: 20px !important;
+}
+.PB23 {
+  padding-bottom: 23px;
+}
+.PB24 {
+  padding-bottom: 24px !important;
+}
+.PB50 {
+  padding-bottom: 50px;
+}
+.PB50Important {
+  padding-bottom: 50px !important;
+}
+.PR0 {
+  padding-right: 0px !important;
+}
+.PR8 {
+  padding-right: 8px;
+}
+.PR10 {
+  padding-right: 10px !important;
+}
+.PR15 {
+  padding-right: 15px !important;
+}
+.PR16 {
+  padding-right: 16px;
+}
+.PR17 {
+  padding-right: 17px;
+}
+.PR63 {
+  padding-right: 63px;
+}
+.PR70 {
+  padding-right: 70px;
+}
+.PR40 {
+  padding-right: 40px;
+}
+.PL0 {
+  padding-left: 0px !important;
+}
+.PL3 {
+  padding-left: 3px;
+}
+.PL5 {
+  padding-left: 5px;
+}
+.PL8 {
+  padding-left: 8px;
+}
+.PL9 {
+  padding-left: 9px;
+}
+.PL10 {
+  padding-left: 10px;
+}
+.PL12 {
+  padding-left: 12px !important;
+}
+.PL15 {
+  padding-left: 15px;
+}
+.PL16 {
+  padding-left: 16px;
+}
+.PL17 {
+  padding-left: 17px;
+}
+.PL18 {
+  padding-left: 18px;
+}
+.PL24 {
+  padding-left: 24px !important;
+}
+.PL28 {
+  padding-left: 28px !important;
+}
+.PL32 {
+  padding-left: 32px;
+}
+.PL34 {
+  padding-left: 34px !important;
+}
+.PL40 {
+  padding-left: 40px;
+}
+.PL56 {
+  padding-left: 56px;
+}
+.PL60 {
+  padding-left: 60px;
+}
+.PL90 {
+  padding-left: 90px;
+}
+.PL100 {
+  padding-left: 100px;
+}
+.PR0IMP {
+  padding-right: 0px !important;
+}
+.PR5 {
+  padding-right: 5px;
+}
+.PR6 {
+  padding-right: 6px;
+}
+.PR3 {
+  padding-right: 3px;
+}
+.PR7 {
+  padding-right: 7px;
+}
+.PR12 {
+  padding-right: 12px !important;
+}
+.PR18 {
+  padding-left: 18px;
+}
+.PR20 {
+  padding-right: 20px;
+}
+.PR21 {
+  padding-right: 21px;
+}
+.PR24{
+  padding-right: 24px;
+}
+.PR32 {
+  padding-right: 32px !important;
+}
+.PR40 {
+  padding-right: 40px;
+}
+.PR50 {
+  padding-right: 50px;
+}
+
+.PL30 {
+  padding-left: 30px;
+}
+.PL50 {
+  padding-left: 50px !important;
+}
+.PL70 {
+  padding-left: 70px !important;
+}
+
+.PL20 {
+  padding-left: 20px;
+}
+
+.PL22 {
+  padding-left: 22px;
+}
+
+.PL25 {
+  padding-left: 25px;
+}
+
+.PR30 {
+  padding-right: 30px;
+}
+
+.PR30IMP {
+  padding-right: 30px !important;
+}
+
+.PX30 {
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @include for-phone-and-tab {
+    padding-inline: 15px;
+  }
+}
+
+.PY30 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.MR30 {
+  margin-right: 30px;
+}
+.MR55 {
+  margin-right: 60px;
+}
+
+.MR250 {
+  margin-right: 250px;
+}
+
+.MR35 {
+  margin-right: 35px;
+}
+
+.MR5 {
+  margin-right: 5px;
+}
+.MR6 {
+  margin-right: 6px;
+}
+.MR8 {
+  margin-right: 8px;
+}
+
+.MR10 {
+  margin-right: 10px;
+}
+.MR15 {
+  @extend %MR15;
+}
+.MR20 {
+  margin-right: 20px;
+}
+.MR25 {
+  margin-right: 25px;
+}
+.ContainerPadding {
+  @extend %ML15;
+  @extend %MR15;
+}
+.MX0 {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.MX8 {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.MX10 {
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+}
+.MX20 {
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+}
+.MX24 {
+  margin-left: 24px !important;
+  margin-right: 24px !important;
+}
+.MX30 {
+  margin-left: 30px !important;
+  margin-right: 30px !important;
+
+  @include for-phone-and-tab {
+    margin-inline: 15px !important;
+  }
+}
+.MX32 {
+  margin-left: 32px !important;
+  margin-right: 32px !important;
+}
+.MX40 {
+  margin-left: 40px !important;
+  margin-right: 40px !important;
+}
+.MY_AUTO {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+.MY8 {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
+.MY10 {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+.MY15 {
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
+}
+.MY20 {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+.MY24 {
+  margin-top: 24px !important;
+  margin-bottom: 24px !important;
+}
+.MT0 {
+  margin-top: 0px !important;
+}
+.MT1 {
+  margin-top: 1px;
+}
+.MT2 {
+  margin-top: 2px;
+}
+.MT3 {
+  margin-top: 3px;
+}
+.MT4 {
+  margin-top: 4px;
+}
+.MT4Imp {
+  margin-top: 4px !important;
+}
+.MT5 {
+  margin-top: 5px;
+}
+.MT6 {
+  margin-top: 6px;
+}
+.MT7 {
+  margin-top: 7px;
+}
+.MT8 {
+  margin-top: 8px !important ;
+}
+.MT10 {
+  margin-top: 10px !important;
+}
+.MT12 {
+  margin-top: 12px;
+}
+.MT13 {
+  margin-top: 13px;
+}
+.MT14 {
+  margin-top: 14px;
+}
+.MT15 {
+  margin-top: 15px !important;
+}
+.MT16 {
+  margin-top: 16px;
+}
+.MT17 {
+  margin-top: 17px;
+}
+.MT18 {
+  margin-top: 18px;
+}
+.MT19 {
+  margin-top: 19px;
+}
+.MT20 {
+  margin-top: 20px !important;
+}
+.MT21 {
+  margin-top: 21px;
+}
+.MT24 {
+  margin-top: 24px;
+}
+.MT25 {
+  margin-top: 25px;
+}
+.MT26 {
+  margin-top: 26px;
+}
+.MT27 {
+  margin-top: 27px;
+}
+.MT28{
+  margin-top: 28px;
+}
+.MT32{
+  margin-top: 32px;
+}
+.MT35 {
+  margin-top: 35px;
+}
+.MT50 {
+  margin-top: 50px !important;
+}
+.MT75 {
+  margin-top: 75px;
+}
+.MT90 {
+  margin-top: 90px;
+}
+.MT92 {
+  margin-top: 92px;
+}
+.MT100 {
+  margin-top: 100px !important;
+}
+
+.MB70 {
+  margin-bottom: 70px;
+}
+
+.MT30 {
+  margin-top: 30px;
+}
+.MT40 {
+  margin-top: 40px;
+}
+.MT48 {
+  margin-top: 48px;
+}
+
+.MT60 {
+  margin-top: 60px;
+}
+.MT70 {
+  margin-top: 70px;
+}
+.MT80 {
+  margin-top: 80px;
+}
+.ML2 {
+  margin-left: 2px;
+}
+.ML3 {
+  margin-left: 3px;
+}
+.ML4 {
+  margin-left: 4px;
+}
+.ML5 {
+  margin-left: 5px;
+}
+.ML6 {
+  margin-left: 6px;
+}
+.ML7 {
+  margin-left: 7px;
+}
+.ML8 {
+  margin-left: 8px;
+}
+.ML9 {
+  margin-left: 8px;
+}
+.ML10 {
+  margin-left: 10px;
+}
+.ML12 {
+  margin-left: 12px;
+}
+.ML15 {
+  @extend %ML15;
+}
+.ML17 {
+  margin-left: 17px;
+}
+.ML20 {
+  margin-left: 20px;
+}
+.ML22 {
+  margin-left: 22px;
+}
+.ML23 {
+  margin-left: 23px;
+}
+.ML25 {
+  margin-left: 25px;
+}
+.ML28{
+  margin-left: 28px;
+}
+.ML30 {
+  margin-left: 30px;
+}
+.ML35 {
+  margin-left: 35px;
+}
+.ML40 {
+  margin-left: 40px;
+}
+.ML50 {
+  margin-left: 50px;
+}
+.ML52 {
+  margin-left: 52px;
+}
+.ML54 {
+  margin-left: 50px;
+}
+.ML60 {
+  margin-left: 60px;
+}
+.ML65 {
+  margin-left: 65px;
+}
+.ML70 {
+  margin-left: 70px;
+}
+.ML75 {
+  margin-left: 75px;
+}
+.ML100 {
+  margin-left: 100px;
+}
+.ML300 {
+  margin-left: 300px;
+}
+.ML150 {
+  margin-left: 150px;
+}
+.MB0 {
+  margin-bottom: 0px !important;
+}
+.MB2 {
+  margin-bottom: 2px;
+}
+.MB3 {
+  margin-bottom: 3px;
+}
+.MB4 {
+  margin-bottom: 4px;
+}
+.MB5 {
+  margin-bottom: 5px !important;
+}
+.MB6 {
+  margin-bottom: 6px;
+}
+
+.MB7 {
+  margin-bottom: 7px !important;
+}
+.MB8 {
+  margin-bottom: 8px !important;
+}
+.MB10 {
+  margin-bottom: 10px !important;
+}
+.MB12 {
+  margin-bottom: 12px !important;
+}
+.MB14 {
+  margin-bottom: 14px;
+}
+.MB15 {
+  margin-bottom: 15px;
+}
+.MB18{
+  margin-bottom: 18px;
+}
+.MBN15 {
+  margin-bottom: -15px;
+}
+.MB16 {
+  margin-bottom: 16px;
+}
+.MB17 {
+  margin-bottom: 17px;
+}
+.M18{
+  margin-bottom: 18px;
+}
+.M10 {
+  margin: 10px !important;
+}
+.MB20 {
+  margin-bottom: 20px !important;
+}
+.MB24 {
+  margin-bottom: 24px;
+}
+.MB25 {
+  margin-bottom: 25px;
+}
+.MB26 {
+  margin-bottom: 26px;
+}
+.MB28 {
+  margin-bottom: 28px;
+}
+.MB30 {
+  margin-bottom: 30px;
+}
+.MB32 {
+  margin-bottom: 32px;
+}
+
+.MB40 {
+  margin-bottom: 40px;
+}
+.MB50 {
+  margin-bottom: 50px;
+}
+.MB54{
+  margin-bottom: 54px;
+}
+.MB60 {
+  margin-bottom: 60px;
+}
+.MB65 {
+  margin-bottom: 65px !important;
+}
+
+.Bottom5 {
+  bottom: 5px !important;
+}
+
+.Bottom30 {
+  bottom: 30px !important;
+}
+
+.Bottom24 {
+  bottom: 24px !important;
+}
+
+.WordWrap {
+  word-wrap: break-word;
+}
+
+%CursorPointer {
+  cursor: pointer;
+}
+
+.CursorPointer {
+  @extend %CursorPointer;
+}
+
+.CursorNone {
+  cursor: none;
+}
+
+.CursorMove {
+  cursor: move !important;
+}
+
+.CursorDefault {
+  cursor: default;
+}
+
+.CursorDefaultImp {
+  cursor: default !important;
+}
+
+.CursorNotAllowed {
+  cursor: not-allowed;
+}
+
+.CursorGrab {
+  cursor: grab;
+}
+
+.ErrorInputBorder {
+  border: 1px solid $red-v18 !important;
+}
+.ErrorInputUnderline {
+  border-bottom: 1px solid $red-v18 !important;
+  // border: none !important;
+  box-shadow: none;
+  border-radius: 0 !important;
+}
+
+.ErrorInputBorderImp {
+  border: 1px solid $red-v18 !important;
+}
+.ErrorInputDashedBorderImp {
+  border-radius: 2px !important;
+  border: dashed 1px $red-v18 !important;
+}
+.BorderNone {
+  border: none;
+}
+
+.BorderNoneImportant {
+  border: none !important;
+}
+
+.InputPadding {
+  padding: 7px 10px;
+}
+
+.InputBorderRadius {
+  @include border-radius(3px);
+}
+.InputBorderRadius4 {
+  @include border-radius(4px);
+}
+
+.InputBorder {
+  @extend %InputBorder;
+}
+
+.InputHeight {
+  height: 36px !important;
+}
+
+.DropdownHeight {
+  height: 42px !important;
+}
+
+.InputHeight32Important {
+  height: 32px !important;
+}
+
+.InputHeight36 {
+  height: 36px;
+}
+.InputHeight39 {
+  height: 39px !important;
+}
+.ReadOnlyBg {
+  background-color: $gray-v7;
+}
+.BlueV2 {
+  @extend %BlueV2;
+}
+.BlueV39 {
+  @extend %BlueV39;
+}
+.RedV2 {
+  @extend %RedV2;
+  fill: $red-v2;
+}
+.BlackV12 {
+  @extend %BlackV12;
+}
+.RedV18 {
+  fill: $red-v18;
+}
+.RedV22 {
+  @extend %RedV22;
+}
+.Stroke {
+  stroke: none !important;
+}
+.White {
+  @extend %White;
+}
+.GrayV2 {
+  @extend %GrayV2;
+}
+.GrayV3 {
+  @extend %GrayV3;
+}
+.GrayV4 {
+  @extend %GrayV4;
+}
+.GrayV104 {
+  @extend %GrayV104;
+}
+.BlackV20 {
+  @extend %BlackV20;
+}
+.GrayV4Fill {
+  @extend %GrayV4;
+  fill: $gray-v4;
+}
+.Underline {
+  text-decoration: underline;
+}
+.FS8 {
+  @extend %FS8;
+}
+.FS12 {
+  @extend %FS12;
+}
+.FS13 {
+  @extend %FS13;
+}
+.FS14 {
+  @extend %FS14;
+}
+.FS16 {
+  @extend %FS16;
+}
+.GrayV90{
+  @extend %GrayV90;
+}
+.GrayV101 {
+  @extend %GrayV101;
+}
+.FOne13GrayV2 {
+  @extend %FOne;
+  @extend %FS13;
+  @extend %GrayV2;
+}
+.FOne13GrayV53 {
+  @extend %FOne;
+  @extend %FS13;
+  color: $gray-v53;
+}
+
+.Fone12 {
+  @extend %FOne;
+  @extend %FS12;
+}
+.F .Fone12BlueV2 {
+  @extend %FOne;
+  @extend %FS12;
+  @extend %BlueV2;
+}
+
+.Fone12GrayV3 {
+  @extend %FOne;
+  @extend %FS12;
+  @extend %GrayV3;
+}
+
+.Fone12GrayV4 {
+  @extend %FOne;
+  @extend %FS12;
+  @extend %GrayV4;
+}
+
+.Fone12GrayV39 {
+  @extend %FOne;
+  @extend %FS12;
+  @extend %GrayV39;
+}
+
+.FOne13GrayV20 {
+  @extend %FOne;
+  @extend %FS13;
+  @extend %GrayV20;
+}
+
+.FOne13GrayV17 {
+  @extend %FOne;
+  @extend %FS13;
+  @extend %GrayV17;
+}
+
+.FTwo12BlueV25 {
+  @extend %FTwo;
+  @extend %FS12;
+  @extend %BlueV25;
+}
+
+.FOne13GrayV36 {
+  @extend %FOne;
+  @extend %FS13;
+  @extend %GrayV36;
+}
+
+.FOne13GrayV38 {
+  @extend %FOne;
+  @extend %FS13;
+  @extend %GrayV38;
+}
+
+.FOne10GrayV2 {
+  @extend %FOne10;
+  @extend %GrayV2;
+}
+
+.FOne10GrayV3 {
+  @extend %FOne10;
+  @extend %GrayV3;
+}
+
+.FOne10White {
+  @extend %FOne10;
+  @extend %White;
+}
+
+//FOne11
+
+.FOne11 {
+  @extend %FOne11;
+}
+.FOne11GrayV17 {
+  @extend %FOne11;
+  @extend %GrayV17;
+}
+.FOne11BlackV1 {
+  @extend %FOne11;
+  @extend %BlackV1;
+}
+.FOne11BlackV2 {
+  @extend %FOne11;
+  @extend %BlackV2;
+}
+.FOne11BlackV11 {
+  @extend %FOne11;
+  @extend %BlackV11;
+}
+.FOne11OrangeV2 {
+  @extend %FOne11;
+  @extend %OrangeV2;
+}
+.FOne13OrangeV25 {
+  @extend %FOne13;
+  @extend %OrangeV25;
+}
+.FOne11RedV7 {
+  @extend %FOne11;
+  @extend %RedV7;
+}
+.FOne11GreenV4 {
+  @extend %FOne11;
+  @extend %GreenV4;
+}
+.FOne11GrayV2 {
+  @extend %FOne11;
+  @extend %GrayV2;
+}
+.FOne11GrayV6 {
+  @extend %FOne11;
+  @extend %GrayV6;
+}
+
+.FOne11GrayV38 {
+  @extend %FOne11;
+  @extend %GrayV38;
+}
+.FTwo11GrayV38 {
+  @extend %FTwo11;
+  @extend %GrayV38;
+}
+
+.FTwo11GrayV10 {
+  @extend %FTwo11;
+  @extend %GrayV10;
+}
+
+.FTwo11GrayV104 {
+  @extend %FTwo11;
+  @extend %GrayV104;
+}
+
+.FTwo12GrayV104 {
+  @extend %FTwo12;
+  @extend %GrayV104;
+}
+
+.FOne11GrayV39 {
+  @extend %FOne11;
+  @extend %GrayV39;
+}
+
+.FOne11BlackV9 {
+  @extend %FOne11;
+  @extend %BlackV9;
+}
+
+.FOne11RedV8 {
+  @extend %FOne11;
+  @extend %RedV8;
+}
+
+.FOne11White {
+  @extend %FOne11;
+  @extend %White;
+}
+
+//FOne13
+.FOne13 {
+  @extend %FOne13;
+}
+
+.FOne13GrayV33 {
+  @extend %FOne13;
+  @extend %GrayV33;
+}
+.FOne13GrayV14 {
+  @extend %FOne13;
+  @extend %GrayV14;
+}
+
+.FOne13RedV2 {
+  @extend %FOne13;
+  @extend %RedV2;
+}
+
+.FOne13GrayV3 {
+  @extend %FOne13;
+  @extend %GrayV3;
+}
+
+.FOne13GrayV5 {
+  @extend %FOne13;
+  @extend %GrayV5;
+}
+
+.FOne13GrayV6 {
+  @extend %FOne13;
+  @extend %GrayV6;
+}
+
+.FOne13GrayV48 {
+  @extend %FOne13;
+  @extend %GrayV48;
+}
+
+.FOne13GrayV49 {
+  @extend %FOne13;
+  @extend %GrayV49;
+}
+
+.FOne13GrayV9 {
+  @extend %FOne13;
+  @extend %GrayV9;
+}
+
+.FOne13BlueV2 {
+  @extend %FOne13;
+  @extend %BlueV2;
+}
+
+.FOne13BlueV10 {
+  @extend %FOne13;
+  @extend %BlueV10;
+}
+
+.FOne13BlueV11 {
+  @extend %FOne13;
+  @extend %BlueV11;
+}
+
+.FOne13BlackV1 {
+  @extend %FOne13;
+  @extend %BlackV1;
+}
+
+.FOne13BlackV2 {
+  @extend %FOne13;
+  @extend %BlackV2;
+}
+
+.FOne13BlackV4 {
+  @extend %FOne13;
+  @extend %BlackV4;
+}
+
+.FOne13BlackV5 {
+  @extend %FOne13;
+  @extend %BlackV5;
+}
+
+.FOne13BlackV6 {
+  @extend %FOne13;
+  @extend %BlackV6;
+}
+
+.FOne13BlackV8 {
+  @extend %FOne13;
+  @extend %BlackV8;
+}
+
+.FTwo13Black {
+  @extend %FTwo13;
+  @extend %Black;
+}
+
+.FTwo13BlackV3 {
+  @extend %FTwo13;
+  @extend %BlackV3;
+}
+
+.FTwo13BlackV8 {
+  @extend %FTwo13;
+  @extend %BlackV8;
+}
+
+.FTwo13BlackV20 {
+  @extend %FTwo13;
+  @extend %BlackV20;
+}
+
+.FTwo13BlackV22 {
+  @extend %FTwo13;
+  @extend %BlackV22;
+}
+
+.FTwo13BlackV27 {
+  @extend %FTwo13;
+  @extend %BlackV27;
+}
+
+.FTwo13BlackV20Normal {
+  @extend %FTwo13;
+  @extend %BlackV20Normal;
+}
+
+.FOne13GrayV12 {
+  @extend %FOne;
+  @extend %FS13;
+  @extend %GrayV12;
+}
+
+.FOne13GrayV24 {
+  @extend %FOne13;
+  @extend %GrayV24;
+}
+
+.FOne13GrayV35 {
+  @extend %FOne13;
+  @extend %GrayV35;
+}
+
+.FOne13White {
+  @extend %FOne13;
+  @extend %White;
+}
+
+// FOne14
+.FOne14 {
+  @extend %FOne14;
+}
+.FOne14GrayV2 {
+  @extend %FOne14;
+  @extend %GrayV2;
+}
+.FOne14GrayV3 {
+  @extend %FOne14;
+  @extend %GrayV3;
+}
+
+//FOne12
+
+%FOne12BlueV2 {
+  @include font-styles($font-family-2, 12px, $blue-v2, normal);
+}
+
+%FOne12BlueV3 {
+  @include font-styles($font-family-2, 12px, $blue-v3, normal);
+}
+
+.FOne12 {
+  @extend %FOne12;
+}
+
+.FOne12GrayV2 {
+  @extend %FOne12;
+  @extend %GrayV2;
+}
+
+.FOne12GrayV4 {
+  @extend %FOne12;
+  @extend %GrayV4;
+}
+
+.FOne12GrayV5 {
+  @extend %FOne12;
+  @extend %GrayV5;
+}
+
+.FOne12GrayV6 {
+  @extend %FOne12;
+  @extend %GrayV6;
+}
+
+.FOne12GrayV9 {
+  @extend %FOne12;
+  @extend %GrayV9;
+}
+
+.FOne11GrayV9 {
+  @extend %FOne11;
+  @extend %GrayV9;
+}
+
+.FOne12BlueV2 {
+  @extend %FOne12;
+  @extend %BlueV2;
+}
+.FOne12BlueV17 {
+  @extend %FOne12;
+  @extend %BlueV17;
+}
+.FOne12RedV1 {
+  @extend %FOne12;
+  @extend %Red;
+}
+.FOne12RedV2 {
+  @extend %FOne12;
+  @extend %RedV2;
+}
+.FOne12RedV5 {
+  @extend %FOne12;
+  @extend %RedV5;
+}
+.FOne12RedV9 {
+  @extend %FOne12;
+  @extend %RedV9;
+}
+.FOne12RedV18 {
+  @extend %FOne12;
+  @extend %RedV18;
+}
+
+.FOne12White {
+  @extend %FOne12;
+  @extend %White;
+}
+.FOne12GrayV14 {
+  @extend %FOne12;
+  @extend %GrayV14;
+}
+
+.FOne12GrayV17 {
+  @extend %FOne12;
+  @extend %GrayV17;
+}
+
+.FOne12BlackV7 {
+  @extend %FOne12;
+  @extend %BlackV7;
+}
+
+//FOne16
+.FOne16 {
+  @extend %FOne16;
+}
+
+.FOne16GrayV4 {
+  @extend %FOne16;
+  @extend %GrayV4;
+}
+
+.FOne16White {
+  @extend %FOne16;
+  @extend %White;
+}
+
+//FOne19
+.FOne19 {
+  @extend %FOne19;
+}
+
+.FOne19White {
+  @extend %FOne19;
+  @extend %White;
+}
+
+//FOne24
+.FOne24 {
+  @extend %FOne24;
+}
+
+.FOne24GrayV5 {
+  @extend %FOne24;
+  @extend %GrayV5;
+}
+
+//FTwo
+
+.FTwo {
+  @extend %FTwo;
+}
+
+.FTwo12Important {
+  @extend %FTwo12Important;
+}
+
+.FTwoWhite {
+  @extend %FTwo;
+  @extend %White;
+}
+.FTwo11 {
+  @extend %FTwo11;
+}
+.FTwo11White {
+  @extend %FTwo11;
+  @extend %White;
+}
+.FTwo11BlackV13 {
+  @extend %FTwo11;
+  @extend %BlackV13;
+}
+.FTwo11BlackV15 {
+  @extend %FTwo11;
+  @extend %BlackV15;
+}
+.FTwo11BlueV21 {
+  @extend %FTwo11;
+  @extend %BlueV21;
+}
+.FTwo11BlueV39 {
+  @extend %FTwo11;
+  @extend %BlueV39;
+}
+
+.FTwo11BlueV2 {
+  @extend %FTwo11;
+  @extend %BlueV2;
+}
+
+.FTwo11BlueV24 {
+  @extend %FTwo11;
+  @extend %BlueV24;
+}
+.FTwo11GrayV9 {
+  @extend %FTwo11;
+  @extend %GrayV9;
+}
+.FTwo11GrayV2 {
+  @extend %FTwo11;
+  @extend %GrayV2;
+}
+
+.FTwo12GrayV5 {
+  @extend %FTwo11;
+  @extend %GrayV5;
+}
+
+
+.FTwo11GrayV53 {
+  @extend %FTwo11;
+  @extend %GrayV53;
+}
+
+.FTwo12GrayV3Important {
+  @extend %FTwo12Important;
+  @extend %GrayV3Important;
+}
+
+.FS8White {
+  @extend %FS8;
+  @extend %White;
+}
+.FTwo9 {
+  @extend %FTwo9;
+}
+//FTwo10
+
+.FTwo10 {
+  @extend %FTwo10;
+}
+
+.FTwo10OrangeV15 {
+  @extend %FTwo10;
+  @extend %OrangeV15;
+}
+
+.FTwo10White {
+  @extend %FTwo10;
+  @extend %White;
+}
+.FTwo10GrayV66 {
+  @extend %FTwo10;
+  @extend %GrayV66;
+}
+
+.FTwo11BlackV21 {
+  @extend %FTwo11;
+  @extend %BlackV21;
+}
+
+.FTwoBlackV23 {
+  @extend %FTwo;
+  @extend %BlackV23;
+}
+.FTwoBlackV20 {
+  @extend %FS20;
+  @extend %BlackV23;
+}
+
+.FTwo13RedV27 {
+  @extend %RedV27;
+  @extend %FTwo13;
+}
+
+.FTwo13RedV28 {
+  @extend %RedV28;
+  @extend %FTwo13;
+}
+
+.FTwo10GrayV3 {
+  @extend %FTwo10;
+  @extend %GrayV3;
+}
+.FTwo10GrayV53 {
+  @extend %FTwo10;
+  @extend %GrayV53;
+}
+
+.FTwo10GrayV20 {
+  @extend %FTwo;
+  @extend %FS10;
+  @extend %GrayV20;
+}
+
+.FTwo10GrayV74 {
+  @extend %FTwo10;
+  @extend %GrayV74;
+}
+
+.FTwo10RedV5 {
+  @extend %FTwo10;
+  @extend %RedV5;
+}
+
+.FTwo8GrayV53 {
+  @extend %FTwo8;
+  @extend %GrayV53;
+}
+
+.FTwo11GrayV3 {
+  @extend %FTwo11;
+  @extend %GrayV3;
+}
+.FTwo12GrayV101 {
+  @extend %FTwo11;
+  @extend %GrayV101;
+}
+.FTwo11RedV22 {
+  @extend %FTwo11;
+  @extend %RedV22;
+}
+.FTwo13RedV22 {
+  @extend %FTwo13;
+  @extend %RedV22;
+}
+.FTwo12GrayV4 {
+  @extend %FOne;
+  @extend %FS12;
+  @extend %GrayV4;
+}
+
+.FTwo12GrayV86 {
+  @extend %FTwo12;
+  @extend %GrayV86;
+}
+
+.FTwo12GrayV89 {
+  @extend %FTwo12;
+  @extend %GrayV89;
+}
+
+.FTwo12GrayV3 {
+  @extend %FTwo12;
+  @extend %GrayV3;
+}
+.FTwo12GrayV6 {
+  @extend %FTwo12;
+  @extend %GrayV6;
+}
+.FTwo14GrayV6 {
+  @extend %FTwo14;
+  @extend %GrayV6;
+}
+.FTwo14GrayV53 {
+  @extend %FTwo14;
+  @extend %GrayV53;
+}
+.FTwo12GrayV62 {
+  @extend %FTwo12;
+  @extend %GrayV62;
+}
+
+.FTwo12GrayV9 {
+  @extend %FTwo12;
+  @extend %GrayV9;
+}
+
+.FTwo12GrayV27 {
+  @extend %FTwo12;
+  @extend %GrayV27;
+}
+.FTwo12GrayV37 {
+  @extend %FTwo12;
+  @extend %GrayV37;
+}
+
+.FTwo12GrayV53 {
+  @extend %FTwo12;
+  @extend %GrayV53;
+}
+.FTwo12GrayV66 {
+  @extend %FTwo12;
+  @extend %GrayV66;
+}
+.FTwo12GrayV74 {
+  @extend %FTwo12;
+  @extend %GrayV74;
+}
+.FTwo12GrayV101 {
+  @extend %FTwo12;
+  @extend %GrayV101;
+}
+.FTwo12BlackV10 {
+  @extend %FTwo12;
+  @extend %BlackV10;
+}
+
+.FTwo12BlackV12 {
+  @extend %FTwo12;
+  @extend %BlackV12;
+}
+
+.FTwo12BlackV13 {
+  @extend %FTwo12;
+  @extend %BlackV13;
+}
+.FTwo12BlackV15 {
+  @extend %FTwo12;
+  @extend %BlackV15;
+}
+.FTwo12BlackV18 {
+  @extend %FTwo12;
+  @extend %BlackV18;
+}
+.FTwo12BlackV20 {
+  @extend %FTwo12Important;
+  @extend %BlackV20;
+}
+
+.FTwo12BlackV21 {
+  @extend %FTwo12;
+  @extend %BlackV21;
+}
+
+.FTwo12Black {
+  @extend %FTwo12;
+  @extend %Black;
+}
+
+.FTwo13BlackV12 {
+  @extend %FTwo13;
+  @extend %BlackV12;
+}
+
+.FTwo13BlackV13 {
+  @extend %FTwo13;
+  @extend %BlackV13;
+}
+.FTwo14Black {
+  @extend %FTwo14;
+  @extend %Black;
+}
+.FTwo14BlackV13 {
+  @extend %FTwo14;
+  @extend %BlackV13;
+}
+.FTwo14BlackV17 {
+  @extend %FTwo14;
+  @extend %BlackV17;
+}
+.FTwo13BlackV17 {
+  @extend %FTwo13;
+  @extend %BlackV17;
+}
+.FTwo14Black18 {
+  @extend %FTwo14;
+  @extend %BlackV18;
+}
+.FTwo13Black12 {
+  @extend %FTwo13;
+  @extend %BlackV12;
+}
+.FTwo13Black18 {
+  @extend %FTwo13;
+  @extend %BlackV18;
+}
+
+.FTwo12BlackV1 {
+  @extend %FTwo12;
+  @extend %BlackV1;
+}
+
+.FTwo12RedV8 {
+  @extend %FTwo12;
+  @extend %RedV8;
+}
+.FTwo12RedV11 {
+  @extend %FTwo12;
+  @extend %RedV11;
+}
+.FTwo12RedV12 {
+  @extend %FTwo12;
+  @extend %RedV12;
+}
+
+.FTwo12RedV2 {
+  @extend %FTwo12;
+  @extend %RedV2;
+}
+
+.FTwo12RedV27 {
+  @extend %FTwo12;
+  @extend %RedV27;
+}
+
+.FTwo12RedV5 {
+  @extend %FTwo12;
+  @extend %RedV5;
+}
+.FTwo12RedV18 {
+  @extend %FTwo12;
+  @extend %RedV18;
+}
+.FTwo13RedV11 {
+  @extend %FTwo13;
+  @extend %RedV11;
+}
+.FTwo13RedV18 {
+  @extend %FTwo13;
+  @extend %RedV18;
+}
+.FTwo13RedV20 {
+  @extend %FTwo13;
+  @extend %RedV20;
+}
+
+.FTwo13Grey89 {
+  @extend %FTwo13;
+  @extend %GrayV89Imp;
+  @extend %FontWeight500;
+}
+
+.FTwo14 {
+  @extend %FTwo14;
+}
+
+.FTwo14White {
+  @extend %FTwo14;
+  @extend %White;
+}
+
+.FTwo14BlackV2 {
+  @extend %FTwo14;
+  @extend %BlackV2;
+}
+
+.FTwo14BlackV20 {
+  @extend %FTwo14;
+  @extend %BlackV20;
+}
+
+.FTwo14Gray90 {
+  @extend %FTwo14;
+  @extend %GrayV90;
+}
+
+.FTwo14BlackV6 {
+  @extend %FTwo14;
+  @extend %BlackV6;
+}
+
+.FTwo14BlackV8 {
+  @extend %FTwo14;
+  @extend %BlackV8;
+}
+
+.FTwo14GrayV3 {
+  @extend %FTwo14;
+  @extend %GrayV3;
+}
+
+.FTwo14Gray89 {
+  @extend %FTwo14;
+  @extend %GrayV89;
+}
+
+.FTwo14BlueV2 {
+  @extend %FTwo14;
+  @extend %BlueV2;
+}
+
+.FTwo15 {
+  @extend %FTwo15;
+}
+.FTwo15GrayV3 {
+  @extend %FTwo15;
+  @extend %GrayV3;
+}
+.FTwo15GrayV29 {
+  @extend %FTwo15;
+  @extend %GrayV29;
+}
+
+.FTwo15White {
+  @extend %FTwo15;
+  @extend %White;
+}
+
+.FTwo15BlueV13 {
+  @extend %FTwo15;
+  @extend %BlueV13;
+}
+
+.FTwo16 {
+  @extend %FTwo16;
+}
+
+.FTwo16White {
+  @extend %FTwo16;
+  @extend %White;
+}
+
+.FTwo16GrayV89 {
+  @extend %FTwo16;
+  @extend %GrayV89;
+}
+
+.FTwo16Gray90 {
+  @extend %FTwo16;
+  @extend %GrayV90;
+}
+
+.GrayV91 {
+  @extend %GrayV91
+}
+.FTwo16GrayV3 {
+  @extend %FTwo16;
+  @extend %GrayV3;
+}
+.FTwo16GrayV42 {
+  @extend %FTwo16;
+  @extend %GrayV42;
+}
+.FTwo16GrayV43 {
+  @extend %FTwo16;
+  @extend %GrayV43;
+}
+.FTwo18GrayV3 {
+  @extend %FTwo18;
+  @extend %GrayV3;
+}
+.FTwo22GrayV3 {
+  @extend %FS22;
+  @extend %GrayV3;
+}
+.FTwo26 {
+  @extend %FTwo26;
+}
+.FTwo26GrayV3 {
+  @extend %FTwo26;
+  @extend %GrayV3;
+}
+.FTwo26BlackV8 {
+  @extend %FTwo26;
+  @extend %BlackV8;
+}
+//FTwo28
+.FTwo28 {
+  @extend %FTwo28;
+}
+
+.FTwo28GrayV3 {
+  @extend %FTwo28;
+  @extend %GrayV3;
+}
+
+.FTwo28White {
+  @extend %FTwo28;
+  @extend %White;
+}
+
+.FTwo16BlackV12 {
+  @extend %FTwo16;
+  @extend %BlackV12;
+}
+
+.FTwoBlueV5 {
+  @extend %FTwo28;
+  @extend %BlueV5;
+}
+
+//FTwo12
+.FTwo12 {
+  @extend %FTwo12;
+}
+
+.FTwo12BlueV2 {
+  @extend %FTwo12;
+  @extend %BlueV2;
+}
+.FTwo12BlueV10 {
+  @extend %FTwo12;
+  @extend %BlueV10;
+}
+.FTwo12BlueV39 {
+  @extend %FTwo12;
+  @extend %BlueV39;
+}
+.FTwo12BlueV21 {
+  @extend %FTwo12;
+  @extend %BlueV21;
+}
+.FTwo12Blue {
+  @extend %FTwo12;
+  color: blue;
+}
+.FTwo12BlackV3 {
+  @extend %FTwo12;
+  @extend %BlackV3;
+}
+
+.FTwo14RedV20 {
+  @extend %FTwo14;
+  @extend %RedV20;
+}
+
+.FTwo14RedV28 {
+  @extend %FTwo14;
+  @extend %RedV28;
+}
+
+.FTwo12RedV30{
+  @extend %FTwo12;
+  @extend %RedV30;
+}
+
+.FTwo13GreenV20 {
+  @extend %FTwo14;
+  @extend %Green20;
+}
+
+.FTwo14GreenV20 {
+  @extend %FTwo14;
+  @extend %Green20;
+}
+
+.FTwo12White {
+  @extend %FTwo12;
+  @extend %White;
+}
+.FTwo12GrayV98 {
+  @extend %FTwo;
+  @extend %FS12;
+  @extend %GrayV98;
+}
+.FTwo12GrayV87 {
+  @extend %FTwo12;
+  @extend %GrayV87;
+}
+.FTwo12GrayV2 {
+  @extend %FTwo12;
+  @extend %GrayV2;
+}
+.FTwo12BlackV6 {
+  @extend %FTwo12;
+  @extend %BlackV6;
+}
+.FTwo12BlackV9 {
+  @extend %FTwo12;
+  @extend %BlackV9;
+}
+.FTwo12OrangeV11 {
+  @extend %FTwo12;
+  @extend %OrangeV11;
+}
+.FTwo12OrangeV15 {
+  @extend %FTwo12;
+  @extend %OrangeV15;
+}
+.FTwo12SideBarBlue {
+  color: linear-gradient(16deg, $gray-v3, #26264f);
+  @extend %FTwo12;
+}
+.FTwo12GreenV6 {
+  @extend %FTwo12;
+  @extend %GreenV6;
+}
+.FTwo12GreenV23 {
+  @extend %FTwo12;
+  @extend %GreenV23;
+}
+.FTwo12GreenV27 {
+  @extend %FTwo12;
+  @extend %GreenV27;
+}
+.FTwo12WhiteV4 {
+  @extend %FTwo12;
+  @extend %WhiteV4;
+}
+
+//FTwo13
+.FTwo13 {
+  @extend %FTwo13;
+}
+.FTwo13Important {
+  @extend %FTwo13Important;
+} 
+.FTwo13RedV5 {
+  @extend %FTwo13;
+  @extend %RedV5;
+}
+.FTwo13RedV2 {
+  @extend %FTwo13;
+  @extend %RedV2;
+}
+.FTwo13PurpleV1 {
+  @extend %FTwo13;
+  @extend %PurpleV1;
+}
+.FTwo13GrayV10 {
+  @extend %FTwo13;
+  @extend %GrayV10;
+}
+.FTwo13GrayV2 {
+  @extend %FTwo13;
+  @extend %GrayV2;
+}
+.FTwo13GrayV3 {
+  @extend %FTwo13 ;
+  @extend %GrayV3 ;
+}
+.FTwo13GrayV6 {
+  @extend %FTwo13;
+  @extend %GrayV6;
+}
+.FTwo13GrayV9 {
+  @extend %FTwo13;
+  @extend %GrayV9;
+}
+.FTwo13GrayV14 {
+  @extend %FTwo13;
+  @extend %GrayV14;
+}
+.FTwo13GrayV62 {
+  @extend %FTwo13;
+  @extend %GrayV62;
+}
+.FTwo13GrayV53 {
+  @extend %FTwo13;
+  @extend %GrayV53;
+}
+
+.FTwo13BlackV2 {
+  @extend %FTwo13;
+  @extend %BlackV2;
+}
+
+.FTwo13BlackV6 {
+  @extend %FTwo13;
+  @extend %BlackV6;
+}
+.FTwo13BlackV7 {
+  @extend %FTwo13;
+  @extend %BlackV7;
+}
+.FTwo13GreenV6 {
+  @extend %FTwo13;
+  @extend %GreenV6;
+}
+
+.FTwo13GreenV26 {
+  @extend %FTwo13;
+  @extend %GreenV26;
+}
+
+.FTwo13Blue {
+  @extend %FTwo13;
+  color: blue;
+}
+.FTwo13BlueV2 {
+  @extend %FTwo13;
+  @extend %BlueV2;
+}
+.FTwo13BlueV21 {
+  @extend %FTwo13;
+  @extend %BlueV21;
+}
+.FTwo13BlueV32 {
+  @extend %FTwo13;
+  @extend %BlueV32;
+}
+.FTwo13BlueV11 {
+  @extend %FTwo13;
+  @extend %BlueV11;
+}
+.FTwo13BlueV16 {
+  @extend %FTwo13;
+  @extend %BlueV16;
+}
+.FTwo13BlueV17 {
+  @extend %FTwo13;
+  @extend %BlueV17;
+}
+.FTwo13BlueV39 {
+  @extend %FTwo13;
+  @extend %BlueV39;
+}
+.FTwo13White {
+  @extend %FTwo13;
+  @extend %White;
+}
+.FTwo13GrayV29 {
+  @extend %FTwo13;
+  @extend %GrayV29;
+}
+
+.FTwo13GrayV86 {
+  @extend %FTwo13;
+  @extend %GrayV86;
+}
+
+.FTwo13GrayV87 {
+  @extend %FTwo13;
+  @extend %GrayV87;
+}
+
+.FTwo13GrayV89 {
+  @extend %FTwo13;
+  @extend %GrayV89;
+}
+.FTwo13GrayV90 {
+  @extend %FTwo13;
+  @extend %GrayV90;
+}
+
+.FTwo13GrayV93 {
+  @extend %FTwo13;
+  @extend %GrayV93;
+}
+
+.FTwo13GrayV98 {
+  @extend %FTwo13;
+  @extend %GrayV98;
+}
+
+.FTwo12GrayV98Imp {
+  @extend %FS12Important;
+  @extend %GrayV98Imp;
+  @extend %FTwo;
+}
+
+//
+.FTwo18 {
+  @extend %FTwo;
+  @extend %FS18;
+}
+
+.FTwo18White {
+  @extend %FTwo;
+  @extend %FS18;
+  @extend %White;
+}
+
+.FTwo18BlackV4 {
+  @extend %FTwo;
+  @extend %FS18;
+  @extend %BlackV4;
+}
+
+.FTwo18BlackV2 {
+  @extend %FTwo;
+  @extend %FS18;
+  @extend %BlackV2;
+}
+
+.FTwo18BlackV23 {
+  @extend %FTwo;
+  @extend %FS18;
+  @extend %BlackV3;
+}
+
+.FTwo18GrayV3 {
+  @extend %FTwo;
+  @extend %FS18;
+  @extend %GrayV3;
+}
+.FTwo18GrayV42 {
+  @extend %FTwo;
+  @extend %FS18;
+  @extend %GrayV42;
+}
+
+//FTwo20
+.FTwo20 {
+  @extend %FTwo20;
+}
+
+.FTwo20White {
+  @extend %FTwo20;
+  @extend %White;
+}
+.FTwo20BlackV2 {
+  @extend %FTwo20;
+  @extend %BlackV3;
+}
+
+.FTwo20BlackV12 {
+  @extend %FTwo20;
+  @extend %BlackV12;
+}
+
+.FTwo20GrayV3 {
+  @extend %FTwo20;
+  @extend %GrayV3;
+}
+
+.FTwo20GrayV53 {
+  @extend %FTwo20;
+  @extend %GrayV53;
+}
+
+.FTwo24 {
+  @extend %FTwo24;
+}
+.FTwo24White {
+  @extend %FTwo24;
+  @extend %White;
+}
+.FTwo29GrayV3 {
+  @extend %FTwo29;
+  @extend %GrayV3;
+}
+.FTwo30GrayV3 {
+  @extend %FTwo;
+  @extend %FS30;
+  @extend %GrayV3;
+}
+.FTwo36 {
+  @extend %FTwo36;
+}
+.FTwo36White {
+  @extend %FTwo36;
+  @extend %White;
+}
+
+.FTwo36GrayV1 {
+  @extend %FTwo36;
+  @extend %GrayV1;
+}
+.FTwo16GrayV1 {
+  @extend %FTwo16;
+  @extend %GrayV1;
+}
+.FTwo24GrayV3 {
+  @extend %FTwo24;
+  @extend %GrayV3;
+}
+.FTwo21GrayV3 {
+  @extend %FTwo21;
+  @extend %GrayV3;
+}
+.FOne13BlueV39 {
+  @extend %FOne13;
+  @extend %BlueV39;
+  @extend %FontWeight500
+}
+.FTwoBlackV12 {
+  font-family: $font-family-2;
+  @extend %BlackV12;
+  @extend %FontWeight500;
+  @extend %FTwo12;
+}
+.FTwoGrayV104 {
+  font-family: $font-family-2;
+  @extend %GrayV104;
+  @extend %FontWeight400;
+  @extend %FTwo11;
+}
+.PageTitle {
+  @extend %FTwo26;
+  @extend %GrayV3;
+  @extend %FontWeight600;
+  @extend %LetterSpacingV11;
+}
+.FlowPageTitle {
+  @extend %FTwo18;
+  @extend %BlueV25;
+  @extend %FontWeight500;
+  @extend %LetterSpacingV11;
+}
+
+.PageSubTitle {
+  @extend %FTwo12;
+  @extend %GrayV9;
+  @extend %FontWeight500;
+  @extend %LetterSpacingV15;
+}
+
+.FormSectionTitle {
+  font-family: $font-family-2;
+  font-size: 15px;
+  @extend %FontWeight500;
+}
+
+.PageNotFoundTitle {
+  font-family: $font-family-2;
+  font-size: 16px;
+  @extend %FontWeight500;
+  text-align: center;
+  color: $black-v2;
+}
+
+.PageNotFoundDesc {
+  font-family: $font-family-2;
+  font-size: 13px;
+  color: $gray-v9;
+}
+
+.NavBarUserName {
+  font-family: $font-family-2;
+  font-size: 13px;
+  @extend %FontWeight500;
+}
+.NavBarEmail {
+  font-family: $font-family-2;
+  font-size: $font-size-smt;
+  font-weight: normal;
+  color: $gray-v53;
+}
+.HomePageTitleV1 {
+  font-family: $font-family-2;
+  font-size: 32px;
+  color: $gray-v3;
+  @include for-phone-and-tab {
+    font-size: 23px;
+  }
+}
+.HomePageTitleV2 {
+  font-family: $font-family-2;
+  font-size: 50px;
+  font-weight: 600;
+  color: $gray-v3;
+  @include for-phone-and-tab {
+    font-size: 45px;
+  }
+}
+.HomePageSubtitle {
+  font-family: $font-family-2;
+  font-size: $font-size-xl;
+  color: $gray-v20;
+}
+
+.HeadingTitleV1 {
+  font-size: $font-size-xl;
+  color: $gray-v3;
+  @extend %FontWeight600;
+}
+.PageMainHeader {
+  color: $gray-v3;
+  @extend %FontWeight600;
+  @extend %FS22;
+}
+.HeadingTitle2 {
+  color: $gray-v3;
+  @extend %FontWeight500;
+  @extend %FS22;
+}
+.HeadingTitle{
+  color: $gray-v3;
+  @extend %FontWeight500;
+  @extend %FS18;
+}
+.SectionSubTitle {
+  color: $gray-v3;
+  @extend %FontWeight500;
+  font-size: $font-size-lg;
+}
+.FieldName {
+  color: $black-v13;
+  font-size: 13px;
+  @extend %FontWeight600;
+}
+.ModalHeader {
+  color: $gray-v3;
+  font-size: $font-size-xl;
+  @extend %FontWeight500;
+}
+.SidePanelContainer {
+  width: $side-panel-width;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+  @include for-phone-and-tab {
+    display: none;
+  }
+}
+.FontStretchNormal {
+  font-stretch: normal;
+}
+.FontWeightNormal {
+  font-weight: normal;
+}
+.FontWeightBold {
+  font-weight: 600;
+}
+.FontWeightBoldImportant {
+  font-weight: 600 !important;
+}
+%DFlex {
+  display: flex;
+}
+.DisplayFlex {
+  @extend %DFlex;
+}
+.DisplayGrid {
+  display: grid !important;
+}
+.DisplayBlock {
+  display: block;
+}
+%AlignItemStart {
+  align-items: start;
+}
+%AlignItemCenter {
+  align-items: center;
+}
+%AlignItemStart {
+  align-items: flex-start;
+}
+%AlignItemEnd {
+  align-items: end;
+}
+%AlignItemBaseline {
+  align-items: baseline;
+}
+
+%JustifyContentCenter {
+  justify-content: center;
+}
+
+%JustifyContentSpaceBetween {
+  justify-content: space-between;
+}
+
+%JustifyContentRight {
+  justify-content: right;
+}
+
+%JustifyContentLeft {
+  justify-content: left;
+}
+.JusSelfStart {
+  justify-self: flex-start;
+}
+
+.TopV{
+  @extend %DFlex;
+  @extend %AlignItemStart;
+}
+
+.BottomV{
+  @extend %DFlex;
+  @extend %AlignItemEnd;
+}
+.RightH {
+  @extend %DFlex;
+  @extend %JustifyContentRight;
+}
+
+.LeftH {
+  @extend %DFlex;
+  @extend %JustifyContentLeft;
+}
+
+.LeftV {
+  @extend %DFlex;
+  @extend %AlignItemStart;
+}
+
+.CenterV {
+  @extend %DFlex;
+  @extend %AlignItemCenter;
+}
+
+.DFlexCenter {
+  @extend %DFlex;
+  @extend %AlignItemCenter;
+  @extend %JustifyContentCenter;
+}
+
+.D_SM {
+  display: none;
+  @include responsive-layout {
+   display: block;   
+  }
+}
+
+.CenterVImportant {
+  @extend %DFlexImportant;
+  @extend %AlignItemCenterImportant;
+}
+
+.CenterH {
+  @extend %DFlex;
+  @extend %JustifyContentCenter;
+}
+.FlexJustifyEnd {
+  @extend %DFlex;
+  @extend %JustifyContentEnd;
+}
+.FlexJustifyBetween {
+  @extend %DFlex;
+  @extend %JustifyContentSpaceBetween;
+}
+.CenterVSpaceBetween {
+  @extend %DFlex;
+  @extend %JustifyContentSpaceBetween;
+  @extend %AlignItemCenter;
+}
+
+.CenterVH {
+  @extend %DFlex;
+  @extend %JustifyContentCenter;
+  @extend %AlignItemCenter;
+}
+.JCEnd {
+  @extend %JustifyContentEnd;
+}
+
+.AlignItemBaseline {
+  @extend %AlignItemBaseline;
+}
+
+.AlignSelfBaseline {
+  align-self: baseline !important;
+}
+
+.AlignSelfCenter {
+  align-self: center !important;
+}
+
+.AlignCenter {
+  @extend %AlignItemCenter;
+}
+.Outline0 {
+  outline: 0;
+}
+
+//input padding
+.InputPaddingV1 {
+  padding: 5px 10px;
+}
+
+.InputPaddingV2 {
+  padding: 6px 10px;
+}
+
+.InputPaddingV3 {
+  padding: 10px 15px;
+}
+
+.InputPaddingV4 {
+  padding: 0px 10px;
+}
+
+.InputPaddingV5 {
+  padding: 4px 10px;
+}
+
+.ErrorMarginV2 {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.ErrorMarginV1 {
+  margin-top: 3px;
+  // margin-bottom: 1px;
+}
+
+.DefaultPrimaryColor {
+  background-color: $blue-v8;
+}
+
+.DefaultSecondaryColor {
+  background-color: $gray-v3;
+}
+.BackgroundWhite {
+  background-color: $white;
+}
+
+.BackgroundWhiteImp {
+  background-color: $white !important;
+}
+
+.ContentContainer {
+  @include border-radius(6px);
+  background-color: $white;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+}
+
+.ContentPadding {
+  padding: 12px 50px;
+  flex: 1 1 auto;
+  overflow: auto;
+}
+
+.DropdownArrow {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top-width: 6px;
+  border-top-style: solid;
+}
+
+.DropdownArrowUp {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom-width: 6px;
+  border-bottom-style: solid;
+}
+
+.RightArrow {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top-width: 6px;
+  border-top-style: solid;
+  transform: rotate(-90deg);
+}
+
+.SelectedTab {
+  height: 4px;
+  width: 100%;
+}
+
+.anchorTag, .anchorTag:hover {
+  color: $blue-v39;
+}
+
+.ScrollBar {
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.ScrollBarV2 {
+  // scrollbar-width: thin;
+  // scrollbar-color: #b8bfc7;
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+}
+
+.HeightInherit {
+  height: inherit;
+}
+
+.WidthInherit {
+  width: inherit;
+}
+
+.LayoutContent {
+  overflow: hidden;
+}
+
+.Rotate270 {
+  transform: rotate(270deg);
+}
+
+.Rotate180 {
+  transform: rotate(180deg);
+}
+
+.Rotate90 {
+  transform: rotate(90deg);
+}
+
+.FlexGrow1 {
+  flex-grow: 1;
+}
+
+.FlexGrow3 {
+  flex-grow: 3;
+}
+
+.FlexGrow4 {
+  flex-grow: 4;
+}
+
+.FlexGrow5 {
+  flex-grow: 5;
+}
+
+.FlexGrow6 {
+  flex-grow: 6;
+}
+
+.FlexGrow7 {
+  flex-grow: 7;
+}
+
+.FlexGrow8 {
+  flex-grow: 8;
+}
+
+.FlexGrow9 {
+  flex-grow: 9;
+}
+
+.FlexGrow10 {
+  flex-grow: 10;
+}
+
+.FlexFlowColumn {
+  flex-flow: column;
+}
+
+.FlexFlowWrap {
+  flex-flow: wrap;
+}
+.FlexWrap {
+  flex-wrap: wrap;
+}
+.FlexPlaceSelfEnd {
+  place-self: flex-end;
+}
+.NoPointerEvent {
+  pointer-events: none;
+}
+.DisabledField {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.DisabledFieldV2 {
+  pointer-events: none;
+  opacity: 0.75;
+}
+.BorderLessInput {
+  border: none;
+  outline: none;
+  &::placeholder {
+    color: $gray-v6;
+    font-weight: normal !important;
+  }
+}
+
+.BorderBottomNone {
+  border-bottom: none !important;
+}
+
+.ErrorPlaceHolder {
+  &::placeholder {
+    color: $red-v2 !important;
+  }
+}
+
+.ActiveBar {
+  height: 4px;
+}
+
+.ClickableElement {
+  background-color: transparent;
+  outline: none !important;
+  text-align: left;
+  border: 0;
+  padding: 0;
+}
+
+.ClickableElementV2 {
+  background-color: transparent;
+  // outline: none !important;
+  text-align: left;
+  border: 0;
+  // padding: 0;
+}
+.ClickableElementV3 {
+  // background-color: transparent;
+  outline: none !important;
+  // text-align: left;
+  border: 0;
+  // padding: 0;
+}
+.ClickableElementV4 {
+  background-color: transparent;
+  outline: none !important;
+  text-align: left;
+  // border: 0;
+  padding: 0;
+}
+
+.Table {
+  & td {
+    vertical-align: middle;
+    border-top: 0;
+    padding: 12px 0px 12px 0px;
+  }
+  & .TableHeader {
+    @include border-radius(2px);
+    border: solid 1px $gray-v1;
+    padding-top: 11px;
+    padding-bottom: 7px;
+    @extend %FOne13;
+    @extend %GrayV9;
+    white-space: nowrap;
+    & td {
+      background-color: $gray-v8;
+    }
+  }
+  &.Row {
+    padding: 8px 20px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+  & .Cell {
+    padding: 10px 30px;
+    @extend %FOne13;
+    @extend %GrayV2;
+  }
+}
+
+.HeightMinContent {
+  height: min-content;
+}
+
+.ModalBg {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.25);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.ModalContentClass {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  padding: 27px 40px 0 40px;
+}
+
+.ModalContentClassWithoutPadding {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.FullScreenModal {
+  @include for-phone-and-tab {
+    width: 100vw !important;
+    height: 100vh;
+    @include border-radius(0px);
+    padding: 30px;
+  }
+}
+
+.Hr {
+  background-color: $gray-v1;
+  height: 1px;
+}
+
+.LayoutShadow {
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.04);
+}
+
+.LayoutBottomShadow {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.04);
+}
+
+.WordBreakAll {
+  word-break: break-all;
+}
+.OverflowHidden {
+  overflow: hidden;
+}
+.OverflowYHiddenImportant {
+  overflow-y: hidden !important;
+}
+.OverflowXHiddenImportant {
+  overflow-x: hidden !important;
+}
+.OverflowHiddenImportant {
+  overflow: hidden !important;
+}
+
+.OverflowInitial {
+  overflow: initial;
+}
+
+.SecondaryButton {
+  &:hover {
+    background: $blue-v70 !important;
+    color: $white;
+  }
+}
+.Ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis !important;
+  white-space: nowrap;
+}
+.TwoLineEllipsis {
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.ButtonStyleV2 {
+  height: 34px !important;
+  border-radius: 20px !important;
+  // width: 80% !important;
+  padding: 0px !important;
+}
+
+.BlurBg {
+  z-index: 2;
+  height: 100vh;
+  width: 100vw;
+}
+
+.Card {
+  @include border-radius(8px);
+  box-shadow: 3px 3px 6px 0 rgba(218, 223, 231, 0.3);
+  background-color: $white;
+}
+.OverflowYAutoImportant {
+  overflow-y: auto !important;
+}
+.OverflowAuto {
+  overflow: auto;
+}
+
+.OverflowXAuto {
+  overflow-x: auto;
+}
+
+.OverflowXHidden {
+  overflow-x: hidden;
+}
+
+.MinHeight16 {
+  min-height: 16px;
+}
+
+.MinHeight36 {
+  min-height: 36px;
+}
+
+.MinHeight18 {
+  min-height: 18px;
+}
+
+.MinHeight22 {
+  min-height: 22px;
+}
+
+.MinHeight24 {
+  min-height: 24px;
+}
+
+.MinWidth0 {
+  min-width: 0px !important;
+}
+
+.MinWidth18 {
+  min-width: 18px;
+}
+
+.MinWidth75 {
+  min-width: 75px;
+}
+
+.MinWidth50 {
+  min-width: 50px;
+}
+
+.MinWidth100 {
+  min-width: 100px;
+}
+
+.MaxWidth30Percent {
+  max-width: 30%;
+}
+
+.MaxWidth40Percent {
+  max-width: 40%;
+}
+
+.Height0 {
+  height: 0px !important;
+}
+
+.Height10 {
+  height: 10px !important;
+}
+.Height16 {
+  height: 16px !important;
+}
+.Height24 {
+  height: 24px !important;
+}
+.Height28 {
+  height: 24px !important;
+}
+.Height90 {
+  height: 90px !important;
+}
+.HeightFitContent {
+  height: fit-content !important;
+}
+.WidthAuto {
+  width: auto !important;
+}
+.Width8 {
+  width: 8px;
+}
+.Width48 {
+  width: 48px;
+}
+.Width50 {
+  width: 50px;
+}
+.Width100 {
+  width: 100px;
+}
+.Width120 {
+  width: 120px;
+}
+.Width150 {
+  width: 150px;
+}
+.Width200 {
+  width: 200px !important;
+}
+.Width400 {
+  width: 400px;
+}
+.WidthFitContent {
+  width: fit-content !important;
+}
+.Width50VW {
+  width: 50vw;
+}
+.Width53VW {
+  width: 53vw !important;
+}
+.Width90VW {
+  width: 90vw;
+}
+.W100 {
+  width: 100%;
+}
+.W100Important {
+  width: 100% !important;
+}
+.W95 {
+  width: 95%;
+}
+.W90 {
+  width: 90%;
+}
+.W82 {
+  width: 82%;
+}
+.W80 {
+  width: 80%;
+}
+.W70 {
+  width: 70% !important;
+}
+.W65 {
+  width: 65%;
+}
+.W60 {
+  width: 60%;
+}
+.W50 {
+  width: 50%;
+}
+.W45{
+  width: 45%;
+}
+.W40{
+  width: 40%;
+}
+.W35{
+  width: 35% !important;
+}
+.W30{
+  width:30%;
+}
+.W25{
+  width: 25%;
+}
+.H85 {
+  height: 85%;
+}
+.H100 {
+  height: 100%;
+}
+.H100Imp {
+  height: 100% !important;
+}
+.H60VH {
+  height: 60vh;
+}
+.H70VH {
+  height: 70vh;
+}
+
+.LCContainer {
+  // border-radius: 30px;
+  // overflow: hidden;
+  display: flex;
+  height: inherit;
+  min-height: inherit;
+  width: inherit;
+  position: relative;
+  box-shadow: 0 6px 30px 0 rgba($black, 0.05);
+
+  @include for-phone-and-tab {
+    // top: calc(100vh - 135px);
+    // height: calc(100vh - 65px) !important;
+    // position: fixed;
+    z-index: 2;
+    //height-change-alert change in latter height has to replicated in list and detailed layout
+  }
+
+  & .LeftContainer {
+    // width: calc(50vw - 20px);
+    height: 100%;
+    // background-color: $gray-v23;
+    overflow: hidden;
+    width: 100%;
+
+    @include for-phone-and-tab {
+      width: 100vw;
+      height: 100vh;
+    }
+    & .Header {
+      padding: 30px 30px 0px 30px;
+      @include for-phone-and-tab {
+        padding: 30px 30px 0px 30px;
+      }
+      background-color: $white;
+      box-shadow: 0 2px 2px 0 rgba(218, 223, 231, 0.4);
+    }
+  }
+
+  & .RightContainer {
+    background-color: $white;
+    flex: 1;
+    // overflow: hidden;
+    // z-index: 2;
+    position: relative;
+    box-shadow: -3px 0 6px 0 rgba(218, 223, 231, 0.3);
+    border-left: 1px solid $gray-v16;
+  }
+
+  @include for-phone-and-tab {
+    width: 100vw;
+  }
+}
+
+.PageHeader {
+  padding: 30px 40px;
+  background-color: $gray-v7;
+}
+
+.ShowDetailsLCContainer {
+  & .LeftContainer {
+    width: 35%;
+    max-width: 480px;
+
+    @include for-phone-and-tab {
+      display: none;
+    }
+  }
+  & .RightContainer {
+    width: 65%;
+    height: 100%;
+    @include for-phone-and-tab {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+    }
+  }
+}
+
+.ListCard {
+  padding: 10px 15px;
+  @include border-radius(6px);
+  box-shadow: 0 1px 2px 0 rgba(218, 223, 231, 0.4);
+  background-color: $gray-v50;
+  margin-bottom: 10px;
+
+  &:hover {
+    @extend %SelectedListCard;
+  }
+}
+
+.dependencyCard {
+  padding: 10px;
+  &:hover {
+    @extend %SelectedDependencyCard;
+  }
+}
+
+.SelectedListCard {
+  @extend %SelectedListCard;
+}
+
+.DashedBorder {
+  border: 1px dashed $gray-v68; //Dashed border color
+}
+
+.CreateContainerTemp {
+  padding: 30px 40px;
+  overflow-y: auto;
+  height: inherit;
+  width: 50vw;
+  background-color: $white;
+  @include border-radius(30px);
+  @include for-phone-and-tab {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    @include border-radius(0px);
+  }
+}
+
+.HelpIcon {
+  // height: 16px;
+  // width: 16px;
+  @extend %HeightWidh16;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+.RuleBased {
+  padding: 30px 20px;
+  @include border-radius(4px);
+  @extend %InputBorder;
+}
+.InvisibleBg {
+  position: fixed;
+  background-color: transparent;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.SwipeIndicatorBar {
+  width: 100px;
+  height: 6px;
+  @include border-radius(4px);
+  background-color: $gray-v25;
+  cursor: pointer;
+  @include for-desktop {
+    display: none;
+  }
+}
+
+.SwipeIndicatorBarPosition {
+  top: 10px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 1;
+  margin: 0 auto;
+}
+
+.FlexShrink0 {
+  @extend %FlexShrink0;
+}
+
+.DetailsHeader {
+  padding: 10px 30px 0 30px;
+  background-color: $white;
+  // @extend %TabHeader;
+  border-bottom: 1px solid $gray-v16;
+  @include for-phone-and-tab {
+    padding: 10px 30px 0 30px;
+  }
+}
+
+.CurrentTabContainer {
+  padding: 30px;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  @include for-phone-and-tab {
+    padding: 20px 30px;
+  }
+}
+
+.HideContentOnMobileScreen {
+  @include for-phone-and-tab {
+    display: none;
+  }
+}
+
+.WhiteSpaceNoWrap {
+  white-space: nowrap;
+}
+.WhiteSpacePreWrap {
+  white-space: pre-wrap;
+}
+.WhiteSpaceNormal {
+  white-space: normal;
+}
+.DisplayNone {
+  display: none !important;
+}
+.VisibilityNone {
+  visibility: hidden !important;
+}
+.Zindex0Imp {
+  z-index: 0 !important;
+}
+.ZIndex0 {
+  z-index: 0;
+}
+.ZIndex1 {
+  z-index: 1;
+}
+.ZIndex2 {
+  z-index: 2 !important;
+}
+
+.ZIndex3 {
+  z-index: 3;
+}
+
+.ZIndex4 {
+  z-index: 4;
+}
+.ZIndex5 {
+  z-index: 5;
+}
+.ZIndex6 {
+  z-index: 6;
+}
+.ZIndex7 {
+  z-index: 7;
+}
+.ZIndex8 {
+  z-index: 8;
+}
+.ZIndex10 {
+  z-index: 10 !important;
+}
+.ZIndex13 {
+  z-index: 13 !important;
+}
+.ZIndex22 {
+  z-index: 22 !important;
+}
+.ZIndex25 {
+  z-index: 25 !important;
+}
+.ZIndex151 {
+  z-index: 151;
+}
+.ZIndex152 {
+  z-index: 152;
+}
+.FlexDirectionColumn {
+  flex-direction: column;
+}
+
+.TransparentButton {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.Sticky {
+  position: sticky;
+  position: -webkit-sticky; /* Safari */
+}
+.PositionRelative {
+  position: relative !important;
+}
+.PositionUnset {
+  position: unset !important;
+}
+.PositionAbsolute {
+  position: absolute;
+}
+.PositionFixed {
+  position: fixed;
+}
+.Flex1 {
+  flex: 1;
+}
+
+.DisableTextSelection {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.HorizontalLine {
+  height: 1px;
+  width: 100%;
+  background-color: $gray-v68;
+}
+
+.Margin0 {
+  margin: 0 !important;
+}
+
+.Padding0 {
+  padding: 0 !important;
+}
+
+.OverflowYAuto {
+  overflow-y: auto;
+}
+
+.OverflowYScroll {
+  overflow-y: Scroll;
+}
+
+.FlexBasis100 {
+  flex-basis: 100%;
+}
+.FlexBasis45 {
+  flex-basis: 45%;
+}
+.FlexBasis25 {
+  flex-basis: 25%;
+}
+.FlexBasis75 {
+  flex-basis: 75%;
+}
+.FlexBasis50 {
+  flex-basis: 50%;
+}
+.Bottom0 {
+  bottom: 0;
+}
+.WordBreakBreakWord {
+  word-break: break-word;
+}
+.Height100Vh {
+  height: 100vh;
+}
+
+.MinHeight100Vh {
+  min-height: 100vh;
+}
+
+.AuthButtonSecondary {
+  color: $blue-v2;
+  height: 40px !important;
+  @include border-radius(8px);
+  border: solid 1px $blue-v17;
+  padding: 12px 30px;
+  background-color: $white;
+  &:hover {
+    background-image: linear-gradient(82deg, #72be44 0%, #00a0fd 100%);
+    color: $white;
+  }
+}
+
+.OutlineSecondary {
+  background: $white;
+  color: $blue-v39;
+  border: 1px solid $blue-v39;
+  padding: 6px 15px; // new UI button
+  height: 40px;
+  min-width: 108px;
+  @extend %FS14;
+  @extend %JustifyContentCenter;
+  @include border-radius(4px);
+
+  &:hover {
+    color: $white;
+    background-color: $blue-v39;
+  }
+}
+
+.WidthMaxContent {
+  width: max-content;
+}
+
+.WidthMinContent {
+  width: min-content;
+}
+
+.BorderRadius4 {
+  @include border-radius(4px);
+}
+
+.BorderRadius6 {
+  @include border-radius(6px);
+}
+
+.SuggestionButton {
+  padding: 7px 15px;
+  margin: 10px 10px 5px 0;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+  border: solid 1px #228bb5;
+  background-color: #fff;
+  color: #228bb5 !important;
+}
+
+.CloseIcon {
+  height: 12px;
+  width: 12px;
+  cursor: pointer;
+}
+
+.OnlyShowInMobile {
+  @include for-desktop {
+    display: none;
+  }
+}
+
+.OnlyShowInDesktop {
+  @include for-phone-and-tab {
+    display: none;
+  }
+}
+.DisplayFlex {
+  @extend %DFlex;
+}
+.FlexDirectionCol{
+  flex-direction: column;
+}
+
+.TextOverflow {
+  @extend %PlaceholderOverflow;
+}
+.TextAlignCenter {
+  text-align: center;
+}
+.TextAlignLeft {
+  text-align: left;
+}
+.TextAlignLeftImp {
+  text-align: left !important;
+}
+.TextAlignCenterImp {
+  text-align: center !important;
+}
+.TextAlignRight {
+  text-align: right;
+}
+.TextAlignRightImp {
+  text-align: right !important;
+}
+.TextTranformUpper {
+  text-transform: uppercase;
+}
+
+.TextTransformCap {
+  text-transform: capitalize;
+}
+
+.TextTransformLower {
+  text-transform: lowercase;
+}
+
+.TextNoWrap {
+  text-wrap: nowrap;
+}
+
+.W88 {
+  width: 88px;
+}
+
+.W108 {
+  width: 108px;
+}
+
+.W120 {
+  width: 120px;
+}
+
+.MW0 {
+  max-width: 0px !important;
+}
+
+.MW15 {
+  max-width: 15vw;
+}
+
+.MW30 {
+  max-width: 30vw;
+}
+
+.W125 {
+  min-width: 125px;
+  max-width: 125px;
+}
+
+.W150 {
+  width: 150px;
+}
+
+.W165 {
+  width: 165px;
+}
+.MW90 {
+  max-width: 90px !important;
+}
+.MW100 {
+  max-width: 100px;
+}
+.W148 {
+  min-width: 148px;
+  max-width: 148px;
+}
+.W64 {
+  min-width: 64px;
+  max-width: 64px;
+}
+.minWidth125 {
+  min-width: 125px;
+}
+
+.W110 {
+  min-width: 110px;
+  max-width: 110px;
+}
+
+.AssigneesClass {
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.BlueV25 {
+  color: $blue-v25 !important;
+}
+
+.WhiteBackground {
+  background-color: $white;
+}
+.BackGroundColorBlue40 {
+  background-color: $blue-v40;
+}
+
+.WarningMessage {
+  font-size: 12px;
+  color: $orange-v10;
+  font-style: italic;
+}
+
+// Button Styles
+
+.ButtonSM {
+  height: 28px;
+  padding: 10px 15px;
+}
+.ButtonMD {
+  height: 30px;
+  padding: 10px 15px;
+}
+.ButtonLG {
+  height: 32px;
+  padding: 10px 15px;
+}
+.ButtonXL {
+  height: 34px;
+  padding: 10px 15px;
+}
+.ButtonXXL {
+  height: 36px;
+  padding: 10px 15px;
+}
+.WH28 {
+  width: 28px;
+  height: 28px;
+}
+.WH16 {
+  @extend %HeightWidh16;
+}
+.FormFieldMultipleOption {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(114px, 1fr));
+  grid-row-gap: 5px;
+  min-height: 36px;
+}
+
+.FormFieldMinWidth {
+  min-width: 50px;
+}
+
+.Flex2 {
+  flex: 2;
+}
+.FloatL {
+  float: left;
+}
+.FloatR {
+  float: right;
+}
+.H52{
+  height:52%;
+}
+.H48{
+  height:48%;
+}
+.MT16IMP{
+  margin-top: 16px !important;
+}
+.MB16IMP{
+  margin-bottom: 16px !important;
+}
+
+.InvisibleBtn,
+.InvisibleBtn:focus,
+.InvisibleBtn:focus-visible{
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.OutlineNoneOnFocus,
+.OutlineNoneOnFocus:focus{
+  outline: none ;
+  border: none;
+  box-shadow: none;
+}
+.OutlineNoneOnFocus:focus-visible{
+  outline: none !important;
+  box-shadow: none;
+}
+
+.BoxShadowNone {
+  box-shadow: none !important;
+}
+
+.Gap4{
+  gap: 4px;
+}
+
+
+.gap5{
+  gap: 5px;
+}
+.gap6{
+  gap: 6px;
+}
+.H90{
+  height: 90% !important;
+}
+.Height2{
+  height: 2px !important;
+}
+.Height4{
+  height: 4px !important;
+}
+.Height96{
+  height: 96px !important;
+}
+.MBN12 {
+  margin-bottom: -12px;
+}
+.GAP8{
+  grid-gap: 8px;
+}
+.GAP15{
+  grid-gap: 15px;
+}
+.GAP20{
+  grid-gap: 20px;
+}
+.FOne13GrayV98 {
+  @extend %FOne;
+  @extend %FS13;
+  @extend %GrayV98;
+}
+.MLN4{
+  margin-left: -4px;
+}
+.MRN8{
+  margin-right: -8px;
+}
+.MTN12 {
+  margin-top: -12px;
+}
+.MTN25 {
+  margin-top: -25px;
+}
+.TransparentBtn {
+  background-color: transparent;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+.MTN5{
+  margin-top: -5px;
+}
+
+
+.TableLayoutFixed {
+  table-layout: fixed;
+}
+
+.JusSpaceBtw {
+  justify-content: space-between;
+}
+
+.JusFlexStart {
+  justify-content: flex-start;
+}
+
+.JusEnd {
+  justify-content: end;
+}
+
+.gap8{
+ gap: 8px;
+}
+
+.gap12{
+ gap: 12px;
+}
+
+.gap24{
+ gap: 24px;
+}
+
+.gap32{
+ gap: 32px;
+}
+
+.red22 {
+  color: $red-v22;
+}
+
+.black18 {
+  color: $black-v18;
+}
+
+.red22Imp {
+  color: $red-v22 !important;
+}
+
+.CursorAuto{
+  cursor: auto;
+}
+
+.width60ch{
+  width: 60ch;
+}
+
+.Scale08 {
+  transform: scale(0.8);
+}
+
+.Scale09 {
+  transform: scale(0.9);
+}
+
+.Gap8{ 
+  gap: 8px;
+}
+.Gap16 { 
+  gap: 16px;
+}
+
+.BackgroundNone {
+  background: none !important;
+
+}
+.DisplayInlineBlock{
+  display: inline-block;
+}
+
+.RightBorder {
+  border-right: 1px solid $gray-v102;
+}
+
+.SpinAnimation {
+  animation-name: spin;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}
+.LeftBorder {
+  border-left: 1px solid $gray-v102;
+}
+
+.AlertCircle{
+  padding: 6px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $red-v23;
+  border-radius: 50px;
+  border: 8px solid $red-v24;
+  margin-bottom: 16px;
+}
+
+.FirstChild100 {
+  & > div:first-child {
+    width: 100%;
+  }
+}
+.BlueIconBtn{
+  @extend .FTwo12BlueV39;
+  @extend .CursorPointer;
+  @extend .FontWeight500;
+  @extend .CenterV;
+  @extend .gap5;
+  @extend .WhiteSpaceNoWrap;
+}
+
+.LabelStyle {
+  @extend %FTwo13Important;
+  @extend %BlackV25Imp;
+  @extend %FontWeight600Imp;
+}
+
+.ScrollYOnHover {
+  @extend %ScrollYOnHover;
+}
+
+.ScrollXOnHover {
+  @extend %ScrollXOnHover;
+}
+
+.MinHW20 {
+  min-width: 20px;
+  min-height: 20px;
+}

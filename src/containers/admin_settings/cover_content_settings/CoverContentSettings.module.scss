@@ -1,0 +1,41 @@
+@import '../../../scss/constants';
+.HelperClass
+{
+    min-height:0px !important;
+}
+
+.MR250{
+    margin-right: 250px;
+}
+
+.ErrorContentWidth {
+    max-width: 150px;
+  }
+
+.ContainerClass
+{
+    margin-right: -28px;
+    margin-top: 10px;
+}
+.CoverDurationError {
+    width: 300px !important;
+}
+.DisableClass
+{
+    color: $gray-v1 !important;
+    fill: $gray-v1 !important;
+    border-top-color: $gray-v1 !important;
+}
+.FontFamilyStyle {
+    padding-bottom: 5px !important;
+  }
+  .CoverMessageNoteMinHeight {
+      min-height: 0px;
+  }
+  .CoverContentSettingsContainer {
+    margin: 30px;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.04);
+    background-color: $white;
+  }

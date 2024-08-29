@@ -1,0 +1,581 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.CreateTitle {
+  line-height: 29px;
+}
+.OauthName {
+  max-width: 25vw;
+}
+.ApiTypeOption {
+  padding: 14px 16px;
+  &:hover {
+    background: $blue-v41;
+  }
+}
+.MethodType {
+  padding: 2px 8px;
+  border-radius: 16px;
+  background: $blue-v48;
+  color: $blue-v69;
+  font-size: $font-size-sm;
+  font-weight: $fw-semibold;
+}
+.OptionDesc {
+  color: $gray-v86;
+  font-size: $font-size-sm;
+  font-weight: $fw-normal;
+}
+.FilterContainer {
+  background-color: $gray-v107;
+  border-radius: 3px;
+  height: 32px;
+  margin-top: 4px;
+  padding: 6px 12px;
+}
+.CloseVector {
+  height: 13px;
+}
+.FilterCount{
+  font-size: $font-size-sm;
+  font-weight: $fw-semibold;
+  color: $blue-v39;
+  background-color: $blue-v41;
+  padding: 2px 8px;
+  border-radius: 16px;
+  margin-left: 10px;
+}
+.AddDescription {
+  height: 60px;
+}
+.AddLabel {
+  font-weight: $fw-semibold;
+  color: $gray-v104;
+}
+.TextValue {
+  color: #344054;
+  font-weight: $fw-semibold;
+}
+.ReadOnlyButton {
+  background: $gray-v109;
+  border: 0px !important;
+  & .ButtonLink {
+    display: none;
+  }
+}
+.MT56 {
+  margin-top: 56px;
+}
+.DefaultCursor {
+  cursor: default;
+}
+.TextLeft {
+  text-align: left;
+}
+.ListOuterClass {
+  height: calc(100vh - 60px);
+  padding-bottom: 24px;
+  background: $white;
+}
+.ShowByDropdown {
+  width: 150px;
+}
+.ShowByPopper {
+  z-index: 10;
+}
+.ApiInfo {
+  width: 92%;
+}
+.OuterTable {
+  overflow: hidden;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  height: calc(100% - 100px);
+  padding: 0px 24px;
+}
+.SearchTab {
+  width: 300px;
+}
+.ShowByText {
+  font-size: 12px;
+  font-weight: 500;
+  color: $gray-v87;
+  margin-right: 12px;
+}
+.ListFilter {
+  z-index: 100;
+  background: $white;
+  border-radius: 3px;
+  padding: 15px;
+  width: 200px;
+  border: 1px solid $gray-v102;
+}
+.OverFlowInherit{
+  overflow: inherit !important;
+  overflow-x: auto !important;
+}
+.CustomIntegration {
+  width: 100%;
+  padding: 12px;
+  &:hover {
+    background-color: $blue-v41;
+  }
+}
+.ListingTab {
+  padding-left: 24px;
+  background: $white;
+  border-bottom: 1px solid $gray-v102;
+}
+.WorkhallIcon {
+  padding: 5px;
+  background-color: $blue-v41;
+  border-radius: 50px;
+  border: 6px solid $blue-v48;
+  width: 45px;
+  height: 45px;
+}
+.ApiSubtitle {
+  color: $gray-v87;
+}
+.ChooseApi {
+  border-radius: 8px;
+  border: 1px solid $gray-v108;
+  width: 100%;
+}
+.ButtonLink {
+  font-size: $font-size-mdt;
+  font-weight: $fw-semibold;
+  color: $blue-v39;
+}
+.Subtitle {
+  color: $gray-v87;
+  text-align: center;
+  width: 100%;
+  margin-top: 4px;
+}
+.AddIntegrationModal {
+  padding: 24px;
+  padding-left: 48px;
+  overflow-y: scroll;
+}
+.ListTitle {
+  color: $gray-v3;
+}
+.TabText {
+  margin-left: 0 !important;
+  margin-bottom: 8px;
+}
+.ActiveTab {
+  height: 4px;
+}
+.IntegrationHeader {
+  padding: 24px 24px 0 !important;
+}
+.AuthInfo {
+  max-width: 90%;
+}
+.AddIntegrationMain {
+  width: 720px;
+}
+.EditIconContainer {
+  visibility: hidden;
+}
+.OauthTable {
+  tr {
+    & td:first-child {
+      padding-left: 12px !important;
+    }
+  }
+}
+.ExternalTable {
+  thead {
+    & th:nth-child(3) {
+      div {
+        justify-content: center;
+      }
+    }
+    & th:last-child {
+      div {
+        justify-content: center;
+      }
+    }
+  }
+  tbody {
+    & td {
+      .IntegrationNavIcon
+        path {
+          fill: none !important;
+          stroke: $blue-v39 !important;
+        }
+    }
+  }
+}
+.Table {
+  // border-spacing: 0 8px !important;
+
+  &.GeneralTable {
+    overflow: initial;
+  }
+
+  thead {
+    & td:not(:first-child) {
+      padding-left: 0px !important;
+    }
+    & th {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+    & th:first-child {
+      padding-left: 12px !important;
+    }
+    & td {
+      min-width: 50px !important;
+      color: $gray-v89;
+      border-bottom: 1px solid $gray-v102 !important;
+      padding-bottom: 8px !important;
+    }
+  }
+
+  .TableCustomHeaderPadding {
+    padding: 0 24px 8px 24px !important;
+  }
+
+  tr {
+    height: 48px !important;
+    padding: 8;
+    transform: none !important;
+    border-bottom: 1px solid $gray-v102;
+    border-radius: 0;
+
+    &:hover {
+      transform: none !important;
+      transition: none;
+      box-shadow: none !important;
+      .EditIconContainer {
+        visibility: visible;
+      }
+
+      .Thumbnail {
+        background-color: $blue-v39 !important;
+      }
+
+      .ThumbnailIcon {
+        fill: $white;
+      }
+    }
+
+    td {
+      padding: 0 10px 0 0 !important;
+      min-width: 50px !important; // min-width required to avoid table overflow-x
+    }
+
+    & td:last-child {
+      padding: 0 !important;
+    }
+  }
+
+  & td:first-child { //model name
+    width: 25%;
+  }
+  & td:nth-child(2) { //model description
+    width: 35%;
+  }
+//   & td:nth-child(3) { //model used in
+//     width: 20%;
+//   }
+  
+//   & td:nth-child(4) { // date created 
+//     width: 15%;
+//   }
+  & td:last-child { //model used in
+    width: 25%;
+  }
+}
+
+.ModalFooter {
+  box-shadow: none;
+  padding-bottom: 27px !important;
+}
+.DeleteIcon {
+  margin-right: 8px;
+}
+.ConnectorNameContainer {
+  width: 100%;
+}
+.UpdatedOn {
+  display: inline-block;
+  color: $gray-v3;
+  font-weight: 400;
+  font-size: $font-size-mdt;
+  max-width: 100px;
+}
+.ConnectorNameHeader {
+  display: inline-block;
+}
+.ConnectorClassModelName {
+  max-width: 25vw;
+  padding-right: 20px;
+  @include for-medium-hd-screen {
+    max-width: 28vw;
+  }
+}
+.ConnectorClass {
+  max-width: 35vw;
+  padding-right: 20px;
+  @include for-medium-hd-screen {
+    max-width: 38vw;
+  }
+}
+.ApiTypeHeader,
+.CreatedOnHeader,
+.EditIconHeader {
+  display: inline-block;
+}
+.ConnectorDescription {
+  font-size: $font-size-sm;
+  color: $gray-v86;
+  font-weight: 400;
+}
+.APITypeBadge {
+  display: inline-block;
+  width: fit-content;
+  height: 24px;
+  border-radius: 20px;
+  font-size: $font-size-sm;
+  padding: 3px 8px;
+  font-weight: 400;
+  max-width: 100%;
+}
+.SourceCol {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 12vw;
+}
+.UpdatedBy {
+  display: inline-block;
+  color: $gray-v3;
+  font-weight: 400;
+  font-size: $font-size-mdt;
+  max-width: 15vw;
+}
+.OauthBadge {
+  background-color: $orange-v34;
+  color: $orange-v35;
+}
+.ApiBadge {
+  background-color: $blue-v48;
+  color: $blue-v69;
+}
+.OpenAuth {
+  background-color: $blue-v41;
+  color: $blue-v39;
+}
+.BasicAuth {
+  background-color: $gray-v96;
+  color: $gray-v3;
+}
+.APIkeyAuth {
+  background-color: $green-v22;
+  color: $green-v17;
+}
+.DisabledAuth {
+  background-color: $gray-v99;
+  color: $gray-v3;
+}
+.ExpiredAuth {
+  background-color: $red-v31;
+  color: $red-v20;
+}
+.OAuthStyle {
+  background-color: $gray-v3;
+  color: $white;
+}
+.TokenAuth {
+  background-color: $orange-v26;
+  color: $orange-v25;
+}
+.BR50 {
+  border-radius: 50%;
+}
+.DefaultLogo {
+  width: 16px;
+  height: 12px;
+}
+.WorkhallLogo {
+  width: 15px;
+  height: 15px;
+}
+.ConnectorLogo {
+  width: 32px;
+  height: 32px;
+  margin: 0px 16px 0px 8px;
+  padding: 6px;
+}
+.LogoContainer {
+  background: $blue-v41;
+  width: 32px;
+  height: 32px;
+  margin: 0px 16px;
+}
+.LogoIntegrationContainer {
+  background: $blue-v41;
+  width: 24px;
+  height: 24px;
+  margin: 0px 16px 0px 8px;
+}
+.EditIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 14px;
+}
+.IntegrationDescription {
+  margin-bottom: 16px;
+}
+.CancelButton {
+  font-size: $font-size-mdt;
+  color: $black-v18;
+  cursor: pointer;
+}
+.HeaderTitle {
+  display: inline-block;
+  width: 300px;
+}
+.ChildComponent {
+  height: calc(100vh - 90px);
+  overflow-y: scroll;
+}
+.ViewComponent {
+  overflow-y: scroll;
+  flex: 1 1;
+}
+.AddButton {
+  height: 32px !important;
+}
+.AddEventContainer {
+  position: absolute !important;
+  top: 0px !important;
+  z-index: 25;
+}
+.ListingPage {
+  padding: 16px 24px;
+}
+.CardLoader {
+  height: 48px;
+  margin: 5px 0px;
+  padding: 4px 15px;
+}
+.DropdownContainer {
+  width: 100% !important;
+}
+.AddCustomElem {
+  color: $blue-v39;
+  font-size: $font-size-mdt;
+  padding: 13px 0;
+  cursor: pointer;
+  border-radius: 2px;
+  font-weight: 500;
+  border-top: 1px solid $gray-v68;
+}
+.TableBody{
+  height: calc(100vh - 150px);
+  padding: 0 24px;
+}
+.SaveButton {
+  padding: 6px 10px !important;
+}
+.PublishButton {
+  min-width: 110px !important;
+}
+.ConnectorName {
+  max-height: 29px !important;
+}
+.TooltipError {
+  max-width: 450px !important;
+  background-color: $red-v14 !important;
+  color: $red-v12 !important;
+}
+.TooltipArrow::before {
+  border-top-color: $red-v14 !important;
+  border-bottom-color: $red-v14 !important;
+}
+.HeaderLogo {
+  background: $blue-v41;
+  width: 48px;
+  height: 48px;
+  border-radius: 3px;
+}
+.EditContainer {
+  overflow: hidden !important;
+}
+.BackIcon {
+  width: 9px;
+  height: 12px;
+  object-fit: contain;
+  margin-right: 7px;
+}
+
+.Layout {
+ height: calc(100vh - 62px) !important;
+  @include for-desktop {
+    height: calc(100vh - 64px) !important;
+  }
+}
+
+.Description {
+  @include for-phone-and-tab {
+    max-width: 40vw;
+  }
+  @include for-desktop {
+    max-width: 55vw;
+  }
+}
+.FullDescription {
+  max-width: 55vw;
+}
+.HeaderWidth {
+  width: calc(100% - 48px);
+}
+
+.Title {
+  width: calc(100% - 150px);
+}
+
+.BreadcrumbText {
+  font-size: $font-size-sm;
+  font-weight: $fw-normal;
+}
+
+.MlTable{
+  & thead{
+   & tr {
+      & th {
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+      }
+      & th:first-child {
+        padding-left: 12px;
+      }
+      & th:last-child {
+        padding-right: 12px;
+      }
+    } 
+  }
+  & tbody{
+    & tr:hover td:nth-child(1) svg path {
+      fill: $blue-v39;
+      stroke: none;
+    }
+    & td:first-child {
+      padding-left: 12px;
+    }
+    & td:last-child {
+      padding-right: 12px;
+    }
+    & td{
+      padding-top: 12px !important;
+      padding-bottom: 12px !important;
+    }
+  }
+}

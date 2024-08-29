@@ -1,0 +1,21 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.CheckBox * {
+  margin-right: 0px;
+}
+
+
+.CheckBoxFloatRight {
+  float: right;
+}
+
+.ReadOnlyIcon {
+  width: 19px;
+  height: 12px;
+}
+
+.EditIcon {
+  width: 16px;
+  height: 16px;
+}

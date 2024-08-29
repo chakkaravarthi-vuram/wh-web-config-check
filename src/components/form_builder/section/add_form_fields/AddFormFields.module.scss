@@ -1,0 +1,45 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.Container {
+  border: dashed 1px $gray-v68 !important;
+  border-radius: 4px;
+  padding: 15px 15px 15px 20px;
+  box-shadow: none;
+  position: inherit;
+  // max-width: 340px ;
+  width: 300px !important;
+  height: 88px;
+  &:hover {
+    border: solid 1px $blue-v39 !important;
+    background-color: $blue-v41;
+  }
+  @include for-phone-and-tab {
+    width:100%
+  }
+  & .CircularBadge {
+    height: 32px;
+    width: 32px;
+    // margin-right: 22px;
+  }
+  & .AddIcon {
+    width: 16px;
+    height: 16px;
+    margin: 0 10px 0 0;
+    object-fit: contain;
+    border-radius: 1px;
+    fill: $blue-v39;
+}
+    // margin-right: 22px;
+  }
+
+.FieldsContainer {
+  z-index: 100;
+  top: 0;
+  left: -10px;
+}
+
+.AddActionButtonContainer {
+  height: 123px;
+  width: 100%;
+}

@@ -1,0 +1,82 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.ValueContainer {
+  height: 36x;
+  border-radius: 2px;
+  border: 1px solid $gray-v1;
+  background-color: $white;
+  padding: 4px 8px 4px 4px;
+  gap: 8px;
+}
+.ValueTypeFlex {
+  width: 155px;
+  > button {
+    border-radius: 2px !important;
+    background-color: $blue-v47 !important;
+  }
+}
+.ValueTypeFlex > button > div > div > div > div {
+  color: $blue-v39 !important;
+  font-size: $font-size-sm !important;
+  font-weight: $fw-semibold !important;
+}
+.ValueFlex {
+  flex-basis: 60%;
+}
+
+.SecondNestedView {
+  background-color: $white;
+  border: 1px solid $gray-v102;
+  & .Dropdown{
+      width: 100%;
+  }
+}
+
+.TableDropdownMaxWidth {
+  max-width: 220px;
+  min-width: 90px;
+  @media (max-width: 1600px ){
+    max-width: 250px;
+  }
+  @media (max-width: 1450px ){
+    max-width: 235px;
+  }
+  @include for-hd-screen-v2 {
+    max-width: 175px;
+  }
+  @include for-medium-hd-screen {
+    max-width: 120px;
+  }
+  @media (max-width: 1100px ){
+    width: 40px;
+  }
+}
+
+.DropdownMaxWidth {
+  max-width: 280px;
+  min-width: 150px;
+  @media (max-width: 1600px ){
+    max-width: 250px;
+  }
+  @media (max-width: 1450px ){
+    max-width: 210px;
+  }
+  @include for-hd-screen-v2 {
+    max-width: 210px;
+  }
+  @include for-medium-hd-screen {
+    max-width: 180px;
+  }
+  @media (max-width: 1100px ){
+    width: 100px;
+  }
+}
+
+.OptionMaxWidth {
+  max-width: 190px;
+}
+
+.MinWidth16 {
+  min-width: 16px;
+}

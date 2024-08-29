@@ -1,0 +1,68 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+
+.CreateContainer {
+    padding: 10px;
+    background-color: $white;
+    box-shadow: 0 6px 30px 0 $gray-v65;
+    @include border-radius(6px);
+    top: -26px;
+    position: relative;
+  
+    button {
+      width: 100%;
+      font-weight: 500;
+      font-size: $font-size-sm;
+      padding: 10px;
+      text-decoration: none;  
+      @include border-radius(3px);
+      border: none;
+      background-color: $white;
+
+      &:hover,
+      &:not([href]):not([tabindex]):hover {
+        color: $blue-v21;
+        background-color: #e8f5fa;
+  
+        svg path {
+          fill: $blue-v21;
+        }
+      }
+    }
+
+    //   &:hover,
+    //   &:not([href]):not([tabindex]):hover {
+    //     color: $blue-v21;
+    //     background-color: #e8f5fa;
+  
+    //     svg path {
+    //       fill: $blue-v21;
+    //     }
+    //   }
+    // }
+    
+    // a, a:not([href]):not([tabindex]) {
+    //   // color: $gray-v3;
+
+    //   &:hover,
+    //   &:not([href]):not([tabindex]):hover {
+    //     color: $blue-v21;
+    //     background-color: #e8f5fa;
+  
+    //     svg path {
+    //       fill: $blue-v21;
+    //     }
+    //   }
+    // }
+}
+
+.IconWidth {
+  width: 18px;
+}
+
+.ActiveSvg {
+  svg {
+      fill: $blue-v21!important;
+  }
+}

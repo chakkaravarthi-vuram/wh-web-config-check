@@ -1,0 +1,209 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+@import '../../scss/Typography.module.scss';
+
+.ContentBlock {
+  padding: 30px;
+  // @extend .MB60;
+  // width: calc(100% - 310px);
+
+  @include for-phone-and-tab {
+    padding: 30px 20px;
+    width: 100%;
+  }
+  @include for-small-device {
+    margin-bottom: 0;
+  }
+  position: relative;
+  z-index: 0;
+}
+
+.RightBlock {
+  position: fixed;
+  top: 95px;
+  right: 30px;
+  width: 280px;
+
+  @include for-phone-and-tab {
+    // position: static;
+    // width: calc(100% - 40px);
+    // margin: 0 auto;
+    // padding-bottom: 30px;
+    display: none;
+  }
+}
+.MobileDisplay {
+  // position: fixed;
+  // top: 95px;
+  // right: 30px;
+  width: 100%;
+  padding: 30px 0 0;
+
+  @include for-desktop {
+    // position: static;
+    // width: calc(100% - 40px);
+    // margin: 0 auto;
+    // padding-bottom: 30px;
+    display: none;
+  }
+}
+.CreateAppModal {
+  padding: 24px;
+  overflow-y: scroll;
+}
+
+// .MainContainer {
+//   color: $white;
+//   height: 100vh;
+//   width: 100vw;
+//   background-color: $gray-v3;
+//   overflow: hidden;
+// }
+
+// .ModalBg {
+//   display: none;
+// }
+
+// .LeftContainer {
+//   width: 50vw;
+//   position: fixed;
+//   @include for-phone-and-tab {
+//     width: 100vw;
+//   }
+// }
+
+// .RightContainer {
+//   position: fixed;
+//   margin: 60px 15px 0px 15px;
+//   height: calc(100vh - 75px);
+//   right: 0;
+//   overflow: hidden;
+//   z-index: 3;
+//   @include for-phone-and-tab {
+//     z-index: 4;
+//     bottom: 0;
+//     margin: 0px !important;
+//   }
+// }
+
+// .MyTaskMobileView {
+//   display: none;
+//   position: fixed;
+//   // height: calc(100vh - 75px);
+//   bottom: 0;
+//   right: 0;
+//   overflow: hidden;
+//   z-index: 3;
+//   @include for-phone-and-tab {
+//     display: block;
+//   }
+// }
+
+// .Mob {
+//   display: none;
+//   @include for-phone-and-tab {
+//     display: block;
+//   }
+// }
+// .TopBar {
+//   right: 0;
+//   margin-top: 36px;
+//   z-index: 4;
+//   margin-right: 43px;
+// }
+// .NotificationIcon {
+//   width: 18px;
+//   height: 20px;
+//   fill: $gray-v25;
+// }
+// .UserImage {
+//   width: 24px;
+//   height: 24px;
+//   object-fit: contain;
+// }
+// .OneThingLogoSmall {
+//   left: 10px;
+//   bottom: 10px;
+// }
+// .Logo {
+//   height: 15px;
+// }
+// .OneThingShapeArt {
+//   left: -75px;
+//   bottom: -30px;
+// }
+// .NavButtonContainer {
+//   z-index: 1;
+// }
+// .LeftPane {
+//   width: 230px;
+//   top: 30px;
+//   left: 30px;
+//   z-index: 4;
+
+//   // & .OneThingLogo {
+//   //   width: 15px;
+//   //   height: 16px;
+//   //   object-fit: contain;
+//   // }
+
+//   // & .CompanyLogo {
+//   //   max-height: 32px;
+//   //   max-width: 180px;
+//   //   margin-left: 33px;
+//   //   @include for-phone-and-tab {
+//   //     margin-left: 20px;
+//   //   }
+//   // }
+//   // @include for-phone-and-tab {
+//   //   width: auto;
+//   //   top: 20px;
+//   //   left: 30px;
+//   // }
+// }
+// .HelpIconContainer{
+//   background-color:  rgba(255, 255, 255, 0.1);
+//   bottom: 30px;
+//   left:30px;
+//   border-radius: 9px;
+//   //z-index:7;
+//   position: fixed;
+//   width:36px;
+//   height:36px;
+//   padding-top:10px;
+//   padding-left: 5px;
+// }
+// .HelpIcon{
+//   // width:10px;
+//   // height:17px;
+//    position: fixed;
+//   // left:30px;
+//   // bottom: 30px;
+//   // z-index:6;
+//   //top:10px;
+//   // top:20px;
+// }
+// .NoneHelpIcon{
+//   display: none;
+// }
+// // .HelpIconMenuContainer{
+// //   height:120px;
+// //   width:150px;
+// //   background-color: blueviolet;
+// //   border-radius: 8px;
+// //   padding: 10px;
+// // }
+
+// // .Icon{
+// //   width:20px;
+// //   height:20px;
+// // }
+
+// // .MenuLabel{
+// //   color:$white;
+// //   font-size:13px;
+// // }
+
+.TrialHeight {
+  top: 145px !important;
+}

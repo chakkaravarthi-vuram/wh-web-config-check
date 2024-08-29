@@ -1,0 +1,30 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+.Input {
+  border-style: none;
+  width: 100%;
+  color: $gray-v3;
+  &::placeholder {
+    color: $gray-v6;
+    opacity: 1;
+    font-weight: $fw-normal;
+  }
+}
+
+.CloseIcon {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  stroke-width: 30px;
+  // right: 0%;
+  opacity: 0.9;
+  &:focus{
+    outline: none;
+  }
+}
+
+.SearchResultsContainer {
+    width: 100%;
+  }
+  

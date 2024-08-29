@@ -1,0 +1,78 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.FlowMetricsContainer {
+  padding: 30px;
+}
+.TableHeaderDiv {
+  display: flex;
+  justify-content: space-between;
+}
+.HeaderContainer {
+  & td {
+    border-top: 1px solid $white !important;
+    border-left: 1px solid $white !important;
+    border-right: 1px solid $white !important;
+    background-color: $white !important;
+  }
+}
+.TableBodyContainer {
+  & tr:hover td {
+    background-color: $gray-v63 !important;
+  }
+}
+.MostFlowContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  background-color: $white;
+  border-radius: 6px;
+  padding: 30px;
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.RowContainer {
+  white-space: nowrap;
+  background-color: $white;
+  padding: 11px 180px 11px 19px !important;
+  height: 50px !important;
+  max-width: '300px';
+  &:hover {
+    background-color: $gray-v68;
+  }
+}
+.ActionButtonContainer {
+  z-index: 2;
+}
+.TestBedSlider {
+  background-color: $gray-v75 !important;
+  &:before {
+    background-color: $gray-v53 !important;
+  }
+}
+.TestBedCheckbox:checked + .TestBedSlider {
+  border: solid 1px $red-v5 !important;
+  background-color: $red-v5 !important;
+  &:before {
+    background-color: $white !important;
+  }
+}
+.DropdownList {
+  position: relative;
+  width: 220px !important;
+  height: 100% !important;
+  border-radius: 6px !important;
+  padding: 4px 0px;
+  z-index: 3 !important;
+  box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.25);
+}
+.DropdownContainer {
+  width: 220px !important;
+}
+@include for-small-device {
+  .DropdownContainer {
+    width: 160px !important;
+  }
+}

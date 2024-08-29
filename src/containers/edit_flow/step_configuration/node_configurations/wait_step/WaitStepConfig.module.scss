@@ -1,0 +1,33 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.ContentTitleClass {
+    color: $gray-v3;
+    margin-bottom: 12px !important;
+}
+.ContentClassSubTitle {
+    font-weight: 500;
+    color: $gray-v104;
+}
+.DeleteStepButton {
+    color: $red-v25 !important;
+}
+.RadioLabelClass {
+    color: $black-v22;
+}
+.DropDownMaxWidth {
+    max-width: 280px;
+}
+.Gap0Important {
+    gap: 0px !important;
+}
+.SpecifiedMaxWidth {
+    width: 150px;
+}
+.InputDropDownMaxWidth {
+    max-width: fit-content !important;
+    border-left: none !important;
+}
+.textClass label {
+    margin-bottom: 6px !important;
+}

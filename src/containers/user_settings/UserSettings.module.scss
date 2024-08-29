@@ -1,0 +1,183 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+.ModalContainer {
+  height: 100%;
+  background-color: $white;
+}
+.CloseVector {
+  margin: 14px 14px 0 0;
+}
+.OkButton {
+  background-color: $blue-v39 !important;
+  border: none !important;
+}
+.InnerModal {
+  padding: 40px 40px 16px !important;
+}
+.ApiKeyName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 22vw;
+}
+.EditIcon {
+  width: 15px;
+  height: 15px;
+  svg path {
+    fill: $blue-v39;
+  }
+}
+.ApiKeyTitle {
+  font-size: $font-size-xl;
+  color: $gray-v3;
+  font-weight: $fw-semibold;
+  line-height: normal;
+}
+.BlueText {
+  color: $blue-v39;
+  font-weight: $fw-semibold;
+  font-size: $font-size-mdt;
+}
+.FieldLabel {
+  font-size: $font-size-sm;
+  font-weight: $fw-semibold;
+  color: $gray-v104;
+}
+.ViewKeyModal {
+  height: fit-content;
+  border-radius: 4px;
+}
+.CopyTick {
+  width: 20px;
+  height: 20px;
+}
+.ApiKeyValue {
+  color: $black-v20;
+  font-size: $font-size-mdt;
+  font-weight: $fw-semibold;
+}
+.CancelBtn {
+  padding: 0 !important;
+}
+.KeyInfo {
+  font-size: $font-size-smt;
+  color: $gray-v104;
+}
+.KeySuccess {
+  padding: 12px 16px;
+  border-radius: 3px;
+  background: $green-v19;
+}
+.KeySuccessTitle {
+  color: $green-v23;
+  font-size: $font-size-mdt;
+  font-weight: $fw-semibold;
+  line-height: 24px;
+}
+.KeySuccessInfo {
+  color: #344054;
+  font-size: $font-size-sm;
+  font-weight: $fw-normal;
+  line-height: 18px;
+}
+.CreatedKey {
+  padding: 8px 12px;
+  border-radius: 3px;
+  border: 1px solid $gray-v102;
+  background: $white;
+}
+.TableContainer {
+  max-height: 50vh;
+  overflow-y: scroll;
+}
+.RowText {
+  font-size: $font-size-sm;
+  font-weight: $fw-normal;
+  color: $gray-v89;
+}
+.ApiKey {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
+}
+.ModalContent {
+  margin: 15px 15px 15px 0px !important;
+  overflow: initial !important;
+  border-radius: 6px;
+  width: 60vw;
+}
+
+.CloseIconClass {
+  margin: 0 15px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include border-radius(4px);
+  border: solid 1px #dadfe7;
+  background-color: #fff;
+  fill: $gray-v53;
+  top: 11px;
+  right: 0px;
+  z-index: 1;
+}
+.ApiKeyTable {
+  & thead {
+    & th{
+      border-top: 1px solid $gray-v108;
+      background: $gray-v110 !important;
+    }
+  }
+  tbody {
+    & tr:hover {
+      & td:nth-child(2) {
+        .RowText {
+          color: $blue-v39;
+        }
+      }
+    }
+  }
+}
+.CloseButton {
+  width: 12px;
+  height: 12px;
+  fill: #6c727e;
+  // background-color: $gray-v53;
+  @include border-radius(1px);
+}
+
+.FillClass {
+  fill: #14162a;
+}
+
+.TitleWidth {
+  width: 225px !important;
+}
+.EditKeyFooter {
+  padding: 0 40px 40px;
+}
+.CreateNew {
+  color:  $blue-v39;
+  font-size: $font-size-mdt;
+  font-weight: $fw-semibold;
+  line-height: 20px;
+}
+.EditModalMain {
+  padding: 0 40px;
+  border-radius: 4px;
+}
+.ViewModalMain {
+  padding: 0 40px 40px;
+  border-radius: 4px;
+}
+.EditKeyHeader {
+  padding: 16px 16px 8px;
+  width: 100%;
+}
+.TitleInfo {
+  font-size: $font-size-mdt;
+  font-weight: $fw-normal;
+  color: $black-v12;
+}

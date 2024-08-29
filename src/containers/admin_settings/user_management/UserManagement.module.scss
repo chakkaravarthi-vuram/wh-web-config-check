@@ -1,0 +1,151 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.UserSearch,
+.DropdownContainer {
+  flex-grow: 1;
+}
+
+.MemberList {
+  & li {
+    margin-top: -1px;
+  }
+}
+
+.Button {
+  padding: 8px 30px;
+}
+
+.UnSelectedColor {
+  color: $black-v2;
+  background-color: #fff;
+  label {
+    font-weight: $fw-semibold;
+  }
+}
+
+.SelectedColor {
+  color: $blue-v39;
+  background-color: #fff;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.FilterIconContainer {
+  border-width: 1px;
+  border-style: solid;
+  height: 32px;
+  width: 32px;
+  border-radius: 4px;
+
+  & .FilterIcon {
+    height: 16px;
+    width: 16px;
+  }
+}
+.ModalPadding {
+  width: 600px;
+  // height: calc(100% - 64px) !important;
+}
+
+// .RowsPerPage{
+//   font-size: 13px;
+//   color:$gray-v12;
+//   margin-top: 10px;
+// }
+.MailDisplayNone {
+  display: none;
+}
+.UserManagementRowClass {
+  height: 48px !important;
+}
+.UserManagementProfile {
+height: 24px !important;
+width: 24px !important;
+}
+.UserManagementContentPadding {
+  padding: 12px 20px !important;
+}
+.CommonHeader {
+  background-color: $white;
+  padding: 0px 22px 8px;
+}
+.UserContent {
+  padding: 0px 30px;
+}
+.InputSearch {
+  background-color: $white;
+  position: relative;
+}
+.SubCommonHeaderTitle {
+  background-color: $white;
+  padding: 20px 0px 5px 20px;
+  margin-bottom: 0;
+}
+
+.SearchIcon {
+  fill: $gray-v77
+}
+
+
+
+.DropdownList {
+  position: relative;
+  width: 90px;
+  height: 100%;
+  border-radius: 6px;
+  top: -30px;
+  left: -40px;
+  z-index: 3;
+  box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.25);
+}
+
+.SortContainer {
+  right: 30px;
+}
+
+.SearchInputPadding {
+  padding-left: 30px!important;
+  padding-right: 90px!important;
+}
+
+.CustomHeight {
+  height: 40px!important;
+}
+
+.Active {
+  content: "";
+  height: 3px;
+  background-color: $blue-v39;
+  position: absolute;
+  left: 0;
+  bottom: -9px;
+  width: 100%;
+}
+
+.LabelStyles {
+  cursor: pointer !important;
+  label {
+    @extend %FS13;
+  }
+}
+.TabContainerWidth {
+  width: 305px;
+}
+
+.ButtonContainerPosition {
+  right: 30px;
+  margin-bottom: 30px;
+}
+
+.InputBorderSearch {
+  border-left: none;
+  border-radius: unset;
+}

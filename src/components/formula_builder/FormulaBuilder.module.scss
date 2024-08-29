@@ -1,0 +1,81 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.FormulaBuilderContainer {
+   position: relative;
+    button {
+        border: none;
+    }
+
+    .TitleDisplay {
+      display: inline-block !important;
+    }
+
+    .TitleButtonContainer {
+      button {
+        border-radius: 4px;
+        padding: 4px 8px;
+      }
+    }
+
+    .FormulaBuilderLoader {
+        font-family: 'Inter', sans-serif;
+        height: 384px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #ddd;
+        background: #FAFBFD;
+        color:$gray-v6;
+        border-radius: 4px;
+       & h1{
+            font-size: 28px;
+            font-weight: 700;
+            animation-name: blink;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+          }
+          
+        & p{
+            font-size: 13px;
+          }
+          
+          @keyframes blink{
+            0%{
+              opacity: 1;
+              transform: scale(1.3);
+            }
+            25%{
+              opacity: .5;
+              transform: scale(1.1);
+            }
+            50%{
+               opacity: .2;
+               transform: scale(1);
+            }
+            75%{
+              opacity: .5;
+              transform: scale(1.1);
+            }
+            100%{
+               opacity: 1;
+              transform: scale(1.3);
+            }
+          }
+    }
+    // & .Loader{
+    //     position: absolute;
+    //     background-color: rgba(0,0,0,0.8);
+    //     top:0;
+    //     bottom: 0;
+    //     left: 0;
+    //     right:0;
+    //     z-index: 1;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     color: $white;
+    // }
+}

@@ -1,0 +1,134 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.DarkTheme {
+    background-color: $black;
+
+    .Error {
+        text-decoration: $red wavy underline;
+        -webkit-text-decoration: $red wavy underline;
+        text-underline-offset: 2px;
+    }
+
+        @extend %FS12;
+        .Field, .Identifier {
+            color: $blue-v21;
+            background-color:  rgba(125, 229, 237, 0.2); //$blue-v29;
+        }
+        .Punctuator {
+            color: $blue-v21 !important;
+        }
+
+        .Linenum {
+            color: $gray-v71;
+        }
+
+        .Keyword {
+            color: $green-v11;
+        }
+
+        .StringLiteral {
+            color: brown;
+        }
+
+        .BooleanLiteral {
+            color: steelblue;
+        }
+
+        .LineComment , .BlockComment {
+            color: $gray-v1;
+        }
+
+        .NumericLiteral{
+            color: lightseagreen
+        }
+
+        .Plain{
+            color: $white;
+        }
+
+    .ButtonContainFill {
+        .ButtonTheme {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.7);
+        }
+    }
+}
+
+.LightTheme {
+    background-color: $white;
+
+    span{
+        font-family:  monospace, 'Courier New', Courier;
+    }
+
+    .Error {
+        text-decoration: $red wavy underline;
+        -webkit-text-decoration: $red wavy underline;
+        text-underline-offset: 2px;
+    }
+        @extend %FS12;
+        .Field, .Identifier {
+            // color: $blue-v21;
+            // background-color: rgba(125, 229, 237, 0.2);//$blue-v29;
+            background-color: $gray-v107;
+            color: $black-v20;
+            font-weight: 500;
+            border-radius: 3px;
+            padding-right: 3px;
+            margin: 0 1px;
+        }
+        .Punctuator {
+            color: $blue-v21 !important;
+            // color: #000;
+            padding: 0 3px;
+            font-weight: 500;
+        }
+
+        .Linenum {
+            color: $gray-v71;
+        }
+
+        .Keyword {
+            // color: $green-v11;
+            // background-color: $green-v28 ;
+            color: $green-v27;
+            font-weight: 500;
+            padding-right: 3px;
+            // border: 1px solid $green-v29;
+            // border-radius: 3px;
+            // padding: 0 5px;
+            // mix-blend-mode: multiply;
+        }
+
+        .StringLiteral {
+            color: brown;
+        }
+
+        .BooleanLiteral {
+            color: steelblue;
+        }
+
+        .LineComment , .BlockComment {
+            color: $gray-v1;
+        }
+
+        .NumericLiteral{
+            color: lightseagreen
+        }
+
+        .Plain{
+            color: $black;
+        }
+    }
+
+    .ButtonContainFill {
+        .ButtonTheme {
+            background-color: $gray-v81;
+            color: $black-v13;
+        }
+    }
+
+    .WhiteSpace {
+        white-space: pre;
+    }

@@ -1,0 +1,32 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.AlertNote{
+    color: $orange-v14;
+    background-color: $orange-v13;
+    padding: 10px 13px;
+    list-style: disc;
+    list-style-position: inside;
+    border-radius: 4px;
+  }
+.ErrorNote{
+    color: $red-v2;
+    background-color: $red-v16;
+    padding: 10px 13px;
+    list-style: disc;
+    list-style-position: inside;
+    border-radius: 4px;
+}
+.DeleteIcon{
+  fill: $gray-v87;
+}
+.DeleteIconContainer{
+  height: 24px;
+  width: 24px;
+  @include border-radius(4px);
+  align-self: center;
+  margin-top: 10px;
+  &:hover{
+    background-color: $gray-v96;
+  }
+}

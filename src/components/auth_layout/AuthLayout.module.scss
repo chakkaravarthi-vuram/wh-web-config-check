@@ -1,0 +1,276 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+// header or navbar css
+.Header {
+  padding: 15px 30px;
+  height: 70px;
+  z-index: 2;
+}
+.ExistingAcntText {
+  @include for-phone-and-tab {
+    display: none;
+  }
+  @include for-small-device {
+    display: none;
+  }
+}
+.Button {
+  margin: 0;
+  height: 40px;
+  min-width: 120px;
+  @include for-phone-and-tab {
+    padding-left: 17px;
+    padding-right: 16px;
+  }
+}
+.Logo {
+  height: 24px;
+  @include for-small-device {
+    display: none;
+  }
+}
+.SmallLogo {
+  height: 24px;
+  display: none;
+  @include for-small-device {
+    display: block;
+  }
+}
+
+// signin
+.SignInHeader {
+  display: block;
+  margin-bottom: 30px;
+  @include for-small-device {
+    font-size: 23px;
+  }
+}
+.ContinueButtonContainer {
+  text-align: center;
+  margin-top: 20px;
+}
+.SignInButton {
+  height: 40px;
+  @include for-small-device {
+    font-size: $font-size-sm;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  svg {
+    fill: none !important;
+    stroke: none !important;
+  }
+}
+.Timer {
+  color: $blue-v39;
+}
+.ForgotPwd {
+  color: $blue-v39;
+  @include for-small-device {
+    display: none;
+  }
+  &:hover{
+    text-decoration: none;
+    color: $blue-v39;
+  }
+}
+.ForgotPwd1 {
+  color: $blue-v39;
+  display: none;
+  @include for-small-device {
+    display: block;
+  }
+}
+.TryAnotherAccount, .TryAnotherAccount:hover{
+  color: $blue-v39;
+}
+
+// signup
+.AdditionalDetails {
+  padding: 50px !important;
+}
+.MessageContainer {
+  margin-top: 19px;
+}
+.ChangeEmail:hover{
+  color: $blue-v39;
+  text-decoration: none;
+}
+
+// signin & reset password
+.HideUsername {
+  visibility: hidden !important;
+  max-height: 0px;
+}
+
+// forgot password
+.ForgotPasswordHeader {
+  display: block;
+  @include for-small-device {
+    font-size: 23px;
+  }
+}
+.NavList {
+  list-style: none;
+  & button {
+    margin-right: 30px;
+    text-decoration: none;
+    line-height: 1;
+    height: 40px !important;
+    &:last-of-type {
+      margin-right: 0px;
+    }
+    &:hover {
+      box-shadow: none !important;
+    }
+  }
+}
+
+// reset password page - mani
+// reset password success page
+// .emailSvg{
+//   margin: auto;
+// }
+// .horizontalLine{
+//   width: 100%;
+//   border: solid 1px #d8dee9;
+// }
+
+// Container
+.Container {
+  background-color: $gray-v40;
+}
+.Body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include for-small-height-device {
+    justify-content: start;
+  }
+  @include for-small-to-medium-height-device {
+    justify-content: start;
+  }
+}
+.InnerContainer {
+  padding: 40px 60px 50px 60px;
+  width: 420px;
+  border-radius: 8px;
+  box-shadow: 2px 4px 30px 0 rgba(0, 0, 0, 0.2);
+  background-color: $white;
+  @include for-small-device {
+    width: calc(100% - 60px);
+    padding: 30px 40px 30px 40px;
+  }
+  @include for-small-height-device {
+    margin-top: 20px;
+  }
+  @include for-very-small-height-device {
+    // margin-top: 20px;
+    // border-radius: 0px;
+    // width: 100vw;
+    // box-shadow: unset;
+    // background-color: unset;
+    max-width: 300px;
+    padding: 30px 20px;
+    width: calc(100% - 40px);
+  }
+}
+.BackgroundContainer {
+  display: flex;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  @include for-very-small-height-device {
+    display: none;
+  }
+}
+.BottomGradientBG {
+  height: 38vh;
+  //background-image: linear-gradient(82deg, #72be44 0%, #00a0fd 100%);
+  background-color: $gray-v95;
+  // @include for-phone-and-tab{
+  //   margin-right: 10px;
+  // }
+}
+.BottomText {
+  @include for-very-small-height-device {
+    display: none;
+  }
+}
+.LandingContainer {
+  padding: 50px !important;
+  width: auto !important;
+  max-width: 801px !important;
+}
+
+.DropdownContainer {
+  height: 44px !important;
+}
+
+.InputPadding {
+  padding: 9px 15px !important;
+}
+
+.InputDomainUrl {
+  // padding: 2px 25px !important;
+}
+
+.InputDomainUrlInner {
+  border-bottom: 1px solid $gray-v1;
+  border-radius: unset;
+  padding: 3px 7px !important;
+
+  input {
+    max-width: 200px;
+  }
+  @include for-very-small-height-device {
+    input {
+      max-width: 160px;
+    }
+  }
+}
+
+.ForgotPasswordTop {
+  margin-top: 4% !important
+}
+.UpdatePasswordTop {
+  margin-top: 6% !important;
+}
+
+//privacy policy page - link hover styles
+.headingLink:hover{
+  a{
+    visibility: visible !important;
+  }
+}
+
+.LanguageDropdown {
+  border-left: 1px solid $gray-v2;
+}
+.SuffixClass {
+  max-width: 100px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.PacsLogo {
+  height: 40px;
+  @include border-radius(4px);
+}
+
+.Imageclass {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.AccountLogo {
+  max-height: 75px;
+  max-width: 70%;
+  object-fit: contain;
+  height: 100%;
+  width: 70%;
+}

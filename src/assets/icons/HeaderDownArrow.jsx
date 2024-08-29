@@ -1,0 +1,26 @@
+import React from 'react';
+
+function HeaderDownArrow(props) {
+  const { width, height } = props;
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width || '16'}
+      height={height || '16'}
+      fill="none"
+      viewBox="0 0 16 16"
+    >
+      <g>
+        <path
+          stroke="#959BA3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.333"
+          d="M8 3.333v9.334m0 0L12.667 8M8 12.667L3.333 8"
+        />
+      </g>
+    </svg>
+  );
+}
+
+export default HeaderDownArrow;

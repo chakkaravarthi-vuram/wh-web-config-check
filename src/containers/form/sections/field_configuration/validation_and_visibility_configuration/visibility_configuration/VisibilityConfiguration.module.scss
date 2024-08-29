@@ -1,0 +1,43 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.PopperLayout {
+  border-radius: 3px;
+  background: $white;
+  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.10);
+  border: 0px solid $gray-v105;
+  background-color: $white;
+}
+
+.ChoosePopup {
+  z-index: 10;
+  position: relative !important;;
+  margin-top: -50px;
+  width: 50%;
+}
+
+.ChooseRuleFooter {
+  grid-gap: 24px;
+  border-top: 1px solid $gray-v88;
+  padding: 16px 24px 24px 24px;
+}
+
+.VisibilityPopper {
+  width: 300px;
+  margin-left: 40px !important;
+}
+
+.VisibilityContainer {
+  @include border-radius(6px);
+  padding: 16px 24px;
+  background-color: $gray-v109;
+}
+
+.RuleSelection {
+  background-color: $gray-v109 !important;
+}
+
+.RadioGroupLabelClass label {
+  color: $black-v20 !important;
+  font-weight: 500 !important;
+}

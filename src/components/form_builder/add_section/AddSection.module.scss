@@ -1,0 +1,42 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.Container {
+  padding: 8px 15px;
+  box-shadow: none;
+}
+.AddBtnContainer {
+  border: dashed 1px $gray-v68;
+  background-color: $white;
+  width: 100%;
+  height: 48px;
+}
+.AddIcon {
+  width: 16px;
+  height: 16px;
+  margin: 0 7px 0 0;
+  object-fit: contain;
+  border-radius: 1px;
+  fill: $blue-v39;
+}
+.BtnContainer {
+  border: none;
+  min-width: 130px;
+  background: none;
+  padding: 5px 0;
+  height: 30px;
+}
+.ButtonText {
+  color:  $blue-v39;
+  @extend %FS13;
+  font-weight: $fw-semibold;
+}
+.Import {
+  text-align: right;
+  width: 90%;
+}
+.SectionBorder {
+  width: 100%;
+  height: 1px;
+  background-color: $gray-v68;
+}

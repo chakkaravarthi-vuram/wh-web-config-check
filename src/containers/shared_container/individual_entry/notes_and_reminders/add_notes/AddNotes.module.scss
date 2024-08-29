@@ -1,0 +1,20 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.Container {
+  padding-right: 50px;
+}
+
+.Dropdown {
+  width: 230px;
+}
+
+.Notes {
+  height: 90px;
+}
+
+.PageTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: $gray-v3;
+}

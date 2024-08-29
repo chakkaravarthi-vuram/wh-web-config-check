@@ -1,0 +1,13 @@
+@import '../../../../../scss/constants';
+@import '../../../../../scss/utilities';
+
+.SnoozeMessage {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.SnoozeTaskComments > label {
+  @extend %FTwo12Important;
+  @extend %BlackV20;
+  @extend %FontWeight500;
+}

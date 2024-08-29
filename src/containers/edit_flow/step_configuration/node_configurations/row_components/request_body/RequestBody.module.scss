@@ -1,0 +1,27 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.InputColumn {
+  width: 20% !important;
+  margin-right: 16px;
+  word-break: break-word;
+}
+.TypeColumn {
+  width: 15% !important;
+  margin-right: 16px;
+}
+.MultipleColumn {
+  width: 15% !important;
+  margin-right: 16px;
+}
+.OutputColumn {
+  flex-grow: 1;
+  margin-right: 16px;
+}
+.MLOutputColumn {
+  flex-grow: 1;
+  margin-right: 16px;
+}
+.Required {
+  color: $red;
+}

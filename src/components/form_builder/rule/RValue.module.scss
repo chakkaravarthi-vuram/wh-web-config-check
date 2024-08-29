@@ -1,0 +1,47 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+.DateErrMsg{
+    margin-top: 10px;
+    margin-bottom: 0;
+ }
+
+.DualField {
+    display: flex;
+    align-items: start;
+    gap: 8px;
+
+    .Text {
+       height: 34px;
+       display: flex;
+       align-items: center;
+    }
+}
+ 
+.height32{
+    height: 32px;
+}
+.RoundedField{
+    border-radius: 3px;
+    overflow: hidden;
+}
+.UserPicker{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin-top: 3px;
+}
+.SingleDropdwon{
+   width: 200px;
+}
+.MultiDropdown {
+    width: 200px;
+}

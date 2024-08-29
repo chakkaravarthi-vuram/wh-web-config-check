@@ -1,0 +1,63 @@
+{
+  "ACCOUNT_NAME": {
+    "ID": "account_name",
+    "LABEL": "Account Name",
+    "PLACEHOLDER": "Company Name…"
+  },
+  "ACCOUNT_DOMAIN": {
+    "ID": "account_domain",
+    "LABEL": "Account Domain",
+    "PLACEHOLDER": "Domain Name…",
+    "SUFFIX": ".workhall.io"
+  },
+  "ACCOUNT_LOGO": {
+    "ID": "acc_logo",
+    "LABEL": "Logo",
+    "PROPERTY": "base64",
+    "ALERT": "Image size exceeded",
+    "LINK_LABEL": "+ Add Logo"
+  },
+  "ACCOUNT_LOGO_URL": {
+    "ID": "acc_logo_url"
+  },
+  "ACCOUNT_LOGO_SIZE": {
+    "VALUE": 1048576
+  },
+  "ACCOUNT_LOGO_ASPECT": 3,
+  "ACCOUNT_LOGO_MIN_WIDTH": 200,
+  "PRIMARY_COLOR": {
+    "ID": "primary_color",
+    "LABEL": "Primary Color"
+  },
+  "SECONDARY_COLOR": {
+    "ID": "secondary_color",
+    "LABEL": "Secondary Color"
+  },
+  "BUTTON_COLOR": {
+    "ID": "button_color",
+    "LABEL": "Button Color"
+  },
+  "SAVE": {
+    "ID": "save",
+    "LABEL": "Save"
+  },
+  "CANCEL": {
+    "ID": "cancel",
+    "LABEL": "Cancel"
+  },
+  "ACCOUNT_DETAILS": "Account Details",
+  "BRANDING_AND_THEME": "Branding and Theme",
+  "CHANGE_LOGO": "Change logo",
+  "NOTE": "Cropped image should be below 1MB and minimum 200px width.",
+  "SUCCESSFUL_UPDATE": {
+    "title": "Updated",
+    "subTitle": "Updated account settings details successfully",
+    "status": 1,
+    "isVisible": true
+  },
+  "UPDATE_FAILURE": {
+    "title": "Error",
+    "status": 2,
+    "isVisible": true
+  }
+}

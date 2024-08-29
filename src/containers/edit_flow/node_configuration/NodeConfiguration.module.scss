@@ -1,0 +1,13 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.DataLossClass {
+    border-radius: 28px;
+    border: 8px solid $red-v24;
+    background-color: $red-v24;
+    display: flex;
+    width: 48px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+}

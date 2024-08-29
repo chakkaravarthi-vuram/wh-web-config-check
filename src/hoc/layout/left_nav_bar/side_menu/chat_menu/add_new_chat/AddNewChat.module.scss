@@ -1,0 +1,55 @@
+@import '../../../../../../scss/utilities';
+
+.AddNewChatDropdown {
+  width: 260px;
+  height: 331px;
+  border-radius: 6px;
+  box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  animation-name: InAnimation;
+  animation-duration: 0.3s;
+
+  @include for-medium-hd-screen {
+    height: 250px;
+  }
+
+  @include for-hd-screen {
+    height: 331px;
+  }
+}
+@keyframes InAnimation {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  100% {
+    width: 260px;
+    height: 331px;
+  }
+}
+
+.Input {
+  padding: 0px 15px 0px 8px;
+  border-bottom: solid 1px #dfe5ec;
+}
+
+.ResultsContainer {
+  padding: 0px 7px;
+  overflow-y: auto;
+  flex: 1;
+  animation-name: ResultsInAnimation;
+  animation-duration: 0.8s;
+}
+@keyframes ResultsInAnimation {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,183 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.LeftContainer {
+  padding: 30px 45px 30px 50px;
+  width: 25vw !important;
+}
+.RightContainer {
+  width: 60vw !important;
+}
+.DlName {
+  max-height: 29px !important;
+}
+.TooltipError {
+  max-width: 450px !important;
+  background-color: $red-v14 !important;
+  color: $red-v12 !important;
+}
+.TooltipArrow::before {
+  border-top-color: $red-v14 !important;
+  border-bottom-color: $red-v14 !important;
+}
+.ContentContainer {
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 40px 60px;
+}
+.ModalContainer {
+  height: 100%;
+  width: 100%;
+  align-items: unset;
+}
+.SettingsContent {
+  height: fit-content;
+}
+.ButtonContainer {
+  height: 64px;
+  display: flex;
+  background-color: $white;
+  bottom: 0;
+  // right: 0;
+  padding: 10px 15px 10px 24px;
+  z-index: 7;
+  @include for-phone-and-tab {
+    z-index: 7;
+    // position: absolute;
+  }
+  @include for-desktop {
+    //  opacity: 0.75;
+    // position: absolute;
+  }
+}
+.SettingsHeader {
+  width: 100% !important;
+  height: fit-content !important;
+}
+.DeleteFlowContainer {
+  width: 55vw;
+  @include border-radius(6px);
+  @include for-desktop {
+    margin: 20px 20px 20px 0px !important; //Margin for create task modal
+    overflow: hidden !important;
+  }
+  @include for-phone-and-tab {
+    width: 100vw;
+  }
+}
+.Container {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-color: $white;
+  position: relative;
+  @include for-desktop {
+    display: flex;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+  @include for-small-height-device {
+    align-items: flex-start;
+    overflow: auto;
+  }
+}
+.ErrorContainer {
+  // width: 60vw;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  // border-radius: 30px;
+  // z-index: 13;
+  position: relative;
+  @include for-desktop {
+    // align-items: center;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+  @include for-small-height-device {
+    align-items: flex-start;
+    overflow: auto;
+  }
+}
+.CreateDataListHeader {
+  background-color: $white !important;
+  border: none !important;
+}
+.CreateDatalistContent {
+  height: 100% !important;
+  padding: 0px 0px 0px 50px;
+  margin-bottom: 0px !important;
+}
+.StartScreenContainer {
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  position: relative;
+
+  @include for-small-height-device {
+    align-items: flex-start;
+  }
+}
+.SaveButton {
+  padding: 6px 10px !important;
+}
+.PublishButton {
+  min-width: 110px !important;
+}
+.ModalContent {
+  margin: 15px 15px 15px 0px !important;
+  overflow: initial !important;
+  border-radius: 6px;
+}
+.ModalContainer {
+  border-radius: 6px;
+  overflow: hidden;
+
+  @include for-phone-and-tab {
+    width: 100%;
+    z-index: 2;
+    top: calc(100vh - 85px);
+  }
+}
+.FillClass {
+  fill: #14162a;
+}
+.FlowModalContainer {
+  position: absolute !important;
+  top: 0px !important;
+  z-index: 25;
+}
+.Label {
+  color: $gray-v9;
+  @extend %FS13;
+}
+.SubHeaderLabelMargin {
+  margin-bottom: 23px;
+}
+.ConfirmationModalButtonContainer {
+  justify-content: center !important;
+}
+.Thumbnail {
+  width: 48px;
+  height: 48px;
+  @include border-radius(3px);
+  background-color: $blue-v41;
+}
+.ThumbnailText {
+fill: $blue-v39;
+}
+
+.DatalistName {
+  overflow: visible !important;
+}
+.CreateMaxWidth {
+  width: 60%;
+}
+.TitleClass {
+  color: $gray-v3;
+}
+
+.CancelButton {
+  color: $gray-v3 !important;
+}

@@ -1,0 +1,35 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.AppInstructionModal {
+    padding: 56px;
+    height: 450px;
+    width: 530px;
+}
+.SkipButton {
+    outline: none;
+}
+.InstructionHeader {
+    margin-bottom: 38px;
+    text-align: center !important;
+}
+.InfoText {
+    color: rgba(104, 107, 111, 0.80);
+}
+.CreateLink {
+    width: fit-content;
+    cursor: pointer;
+    font-size: $font-size-mdt;
+    font-weight: $fw-semibold;
+    color: $blue-v39;
+    padding: 0;
+    &:hover {
+        color: $blue-v69;
+        text-decoration: none;
+        .PlusIcon {
+            path {
+                stroke: $blue-v69;
+            }
+        }
+    }
+}

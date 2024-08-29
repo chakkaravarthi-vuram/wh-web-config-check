@@ -1,0 +1,100 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.LabelWrapper{
+    background-color: $white;
+    // width: fit-content;
+}
+.IconWrapper{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    // margin: auto;
+    // padding: 2px;
+    // display: none;
+}
+.Label{
+    // width: fit-content;
+    width: 50px;
+    padding: 5px;
+    // padding-top: 5px;
+    // padding-left: 5px;
+    // padding-right: 5px;
+    text-align: center;
+    flex-grow: 1;
+}
+.EdgeStyleContainer {
+    padding: 6px;
+    border-radius: 3px;
+    border: solid 1px #dadfe7;
+    background-color: #fff;
+    width: 122.7px;
+    height: 32px;
+}
+.EdgeContainer {
+  padding-right: 7px;
+  margin: 0 3px 0 2px;
+  width: 21.3px;
+  height: 21.3px;
+  // padding-top: 1.5px;
+  background-color: #dadfe7;
+  border-top: solid 2px #dadfe7;
+}
+.SelectedEdgeContainer {
+  padding-right: 7px;
+  margin: 0 3px 0 2px;
+  width: 21.3px;
+  height: 21.3px;
+  // padding-top: 1.5px;
+  background-color: $blue-v39;
+  border-top: solid 2px $blue-v39;
+}
+.StraightEdge{
+  height: 11px;
+  width: 100%;
+  transform: rotate(315deg);
+  /* height: 16px; */
+  transform-origin: center;
+  border-bottom: 2px solid #6c727e;
+}
+.SelectedStraightEdge{
+  height: 11px;
+  width: 100%;
+  transform: rotate(315deg);
+  /* height: 16px; */
+  transform-origin: center;
+  border-bottom: 2px solid white;
+}
+.CurvedEdge {
+  width: 12px;
+  height: 12px;
+  margin: 3.3px 0 4px 4.7px;
+  border-top-right-radius: 5.2px;
+  border-top: solid 2px #6c727e;
+  border-right: solid 2px #6c727e;
+}
+.SelectedCurvedEdge {
+  width: 12px;
+  height: 12px;
+  margin: 3.3px 0 4px 4.7px;
+  border-top-right-radius: 5.2px;
+  border-top: solid 2px white;
+  border-right: solid 2px white;
+}
+.StepEdge {
+  width: 12px;
+  height: 12px;
+  margin: 3.3px 0 4px 4.7px;
+  border-top: solid 2px #6c727e;
+  border-right: solid 2px #6c727e;
+}
+.SelectedStepEdge {
+  width: 12px;
+  height: 12px;
+  margin: 3.3px 0 4px 4.7px;
+  border-top: solid 2px white;
+  border-right: solid 2px white;
+}
+.DeleteIcon{
+  fill: $gray-v87;
+}

@@ -1,0 +1,22 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.MdCancelBtn {
+    border: none;
+    color: $gray-v89;
+ }
+ 
+ .AlertCircle{
+    padding: 6px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $red-v23;
+    border-radius: 50px;
+    border: 8px solid $red-v24;
+    margin-bottom: 16px;
+ }
+
+ .HideVerticalScroll {
+    overflow-y: hidden !important;
+ }

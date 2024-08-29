@@ -1,0 +1,7 @@
+export const PROGRESS_BAR_COLORS_CONSTANTS = {
+  IN_PROGRESS: '#f9b450',
+  COMPLETED: '#6ccf9c',
+  REJECTED: '#f07f7f',
+};
+
+export default PROGRESS_BAR_COLORS_CONSTANTS;

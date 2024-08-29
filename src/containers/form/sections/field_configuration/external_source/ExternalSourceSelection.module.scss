@@ -1,0 +1,77 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.PopperLayout {
+  border-radius: 3px;
+  background: $white;
+  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.10);
+  border: 0px solid $gray-v105;
+  background-color: $white;
+}
+
+.ChoosePopup {
+  position: absolute !important;
+  width: 100%;
+  max-width: 300px;
+  top: auto !important;
+  left: auto !important;
+  z-index: 10;
+}
+
+.ChooseRuleFooter {
+  grid-gap: 24px;
+  border-top: 1px solid $gray-v88;
+  padding: 16px 24px 24px 24px;
+}
+
+.EachRule {
+  display: flex; 
+  padding: 10px 12px;
+  justify-content: space-between;
+  align-items: center; 
+  border-bottom-width: 1px; 
+  outline-style: none; 
+  width: 100%; 
+  cursor: pointer;
+  color: $gray-v3; 
+  font-size: 13px;
+  &:hover {
+    background-color: $blue-v41; 
+  }
+}
+
+.ExternalPopper {
+  background-color: #ffffff; 
+  cursor: default; 
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); 
+  border-color: 1px;
+  > div {
+    max-height: 200px;
+    overflow-y: auto !important;
+  }
+}
+
+.ArrowIcon {
+  fill: $gray-v87 !important;
+}
+
+.GoBackButton {
+  display: inline-block;
+  cursor: pointer;
+  margin: 10px 12px;
+  &:hover {
+    color: $blue-v39;
+    & .ArrowIcon {
+      fill: $blue-v39 !important;
+    }
+  }
+}
+
+.GoBackText {
+  font-size: 13px;
+  padding-left: 8px;
+}
+
+.NoDataText {
+  padding: 10px 12px;
+}

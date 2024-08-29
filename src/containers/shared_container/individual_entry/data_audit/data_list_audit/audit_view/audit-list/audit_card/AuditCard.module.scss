@@ -1,0 +1,48 @@
+@import '../../../../../../../../scss/constants';
+@import '../../../../../../../../scss/utilities';
+.CardContainer{
+    min-height: 62px;
+    border: solid 1px #dadfe7;
+
+}
+.DownArrowIcon{
+    fill: $gray-v87;
+    height: 8px !important;
+    width: 12px !important;
+}
+.UserNameContainer{
+    grid-gap: 15px;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+.Rotate {
+    transition: all 2s cubic-bezier(0, 1, 0, 1);
+  }
+  .EditedBackground{
+    background-color: $orange-v15;
+  }
+  .DeletedBackground{
+    background-color: $red-v15;
+  }
+  .AddedBackgroung{
+    background-color: $green-V9;
+  }
+  .indicator{
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+  }
+  .DetailedView{
+    background-color: $gray-v63;
+    border-top: 1px solid $gray-v68;
+    min-height: 89px;
+  }
+  .DetailedArrow{
+    fill:$blue-v21 !important;
+  }
+  .DetailedContainer{
+    border-color: $blue-v39;
+    .DownArrowIcon{
+        fill: $blue-v39 !important;
+    }
+  }

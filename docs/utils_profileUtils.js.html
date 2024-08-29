@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: utils/profileUtils.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: utils/profileUtils.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/** @module profile * */
+
+import { DEFAULT_COLORS_CONSTANTS } from './UIConstants';
+import jsUtils, { nullCheck } from './jsUtility';
+import { ROLES } from './Constants';
+import store from '../Store';
+import * as actions from '../redux/actions/Actions';
+/**
+ * @memberof profile
+ */
+/**
+ * @function getColorCodes
+ * @description To return configured or default color codes
+ * @return {Object}
+ */
+ export function getColorCodes(responseColorCodes) {
+    const buttonColor = responseColorCodes.button_color
+      ? responseColorCodes.button_color
+      : DEFAULT_COLORS_CONSTANTS.BUTTON;
+    const primaryColor = responseColorCodes.primary_color
+      ? responseColorCodes.primary_color
+      : DEFAULT_COLORS_CONSTANTS.PRIMARY;
+    const secondaryColor = responseColorCodes.secondary_color
+      ? responseColorCodes.secondary_color
+      : DEFAULT_COLORS_CONSTANTS.SECONDARY;
+    const colorCodes = {
+      primaryColor,
+      secondaryColor,
+      buttonColor,
+    };
+    return colorCodes;
+  }
+/**
+ * @memberof profile
+ */
+  /**
+ * @function getSignedUrlFromDocumentUrlDetails
+ * @param {Object} document_url_details
+ * @param {string} document_id
+ * @description to retrieve signed url deom document details obejct
+ * @return {string}
+ */
+export const getSignedUrlFromDocumentUrlDetails = (
+    document_url_details,
+    document_id,
+  ) => {
+    if (!jsUtils.isEmpty(document_url_details) &amp;&amp; document_id) {
+      const document = jsUtils.find(document_url_details, {
+        document_id,
+      });
+      return document ? document.signedurl : null;
+    }
+    return null;
+  };
+/**
+ * @memberof profile
+ */
+/**
+ * @function updateAdminProfileInRedux
+ * @param {Object} response userdetails server response
+ * @param {Object} acc_logo account logo
+ * @param {Object} profile_pic profile picture
+ * @param {Object} socket socket connection
+ * @param {function} setAdminProfile
+ * @param {Object} acc_cover_pic account profile picture
+ * @description update admin details in redux
+ */
+ const updateAdminProfileInRedux = (
+    response,
+    acc_logo,
+    profile_pic,
+    socket,
+    setAdminProfile,
+    acc_cover_pic,
+  ) => {
+    const adminProfileJson = Object.freeze({
+      id: response._id,
+      user_name: response.username,
+      email: response.email,
+      acc_logo,
+      first_name: response.first_name,
+      last_name: response.last_name,
+      allowed_extensions: response.allowed_extensions,
+      allowed_currency_types: response.allowed_currency_types,
+      maximum_file_size: response.maximum_file_size,
+      isAdmin: true,
+      profile_pic,
+      default_currency_type: response.default_currency_type,
+      account_domain: response.account_domain,
+      socket,
+      pref_utc_offsetStr: response.pref_utc_offsetStr,
+      pref_timezone: response.pref_timezone,
+      show_cover: response.show_cover,
+      cover_type: response.cover_type,
+      cover_message: response.cover_message,
+      cover_color: response.cover_color,
+      acc_cover_pic,
+    });
+    setAdminProfile(adminProfileJson);
+  };
+  /**
+ * @memberof profile
+ */
+  /**
+ * @function updateProcedureCreatorProfileInRedux
+ * @param {Object} response userdetails server response
+ * @param {Object} acc_logo account logo
+ * @param {Object} profile_pic profile picture
+ * @param {Object} socket socket connection
+ * @param {function} setProcedureCreatorProfile
+ * @param {Object} acc_cover_pic account profile picture
+ * @description update procedure creator details in redux
+ */
+  const updateProcedureCreatorProfileInRedux = (
+    response,
+    acc_logo,
+    profile_pic,
+    socket,
+    setProcedureCreatorProfile,
+    acc_cover_pic,
+  ) => {
+    const procedure_creator_profile_json = Object.freeze({
+      id: response._id,
+      user_name: response.username,
+      email: response.email,
+      acc_logo,
+      first_name: response.first_name,
+      last_name: response.last_name,
+      allowed_extensions: response.allowed_extensions,
+      allowed_currency_types: response.allowed_currency_types,
+      default_currency_type: response.default_currency_type,
+      maximum_file_size: response.maximum_file_size,
+      isProcedureCreator: true,
+      profile_pic,
+      account_domain: response.account_domain,
+      socket,
+      show_cover: response.show_cover,
+      cover_type: response.cover_type,
+      cover_message: response.cover_message,
+      cover_color: response.cover_color,
+      acc_cover_pic,
+    });
+    setProcedureCreatorProfile(procedure_creator_profile_json);
+  };
+  /**
+ * @memberof profile
+ */
+  /**
+ * @function updateMemberProfileInRedux
+ * @param {Object} response userdetails server response
+ * @param {Object} acc_logo account logo
+ * @param {Object} profile_pic profile picture
+ * @param {Object} socket socket connection
+ * @param {function} setMemberProfile
+ * @param {Object} acc_cover_pic account profile picture
+ * @description update member details in redux
+ */
+  const updateMemberProfileInRedux = (
+    response,
+    acc_logo,
+    profile_pic,
+    socket,
+    setMemberProfile,
+    acc_cover_pic,
+  ) => {
+    const member_profile_json = Object.freeze({
+      id: response._id,
+      user_name: response.username,
+      email: response.email,
+      acc_logo,
+      first_name: response.first_name,
+      last_name: response.last_name,
+      allowed_extensions: response.allowed_extensions,
+      allowed_currency_types: response.allowed_currency_types,
+      default_currency_type: response.default_currency_type,
+      maximum_file_size: response.maximum_file_size,
+      isMember: true,
+      profile_pic,
+      account_domain: response.account_domain,
+      socket,
+      show_cover: response.show_cover,
+      cover_type: response.cover_type,
+      cover_message: response.cover_message,
+      cover_color: response.cover_color,
+      acc_cover_pic,
+    });
+    setMemberProfile(member_profile_json);
+  };
+  /**
+ * @memberof profile
+ */
+  /**
+ * @function updateProfileInRedux
+ * @param {Object} response userdetails server response
+ * @param {function} setRole set role(admin, procedure creator, member)
+ * @param {function} setColorCode set color code
+ * @param {Object} socket socket connection
+ * @param {function} setAdminProfile
+ * @param {function} setProcedureCreatorProfile
+ * @param {function} setMemberProfile
+ * @param {Object} acc_cover_pic account profile picture
+ * @description update member details in redux
+ */
+  export const updateProfileInRedux = (
+    response,
+    setRole,
+    setColorCode,
+    socket,
+    setAdminProfile,
+    setProcedureCreatorProfile,
+    setMemberProfile,
+  ) => {
+    const color_code_json = getColorCodes(response);
+    let acc_logo = null;
+    let profile_pic = null;
+    let acc_cover_pic = null;
+    if (response.acc_logo &amp;&amp; response.document_url_details) {
+      const acc_logo_object = jsUtils.find(
+        response.document_url_details,
+        (document) => document.document_id === response.acc_logo,
+      );
+      if (!jsUtils.isEmpty(acc_logo_object)) acc_logo = acc_logo_object.signedurl;
+    }
+    if (response.profile_pic &amp;&amp; response.document_url_details) {
+      const profile_pic_object = jsUtils.find(
+        response.document_url_details,
+        (document) => document.document_id === response.profile_pic,
+      );
+      if (!jsUtils.isEmpty(profile_pic_object)) profile_pic = profile_pic_object.signedurl;
+    }
+    if (response.acc_cover_pic &amp;&amp; response.document_url_details) {
+      acc_cover_pic = getSignedUrlFromDocumentUrlDetails(
+        response.document_url_details,
+        response.acc_cover_pic,
+      );
+    }
+    setRole(response.user_type);
+    store.dispatch(
+      actions.roleActionDomainName(response.account_domain, response._id),
+    );
+    setColorCode(color_code_json);
+
+    switch (response.user_type) {
+      case ROLES.ADMIN:
+        updateAdminProfileInRedux(
+          response,
+          acc_logo,
+          profile_pic,
+          socket,
+          setAdminProfile,
+          acc_cover_pic,
+        );
+        break;
+      case ROLES.MEMBER:
+        updateMemberProfileInRedux(
+          response,
+          acc_logo,
+          profile_pic,
+          socket,
+          setMemberProfile,
+          acc_cover_pic,
+        );
+        break;
+      case ROLES.PROCEDURE_CREATOR:
+        updateProcedureCreatorProfileInRedux(
+          response,
+          acc_logo,
+          profile_pic,
+          socket,
+          setProcedureCreatorProfile,
+          acc_cover_pic,
+        );
+        break;
+      default:
+        break;
+    }
+  };
+/**
+ * @memberof profile
+ */
+ /**
+ * @function replaceDocumentIdWithSignedUrlInList
+ * @param {Object} objectArray
+ * @param {Object} documentUrlDetails
+ * @param {string} documentIdFieldName
+ * @description to replace document id with signed url
+ */
+export const replaceDocumentIdWithSignedUrlInList = (
+    objectArray,
+    documentUrlDetails,
+    documentIdFieldName,
+  ) => {
+    if (
+      nullCheck(objectArray, 'length', true)
+      &amp;&amp; nullCheck(documentUrlDetails, 'length', true)
+      &amp;&amp; documentIdFieldName
+    ) {
+      return objectArray.map((obj) => {
+        return {
+          ...obj,
+          [documentIdFieldName]: getSignedUrlFromDocumentUrlDetails(
+            documentUrlDetails,
+            obj[documentIdFieldName],
+          ),
+        };
+      });
+    }
+    return objectArray;
+  };
+
+  export default updateProfileInRedux;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-date%2520_.html">date *</a></li><li><a href="module-encryption%2520_.html">encryption *</a></li><li><a href="module-getter&generator%2520_.html">getter&generator *</a></li><li><a href="module-helper%2520_.html">helper *</a></li><li><a href="module-imagehelper%2520_.html">imagehelper *</a></li><li><a href="module-joi%2520_.html">joi *</a></li><li><a href="module-loader%2520_.html">loader *</a></li><li><a href="module-popover%2520_.html">popover *</a></li><li><a href="module-profile%2520_.html">profile *</a></li></ul><h3>Global</h3><ul><li><a href="global.html#generateActionName">generateActionName</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Thu Aug 12 2021 18:35:32 GMT+0530 (India Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

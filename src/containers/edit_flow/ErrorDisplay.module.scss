@@ -1,0 +1,19 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.Container {
+    border-radius: 10px;
+    padding: 30px;
+}
+.ErrorTitle {
+    text-align: center;
+    color: $red-v8;
+    @extend %FS18;
+    font-weight: $fw-medium;
+}
+.ErrorMsg {
+    text-align: center;
+    color: $gray-v9;
+    @extend %FS13;
+    font-weight: $fw-semibold;
+}

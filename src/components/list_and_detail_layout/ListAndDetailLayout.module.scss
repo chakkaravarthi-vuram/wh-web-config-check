@@ -1,0 +1,25 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+.CloseIcon {
+  top: 20px;
+  right: 20px;
+  @include for-desktop {
+    display: none;
+  }
+}
+
+.SwipeIndicatorContainer {
+  height: 400px;
+
+}
+
+.RightContainerWidthWithoutList {
+  @include for-desktop {
+    width: calc(50vw - 20px) !important;
+  }
+  width:100vw;
+  height:100vh;
+  position:fixed;
+  top:0;
+}

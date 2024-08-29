@@ -1,0 +1,31 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.ContainerBackground {
+  background-color: $gray-v103;
+  border-radius: 3px;
+  position: relative;
+}
+
+.DeleteButton {
+  color: $red-v22;
+  position: absolute;
+  top: 18px;
+  right: 26px;
+}
+
+.PopperClassName {
+  max-height: 300px !important;
+  overflow: hidden;
+  overflow-y: auto;
+  border-bottom: 1px solid $gray-v111;
+  border-radius: 3px;
+}
+
+.LabelClassName {
+  label {
+    color: $gray-v104;
+    font-size: $font-size-sm;
+    font-weight: 500;
+  }
+}

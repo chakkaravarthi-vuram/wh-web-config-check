@@ -1,0 +1,20 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.AddField{
+    height: 76px;
+    border: 1px dashed #D8DEE9;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $gray-v87;
+    font-size: 12px;
+    width: 100%;
+    word-break: break-all;
+
+    &:hover {
+        border-color: #74B0FF;
+        background-color :#F3F9FF;
+    }
+}

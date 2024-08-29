@@ -1,0 +1,26 @@
+@import '../../../scss/utilities';
+@import '../../../scss/constants';
+
+.Container {
+  border-width: 1px;
+  border-style: solid;
+  height: 32px;
+  width: 32px;
+  border-radius: 6px;
+
+  &:hover {
+    .ButtonText {
+      display: none;
+    }
+    .ButtonTextOnHover {
+      display: flex;
+    }
+  }
+}
+
+.ButtonText {
+  display: flex;
+}
+.ButtonTextOnHover {
+  display: none;
+}

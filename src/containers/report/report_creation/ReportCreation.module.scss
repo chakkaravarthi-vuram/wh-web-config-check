@@ -1,0 +1,107 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.Header {
+  padding: 0 24px 13px;
+  background-color: $white;
+  border-bottom: 1px solid $gray-v102;
+
+  .HeaderContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .OptionList {
+    position: absolute;
+    top: 32px;
+    right: 8px;
+    padding: 8px 0;
+    border-radius: 3px;
+    background-color: $white;
+    border: 1px solid $gray-v107;
+    width: max-content;
+    box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.03),
+      0px 12px 16px -4px rgba(16, 24, 40, 0.08);
+    z-index: 3;
+
+    .OptionBtn {
+      padding: 10px 12px;
+      cursor: pointer;
+      display: flex;
+      gap: 8px;
+      font-size: 13px;
+      width: 100%;
+
+      &:hover {
+        background-color: $gray-v107;
+      }
+    }
+  }
+}
+
+.CancelButton {
+  cursor: pointer;
+  margin-right: 16px;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 5px 10px;
+}
+
+.MainContent {
+  height: calc(100vh - 76px);
+  display: flex;
+}
+
+.ReportView {
+  flex: 9;
+  width: 70%;
+  background-color: $gray-v103;
+  padding: 24px;
+}
+
+.ConfigPanel {
+  width: 30%;
+  max-width: 356px;
+  overflow-y: auto;
+  height: 100%;
+  background-color: $white;
+}
+
+.ReportModal {
+  z-index: 152 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  border: 1px solid $gray-v1;
+
+  &:first-child {
+    width: 100vw !important;
+  }
+}
+
+.ModalContent {
+  padding-top: 24px !important;
+  margin: 0 !important;
+}
+
+.ModalFooter {
+  box-shadow: 0px -1px 4px 0px rgba_func($black-v24, 0.08);
+  padding: 12px 24px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.CloseIcon {
+  width: 16px;
+  height: 16px;
+  margin-top: 3px;
+  fill: $gray-v101 !important;
+  outline: none;
+}
+
+.Breadcrumb {
+  &>li:first-child>div>div>div {
+    display: none;
+  }
+}

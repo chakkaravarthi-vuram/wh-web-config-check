@@ -1,0 +1,60 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.ResponseContainer {
+    color: $gray-v101;
+}
+.SectionTitle {
+    color: $gray-v3;
+    font-size: $font-size-xl;
+    font-weight: $fw-semibold;
+}
+.ResponseKey {
+    color: $red-v18;
+}
+.BodyConfig {
+    width: 70%;
+}
+.SampleBody {
+    height: fit-content;
+    margin: 12px 0px;
+    border: 1px solid $gray-v108;
+    padding: 12px;
+    width: 30%;
+    word-break: break-all;
+    font-family: $font-family-2;
+    font-size: $font-size-mdt;
+}
+.HeaderQueryTable {
+    margin: 12px 0px;
+    width: 70%;
+}
+.ErrorCodes {
+    color: $black-v18;
+    font-weight: 500;
+}
+.StatusCodeCont {
+    padding: 12px;
+    border-radius: 8px;
+    background: $white;
+    width: 350px;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.35);
+}
+.StatusCodes {
+    flex-wrap: wrap;
+    height: fit-content;
+}
+.StatusCodeChip {
+    color: $white;
+    font-size: $font-size-sm;
+    font-weight: 500;
+    border-radius: 16px;
+    padding: 2px 8px;
+}
+.StatusCodeBigChip {
+    padding: 4px 8px 4px 4px;
+}
+.ErrorCodeHeading {
+    color: $black-v20;
+    font-weight: 700;
+}

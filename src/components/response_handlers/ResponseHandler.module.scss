@@ -1,0 +1,22 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+.CloseIcon {
+  width: 28px;
+  height: 28px;
+  margin: 0 15px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include border-radius(4px);
+  border: solid 1px #dadfe7;
+  background-color: #fff;
+  top: 10px;
+  right: 10px;
+}
+.CloseButton {
+  width: 12px;
+  height: 12px;
+  fill: $gray-v53;
+  @include border-radius(1px);
+}

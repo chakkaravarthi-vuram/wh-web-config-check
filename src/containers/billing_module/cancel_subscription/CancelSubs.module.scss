@@ -1,0 +1,174 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.ModalContainer {
+    width: 100%;
+    background-color: rgba(20, 22, 42, 0.75)!important;
+    height: 100%;
+    padding: 20px;
+    z-index: 7;
+    @include for-phone-and-tab {
+        padding-top: 75px;
+    }
+}
+
+.CancelContainer {
+    background-color: $white;
+    // margin: 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.04);
+    height: 100%;
+    // overflow: auto;
+    position: relative;
+
+    .CancelSubcontainer {
+        overflow: auto;
+        max-height: 200px;
+        h2 {
+            color: $gray-v3;
+            @extend %FTwo24;
+        }
+    
+        p {
+            color: $gray-v53;
+            @extend %FontWeight500;
+            @extend %FS11;
+            margin-bottom: 0;
+        }
+
+        h5 {
+            color: $gray-v3;
+            @extend %FS13;
+            @extend %FontWeight600;
+            span {
+                color: $red-v11;
+            }
+        }
+    }
+
+    .ReasonsWrap {
+        max-width: 900px;
+
+        .ReasonTextContainer {
+            margin: 0 10px 10px 0;
+            padding: 12px 20px;
+            border-radius: 4px;
+            border: solid 1px $gray-v66;
+            color: $gray-v53;
+            @extend %FS12;
+            @extend %FontWeight500;
+
+            &.hover {
+                background-color: $blue-v26!important;
+            }
+        }
+
+        .ReasonTextContainerSelect {
+            color: $gray-v3!important;
+            border: solid 1px $blue-v2!important;
+            background-color: $blue-v26!important;
+        }
+    }
+}
+
+.Button {
+    @extend %FontWeight600;
+    @extend %FS11;
+    width: 155px!important;
+    padding: 11px 0px;
+    border-radius: 4px;
+    height: 39px;
+}
+
+.CancelButton {
+    background-color: $red-v11!important;
+    background-image: none!important;
+}
+.SubmitButton {
+    background-image: linear-gradient(76deg, #72be44, #00a0fd)!important;
+}
+
+.KeepButton {
+    &:hover {
+        background-image: none!important;
+        color: rgb(34, 139, 181)!important;
+    }
+}
+
+.NoteConatainer {
+    max-width: 594px;
+    background-image: linear-gradient(83deg, $gray-v3, $blue-v25);
+    border-radius: 4px;
+    padding: 22px 20px;
+
+    .NoteInfo { 
+        color: $gray-v70;
+        @extend %FS11;
+        @extend %FontWeight500;
+    }
+
+    .ContactInfo {
+        color: $blue-v21;
+        @extend %FS11;
+        @extend %FontWeight600;
+        min-width: 92px;
+    }
+}
+
+.QuestionConatainer {
+    width: 594px;
+    @include for-phone-and-tab {
+        width: 100%;
+    }
+
+    h5 {
+        color: $gray-v3;
+        @extend %FS13;
+        @extend %FontWeight600;
+        span {
+            color: $red-v11;
+        }
+    }
+    .AnswerText {
+        textarea {
+            height: 72px!important;
+            border-radius: 3px;
+            width: 100%;
+        }
+    }
+}
+
+.ThanksContainer {
+    text-align: center;
+    h2 {
+        @extend %FTwo24;
+        color: $gray-v3;
+    }
+
+    p {
+        @extend %FS12;
+        @extend %FontWeight500;
+        color: $gray-v3;
+        margin-bottom: 0;
+    }
+}
+
+.ModalCloseIcon {
+    border-radius: 4px;
+    border: solid 1px $gray-v68;
+    z-index: 55 !important;
+    position: absolute !important;
+    width: 35px;
+    height: 35px;
+    color: $gray-v53;
+    @extend %FS16;
+    @extend %FontWeight600;
+    text-align: center;
+    padding: 3px 0;
+    top: 15px;
+    right: 15px;
+}
+
+.Close {
+    display: none;
+}

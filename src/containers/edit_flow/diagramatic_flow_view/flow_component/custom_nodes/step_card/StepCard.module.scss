@@ -1,0 +1,296 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.Node {
+    border-radius: 3px;
+}
+.SuccessIcon {
+    height: 20px;
+}
+.ErrorInfo {
+    background-color: $red-v19 !important;
+    color: $red-v20 !important;
+    border: 1px solid $red-v21;
+    max-width: 300px !important;
+}
+.TooltipArrow::before {
+    border-top-color: $red-v21 !important;
+    border-bottom-color: $red-v21 !important;
+}
+.TriggerNodeError {
+    background-color: $red-v19 !important;
+    color: $red-v20 !important;
+    border: 1px solid $red-v21;
+    max-width: 328px !important;
+}
+.TitleClass {
+    font-weight: $fw-medium;
+    font-size: $font-size-md;
+}
+.AnotherFlowNode {
+background: $blue-v41;
+border: 1px solid $blue-v39;
+padding-left: 8px;
+padding-right: 8px;
+border-radius: 3px;
+    &:hover {
+        border: 1px solid $blue-v39 !important;
+        .EditStepIcons {
+            visibility: visible !important;
+        }
+        .AnotherFlowDetail {
+            border-color: $blue-v39;
+        }
+    }
+}
+.B70 {
+    bottom: 70px !important;
+}
+.PositionStyle1 {
+    bottom: 21px !important;
+}
+.EditStepIcons {
+    position: absolute;
+    z-index: 1;
+    bottom: 49px;
+    right: 0px;
+    visibility: hidden;
+}
+.IconPosition {
+    bottom: 85px !important;
+}
+.CompletedNode {
+    border: 1px solid $gray-v68;
+    background-color: $white;
+}
+.ErrorNode {
+    border: 1px solid $red-v18;
+    background-color: $red-v17;
+    .AnotherFlowDetail {
+        border-color: $red-v18;
+    }
+}
+.InProgressNode {
+    border: 1px solid $orange-v21;
+    background-color: $orange-v20;
+}
+.B0 {
+    bottom: 0px !important;
+}
+.StartNode {
+    background-color: $green-v14;
+    height: 40px;
+    padding: 12px 15px;
+    font-size: $font-size-sm;
+    color: $white;
+    border-radius: 3px 3px 0px 0px;
+    &:hover {
+        .StartNodeSettings {
+            visibility: visible;
+        }
+    }
+}
+.IntegrationNode {
+    background-color: $orange-v27;
+    height: 40px;
+    padding: 12px 15px;
+    font-size: $font-size-sm;
+    font-weight: 500;
+    color: $orange-v28;
+}
+.StartNodeSettings {
+    cursor: pointer;
+    visibility: hidden;
+    path {
+        fill: $white;
+    }
+}
+.AdditionalData{
+    height: 70px;
+    width: 300px;
+    display: flex;
+}
+.JoinStepIcon {
+    background-color: $blue-v43 !important;
+    border-color: $blue-v42 !important;
+}
+.StepDetail{
+    padding: 10px 15px;
+    width: 300px;
+    // height: 80px;
+}
+.AllStepContent {
+    @include border-radius(3px);
+    &:hover {
+        border: 1px solid $blue-v39;
+        .EditStepIcons {
+            visibility: visible;
+        }
+    }
+}
+.removeTopBorder{
+    border-radius: 0px 0px 3px 3px;
+}
+.AnotherFlowDetail {
+    width: 310px;
+    border-right: 1px solid #217CF5;
+    border-left: 1px solid #217CF5;
+    padding: 15px;
+    text-align: center;
+}
+.StepName {
+    flex-grow: 1;
+    padding-right: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    @extend %FS14;
+    text-align: left;
+    font-weight: $fw-semibold;
+}
+.AnotherFlowName {
+    flex-grow: 1;
+    padding-right: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    @extend %FS14;
+    text-align: left;
+    font-weight: $fw-semibold;
+    margin-left: 8px;
+    display: block;
+    padding-top: 5px;
+}
+.UserIcon {
+    border-radius: 12px;
+    background-color: $blue-v41;
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    svg path {
+        fill: $blue-v39;
+    }
+}
+.OtherActions {
+    padding: 10px 15px;
+    flex-grow: 1;
+    border-top: 1px solid $gray-v68;
+    background-color: $blue-v41;
+}
+.ActionLabel {
+    @extend %FS13;
+    font-weight: $fw-semibold;
+    color: $blue-v39;
+}
+.SettingsIcon {
+    // height: 100%;
+    cursor: pointer;
+    path {
+        fill: $white;
+    }
+}
+.IconContainer {
+    border: solid 1px $gray-v30;
+    width: 24px;
+    height: 24px;
+    background-color: $white;
+    margin-right: 20px;
+}
+
+.Icon {
+    width: 22px;
+    height: 24px;
+}
+.VerticalConnector {
+    content: '';
+    width: 1px;
+    height: 20px;
+    margin: auto;
+    background-color: $gray-v85;
+}
+
+.Connector{ 
+    margin-left: 122px;
+}
+.CancelIcon {
+    height: 13px;
+}
+.EndFlowNode {
+    width: 110px;
+    color: $white;
+    border: 1px solid $green-v14;
+    padding: 15px;
+    background-color: $green-v14;
+    border-radius: 100px;
+    .SettingsIcon {
+        visibility: hidden;
+        height: 100%;
+        width: 14px;
+    }
+    :hover {
+        cursor: pointer;
+        .SettingsIcon{
+            visibility: visible;
+        }
+    }
+}
+.EndCardLabel {
+    flex-grow: 1;
+    @extend %FS14;
+    text-align: left;
+    font-weight: $fw-semibold;
+    width: 45px !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.StepConnector {
+    width: 28px;
+    height: 28px;
+    border: solid 1px $pink-v3;
+    background-color: $pink-v4;
+    border-radius: 2px;
+}
+
+.ExtraAssignees{
+    font-size: 8px;
+    font-weight: 600;
+    text-align: center;
+    color: $gray-v53;
+    min-width: 20px;
+    height: 20px;
+    margin-left:5px;
+    padding: 5px;
+    background-color: $gray-v32;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.PlusIcon:hover{
+    cursor: pointer;
+}
+.PlusIcon:hover circle,
+.PlusIcon:active circle {
+    fill: $blue-v39;
+    stroke: $blue-v39;
+}
+.PlusIcon:hover path,
+.PlusIcon:active path {
+    fill: $white;
+}
+.StepDelete {
+    border-right: 1px solid white;
+    padding-right: 5px;
+}
+.HideHandle{
+    visibility: hidden;
+}
+.StepIconContainer {
+    background: $blue-v39;
+    padding: 7px;
+    margin-bottom: -1px;
+    border-bottom-right-radius: 3px;
+}
+.ErrorClass {
+    border: 1px solid $red-v18 !important;
+}

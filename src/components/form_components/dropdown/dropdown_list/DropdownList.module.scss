@@ -1,0 +1,171 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.selectedText {
+  color: $white;
+}
+
+// .ContainerTopV1 {
+//   // top: 59px;
+// }
+
+.InfiniteScrollHeight {
+  max-height: 145px !important;
+  overflow-x: hidden !important;
+}
+.SelectedMobileNumber{
+  background-color: $blue-v39 !important;
+}
+.SelectedOption {
+  background-color: $gray-v7;
+}
+
+.ChildElements {
+  padding-left: 15px;
+}
+
+.HeaderOption {
+  background-color: $gray-v45;
+  color: $blue-v5;
+}
+
+.DropdownContainer {
+  background-color: $white;
+  z-index: 2;
+  // max-height: 155px;
+  // min-width: max-content;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  .OptionList {
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+    & .Option {
+      color: $black-v7;
+      z-index: 2;
+      border-bottom: 1px solid $gray-v1;
+      &:last-child {
+        border-bottom: 0px;
+      }
+      &:hover {
+        @extend %DropdownHoverBg;
+        color: $blue-v39;
+        .DropdownListVisibilityConditionA {
+          display: block;
+        }
+        .DropdownListVisibilityConditionB {
+          display: none;
+        }
+        svg path {
+          fill: $blue-v39;
+        }
+        svg[specialIcon=true]{
+          path{
+            fill: none;
+            stroke: $blue-v39;
+          }
+        }
+        svg g[id=allFlowsIcon]{
+          stroke: $blue-v39 !important;
+        }
+      }
+    }
+  }
+  .Input {
+    flex-grow: 1;
+  }
+}
+.ReadOnlySuffix {
+  line-height: inherit;
+  display: flex;
+  align-items: center;
+}
+.SelectedBg, .SelectedBg:hover {
+  @extend %DropdownSelectedBgV2;
+  border-radius: 0px !important;
+  svg {
+    path {
+      color: $blue-v21 !important;
+      fill: $white !important;
+    }
+  }
+  div {
+  @extend %DropdownSelectedBgV2;
+  }
+}
+.SelectedSuggestion {
+  @extend %DropdownSelectedBg;
+  color: $white !important;
+  svg {
+    path {
+      color: $blue-v21 !important;
+    }
+  }
+}
+// new dropdown classes
+.LabelViewDropdownList {
+  margin-top: 8px;
+  // margin-right: 8px;
+  border: 0px !important;
+  @include border-radius(6px);
+  box-shadow: 4px 4px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+.LabelViewDropdownListItem {
+  border: 0px !important;
+  padding: 10px 10px;
+}
+.DropdownListVisibilityConditionA {
+  fill: $gray-v25;
+  display: block;
+}
+.DropdownListVisibilityConditionB {
+  display: none;
+}
+
+// multi section dropdown
+.MultiSectionDropdown {
+  max-height: 280px !important;
+  padding: 15px 15px 0px 15px;
+  overflow: hidden;
+  overflow-y: auto;
+  background-color: $white;
+  z-index: 2;
+  @include border-radius(6px);
+  box-shadow: 4px 4px 12px 2px rgba(0, 0, 0, 0.2);
+}
+
+.CreateSectionButton {
+  padding-left: 16px;
+  padding-right: 16px;
+  height: 28px;
+}
+
+.CreateSectionInputButton {
+  padding: 1px 5px 1px 0px;
+  @include border-radius(4px);
+}
+
+.CreateSectionInputButtonBorder {
+  border: solid 1px $gray-v1;
+}
+
+// .ChooseSectionDropdownListItem {
+//   &:hover {
+//     .ChooseSectionDropdownOption {
+//       // color: $black-v6;
+//     }
+//   }
+// }
+
+.InputOuterPadding {
+  padding: 6px;
+}
+.DisabledDropdown{
+  background-color: $gray-v99;
+  color: $gray-v86 !important;
+  height: 32px !important;
+  font-size: $font-size-sm;
+  font-weight: $fw-semibold;
+}

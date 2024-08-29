@@ -1,0 +1,86 @@
+@import '../../../../scss/constants';
+
+.CloseIcon {
+  width: 12px;
+  height: 12px;
+  margin-top: 3px;
+  fill: $gray-v101 !important;
+  outline: none;
+}
+
+.Tab {
+  padding-left: 40px;
+  border-bottom: 1px solid $gray-v102;
+}
+
+.ActiveBar {
+  height: 3px;
+}
+
+.TabText {
+  margin-left: 0 !important;
+  margin-bottom: 8px;
+  font-size: $font-size-mdt;
+}
+
+.AppPageSettingsModal {
+  z-index: 152 !important;
+  margin: 0px !important;
+  width: 100% !important;
+  border: 1px solid $gray-v1;
+}
+
+.PageAdmins {
+  width: 60vw !important;
+}
+
+.InputClass {
+  width: 40vw;
+}
+
+.AppUrl {
+  & > div > div:nth-child(2) > div > div {
+    &>div {
+      flex-basis: content;
+      flex-grow: 1;
+    }
+  }
+}
+
+.AppUrlInput {
+  width: max-content;
+}
+
+.InputInnerClass {
+  text-overflow: clip;
+}
+
+.LinkClass {
+  border-left: none;
+}
+
+.InhertiSecurityContainer {
+  border-radius: 8px;
+  border: 1px solid $gray-v108;
+  background: $white;
+  margin-bottom: 16px !important;
+}
+
+.CheckboxChecked {
+  border: 1px solid $blue-v46 !important;
+  background: $blue-v47 !important;
+}
+
+.InheritOption {
+  line-height: 20px !important;
+  margin-bottom: 0;
+  margin-left: 12px !important;
+}
+
+.FooterContent {
+  height: 100px !important;
+}
+
+.TabZindex {
+  z-index: 0 !important;
+}

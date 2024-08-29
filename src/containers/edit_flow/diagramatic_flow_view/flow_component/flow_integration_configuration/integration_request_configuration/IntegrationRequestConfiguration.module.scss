@@ -1,0 +1,86 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.MappingField {
+    width: 200px;
+}
+.RequestBodyFields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.DropdownInput {
+    padding: 6px 5px;
+}
+.DeleteIcon {
+    width: 16px;
+    height: 16px;
+    path {
+        fill: $gray-v87;
+    }
+}
+.SectionHeader {
+    font-size: $font-size-md;
+    font-weight: $fw-semibold;
+    color: $gray-v3;
+    line-height: 17px;
+}
+.ColMax{
+    width: 30% !important;
+}
+.ColMed {
+    width: 25% !important;
+}
+.CheckboxCol {
+    width: 15% !important;
+}
+.ColMid{
+    width: 20% !important;
+}
+.ColMin{
+    width: 20% !important;
+}
+.ColMini {
+    width: 10% !important;
+}
+.InputColMax {
+    width: 50%;
+    padding-left: 0;
+}
+.KeyName{
+    border-radius: 3px;
+    height: 36px;
+    padding: 5px 10px;
+    border: 1px solid $gray-v1;
+    margin-bottom: 12px !important;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.Required {
+    color: $red;
+  }
+
+.Disabled {
+    pointer-events: none !important;
+    background-color:$gray-v7 !important;
+}
+
+.FieldTag {
+    width: fit-content;
+    padding: 4px 8px;
+    border-radius: 3px;
+    max-width: 100%;
+    background-color: $gray-v99;
+}
+.InputColHeader {
+    width: 50% !important;
+    padding-left: 0 !important;
+    padding-bottom: 5px !important;
+    &:first-child {
+        margin-right: 24px !important;
+      }
+}
+.ErrorClass {
+    position: relative !important;
+}

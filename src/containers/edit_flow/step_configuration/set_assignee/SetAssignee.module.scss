@@ -1,0 +1,105 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.Container {
+    height: 100%;
+    overflow-y: auto;
+    padding: 32px;
+    background-color: $white;
+    position: relative;
+}
+.UserDisplay {
+    max-width:180px !important;
+    white-space:nowrap !important;
+    overflow:hidden !important;
+    text-overflow: ellipsis;
+}
+.MailId {
+    color: $gray-v3;
+    max-width:100%;
+}
+.W260 {
+    width: 260px;
+    margin-right: 10px;
+}
+.FormFieldDropdown {
+    max-width: 50vw;
+}
+.RuleDropdownClass {
+    max-width: 20vw;
+    min-width: 200px;
+}
+.W70 {
+    width: 70vw;
+}
+.ChooseActor {
+    padding-bottom: 6px;
+    margin: 0;
+}
+.FieldLabel {
+    color: $gray-v104;
+    font-size: $font-size-sm;
+    font-weight: $fw-semibold;
+}
+.ContainerStyle2 {
+    max-width: 72vw !important;
+}
+.ContainerStyle1 {
+    max-width: 80vw !important;
+}
+.Table {
+    max-width: 870px;
+}
+
+.DueDate{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid $gray-v1;
+    padding-left: 12px;
+    width: min-content;
+    border-radius: 3px;
+
+    .DueDateInput{
+        width: 70px;
+        font-size: 13px;
+    }
+
+    .DueDateDropdown{
+        width: 100px;
+    }
+}
+
+.DueDataError{
+    font-size: 11px;
+    color: $red-v22;
+}
+
+.BlueIconButton {
+    color: $blue-v39;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+
+    svg {
+        margin-right: 8px;
+        path {
+            fill: $blue-v39;
+        }
+    }
+}
+
+.CategoryDropdownPopper {
+    min-width: 300px;
+    margin-left: 50px;
+}
+.CategoryDropdown {
+    width: 210px;
+    margin-bottom: 0 !important;
+    background: $white;
+}
+
+.ChangeTextClass {
+    color: $blue-v39 !important;
+}

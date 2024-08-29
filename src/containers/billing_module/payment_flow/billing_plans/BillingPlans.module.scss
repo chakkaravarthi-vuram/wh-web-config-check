@@ -1,0 +1,230 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.ContentClass { 
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 22, 42, 0.75)!important;
+}
+
+.ContainerClass {
+    border-radius: 6px;
+    width: 100%;
+    background-color: $white;
+    margin: 30px;
+    height: calc(100% - 60px);
+}
+
+.PlanContainer {
+    position: relative;
+
+    .ModalCloseContainer {
+        position: absolute!important;
+        width: 26px;
+        height: 25px;
+        right: 15px;
+        top: 15px;
+
+        .CloseIcon {
+            fill: $gray-v53;
+        }
+    }
+
+    .TitleContainer {
+        text-align: center;
+        h2 {
+            color: $gray-v3;
+            margin: 0;
+        }
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    .PlanCardContainer {
+        position: relative;
+        @include for-small-device {
+            flex-direction: column;
+            overflow: auto;
+            display: block;
+            height: calc(100vh - 240px)
+            // margin: 20px auto;
+        }    
+
+        .PlanCard {
+            width: 330px;
+            height: 442px;
+            margin-right: 30px;
+            border-radius: 6px;
+            box-shadow: 4px 4px 24px 0 rgba(0, 0, 0, 0.2);
+            background-color: $white;
+            position: relative;
+            overflow-x: hidden;
+
+            @include for-small-device {
+                margin: 0px auto 20px auto;
+            }
+
+            // &:last-child {
+            //     margin-right: 0px;
+            // }
+
+        .PlanCardTitleContainer {
+            text-align: center;
+    
+            .PlanCardTitleInfo {
+                color: $gray-v73;
+                line-height: 2.14;
+                letter-spacing: -0.39px;
+            }
+        }
+        .PlanPriceContainer {
+            text-align: center;
+            // display: flex;
+            // justify-content: center;
+            p {
+                font-size: 24px;
+                color: $blue-v21;
+                line-height: 1.7;
+            }
+            h2 {
+                font-size: 48px;
+                color: $blue-v21
+            }
+            // h3 {
+            //     font-size: 20px;
+            //     margin: 20px 10px 0 10px;
+            // }
+            h3{
+               color: $blue-v21
+            }
+            div{
+                color: #7c828d;
+                letter-spacing: -0.39px;
+            }
+        }
+        .PlanContentContainer {
+            p {
+                color: $gray-v2;
+                font-size: 12px;
+            }
+        }
+        .ButtonContainer {
+            margin-top: auto!important;
+            width: 100%;
+            bottom: 0;
+            position: absolute;
+            // bottom: 25px;
+        }
+        .gradientBorder{
+            height: 4px;
+            width: 100%;
+            border-bottom-right-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+        .gradientCol {
+            background-image: linear-gradient(89deg, #72be44, #00a0fd);
+            position: absolute;
+            bottom: 0px;
+        }
+        .gradientTrialRemaining {
+            background-image: none!important;
+            background-color: $orange-v7;
+            position: absolute;
+            bottom: 0px;
+        }
+        .gradietTialExpired {
+            background-image: none!important;
+            background-color: $red-v5;
+            position: absolute;
+            bottom: 0px;
+        }
+    }
+    }
+    .WillLater {
+        color: $blue-v2;
+        text-align: center;
+        @extend %FS13;
+    }   
+}
+
+.Button {
+    width: 70%!important;
+    height: 40px!important;
+    @extend %FS13;
+}
+
+.TrialBorder {
+    border: solid 1px $orange-v7;
+    border-bottom: none;
+    box-shadow: 4px 4px 24px 0 rgba(0, 0, 0, 0.1)!important;
+}
+
+.ExpiredBorder {
+    border: 1px solid $red-v5;
+    border-bottom: none;
+}
+
+.CustomPlanButton {
+    border-radius: 4px;
+    border: none;
+    padding: 1px 15px;
+
+    &:focus {
+        outline: none;
+      }
+    @include for-phone-and-tab {
+        padding: 0 15px;
+    }
+}
+
+.TrailRemainButton {
+    color: $red-v12!important;
+    background-color: rgba(240, 174, 69, 0.3)!important;
+}
+
+.TrailExpiredButton {
+    color: $orange-v8!important;
+    background-color: rgba(255, 102, 95, 0.3)!important;
+    position: absolute;
+    bottom: 0px;
+}
+
+.PlanSignOut {
+    position: absolute!important;
+    right: 36px;
+    top: 36px;
+}
+
+.WarningTrailIcon {
+    fill: $orange-v7;
+}
+
+.WarningExpireIcon {
+    fill: $red-v5;
+}
+
+.PlanSubContainer {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+
+    @include for-small-device {
+        max-height: 100%;
+        overflow-y:hidden
+    }
+}
+
+.CurrentPlan {
+    border-radius: 4px;
+    width: 110px;
+    height: 32px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.ExpiredColor {
+    color: $orange-v8!important;
+    background-color: rgba(255, 102, 95, 0.3)!important;
+
+}

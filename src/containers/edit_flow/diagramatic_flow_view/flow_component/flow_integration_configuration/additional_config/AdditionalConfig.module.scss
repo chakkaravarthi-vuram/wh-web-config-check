@@ -1,0 +1,33 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.TestBedRun {
+    box-sizing: border-box;
+    height: 72px;
+    background: rgb(244, 245, 247, 0.4);
+    border: 1px solid rgb(216, 222, 233, 0.4);
+    padding: 24px;
+}
+.header {
+    width: 100%;
+  }
+.TestLabel {
+    font-size: $font-size-mdt !important;
+    color: $gray-v3 !important;
+    font-weight: $fw-semibold !important;
+}
+.FormFieldRadio {
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    border: 1px solid $gray-v1;
+    cursor: pointer;
+}
+.TestRunCheck {
+    margin: 0 6px 0 0 !important;
+}
+.RadioSelectedStyle {
+    height: 12px !important;
+    width: 12px !important;
+    border-radius: 9px;
+}

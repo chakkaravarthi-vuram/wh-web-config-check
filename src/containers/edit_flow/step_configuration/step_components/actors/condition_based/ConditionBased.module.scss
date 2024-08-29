@@ -1,0 +1,65 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.Rule {
+  border-radius: 4px;
+  border: 1px solid $gray-v1;
+  background: $white;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+
+  .RuleControls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}
+.ChooseRule {
+  margin-top: 0;
+}
+.AssigneeRule {
+  margin-top: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.ChooseCondition {
+  width: 260px !important;
+  @media (max-width: 1150px ){
+    width: 25vw !important;
+  }
+  @media (max-width: 1100px ){
+    width: 20vw !important;
+  }
+}
+.AccordionContainerClass {
+  width: 100%;
+  padding: 16px;
+  @include border-radius(4px);
+  border: 1px solid $gray-v108;
+}
+.ConditionPopper {
+  z-index: 10;
+}
+.AccBorder {
+  padding: 0 0 16px 0 !important;
+}
+.Sticky {
+  position: sticky;
+  top: 0px;
+  border-radius: 0px !important;
+  z-index: 2;
+}
+.AccordionHeader {
+  line-height: 20px;
+  color: $black-v22 !important;
+}
+.ChevronClass {
+  fill: $gray-v101 !important;
+}
+.ChevronContainerClass {
+  height: 20px;
+  width: 18px;
+  justify-content: center;
+}

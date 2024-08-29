@@ -1,0 +1,139 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.SelectedEventInfo {
+  width: calc(100% - 30px);
+}
+.SelectedNoEventInfo {
+  width: calc(100% - 30px);
+  padding: 8px;
+}
+.SelectedEvent {
+  width: 40%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+.ExternalListPopper {
+  max-height: 40vh !important;
+}
+.SearchInput {
+  border: none;
+}
+.EventSearch {
+  border-bottom: 1px solid $gray-v68;
+  border-top: 1px solid $gray-v68;
+}
+.SelectedOption {
+  background: $blue-v41;
+  border-left: 2px solid $blue-v39;
+}
+.ConnectorLogo {
+  width: 32px;
+  height: 32px;
+  margin: 0px 16px;
+}
+.AddIntegrationTitle {
+  @extend %FS24;
+  color: $gray-v3;
+  font-weight: $fw-semibold;
+}
+.IntegrationDescriptionHeight {
+  height: 72px !important;
+}
+.AddIcon{
+  height: 16px;
+  width: 16px;
+}
+.ChooseFlowContainer {
+  width: 70% !important;
+}
+.EventContainer {
+  height: 36px !important;
+  background: $white;
+  border: 1px solid $gray-v1;
+  // padding: 12px;
+  // margin-bottom: 15px !important;
+}
+.Container {
+  box-sizing: border-box;
+  overflow: hidden;
+  max-height: 35vh;
+  @extend %FTwo;
+  background-color: $white !important;
+  border: 1px solid $gray-v1;
+}
+.OptionListContainer{
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: calc(35vh - 40px);
+}
+.OptionContainer {
+  margin: 10px 0;
+  width: 100%;
+  cursor: pointer;
+  &:last-child {
+      border-bottom: none;
+  }
+  &:hover {
+      background-color: $blue-v41;
+  }
+}
+.OptionLabel {
+  width: 45%;
+  margin: 10px 15px;
+}
+.CategoryContainer {
+  background-color: $gray-v99 !important;
+  padding: 8px 10px;
+  width: 100%;
+  cursor: pointer;
+  &:last-child {
+      border-bottom: none;
+  }
+}
+.EndPoint {
+  width: 45%;
+  text-align: right;
+  margin: 10px 15px 10px 10px;
+}
+.MethodContainer {
+  margin: 12px 0px 12px 5px !important;
+  height: 24px;
+  width: 10%;
+}
+.EventMethod {
+  padding: 3px 8px;
+  background: $white;
+  border: 1px solid $gray-v1;
+  border-radius: 25px;
+}
+.Method {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 8px;
+  gap: 4px;
+  width: 85px;
+  height: 34px;
+  background: $gray-v99;
+  border-right: $gray-v1;
+}
+.EventName {
+  margin-left: 15px !important;
+  padding-right: 15px;
+  border-right: 1px solid $gray-v1;
+}
+.ErrorClass {
+  border: 1px solid $red-v18 !important
+}
+.CustomDropdownViewClass {
+  div {
+    div {
+      padding: 0px !important;
+    }
+  }
+}

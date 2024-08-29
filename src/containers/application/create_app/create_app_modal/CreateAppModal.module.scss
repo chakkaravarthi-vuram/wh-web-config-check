@@ -1,0 +1,49 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.AppListing {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 24px;
+    background-color: $white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.OuterCard {
+    width: 280px;
+    @media (min-width: 1520px) {
+        width: 320px;
+    }
+    @media (min-width: 1740px) {
+        width: 370px;
+    }
+}
+.MainTitle {
+    text-align: center !important;
+    margin-bottom: 40px;
+    line-height: 29px;
+    margin-top: 8px;
+}
+.ComponentCard {
+    padding: 32px;
+    width: 100% !important;
+    height: 100% !important;
+}
+.CardTitle {
+    text-align: center !important;
+    width: 100%;
+}
+.IntegrationIcon {
+    height: 101px;
+    width: 218px;
+}
+.CardText {
+    margin-top: 8px;
+    justify-content: center;
+    width: 100%;
+    text-align: center !important;
+}
+.CardIcon {
+    margin-bottom: 15px;
+}
+

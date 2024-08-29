@@ -1,0 +1,32 @@
+@import 'scss/constants';
+
+.DropdownOuterClassName {
+  width: 100%;
+}
+
+.TableRow {
+  & td:first-child,
+  & td:nth-child(2){
+    width: 35%;
+  }
+  & td:nth-child(3){
+    width: 25%;
+  }
+  & td:last-child{
+    width: 3%;
+    & div {
+      justify-content: end;
+    }
+  }
+}
+
+.DuplicateRowError {
+  & > td{
+    background-color: $orange-v9 !important;
+    vertical-align: text-top;
+  }
+}
+
+.Table {
+  width: 70%;
+}

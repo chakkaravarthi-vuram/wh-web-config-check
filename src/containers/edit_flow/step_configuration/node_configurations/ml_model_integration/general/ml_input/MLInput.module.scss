@@ -1,0 +1,58 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.InputTreeRow {
+    & > li:last-child {
+      border-bottom: 1px solid $gray-v1 !important;
+    }
+}
+
+.InputTreeHeaderRow {
+    border-top: none !important;
+    border-bottom: 1px solid $gray-v108 !important;
+    padding: 0px, 16px, 4px, 16px;
+  
+    & > div > div > p {
+      font-size: 12px;
+      color: $gray-v89;
+      font-weight: 500;
+      padding-right: 0px !important;
+    }
+  }
+
+  .ValueContainer {
+    height: 36x;
+    border-radius: 2px;
+    border: 1px solid $gray-v1;
+    background-color: $white;
+    padding: 4px 8px 4px 4px;
+    gap: 8px;
+    > div {
+      width: 100%;
+    } 
+  }
+  
+  .ParamNameFlex, .TypeFlex {
+    flex-basis: 25%;
+  }
+  .ValueNameFlex {
+    flex-basis: 50%;
+  }
+
+  .ValueTypeFlex {
+    flex-basis: 40%;
+    > button {
+      border-radius: 2px !important;
+      background-color: $blue-v47 !important;
+    }
+  }
+
+  .ValueTypeFlex > button > div > div > div > div {
+      color: $blue-v39 !important;
+      font-size: $font-size-sm !important;
+      font-weight: $fw-semibold !important;
+  }
+
+  .ValueFlex {
+    flex-basis: 60%
+  }

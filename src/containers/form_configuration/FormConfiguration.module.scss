@@ -1,0 +1,27 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+
+.FormConfiguration {
+  height: inherit;
+  overflow:hidden;
+  overflow-y: auto;
+  max-width: 320px;
+  padding-bottom: 25px;
+}
+
+.ExternalSource {
+  border-radius: 3px;
+  background-color: $gray-v109;
+  padding: 16px;
+  min-height: calc(100vh - 265px);
+  flex-basis: 35%;
+}
+
+.EachSource {
+  border-radius: 3px;
+  border: 1px solid $gray-v102;
+  opacity: 0.7;
+  background-color: $white;
+  padding: 8px 12px;
+}

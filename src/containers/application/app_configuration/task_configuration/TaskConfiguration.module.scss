@@ -1,0 +1,20 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.FlowOrDlContainer{
+    background-color: $white;
+    border: 1px solid $gray-v102;
+
+    & .Dropdown{
+        width: 100%;
+    }
+};
+
+.ViewContainer {
+    &:hover {
+        background-color: $gray-v109;
+    }
+    .FlowOrDlLabel {
+        color: $gray-v115; 
+    }
+}

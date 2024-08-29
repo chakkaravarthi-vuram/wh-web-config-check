@@ -1,0 +1,16 @@
+@import '../../../scss/constants';
+
+.Container {
+  border-radius: 4px;
+  opacity: 0.8;
+  padding: 7px 10px;
+}
+.Success {
+  background-color: $green-v6;
+}
+.Failure {
+  background-color: $red-v5;
+}
+.Warning {
+  background-color: $red-v5;
+}

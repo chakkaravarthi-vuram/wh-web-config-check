@@ -1,0 +1,39 @@
+@import '../../scss/utilities';
+
+.TextEditorContainer {
+  padding: 9px 15px;
+  font-size: 13px;
+  &::placeholder {
+    @extend %Placeholder;
+  }
+}
+
+.BlockQuote {
+  color: #999;
+  font-style: italic;
+  text-align: center;
+  border-left: 1px solid gray;
+}
+
+.AlignLeft {
+  text-align: left;
+}
+
+.AlignRight {
+  text-align: right;
+}
+
+.AlignCenter {
+  text-align: center;
+}
+
+.AlignJustify {
+  text-align: justify;
+}
+
+.Placeholder {
+  @extend %Placeholder;
+  margin-top: -5px;
+  padding-bottom: 10px;
+  pointer-events: none;
+}

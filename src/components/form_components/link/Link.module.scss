@@ -1,0 +1,8 @@
+@import "../../../scss/utilities";
+.Link {
+    @extend %FOne12;    
+
+    // &:hover {
+    //     // @extend %FOne12BlueV3
+    // }
+}

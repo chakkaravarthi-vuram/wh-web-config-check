@@ -1,0 +1,74 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.CardContainer {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid $gray-v1;
+  border-radius: 4px;
+  height: 62px;
+  padding: 8px 12px;
+  background-color: $white;
+  &:hover {
+    .ActionIconContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .IconContainer {
+      background-color: $blue-v39;
+      svg {
+        path {
+          fill: $white !important;
+        }
+      }
+    }
+  }
+}
+.ErrorCard {
+  border: 1px solid $red-v2 !important;
+}
+.EditIcon {
+  fill: $gray-v101;
+}
+.IconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $blue-v41;
+  width: 32px;
+  height: 32px;
+  border-radius: 3px;
+}
+.ActionIconContainer {
+  display: none;
+}
+.EditIconContainer {
+  @include border-radius(4px);
+  background-color: $white;
+  height: 24px;
+  width: 24px;
+}
+.Title {
+  font-size: $font-size-md;
+  color: $gray-v3;
+  font-weight: 500;
+  max-width: 300px;
+  display: inline-block;
+}
+.SubTitle1,
+.SubTitle2 {
+  display: inline-block;
+  font-size: $font-size-sm;
+  color: $gray-v86;
+  max-width: 150px;
+}
+.BorderLine {
+  position: absolute;
+  width: 11px;
+  height: 0px;
+  right: -6px;
+  top: 8px;
+  border: 1px solid $gray-v1;
+  transform: rotate(90deg);
+}

@@ -1,0 +1,90 @@
+@import '../../../scss/constants';
+@import 'scss/utilities';
+
+.SelectedOptionTag {
+  height: 24px;
+  border-radius: 4px;
+  max-width: 100%;
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.UserIcon {
+  fill: $gray-v87;
+  width: 9px;
+  height: 10px;
+  // margin-right: 8px;
+}
+
+.SelectedList {
+  overflow-y: scroll !important;
+  width: 100% !important;
+  overflow-x: hidden;
+  // max-height: ; fix the max height through custom prop 'memberListClass'
+}
+
+.TeamIcon {
+  width: 9px;
+  height: 10px;
+  margin-right: 8px;
+}
+
+.UserIconBg {
+  fill: $gray-v87;
+}
+
+.InputClass div {
+  padding: 0 !important;
+}
+
+.Container {
+  padding: 5px 7px 5px 7px;
+  list-style: none;
+}
+
+.FileContainer {
+  list-style: none;
+  padding: 10px;
+}
+
+.AddButton {
+  padding: 0px 20px;
+  height: 30px !important;
+}
+
+.ScrollableSelectedList {
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.ReadOnlyInput {
+  background-color: $gray-v7;
+}
+.ContainerHeight {
+  height: 24px; // !important;//Assign to form height
+  align-items: center;
+  //  padding-top: 12px;
+  //  padding-bottom: 12px;
+}
+.SelectedUsersorTeams {
+  margin: 0 9px 0 7px;
+  font-size: $font-size-sm;
+  color: var(--dark);
+}
+
+.Icon {
+  height: 24px;
+}
+
+.Alert {
+  color: $orange_v14;
+  background-color: $orange-v13;
+  padding: 10px 13px;
+  border-radius: 4px;
+  margin-top: 5px;
+  word-break: break-word;
+}
+.SelectedUserTag {
+  max-width: 90%;
+}

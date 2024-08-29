@@ -1,0 +1,82 @@
+@import '../../../../../scss/constants';
+
+.Container {
+  padding: 10px;
+  &:hover {
+    .ThumbnailTextOpacity {
+      opacity: 1;
+    }
+
+    .TextOpacity {
+      opacity: 1;
+    }
+
+    border: 2px solid;
+    border-radius: 12px;
+    padding: 8px;
+
+    .InProgressStatusBox {
+      background-color: $orange-v2;
+    }
+
+    .InProgressStatusText {
+      color: $white;
+    }
+
+    .CompletedStatusBox {
+      background-color: $green-v4;
+    }
+
+    .CompletedStatusText {
+      color: $white;
+    }
+  }
+}
+
+.Thumbnail {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+}
+
+.ThumbnailTextOpacity {
+  opacity: 0.7;
+}
+
+.TextOpacity {
+  opacity: 0.5;
+}
+
+.StatusBox {
+  border-radius: 12px;
+  width: 90px;
+  height: 24px;
+}
+
+.InProgressStatusBox {
+  background-color: $orange-v1;
+}
+
+.CompletedStatusBox {
+  background-color: $green-v3;
+}
+
+.CancelledStatusBox {
+  background-color: $red-v8;
+}
+
+.InProgressStatusText {
+  color: $orange-v2;
+}
+
+.CompletedStatusText {
+  color: $green-v1;
+}
+
+.CancelledStatusText {
+  color: $white;
+}
+
+.BorderG {
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+}

@@ -1,0 +1,30 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.Header {
+  padding: 24px 16px 0 24px;
+  position: relative;
+
+  button {
+    position: absolute;
+    padding: 8px;
+    top: 4px;
+    right: 8px;
+    cursor: pointer;
+  }
+}
+
+.Footer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 0px 0px 3px 3px;
+  background: #fff;
+  box-shadow: 0px -1px 4px 0px rgba(16, 24, 40, 0.08);
+}
+
+.PageTitle {
+  font-size: 26px;
+  color: #1f243d;
+}

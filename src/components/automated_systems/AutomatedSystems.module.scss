@@ -1,0 +1,212 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+.ModalWidth {
+    width: calc(100vw - 220px);
+    @include for-medium-height-device {
+        width: 100vw;
+    }
+} 
+
+.HeaderContainer {
+    position: relative;
+    padding: 24px 32px;
+
+    .CloseIcon {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+    }
+}
+
+.BodyContainer {
+    padding: 0px 32px;
+}
+
+.FieldLabel label {
+    @extend %FTwo13;
+    @extend %BlackV20;
+    margin-bottom: 0px;
+}
+
+.RadioLabelMargin label {
+    margin-bottom: 8px !important;
+}
+.RadioLabelFont label {
+    font-weight: 500 !important;
+}
+.FreqTriggerLabel label{
+    color: $black-v22 !important;
+}
+
+.DropdownMaxWidth {
+    max-width: 304px;
+}
+
+.Gap8Imp {
+    gap: 8px !important;
+}
+
+.WeekDropdown {
+    max-width: 130px;
+}
+
+.DayDropdown {
+    max-width: 90px;
+}
+
+.SchedulerContainer {
+  border-radius: 4px;
+  border: 1px solid $gray-v1;
+  background-color: $gray-v80;
+  padding: 15px;
+  max-width: 500px;
+}
+
+.FooterContainer {
+    border-top: 1px solid $gray-v119;
+    padding: 16px 32px 16px 16px;
+}
+
+.DeleteButton {
+    color: $red-v25;
+}
+
+.Divider {
+    width: 1px;
+    height: 26px;
+    background-color: $gray-v1;
+}
+
+.ActorRow {
+    border-top: 1px solid $gray-v1;
+    border-bottom: 1px solid $gray-v1;
+    padding: 12px 0px;
+}
+
+.ActorDropdownMaxWidth {
+    max-width: 340px;
+}
+
+.StepActorButton {
+    color: $blue-v39 !important;
+    padding: 0px !important;
+    svg path {
+        fill: $blue-v39 !important;
+        stroke: none !important;
+    }
+}
+
+.InputTreeHeaderRow {
+    border-top: none !important;
+    border-bottom: 1px solid $gray-v108 !important;
+    padding: 0px 0px 8px;
+
+    & > div{
+        gap: 16px;
+    }
+
+    & > div > div > p {
+        font-size: 12px;
+        color: $gray-v3;
+        font-weight: 500;
+        padding-right: 0px !important;
+    }
+}
+
+.InputTreeContainer {
+    border-radius: 4px;
+    background: $gray-v109;
+    border: 1px solid $gray-v108;
+}
+
+.InputTreeInnerContainer {
+    padding: 0px;
+
+    & > button {
+        background-color: $gray-v109 !important;
+        padding: 0px !important;
+        margin-top: 8px;
+
+        &:hover {
+            background-color: $gray-v109 !important;
+        }
+    }
+
+    & > li > div {
+        padding-left: 0px !important;
+    }
+}
+
+.FlowField {
+    width: 100% !important;
+}
+
+.ValueBy {
+    width: 100% !important;
+}
+
+.DlField {
+    width: 100% !important;
+}
+
+.AddCondition {
+    height: 80px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid $gray-v108;
+}
+
+.AddConditionButton {
+    padding: 0px !important;
+    color: $blue-v39 !important;
+
+    svg path {
+        fill: $blue-v39 !important;
+        stroke: none !important;
+    }
+}
+
+.SelectDay {
+    border-color: $gray-v118 !important;
+    height: 36px !important;
+    border-radius: 3px !important;
+    background-color: $white !important;
+}
+
+.FieldMapping{
+    display: flex;
+    align-items: start;
+    gap: 16px;
+    width: 100%;
+}
+
+.ActionButton {
+    width: 32px;
+    height: 32px;
+}
+
+.DeleteColumn {
+    width: 6% !important;
+  }
+
+  .TriggerFieldMaxWidth {
+    flex-grow: 1 !important;
+    max-width: 495px;
+    min-width: 150px;
+    @media (max-width: 1600px ){
+      max-width: 550px;
+    }
+    @media (max-width: 1450px ){
+      max-width: 445px;
+    }
+    @include for-hd-screen-v2 {
+      max-width: 355px;
+    }
+    @include for-medium-hd-screen {
+      max-width: 385px;
+    }
+    @media (max-width: 1100px ){
+      width: 305px;
+    }
+  }

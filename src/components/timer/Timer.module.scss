@@ -1,0 +1,21 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+.ResendText {
+    font-family: Inter;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.ResendStyle {
+    color: $blue-v39;
+    font-family: Inter;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+}

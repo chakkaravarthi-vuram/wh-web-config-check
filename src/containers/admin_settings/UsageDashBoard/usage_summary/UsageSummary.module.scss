@@ -1,0 +1,50 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.Container {
+  // padding-left: 30px;
+  display: flex;
+  flex-direction: row;
+}
+.Card {
+  width: 342px;
+  height: 204px;
+  background-color: $white;
+  margin: 0 15px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.04);
+  flex: 1;
+  &:first-child {
+    margin-left: 0;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+  @media (min-width:768px) and (max-height:1024px) {
+    box-shadow: none;
+  }
+}
+.CardTitle {
+  padding: 20px 0px 10px;
+  font-size: $font-size-lg;
+  font-weight: $fw-semibold;
+}
+.TotalCount {
+  color: $blue-v39;
+  @extend %FS30;
+}
+.TotalString {
+  margin-top: -8px;
+  font-size: 12px;
+  color: $gray-v72;
+}
+@include for-phone-and-tab {
+  .Container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .Card {
+    margin-left: 30px !important;
+  }
+}

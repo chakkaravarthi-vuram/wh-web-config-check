@@ -1,0 +1,13 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.Dropdown {
+  min-width: 270px;
+}
+.Category {
+  height: 36px !important;
+  background: $white;
+}
+.PopperClass{
+  width: 40%;
+}

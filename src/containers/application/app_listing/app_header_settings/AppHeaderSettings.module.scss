@@ -1,0 +1,31 @@
+@import 'scss/constants';
+
+.AppHeaderSettingModel {
+  margin: 0px;
+  width: 100%;
+  border: 1px solid $gray-v1;
+}
+
+.FooterContent {
+  height: 100px;
+}
+
+.MainTitle {
+  font-size: 16px;
+}
+
+.RadioContainer {
+  border-radius: 4px;
+  border: 1px solid $gray-v1;
+  background: $white;
+  padding-right: 16px;
+}
+
+.CloseIcon {
+  top: 0px;
+  right: 16px;
+}
+
+.HeaderSpace{
+  padding-bottom: 16px;
+}

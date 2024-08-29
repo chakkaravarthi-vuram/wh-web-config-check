@@ -1,0 +1,111 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.InputDropdown{
+    max-width: 165px;
+}
+.RuleDropdownClass {
+    min-width: 130px;
+}
+.FormFieldDropdown {
+    max-width: 37vw;
+}
+.MailLabel {
+    font-size: $font-size-mdt;
+    color: $black-v20;
+    font-weight: $fw-normal;
+    line-height: 20px;
+}
+.TypeLabel {
+    padding: 5px 0 3px 0;
+}
+.DueDate {
+    height: 40px;
+    @include border-radius(3px);
+}
+.InputDropdownHeight{
+    height: 36px;
+}
+.Content{
+ font-size: 12px;
+ color: $gray-v3;
+ padding-top: 15px;
+ padding-left: 15px;
+ padding-bottom: 16px;
+ background-color: $gray-v7;
+ border: 1px solid $gray-v108;
+}
+.MailSubject{
+    font-size: 12px;
+    color: $gray-v3;  
+    height: 40px;
+    background-color: $gray-v7;
+    border: 1px solid $gray-v108;
+}
+
+.TextLabel {
+    label {
+        color: $black-v20 !important;
+        font-size: 12px;
+        font-weight: 500;
+    }
+}
+.AddActorsContainer{
+    margin-top:12px;
+    padding: 10px 15px;
+    max-height: 36px;
+   }
+.AddIconClass{
+     background-color: transparent !important;
+     fill:$blue-v21;
+     width: 16px;
+     height: 16px;
+     align-items: center;
+   }
+.textClass{
+    margin-left: 3px !important;
+}
+.FieldWithDelete{
+    width:calc(100% - 30px) !important;
+}
+.BlueIconButton {
+    color: $blue-v39;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+
+    svg {
+        margin-right: 8px;
+        path {
+            fill: $blue-v39;
+        }
+    }
+}
+
+.CloseIcon {
+    margin: 16px;
+    width: 16px;
+    height: 16px;
+    fill: $gray-v101 !important;
+    outline: none;
+}
+.W70 {
+    width: 70vw;
+}
+
+.Footer {
+    background: $white;
+    box-shadow: 0px -1px 4px 0px rgba(16, 24, 40, 0.08);
+    padding: 16px 24px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  
+    .Button {
+      font-size: $font-size-mdt;
+      padding: 8px 16px;
+      height: 36px;
+      font-weight: 500;
+    }
+  }

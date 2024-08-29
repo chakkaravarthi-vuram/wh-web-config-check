@@ -1,0 +1,176 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.FormButtonConfigBody {
+  width: 650px !important;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.ButtonType {
+  margin-top: 16px;
+}
+
+.ButtonPositionAndColorContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.AllowCommentsLabel {
+  margin-bottom: 10px;
+}
+.NeedComments {
+  margin-top: 16px;
+}
+
+.FormButtonsListContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.DeleteButton {
+  color: #b42318;
+  border: 0px !important;
+  white-space: nowrap;
+}
+
+.SaveAndCancelButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.SecondaryButton {
+  height: 38px;
+  border: 0px !important;
+  white-space: nowrap;
+}
+
+.Save {
+  width: 100px;
+  height: 38px !important;
+  font-size: 13px;
+  margin-left: 15px;
+}
+  
+.PlusIcon {
+  height: 18px;
+  width: 18px;
+  path {
+    stroke: $gray-v101;
+  }
+}
+
+.ButtonText {
+   color: $black-v20;
+   font-weight: 500;
+   text-wrap: nowrap;
+}
+
+.AddButtonContainer {
+  padding: 14px 12px;
+  border: 1px dashed $gray-v1;
+  gap: 8px;
+  border-radius: 3px;
+
+  &:hover {
+    border-style: solid;
+    border-color: $blue-v39;
+  }
+
+  &.Error {
+    border: 1px dashed $red-v18;
+  }
+}
+
+.FooterButtonsContainer {
+  background-color: $white;
+  height: 72px;
+  padding: 11.5px 18px;
+  border: 1px solid $gray-v108;
+  border-radius: 3px;
+  position: relative;
+  margin-top: 10px;
+
+  &:hover {
+    border-color: $blue-v46;
+  }
+
+  & .PanelContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  & .Panel{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+.Button {
+  padding: 7px 16px;
+  white-space: nowrap;
+  font-size: 13px;
+  line-height: 20px;
+  border-radius: 3px;
+}
+
+.ButtonContainer {
+  padding: 6px;
+  border-radius: 3px;
+  border: 1px dashed $gray-v1;
+
+  &:hover {
+    border-color: $blue-v39;
+    border-style: solid;
+  }
+}
+
+.Primary {
+  background-color: $blue-v39;
+  color: $white;
+}
+
+.OutlinePrimary{
+  background-color: white;
+  color: $blue-v39;
+  border: 1px solid $blue-v39;
+}
+
+.Negative {
+  color: $red-v25;
+}
+
+.MoreButton {
+  color: $blue-v39;
+  border: 1px solid $blue-v39;
+  border-radius: 3px;
+  padding: 7px 12px;
+  font-size: 12px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.FormFooterChip {
+  font-size: 12px;
+  line-height: 18px;
+  height: 22px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Add a smooth transition */
+}
+
+.FooterButtonsContainer:hover .FormFooterChip {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease; /* Add a smooth transition */
+}

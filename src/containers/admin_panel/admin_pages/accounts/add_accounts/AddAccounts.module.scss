@@ -1,0 +1,40 @@
+@import '../../../../../scss/constants';
+
+.AdminAccountLabel {
+  font-family: $font-family-2;
+  font-size: 26px;
+  font-weight: 600;
+}
+.Remainder {
+  font-family: $font-family-2;
+  font-size: 13px;
+  color: $gray-v9;
+}
+.InputSize {
+  width: 48%;
+}
+.FormContainer,
+.AdminFormContainer {
+  width: 100%;
+}
+.AdminFormFields {
+  margin-bottom: 10px;
+  width: 48%;
+}
+.FormFields {
+  margin-bottom: 10px;
+}
+
+.ActionButton {
+  width: 110px;
+  height: 40px;
+  border-radius: 20px;
+  background-image: linear-gradient(70deg, #72be44 0%, #00a0fd);
+}
+.SecondaryButton {
+  width: 110px;
+  height: 40px;
+  border-radius: 22px;
+  border-style: solid;
+  border-width: 1px;
+}

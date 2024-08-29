@@ -1,0 +1,154 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.Notes {
+  margin-top: 5px;
+  font-style: italic;
+  font-size: 11px;
+}
+
+.FontDropdown {
+  width: 367px;
+}
+.SettingsPopper {
+  background: $white;
+}
+.BlockPicker {
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px, rgba(0, 0, 0, 0.15) 0px 8px 16px;
+}
+.ThemeSettingsModal {
+  padding: 30px;
+}
+.ColorType {
+  padding: 5px 8px;
+  font-size: $font-size-mdt;
+  height: 32px;
+  text-align: center;
+  border-top: 1px solid $gray-v102;
+}
+.FillBox {
+  height: 48px;
+}
+.ColorBox {
+  border-radius: 3px;
+  border: 1px solid var(--text-15, $gray-v102);
+  width: 124px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.ImageContainer {
+  height: 105px;
+  width: 340px;
+  background-color: $gray-v10;
+
+  & .Image {
+    max-height: 100%;
+  }
+}
+
+.AvailableImage {
+  & :hover + .LinkContainer,
+  & .LinkContainer:hover {
+    opacity: 1;
+  }
+  .LinkContainer {
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+}
+
+.LinkContainer {
+  background-color: rgba(239, 241, 244, 0.9);
+  height: inherit;
+  width: inherit;
+  border-radius: 3px;
+}
+
+.FormTitleWidth {
+  width: 35%;
+  min-width: 100px;
+}
+
+.InputBox {
+  display: flex;
+  width: 695px;
+  justify-content: space-between;
+}
+
+.AccountName {
+  width: 340px;
+  height: 36px;
+  border-radius: 3px;
+
+  & Input {
+    flex-grow: 1;
+    text-overflow: clip;
+  }
+}
+.labelClass {
+  width: 340px;
+  margin-bottom: 1px !important;
+}
+.InputSize {
+  width: 695px !important;
+}
+
+.FontFamilyStyle {
+  padding-bottom: 5px !important;
+}
+
+.LogoLabel {
+  margin-bottom: 2px !important;
+}
+.OptionListDropDown {
+  width: 695px !important;
+  // margin-left: 62px;
+}
+.dropdownWidth{
+  div > div{
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  // box-shadow: none !important;
+}
+.AccountContainer {
+  background-color: $white;
+  margin: 30px;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.04);
+  // height: 518px;
+}
+.SubCommonHeaderTitle {
+  background-color: $white;
+  padding: 20px 0px 16px 30px;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 20px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.04);
+  border: solid 1px $gray-v68;
+}
+.InstructionMessageStyles {
+  font-size: $font-size-sm;
+  color: $gray-v74;
+}
+.UpdatedImageContainer {
+  margin: 0px !important;
+}
+
+@include for-phone-and-tab {
+  .InputBox {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  .InputSize {
+    width: 100% !important;
+  }
+  .OptionListDropDown {
+    width: 100% !important;
+    margin-left: 0px;
+  }
+}

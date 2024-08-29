@@ -1,0 +1,45 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.OuterContainer {
+  background-color: $white;
+  padding: 32px;
+  height: calc(100vh - 238px);
+  overflow: auto;
+}
+.AuthTitle {
+  color: $gray-v3;
+  font-size: $font-size-xl;
+  font-weight: $fw-semibold;
+}
+.AuthenticationFields {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.HeaderParamColumn {
+  width: 200px;
+}
+.HeaderParamTable {
+  & thead {
+    & th {
+      color: $black-v20 !important;
+      font-size: 12px !important;
+      background-color: $gray-v108 !important;
+    }
+  }
+  & tbody {
+    & tr {
+      & td {
+        color: $gray-v89 !important;
+      }
+    }
+    & tr:last-child {
+      & td {
+        border-bottom: none !important;
+      }
+    }
+  }
+  border: 1px solid $gray-v108;
+}

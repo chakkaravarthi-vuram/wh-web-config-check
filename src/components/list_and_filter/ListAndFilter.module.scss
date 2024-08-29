@@ -1,0 +1,126 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+.Container {
+  & .InfiniteScrollContainer {
+    height: calc(100% - 60px);
+    list-style: none;
+    width: 100%;
+
+    & div {
+      height: 100%;
+    }
+  }
+
+  & .ScrollBar {
+    &::-webkit-scrollbar {
+      display: none;
+      width: 0;
+    }
+
+    &::-webkit-scrollbar-track {
+      display: none;
+      width: 0;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      display: none;
+      width: 0;
+    }
+  }
+
+  & .SearchFilterContainer {
+    & .Input {
+      flex-grow: 1;
+      border: 0;
+      height: 18px;
+      ::placeholder {
+        color: $gray-v37;
+      }
+    }
+
+    // & .Dropdown {
+    //   height: 18px;
+    //   width: 150px;
+    // }
+  }
+}
+
+.ListContainer {
+  flex: 1 1 auto;
+  // height: calc(100% - 138px);
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding-left: 30px;
+  background-color: $gray-v23;
+  
+  @include for-phone-and-tab {
+    padding-left: 30px;
+  }
+}
+
+.Hr {
+  left: 0;
+}
+
+.InfiniteScroll {
+  overflow-x: hidden !important;
+  padding-right: 33px;
+  max-height: calc(100vh - 275px);
+  @include for-phone-and-tab {
+    padding-right: 23px;
+  }
+}
+
+.AccordionInfiniteScroll {
+  overflow-x: hidden !important;
+  padding-right: 2px;
+  @include for-phone-and-tab {
+    padding-right: 1px;
+  }
+}
+.CreateTaskButton {
+  padding: 0px 12px 0px 14px;
+  font-size: 13px;
+  //  justify-content: flex-end;
+}
+.MyTasksSearchInput {
+  & .Input {
+    flex-grow: 1;
+    border: 0;
+    width: calc(100% - 40px);
+    height: 18px;
+    ::placeholder {
+      color: $gray-v37;
+    }
+  }
+}
+
+// .TabDropdown {
+//   // width: 250px;
+// }
+
+.CloseIcon {
+  width: 14px;
+  height: 14px;
+  stroke-width: 30px;
+}
+
+.Dropdown {
+  height: 18px;
+  width: max-content;
+}
+
+.Accordion {
+  padding: 0px 20px;
+  background-color: $gray-v23;
+  flex: 1;
+}
+.AccordionChildrenScroll {
+  overflow-x: hidden !important;
+}
+
+.DropdownList {
+  width: 225px;
+  max-height: none;
+}

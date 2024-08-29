@@ -1,0 +1,43 @@
+@import '../../../../../scss/utilities';
+
+.Content {
+  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+  height: 0px !important;
+}
+.Show {
+  height: 100%;
+  transition: all 0.5s cubic-bezier(0, 1, 0, 1) !important ;
+}
+.Rotate {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(-90deg);
+}
+.PlusButton {
+  height: 30px !important;
+  width: 30px !important;
+  display: flex !important;
+}
+
+.AddNewChatRightStartPlacement {
+  margin-left: 10px;
+}
+.ShowChatButton {
+  padding-bottom: 0px !important;
+}
+
+.Popper {
+  outline: none !important;
+}
+.ChatTitle {
+  @extend %FS14;
+  @extend %FontWeight600;
+}
+.ChatMenuList {
+  padding-right: 0px !important;
+}
+.ChatMenuExpanded {
+  padding-right: 8px !important;
+}

@@ -1,0 +1,11 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.NoParamsContainer {
+    height: 100%;
+}
+.NoDataInfo {
+    font-size: $font-size-md;
+    line-height: 17px;
+    color: $gray-v86;
+}

@@ -1,0 +1,63 @@
+@import '../../scss/constants';
+@import 'scss/utilities';
+
+.NextButton {
+  padding-left: 40px;
+  padding-right: 40px;
+  width: auto;
+  margin-top: 50px;
+}
+.MR10 {
+  margin-right: 10px !important;
+}
+.Hr {
+  height: 1px;
+  opacity: 0.3;
+  background-color: $gray-v16;
+}
+.EditableContainer {
+  padding: 0px 0px 15px 0px;
+}
+
+.CheckBox * {
+  margin-right: 0px;
+}
+
+.UserIcon {
+  fill: $gray-v2 !important;
+}
+.HLine{
+  height: 1px;
+  background-color: #d8dee9;
+  width: 100%;
+  overflow: hidden;
+  margin-right: 20px;
+  margin-left: 15px;
+
+}
+
+.Checkbox{
+  height: 24px !important;
+  width: 24px !important;
+}
+
+.Header{
+  padding: 20px 51px 20px 48px;
+}
+
+.labelClass{
+  @extend %FS13;
+  color: $gray-v53 !important;
+}
+
+.MR20{
+  margin-right: 20px !important;
+}
+.ImportSections{
+  padding: 0 51px 0 48px;
+}
+.ImportSectionContainer{
+  overflow: hidden ;
+  overflow-y: scroll;
+  height: calc(100vh - 200px);
+}

@@ -1,0 +1,71 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+.UserCard {
+  padding: 11px 23px;
+  &:hover {
+    background-color: $gray-v7;
+  }
+}
+
+.SelectedUserCard {
+  padding: 11px 23px;
+  background-color: $gray-v7;
+  &:hover {
+    background-color: $gray-v7;
+  }
+}
+
+.UserCardBorder {
+  border: 1px solid $gray-v1;
+}
+
+.UserCardBorderV2 {
+  border: 1px solid $gray-v1;
+  border-radius: 4px;
+  &:hover{
+    .DeleteIcon {
+      opacity: 1;
+    }
+    background-color: $gray-v7;
+  }
+}
+
+.FlexGrow1 {
+  flex-grow: 1;
+}
+
+.UserImage {
+  height: 32px;
+  width: 32px;
+}
+
+.UsernameAndDomain {
+  width: calc(100% - 62px);
+}
+
+.MailIcon {
+  height: 12px;
+  width: 16px;
+  fill: $gray-v13;
+}
+
+.DeleteIcon {
+    opacity: 0;
+}
+
+.DeleteIcon {
+  fill: $gray-v87;
+  &:focus, &:focus-visible {
+    opacity: 1 !important;
+
+  }
+}
+.DeleteIconContainer{
+  height: 24px;
+  width: 24px;
+  @include border-radius(4px);
+  &:hover{
+    background-color: $white;
+  }
+} 

@@ -1,0 +1,105 @@
+
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+    .SearchInput {
+      width: 280px;
+      border-radius: 2px;
+      padding: 3px 20px 3px 25px;
+      height: 40px;
+      border-width: 0;
+      border: none;
+      border-bottom: 2px solid transparent;
+      @include transition(.3s);
+      &::placeholder {
+        color: $gray-v6;
+        opacity: 1;
+      }
+      &:focus-visible {
+        outline: none;
+      }
+      &:not(:placeholder-shown) {
+        color: $gray-v3;
+          @include for-desktop{
+              // width: 40vw;
+          }
+      }
+      @include for-phone-and-tab {
+        width: 0;
+        // padding: 3px 15px;
+      }
+      
+      &.AppHeaderSearch{
+        padding: 3px 20px 3px 5px;
+        color: white;
+
+        &::placeholder {
+            color: $gray-v1;
+            opacity: 1;
+        }
+
+        &:not(:placeholder-shown) {
+          color: white;
+        }
+      }
+
+    }
+    .OpenSearch{
+      border: none !important;
+      width: 40vw!important;
+    }
+
+    .SearchIcon {
+      position: absolute;
+      // left: 11px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      // z-index: 1;
+      @include for-phone-and-tab {
+        // left: 0;
+      }
+    }
+    @include for-phone-and-tab {
+      .SmallSearch {
+        max-width: calc(100% - 60px);
+        input {
+          display: block;
+          width: calc(50vw - 42px);
+          padding: 3px 8px 3px 22px;
+        }
+      }
+    }
+    .SearchResultsContainer {
+      width: 100%;
+    }
+  
+
+  .SearchCondition {
+    pointer-events: none;
+    cursor: pointer;
+  }
+
+  .SearchMobileContainer {
+    background-color: $white;
+    padding: 20px;
+    border-radius: 0px;
+    height: 100%;
+  }
+  
+  .SearchMobileOuter {
+    margin-top: 66px;
+    display: block;
+  }
+  .SearchInputFocused {
+    max-width: 40vw!important;
+    @include for-desktop{
+      width: 40vw!important;
+      border: none !important;
+      border-bottom: $blue-v20 solid 2px !important;
+      box-shadow: none;
+    }
+  }
+  

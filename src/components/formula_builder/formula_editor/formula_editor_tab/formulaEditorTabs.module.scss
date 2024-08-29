@@ -1,0 +1,222 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.EditorTabs{
+    width: 294px !important;
+    border: solid 1px $gray-v71;
+    border-left: none;
+}
+
+.Container {
+    // height: 32px;
+    border: solid 1px $gray-v71;
+    border-width: 0 1px 1px 1px;
+    
+    .SubContainer {
+        padding: 2px 0px;
+    }
+
+    button {
+        border-right: solid 1px $gray-v71;;
+        padding: 0px 16px;
+        color: $gray-v3;
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+
+    .Focus {
+        color: $blue-v39;
+        
+    }
+}
+
+.SectionBottomBorder{
+    border-bottom: 1px solid $gray-v71;
+}
+
+.SectionTitle{
+    color: var(--text-body-text, #282828);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.TabValueContainer {
+    // border: 1px solid $gray-v68;
+    width: 100%;
+    padding: 0 16px 8px;
+    // max-height: 95px;
+    // min-height: 95px;
+    overflow: hidden;
+    overflow-y: auto;
+    // border-bottom: 1px solid $gray-v71;
+    // gap: 5px;
+    // display: flex;
+    // flex-wrap: wrap;
+    // align-content: baseline;
+
+    .TabButton{
+        padding: 5px;
+        box-shadow: none !important;
+        text-transform: none !important;
+        border-radius: 3px;
+        @extend %FTwo12Important;
+        font-weight: 500!important;
+        height: fit-content!important;
+    }
+    .functions {
+        background-color: $green-v28 ;
+        color: $green-v27;
+        border: 1px solid $green-v29;
+
+        &:hover{
+            color: $white !important;
+            background-color: $green-v27 !important;
+            border: 1px solid $green-v27;
+        }
+    }
+
+    .fields {
+        // background-color: $blue-v41 !important;
+        // color: $blue-v39 !important;
+        background-color: $gray-v107 !important;
+        color: $black-v20 !important;
+    }
+
+    // > button:not(:last-child) {
+    //     margin-right: 5px;
+    // }
+}
+
+.TabGroup{
+    position: relative;
+    .GroupTitle {
+        position: sticky;
+        top: 0;
+        color: $gray-v86;
+        font-size: 12px;
+        text-transform: capitalize;
+        z-index: 1;
+        background-color: white;
+    }
+
+    .GroupContent{
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 5px;
+        padding: 8px 0;
+    }
+}
+
+.FormulaTabContainer {
+    border: 1px solid $gray-v68;
+    padding: 10px;
+    border-top: none;
+
+    .FormulaCategory {
+        border-radius: 2px;
+        background-color: $gray-v10;
+
+        .FormulaBlock {
+            padding: 0px 7px;
+            cursor: pointer;
+            border: none;
+            &:hover {
+                background-color: $blue-v31;
+            }
+        }
+    }
+}
+
+.ErrorContainer {
+  width:80%;
+}
+
+.EvaluateButton {
+    height: fit-content !important;
+    text-transform: none !important;
+    padding: 10px !important;
+    display: flex;
+    column-gap: 5px;
+    width: 18% !important;
+}
+
+.BtnLink {
+    border: none;
+    background-color: transparent;
+}
+.Correct{
+    color: $green-13
+}
+.Incorrect{
+    color: $red-v5
+}
+.ClearFormula {
+    color: $red-v5;
+}
+
+.MathSymbolContainer {
+    padding: 10px;
+    border: 1px solid $gray-v68;
+
+    .MathSymbolVariety {
+        background-color: $gray-v10;
+        border-radius: 2px;
+        margin-right: 1px;
+        font-size: 9px;
+        font-weight: 600;
+        color: $gray-v53;
+        height: 24px;
+        padding: 0 10px;
+
+        .IconContainer {
+            margin-right: 20px;
+            cursor: pointer;
+        
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
+    }
+}
+
+.SearchArea{
+    height: 27px;
+    margin: 8px 16px;
+    border: 1px solid $gray-v68;
+    // border-width: 0 1px 1px 1px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+ 
+    & .SearchIcon{
+        height: 12px;
+        width: 12px;
+        margin-right: 5px;
+    }
+    & .Input{
+        height: auto;
+        padding: 0;
+        flex: 1;
+        
+        input {
+          font-size: 12px;
+        }
+    }
+}
+
+.ButtonContainer{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    height: min-content;
+}
+
+.TabDataPopper{
+    top:0;
+    left: 0;
+    width: fit-content;
+}

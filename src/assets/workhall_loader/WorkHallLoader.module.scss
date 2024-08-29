@@ -1,0 +1,114 @@
+@import '../../scss/constants';
+
+.WorkHallLoader {
+  height: 90vh;
+  // width: 88vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.LinearActivity {
+  overflow: hidden;
+  width: 250px;
+  height: 4px;
+  background-color: #b3e5fc;
+  margin-top: 20px;
+}
+
+.Indeterminate {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.Indeterminate:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  background-color: $blue-v39;
+  animation: indeterminate_first 1.5s infinite ease-out;
+}
+
+.Indeterminate:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  background-color: #4fc3f7;
+  animation: indeterminate_second 1.5s infinite ease-in;
+}
+
+@keyframes indeterminate_first {
+  0% {
+    left: -100%;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 10%;
+  }
+}
+
+@keyframes indeterminate_second {
+  0% {
+    left: -150%;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 10%;
+  }
+}
+
+// Spinner.scss
+.spinnerWheel {
+  transform-origin: center;
+  animation: spinner_first 2s linear infinite;
+}
+
+.spinnerWheel circle {
+  stroke-linecap: round;
+  animation: spinner_second 1.5s ease-in-out infinite;
+}
+
+@keyframes spinner_first {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner_second {
+  0% {
+    stroke-dasharray: 0 150;
+    stroke-dashoffset: 0;
+  }
+  47.5% {
+    stroke-dasharray: 42 150;
+    stroke-dashoffset: -16;
+  }
+  95%, 100% {
+    stroke-dasharray: 42 150;
+    stroke-dashoffset: -59;
+  }
+}
+
+.loader {
+  width: 120px;
+  height: 22px;
+  border-radius: 20px;
+  border: 2px solid;
+  position: relative;
+}
+.loader::before {
+  content: "";
+  position: absolute;
+  margin: 2px;
+  inset: 0 100% 0 0;
+  border-radius: inherit;
+  background: currentColor;
+  animation: l6 2s infinite;
+}
+@keyframes l6 {
+    100% {inset:0}
+}

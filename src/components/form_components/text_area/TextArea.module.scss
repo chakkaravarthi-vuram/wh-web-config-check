@@ -1,0 +1,21 @@
+@import '../../../scss/utilities';
+
+.TextArea {
+  max-height: 100px;
+  // margin-bottom: -7px;
+  // height: 62px;
+  resize: none;
+  &::placeholder {
+    @extend %GrayV6;
+    opacity: 1;
+  }
+}
+.TextAreaWidth {
+  min-width: 72px;
+}
+.NoBorder {
+  border: none;
+}
+.TextAreaHeight {
+  height: 72px !important;
+}

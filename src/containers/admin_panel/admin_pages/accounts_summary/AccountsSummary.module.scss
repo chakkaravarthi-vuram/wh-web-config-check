@@ -1,0 +1,33 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.GlobalContainer {
+  padding: 30px;
+  background-color: $gray-v63;
+}
+
+.Container {
+  justify-content: space-between;
+  flex-direction: row;
+
+  @include for-phone-and-tab {
+    flex-direction: column;
+  }
+}
+
+.CardMargin {
+  flex: 1;
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+
+  @include for-phone-and-tab {
+    margin-right: 0px;
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+}

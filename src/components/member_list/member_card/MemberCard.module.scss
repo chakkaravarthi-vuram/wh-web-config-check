@@ -1,0 +1,115 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.MemberListContainer {
+  padding: 10px 0px;
+  margin-bottom: 10px;
+
+  & .MailIcon {
+    height: 12px;
+    width: 16px;
+    fill: $gray-v13;
+  }
+
+  & .UserDetailContainer {
+    flex-grow: 2;
+    .UserName {
+      @include for-small-to-medium-height-device {
+        font-size: $font-size-sm !important;
+      }
+    }
+  }
+
+  & .NameContainer {
+    background-color: $gray-v10;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    text-transform: uppercase;
+  }
+
+  & .UserRole {
+    flex-grow: 1;
+    color: $gray-v89;
+  }
+
+  & .UserEmail {
+    @include for-small-to-medium-height-device {
+      font-size: $font-size-sm !important;
+    }
+    color: $gray-v98;
+  }
+
+  & .Dropdown {
+    width: 150px;
+  }
+  & .Activate {
+    color: $green-v1;
+  }
+  & .UserImage {
+    height: 36px;
+    width: 36px;
+  }
+
+  @include for-small-to-medium-height-device {
+    padding-block: 5px;
+    margin-block-end: 4px;
+  }
+}
+
+.Hover {
+  cursor: pointer;
+
+  & .Button,
+  .Dropdown {
+    visibility: hidden;
+  }
+
+  &:hover {
+    background-color: $gray-v7;
+
+    & .Button,
+    .Dropdown {
+      visibility: visible;
+    }
+  }
+}
+
+.ButtonContainer {
+  @include for-phone-and-tab {
+    display: none;
+  }
+}
+
+.DeleteIcon{
+  fill: $gray-v87;
+}
+.DeleteIconContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  width: 24px;
+  @include border-radius(4px);
+  &:hover{
+    background-color: $gray-v96;
+  }
+}
+
+.TableHeader {
+  color: $black-v20;
+  padding: 12px 24px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  display: grid;
+  grid-template-columns: 7fr 2.2fr;
+  background-color: $gray-v110;
+  border-bottom: 1px solid $gray-v108;
+}
+
+.Arrow {
+  color: $gray-v87;
+  font-size: 14px;
+}

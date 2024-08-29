@@ -1,0 +1,28 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.MainContainer {
+  @include border-radius(2px);
+  background-color: $white;
+  margin: 24px;
+  padding: 20px;
+  height: calc(100vh - 120px);
+  overflow: auto;
+}
+
+.ViewModeContainer {
+  height: calc(100vh - 288px);
+}
+
+.Container {
+  background-color: $green-v24;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+  
+  .Title {
+    @extend %GreenV23;
+    margin-bottom: 5px;
+  }
+}

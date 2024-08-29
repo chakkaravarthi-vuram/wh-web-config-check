@@ -1,0 +1,142 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+
+.Table{
+    padding-left: 8px;
+   & .LabelContainer{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   & .Edit{
+        border-radius:4px;
+        height: 24px;
+        width: 24px;
+        background-color: white;
+        display: none;
+
+        path {
+            fill: $gray-v87;
+        }
+    
+        &:hover{
+            background-color: $gray-v10;
+        }
+    }
+
+    &:hover .Edit{
+        display: block;
+    }
+}
+
+.OverlayButtons{
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid $blue-v39;
+    .OverlayBtn{
+        font-size: 13px;
+        padding: 4px 8px;
+        color: $blue-v39;
+        background-color: white;
+        width: 50%;
+
+        &:disabled{
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        &.SelectedBtn{
+            background-color: $blue-v39;
+            color: white;
+        }
+
+        &:nth-child(1) {
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+
+        &:nth-child(2) {
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+    }
+}
+
+.DarkOverlay {
+    opacity: 0.75;
+}
+
+.EachColumn {
+    min-width: 200px;
+}
+.TableWrapper {
+ width: inherit;
+ overflow: auto ;
+}
+
+.AddRowBtn{
+    margin-top: 8px;
+    font-size: 13px;
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+.TooltipArrowClass {
+    :global(.bs-tooltip-auto[x-placement^=bottom] .arrow::before) {
+        border-bottom-color: $black-v22 !important;
+      }
+      :global(.bs-tooltip-auto[x-placement^=left] .arrow::before) {
+        border-left-color: $black-v22 !important;
+      }
+      :global(.bs-tooltip-auto[x-placement^=top] .arrow::before) {
+        border-top-color: $black-v22 !important;
+      }
+      :global(.bs-tooltip-auto[x-placement^=right] .arrow::before) {
+        border-right-color: $black-v22 !important;
+      }
+}
+
+.Tooltip {
+    background-color: $black-v22;
+    color: $white;
+}
+
+.ColumnInstruction {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.CustomTableStyles {
+    th, td {
+        padding: 12px 12px !important;
+    }
+}
+
+.ColumnName {
+    max-width: 15vw;
+    min-width: 100%;
+}
+
+.DeleteButton {
+    svg path {
+        stroke: $gray-v86;
+    }
+
+    &:hover {
+        svg path {
+            stroke: $red-v22;
+        }
+    }
+}
+
+.LinkFieldClass {
+    min-width: 300px !important;
+}

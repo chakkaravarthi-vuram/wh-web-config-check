@@ -1,0 +1,183 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+@import '../../scss/Typography.module.scss';
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.footerWithDependencies {
+  display: flex;
+  justify-content: flex-end;
+  width: auto;
+  margin-top: 22px;
+  margin-bottom: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.footerWithoutDependencies {
+  display: flex;
+  justify-content: flex-end;
+  width: auto;
+  margin-bottom: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.DependenciesTextHeader {
+  @extend %FS13;
+  @extend %FontWeight500;
+  color: $orange-v33;
+  margin-left: 20px;
+}
+
+.DependenciesTextSubHeader {
+  @extend %FS12;
+  @extend %FontWeight400;
+  color: $black-v20;
+  margin-left: 20px;
+}
+
+.DisplayFlex {
+  @extend %DFlex;
+}
+
+.JustifyCenter {
+  @extend %JustifyContentCenter;
+}
+
+.DependencyWarningHeader {
+  display: flex;
+  padding: 10px 0;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+  margin-right: 30px;
+}
+
+.DependencyWarningContents {
+  background-color: $orange-v20;
+  width: 100%;
+}
+
+.NoDepFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.DependencyCard {
+  border: 1px solid $gray-v1;
+  border-radius: 3px;
+  padding-bottom: 10px;
+  margin-left: 40px;
+  margin-right: 30px;
+  margin-bottom: 10px;
+}
+
+.DependencyCardHeadertext {
+  background-color: $gray-v107;
+  color: $blue-v25;
+  @extend %FontWeight500;
+  @extend %FS13;
+  text-align: initial;
+  padding: 5px 10px 5px 10px;
+  border-radius: 3px 3px 0px 0px;
+  display: flex;
+  flex: row;
+  align-items: center;
+
+  .CardHeader {
+    margin-left: 10px;
+  }
+}
+
+.CardHeaderOuter {
+  display: contents;
+}
+
+.DependencyCardHeadText {
+  text-align: start;
+  @extend %FS13;
+  @extend %FontWeight400;
+  color: $blue-v25;
+  overflow: auto;
+}
+
+.MainContent {
+  height: auto !important;
+  min-height: fit-content !important;
+  max-height: 250px !important;
+  overflow-y: scroll;
+}
+
+.DependencyCardInnerDep {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 10px;
+}
+
+.NoDependenciesContentHeight {
+  height: fit-content !important;
+}
+
+.DependencyList {
+  margin-left: 8px;
+
+  ul {
+    margin-left: 30px;
+  }
+
+  li {
+    list-style-type: none;
+    margin: 15px 0 15px 10px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: -32px;
+      border-left: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      width: 30px;
+      height: 20px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 9.5px;
+      left: -32px;
+      border-left: 1px solid #ddd;
+      border-top: 1px solid #ddd;
+      width: 30px;
+      height: 100%;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+
+    &:first-child::before {
+      width: 0;
+    }
+
+    &:first-child:last-child::before {
+      width: 30px;
+    }
+  }
+}

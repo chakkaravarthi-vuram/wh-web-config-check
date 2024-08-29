@@ -1,0 +1,369 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+  .Layout {
+    min-height: 300px !important;
+    :global(.react-grid-item) {
+      border-radius: 4px;
+      @include responsive-layout {
+        position: relative !important;
+        transform: none !important;
+        min-width: 100%;
+        padding: 24px;
+        padding-top: 0;
+        height: fit-content !important;
+      }
+    }
+    :global(.react-grid-item.react-grid-placeholder) {
+      background: $gray-v102 !important;
+      opacity: 0.3 !important;
+      transition-duration: 100ms;
+      z-index: 2;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+    }
+    :global(.react-grid-item .react-resizable-handle) {
+      z-index: 6;
+    }
+    :global(.react-grid-item .react-resizable-handle::after) {
+      border: none;
+    }
+    @include responsive-layout {
+      padding-top: 24px;
+      height: 100vh !important;
+    }
+  }
+
+  .TabIcon {
+    path {
+      fill: #9E9E9E !important;
+    }
+  }
+
+  .TabSelected {
+    width: calc(100% - 12px) !important;
+    left: 0;
+    bottom: 1px;
+  }
+
+  .PopperLayout {
+    box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.16);
+    @include border-radius(3px);
+    border: 0px solid $gray-v105;
+    background-color: $white;
+    padding: 12px;
+    
+    .PopperElement {
+      display: block;
+    }
+
+    :not(:last-child) {
+      margin-bottom: 12px;
+
+      &:hover div p{
+        color: $blue-v39;
+      }
+    }
+  }
+
+  .TabContainer {
+    border: 1px solid $gray-v102;
+    background-color: $white;
+    border-right: none;
+    border-left: none;
+  }
+
+  .AppHeader {
+    height: 75px;
+    background-color: $white;
+
+    .AppTitleContainer {
+      justify-content: space-between;
+
+      .Divider {
+        width: 1px;
+        height: 26px;
+        background: $gray-v102;
+        margin: 0 12px;
+      }
+    }
+  }
+
+  .PopperPosition {
+    inset: 1px 1px auto auto !important
+  }
+
+  .ComponentDnd {
+    border-left: 1px solid $gray-v102;
+    border-top: 1px solid $gray-v102;
+    background: $white;
+    overflow-y: hidden !important;
+
+    .ComponentDndHeader {
+      height: 48px;
+      border-bottom: 1px solid $gray-v102;
+    }
+
+    .ElementGrid {
+      padding: 24px;
+      height: calc(100% - 110px);
+      overflow-y: scroll !important;
+      overflow-x: hidden !important;
+
+      .DragElement {
+        border-radius: 3px;
+        border: 1px solid $gray-v102;
+        background: $gray-v80;
+        padding: 12px;
+        cursor: grab;
+
+        &:hover {
+          border: 1px solid $blue-v39;
+          background: $blue-v48;
+
+          .TextStyle path {
+            stroke: $blue-v39 !important;
+          }
+          svg:not(.TextStyle) path {
+            fill: $blue-v39 !important;
+          }
+          div p{
+            color: $blue-v39 !important;
+          }
+        }
+      }
+    }
+  }
+
+  .AppBuilderContainer {
+    background: $gray-v103;
+  }
+
+  .W72 {
+    width: 72px !important;
+  }
+
+  .W90 {
+    width: 90px !important;
+  }
+
+  .W100 {
+    width: 100px !important;
+  }
+
+  .TabContainerDimension {
+    height: 30px;
+  }
+
+  .TabWrapper {
+    padding-right: 50px;
+  }
+
+  .TabButton {
+    position: absolute;
+    right: 0;
+
+  }
+
+  .ToggleOpen {
+    width: 252px;
+  }
+  .ToggleClose {
+    width: 48px;
+  }
+
+  .AppContainerWoToggle {
+    width: calc(100% - 96px);
+  }
+
+  .AppContainerToggle {
+    width: calc(100% - 300px);
+  }
+
+  .W100Imp {
+    width: 100% !important;
+  }
+
+  .PlusContainer {
+    top: -5px;
+    position: absolute;
+    right: 20px;
+  }
+
+  .overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    z-index: 5;
+    @include border-radius(6px);
+    cursor: grab;
+  }
+
+  .OverlayHover {
+    @include border-radius(4px);
+    border: 1px solid $blue-v39;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    .EditComp {
+      display: block !important;
+    }
+  }
+
+  .ErrorCompBorder {
+    @include border-radius(4px);
+    border: 1px solid $red-v28 !important;
+  }
+
+  .EditComp {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    display: none !important;
+  }
+
+  .SpaceBtw {
+    justify-content: space-between;
+  }
+
+  .DirContainer {
+    top: -5px;
+    left: -18px;
+    right: -18px;
+  }
+
+  .OverFlowHidden {
+    overflow: hidden !important;
+  }
+
+  .LayoutDndContainer {
+    overflow-x: hidden !important;
+    height: calc(100vh - 128px);
+    overflow-x: auto;
+  }
+
+  .AppCompBorder {
+    @include border-radius(6px);
+  }
+
+  .AppComponent {
+    border-radius: 4px;
+    white-space: nowrap;
+    overflow-y: auto;
+  }
+  .AppComponentTitle {
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block !important;
+  }
+
+  .BottomM1 {
+    bottom: -1px !important;
+  }
+
+  .BgPlaceholderContainer {
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 24px;
+    gap: 24px;
+
+    .BgPlaceholder {
+      border: 1px dashed $gray-v106;
+      @include border-radius(6px);
+      width: 100%;
+      height: 100px;
+    }
+  }
+
+  .ToggleIcon {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+  .IconsStrokeHover {
+    transition: 0.3s all;
+    &:hover {
+      path {
+        stroke: $blue-v39;
+      }
+    }
+  }
+
+  .IconsFillHover {
+    &:hover {
+      path {
+        fill: $blue-v39;
+      }
+    }
+  }
+
+  .BgBlack {
+    background-color: $black-v12 !important;
+  }
+
+  .Opac1 {
+    opacity: 1 !important;
+  }
+
+  .MaxWidth120 {
+    max-width: 120px;
+  }
+
+  .ResizeHandle {
+    position: absolute;
+    right: 1px;
+    bottom: 1px;
+    path {
+      fill: transparent !important;
+    }
+  }
+
+  .ImageComponentStyle {
+    display: inline-block;
+  }
+
+  .W32 {
+    width: 32px;
+  }
+
+  .LoaderComponent {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 1fr 1fr;
+
+    > div {
+      height: 200px;
+      padding: 24px;
+      gap: 20px;
+      display: grid;
+      @include border-radius(6px);
+    }
+  }
+
+  .ExpandIcon {
+    position: absolute;
+    bottom: 2px;
+    right: -3px;
+    transform: rotate(91deg);
+    height: 14px;
+  }
+
+  .AppContainerHeight {
+    height: calc(100vh - 76px);
+  }

@@ -1,0 +1,78 @@
+@import '../../../../../../scss/Typography.module.scss';
+@import '../../../../../../scss/constants';
+@import '../../../../../../scss/utilities';
+
+.NewFieldHeaderText {
+    color: var(--gray-900-title, #1f243d);
+    font-feature-settings: 'clig' off, 'liga' off;
+  
+    /* H3_Sub & Popover heading */
+    font-family: $font-family-2;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.2px;
+}
+
+.NewFieldHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 24px;
+    border-bottom: 1px solid $gray-v1;
+}
+
+.NewFieldCloseIcon {
+    cursor: pointer;
+}
+
+
+.TableColumnContainer {
+    padding: 6px 12px;
+    border: 1px solid $gray-v1;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.NewFieldFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 0px 0px 3px 3px;
+    background: #fff;
+    box-shadow: 0px -1px 4px 0px rgba(16, 24, 40, 0.08);
+    flex-shrink: 0;
+  }
+
+.SaveAndCancelButtons {
+    display: flex;
+    flex-direction: row;
+}
+
+.Cancel {
+    border: none !important;
+}
+
+.DeleteFormField {
+    color: $red-v25;
+    border: none !important;
+  }
+.DeleteFormField:hover {
+    color: $red-v25 !important;
+}
+.FlexBasis {
+    width: 50% !important;
+}
+.FlexBasisMaxWidth {
+    max-width: 220px;
+}
+
+.TwoColGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px
+}

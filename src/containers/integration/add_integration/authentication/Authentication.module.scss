@@ -1,0 +1,107 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.MainContainer {
+  background-color: $white;
+  padding: 32px;
+  height: calc(100vh - 62px);
+  overflow: auto;
+}
+.FieldsWrapper {
+  max-width: 650px;
+}
+.Success {
+  @extend %FS13;
+  font-weight: $fw-semibold;
+  color: $green-v17;
+}
+.AuthIcon {
+  width: 14px;
+  height: 14px;
+}
+.AuthTitle {
+  color: $gray-v3;
+  font-size: $font-size-xl;
+  font-weight: $fw-semibold;
+}
+
+.DeleteIcon {
+  cursor: pointer;
+}
+.SuccessIcon {
+  width: 14px;
+  height: 14px;
+  circle {
+    fill: $green-v18;
+  }
+}
+.TryAgain {
+  @extend %FS13;
+  font-weight: $fw-semibold;
+  color: $blue-v39;
+}
+.AuthFailed {
+  @extend %FS13;
+  font-weight: $fw-semibold;
+  color: $red-v20;
+}
+.MaskedInput {
+  flex-grow: 1;
+  margin-bottom: 16px;
+}
+
+.CallbackContainer {
+  border: 1px solid $gray-v1;
+  border-radius: 2px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+.InfoContainer {
+  border: 1px solid $orange-v26;
+  border-radius: 2px;
+  background-color: $orange-v29;
+  padding: 16px;
+  font-weight: 400;
+}
+
+.CallbackTitle{
+  font-weight: 600;
+}
+
+.Link{
+  font-weight: 500;
+  padding: 12px 0;
+}
+
+.ColMid {
+  width: 45% !important;
+  padding-left: 3px;
+  // padding-right: 12px
+}
+
+.ColMini {
+  width: 40px !important;
+}
+
+.Header {
+  padding-left: 3px !important;
+  &:first-child {
+    width: 45% !important;
+  }
+  &:nth-child(2) {
+    width: 45% !important;
+  }
+  &:last-child {
+    width: 40px !important;
+  }
+}
+.LabelClassName {
+  label {
+    color: $black-v13;
+    font-size: $font-size-mdt;
+    font-weight: $fw-semibold;
+  }
+}
+.AdminFormFields {
+  margin-bottom: 16px;
+}

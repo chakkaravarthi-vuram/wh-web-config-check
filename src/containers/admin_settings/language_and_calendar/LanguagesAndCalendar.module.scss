@@ -1,0 +1,22 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.LanguageCalendarContainer {
+    margin: 30px;
+    background-color: $white;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.04);
+  }
+  .LangAndTimeDetailsLabels {
+    margin-bottom: -5px !important;
+  }
+  .DayPickerBoxStyles {
+    padding: 10px 19px;
+    border-right: 0px;
+  }
+  @include for-small-device {
+    .DayPickerBoxStyles {
+      padding: 6px 12px;
+    }
+  }

@@ -1,0 +1,33 @@
+@import '../../../scss/constants';
+
+.SubCommonHeaderTitle {
+  background-color: $white;
+  padding: 20px 0px 0px 30px;
+  margin-bottom: 0;
+}
+.SubHeaderTitle {
+  background-color: #fff;
+  padding: 15px 30px;
+  font-size: 12px;
+  display: flex;
+}
+.Active {
+  color: #1a9cd1;
+}
+.ActiveDiv {
+  background-color: rgb(34, 139, 181);
+  position: absolute;
+  // bottom: -13px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+}
+.ActiveHeader {
+  content: "";
+  height: 3px;
+  background-color: $blue-v39;
+  position: absolute;
+  left: 0;
+  bottom: -17px;
+  width: 100%;
+}

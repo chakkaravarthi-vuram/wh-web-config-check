@@ -1,0 +1,49 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+.Container {
+  background-color: $gray-v7;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  @include for-phone-and-tab {
+    z-index: 2;
+    top: calc(100vh - 85px);
+    height: calc(100vh - 65px) !important;
+  }
+}
+.HeaderContainer {
+  border-bottom: $gray-v68 solid 1px;
+}
+
+.ContentContainer {
+  background-color: $white;
+  padding: 30px 50px;
+  flex: 1 1 auto;
+  overflow: auto;
+  @include for-phone-and-tab {
+    padding: 30px;
+  }
+}
+.TabText {
+  color: $white !important;
+  font-weight: $fw-normal;
+  margin-bottom: 8px;
+}
+.Title {
+  width: 180px;
+  height: 25px;
+  margin: 10px 84px 15px 50px;
+  color: $white;
+}
+.Tab {
+  width: 142px;
+  height: 15px;
+  margin: 0px 50px 8px 50px;
+  font-size: $font-size-sm;
+  color: #1f243d;
+}
+
+.TabClass {
+  height: 4px !important;
+}

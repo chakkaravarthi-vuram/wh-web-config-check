@@ -1,0 +1,51 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.TextAreaClass {
+  resize: none;
+  height: 90px !important;
+}
+
+.GradientSwatchPicker {
+  width: 48px;
+  height: 36px;
+  border-radius: 3px;
+  background-color: $gray-v6;
+}
+
+.CategoryContainerClass {
+  max-width: 100% !important;
+}
+.PopperClass{
+  width: 100%;
+}
+.Label {
+  color: $gray-v9;
+  @extend %FS13;
+  line-height: normal;
+  text-align: center;
+}
+.TitleClass {
+  color: $gray-v3;
+  line-height: normal;
+}
+.DescriptionClass {
+  line-height: 20px;
+}
+.CreateMaxWidth {
+  width: 60%;
+}
+.CloseIcon {
+  width: 12px;
+  height: 12px;
+  margin: 7px 3px !important;
+  fill: $gray-v101 !important;
+  outline: none;
+}
+.HeaderClass {
+  padding: 24px 16px 24px 32px !important;
+}
+
+.CancelButton {
+  color: $gray-v3 !important;
+}

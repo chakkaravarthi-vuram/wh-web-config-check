@@ -1,0 +1,58 @@
+
+@import '../../../../scss/constants';
+@import '../../../../scss//utilities';
+.MonthNavigation{
+    cursor: pointer;
+    color: #212529;
+    border: 1px solid #c4c4c4;
+    border-radius: 3px;
+    padding: 6px 10px;
+}
+.MonthNavigationDisabled{
+    visibility: hidden;
+}
+.CalendarHeader{
+    font-family: $font-family-2;
+    color: #212529;
+    line-height: 28px;
+    width: 80%;
+    font-weight: bold;
+    font-size: 14px;
+}
+.TitleContainer{
+    display: flex;
+    margin-bottom: 5px;
+}
+.HeaderWrapper{
+    margin: 0 10px;
+}
+.YearSelect{
+    width: 72px;
+    margin: auto;
+}
+.RightNav {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(-90deg);
+  }
+.LeftNav{
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(90deg);
+  }
+  .Icon{
+    width: 16px;
+    height: 16px;
+    fill: #c4c4c4;
+  }
+  .MonthNavigation:hover .Icon{
+    fill: $blue-v39;
+  }
+  .MonthNavigation:hover{
+    border: 1px solid $blue-v39;
+    background-color: $blue-v41;
+  }

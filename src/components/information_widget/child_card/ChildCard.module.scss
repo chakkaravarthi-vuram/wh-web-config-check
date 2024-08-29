@@ -1,0 +1,35 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.HeaderContent {
+  padding: 32px;
+}
+.FooterContent {
+  padding: 32px;
+}
+.ChildCardContainer {
+  height: calc(100vh - 220px);
+  padding: 0px 32px 0px 32px;
+}
+.ColorBtn {
+  width: 48px;
+  height: 24px;
+  border: 1px solid $gray-v102;
+  border-radius: 4px;
+}
+.PopperClassName {
+  z-index: 5 !important;
+}
+.LabelClassName {
+  color: $black-v20 !important;
+  label {
+    color: $black-v20 !important;
+  }
+}
+.EditorError {
+  border: 1px solid $red-v18;
+  border-radius: 10px;
+}
+.EditorErrorMsg {
+  color: $red-v18;
+}

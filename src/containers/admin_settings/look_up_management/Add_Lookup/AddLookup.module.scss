@@ -1,0 +1,38 @@
+@import "../../../../scss/constants";
+@import "../../../../scss/utilities";
+
+.LookupLabel{
+    font-size: 26px;
+    font-weight: 600;
+}
+.Label2{
+  @extend %FS13;
+  color: $gray-v9;
+}
+.LookupName {
+  width: 233px !important
+}
+.LookupValue {
+  width: 495px !important
+}
+.Header{
+  font-size: 13px;
+  color: $gray-v2;
+}
+.Value{
+  font-size: 13px;
+  color: $gray-v3;
+}
+.Remainder{
+  font-size: 13px;
+  color:$gray-v9;
+}
+.RemainderMessage{
+    width:454px;
+}
+.Button{
+    padding: 7px 12px 10px 12px !important;
+    width: 100px !important;
+    height: 34px !important;
+    border-radius: 8px !important;
+}

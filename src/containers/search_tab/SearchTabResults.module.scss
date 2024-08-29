@@ -1,0 +1,105 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+@import '../../scss/Typography.module.scss';
+
+.SearchMainContainer {
+
+  position: relative;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px 0 #aaafba;
+  max-height: 294px;
+  overflow-y: auto;
+  width: 95%;
+  margin-left: 30px;
+  top: 14px;
+  position: relative;
+  background-color: $white;
+  box-shadow: 0 2px 10px 0 $gray-v25;
+  @include for-desktop {
+    padding: 15px;
+  }
+  }
+  @media only screen and (max-width: 768px) {
+    .SearchMainContainer{
+      width: 96%;
+      margin-left: 2%;
+      top: 14px;
+      padding: 12px;
+    }
+  }
+.Head{
+    color: #afb2b9;
+    padding-left: 14px;
+    margin-top: 4px;
+    margin-bottom: 0px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.CardContainer:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  background-color: #1a9dd118 !important;
+  border-radius: 3px !important;
+  // height: 36px;
+  &:hover{
+    .SearchCardContainerName{
+      color: #1a9cd1 !important;
+    }
+  }
+}
+.CardContainer {
+  border-bottom: none !important;
+  transition: none !important;
+  // min-height: 34px !important;
+  font-size: $font-size-sm;
+  height: 40px;
+  cursor: pointer;
+  // padding: 0 0 0 15px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  padding: 10px 15px;
+}
+
+.NoSearchFoundLabel{
+  border-radius:0px !important;
+  box-shadow:none !important;
+}
+
+.CardLoader
+{
+  margin-left: 30px;
+}
+
+.NameContainer
+{
+  width: 100%;
+  max-width: 60%;
+  color: #1f243d;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  align-items: center;
+  display: flex;
+}
+
+.StatusContainer{
+  margin-left: auto;
+  display: flex;
+}
+
+.Status
+{
+  border-left: none!important;
+  padding-right: 0;
+  font-size: $font-size-sm;
+  color: $gray-v53;
+  padding: 2px 15px;
+  margin-left: 40px;
+}
+.PrimaryButton {
+  height: 28px;
+}

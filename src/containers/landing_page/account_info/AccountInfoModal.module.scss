@@ -1,0 +1,77 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.ContentClass { 
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 22, 42, 0.75)!important;
+}
+
+.ContainerClass {
+    border-radius: 6px;
+    width: 100%;
+    background-color: $white;
+    margin: 30px;
+    height: calc(100% - 60px);
+    overflow: hidden!important;
+}
+
+.FormContainer {
+    height: calc(100vh - 185px);
+    overflow: auto;
+
+    .FormSubContainer {
+        max-width: 630px;
+        margin: 0 auto;
+
+        @include for-phone-and-tab {
+            max-width: 300px;
+        }
+
+        .TwoColumnContainer {
+            @include for-phone-and-tab {
+                flex-direction: column;
+                >:first-child {
+                    margin-right: 0!important;
+                }
+            }
+            
+        }
+        .TwoColumnContainer > :first-child {
+            margin-right: 30px;
+    
+        }
+    }
+}
+
+.Input {
+    width: 282px;
+}
+
+.InputFull {
+    width: 100%;
+}
+
+.InputInner {
+    height: 36px;
+}
+
+.Dropdown {
+    width: 300px;
+}
+
+.DropdownInner {
+    height: 36px!important;
+}
+
+.FileLetterSpace {
+    letter-spacing: -0.31px;
+}
+
+.SignOutButton {
+    margin: auto;
+    margin-bottom: 16px;
+    margin-top: 20px;
+    width: fit-content;
+
+}

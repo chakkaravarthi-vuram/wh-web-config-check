@@ -1,0 +1,14 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.StepConfigInfo {
+    padding: 20px 30px;
+}
+.StepInfoHeader {
+    padding: 20px;
+    border-bottom: solid 1px $gray-v68;
+    height: 84px;
+}
+.StepInfoField {
+    margin-bottom: 20px;
+}

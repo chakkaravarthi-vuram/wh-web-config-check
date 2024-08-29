@@ -1,0 +1,66 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.CloseIcon {
+    margin: 16px;
+    width: 16px;
+    height: 16px;
+    fill: $gray-v101 !important;
+    outline: none;
+}
+
+.Modal{
+    width: 90vw;
+}
+
+.MainContent {
+    padding: 32px;
+}
+
+.Footer{
+    background: #FFF;
+    box-shadow: 0px -1px 4px 0px rgba(16, 24, 40, 0.08);
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .Button{
+        font-size: $font-size-mdt;
+        padding: 8px 16px;
+        height: 36px;
+        font-weight: 500;
+    }
+
+    .DeleteButton {
+        color: $red-v25;
+        &:hover {
+            background: $red-v26;
+        }
+    }
+}
+
+.Builder {
+    border: 1px solid $gray-v108;
+    border-radius: 4px;
+
+    .OperatorDetails {
+        display: flex;
+        padding: 16px;
+        border-radius: 4px 4px 0px 0px;
+        background: $gray-v109;
+        border-bottom: 1px solid $gray-v108;
+    }
+
+    .RuleDetails {
+        padding: 16px;
+        border-radius: 0px 0px 4px 4px;
+        display: flex;
+        gap: 24px;
+    }
+
+    .BuilderInput{
+        width: 100%;
+        max-width: 322px;
+    }
+}

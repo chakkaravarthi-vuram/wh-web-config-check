@@ -1,0 +1,19 @@
+.tox-collection__group {
+    max-height: 200px !important;
+    width: 220px !important;
+}
+.tox-tbtn--bespoke {
+    background: white !important;
+}
+.tox-tbtn--bespoke:hover {
+    background: #cce2fa !important;
+}
+.tox-toolbar {
+    justify-content: space-between !important;
+}
+.tox-collection__item-label {
+    overflow: auto;
+}
+.tox-editor-container {
+    z-index: 0;
+}

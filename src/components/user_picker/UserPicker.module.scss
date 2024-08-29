@@ -1,0 +1,15 @@
+.UserSelector > div:not(:last-child) > div div:nth-child(2) {
+  max-width: none !important;
+}
+
+.UserSelector {
+  flex-wrap: wrap;
+  row-gap: 8px;
+  > div {
+    pointer-events: auto !important;
+  }
+}
+
+.SelectedUsersPopper > div > div > div > div > div > div {
+  max-width: none !important;
+}

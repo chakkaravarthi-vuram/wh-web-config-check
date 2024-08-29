@@ -1,0 +1,74 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.AdvancedTitle {
+  color: $gray-v3;
+}
+
+.FlowField {
+  height: 36px;
+  line-height: 20px;
+  color: $gray-v87;
+  border: 1px solid $gray-v1;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-right: none;
+  padding: 8px 12px;
+  text-wrap: nowrap;
+}
+.FlowFieldInput {
+  border-radius: 4px;
+}
+
+.FlowFieldContainer {
+  height: 36px;
+  padding: 6px 12px;
+  border: 1px solid $gray-v1;
+  border-radius: 4px;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  align-items: center
+}
+
+.FlowFieldInput {
+  border-radius: 4px;
+}
+
+.FlowFieldChip {
+  padding: 4px 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-flex;
+  min-width: 0;
+  & div {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+  min-width: 0;
+  }
+}
+
+.ComboFieldsContainer {
+  gap: 24px;
+}
+
+.CreatePopover{
+    background-color: white;
+    padding: 24px;
+    border-radius: 3px;
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.10);
+    z-index: 2;
+}
+
+.ReferenceName {
+  flex-basis: 60%;
+}
+
+.Margin0 {
+  label {
+    margin: 0px !important;
+  }
+}

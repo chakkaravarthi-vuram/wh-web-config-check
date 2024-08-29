@@ -1,0 +1,12 @@
+@import '../../../../../scss/constants';
+@import '../../../../../scss/utilities';
+.UploadedDropZone {
+  width: 151px;
+  height: 177px;
+  padding: 64px 25px;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}

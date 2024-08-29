@@ -1,0 +1,25 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.Container {
+    border-radius: 3px;
+    border: solid 1px $gray-v71;
+    background-color: $blue-v27;
+
+    .FunctionContainer {
+        width: 30px;
+        background-color: $blue-v28;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+
+        .FunctionSymbol {
+            font-family: 'TimesNewRomanPS-MT';
+            color: $white;
+            @extend %FS18;
+        }
+    }
+
+    .FormulaContainer {
+        padding: 10px 0px 10px 30px;
+    }
+}

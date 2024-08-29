@@ -1,0 +1,96 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.AddEventModal {
+  width: 84vw !important;
+}
+.ColMax {
+  width: 33% !important;
+  padding-left: 0px !important;
+  margin-right: 36px;
+}
+.KeyColumn, .TypeColumn, .MultipleColumn, .ValueColumn {
+  margin-right: 16px;
+}
+.KeyColumn {
+  width: 30% !important;
+}
+.TypeColumn {
+  width: 25% !important;
+}
+.MultipleColumn {
+  width: 15% !important;
+}
+.ValueColumn {
+  width: 30% !important;
+}
+.KeyName {
+  border-radius: 3px;
+  height: 36px;
+  padding: 5px 10px;
+  border: 1px solid $gray-v1;
+  margin-bottom: 12px !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+}
+.TestConnectionContainer {
+  padding: 0 40px 20px 40px;
+}
+.Required {
+  color: $red;
+}
+.ConfigurationHeader {
+  height: 100px;
+  padding: 20px 0px;
+  background: $white;
+}
+.EachSubTitle {
+  display: inline-block;
+  color: $gray-v3;
+  font-weight: $fw-semibold;
+}
+.SubTitleEllipsis {
+  max-width: 450px !important;
+}
+.FooterClass {
+  height: 64px;
+  display: flex;
+  background-color: $white;
+  padding: 10px 15px 10px 15px;
+  border-radius: 0px 0px 6px 6px;
+  align-items: center;
+}
+.TestResponseSuccess {
+    background-color: $green-v19 !important;
+    height: 49px;
+    padding: 16px;
+}
+.TestResponse {
+    overflow-y: auto;
+    box-sizing: border-box;
+    max-height: 200px;
+    background: $gray-v1 !important;
+    opacity: 0.5;
+    border: 1px solid $gray-v1;
+    border-radius: 3px;
+    color: $gray-v90 !important;
+}
+.TestResponseFailure {
+    height: 49px;
+    padding: 16px;
+    background-color: $red-v17;
+}
+.Header {
+  width: 50% !important;
+}
+.CopyIcon {
+  width: 100%;
+  text-align: right;
+  padding: 5px;
+}
+.CloseIcon {
+  text-align: right;
+  padding-right: 8px;
+}

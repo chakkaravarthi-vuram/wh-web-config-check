@@ -1,0 +1,32 @@
+export const ENABLE_MFA_STRINGS = {
+    ENABLE_MFA_MODAL_TITLE: 'mfa.enable_mfa.title',
+    ENABLE_MFA_INFO: 'mfa.enable_mfa.propmpt_for_mfa_info',
+    ENABLE_MFA_CANCEL_BTN_TEXT: 'mfa.cancel_btn_text',
+    ENABLE_MFA_ACTIVATE_BTN_TEXT: 'mfa.activate_btn_text',
+    ENABLE_TOTP: {
+        DOWNLOAD_AUTHENTICATOR_APP_TEXT: 'mfa.enable_mfa.enable_totp.download_authenticator_app_step_title',
+        DOWNLOAD_AND_INSTALL_AUTHENTICATOR_APP_TEXT: 'mfa.enable_mfa.enable_totp.download_and_install_app',
+        SCAN_QR_CODE_STEP_TITLE: 'mfa.enable_mfa.enable_totp.scan_qr_code_step_title',
+        OPEN_AUTHENTICATOR_APP_SCAN_QR_CODE: 'mfa.enable_mfa.enable_totp.open_authenticator_app_scan_qr_code',
+        VERIFY_OTP_STEP_TITLE: 'mfa.enable_mfa.enable_totp.verify_otp_step_title',
+        ENTER_SIX_DIGIT_CODE: 'mfa.enable_mfa.enable_totp.enter_six_digit_code',
+    },
+    ENABLE_EOTP: {
+        EMAIL_AUTHENTICATION_TITLE: 'mfa.enable_mfa.enable_eotp.email_authentication_title',
+        VERIFICATION_CODE_WAS_SENT_PREFIX: 'mfa.enable_mfa.enable_eotp.verification_code_was_sent_prefix',
+        VERIFICATION_CODE_WAS_SENT_SUFFIX: 'mfa.enable_mfa.enable_eotp.verification_code_was_sent_suffix',
+        VERIFICATION_CODE: 'mfa.enable_mfa.enable_eotp.verification_code',
+    },
+    DISABLE_MFA: {
+        DISABLE_MFA_MODAL_TITLE: 'mfa.reset_mfa_string.title',
+        DISABLE_MFA_OTP_VERIFICATION_HEADER: 'mfa.reset_mfa_string.otp_section_diable_mfa_title',
+        VERIFICATION_CODE_WAS_SENT_PREFIX: 'mfa.enable_mfa.enable_eotp.verification_code_was_sent_prefix',
+        VERIFICATION_CODE_WAS_SENT_SUFFIX: 'mfa.enable_mfa.enable_eotp.verification_code_was_sent_suffix',
+        VERIFICATION_CODE: 'mfa.enable_mfa.enable_eotp.verification_code',
+        DISABLE_MFA_CANCEL_BTN_TEXT: 'mfa.cancel_btn_text',
+        DISABLE_MFA_DEACTIVATE_BTN_TEXT: 'mfa.reset_mfa_string.modal_content_disable_btn',
+        DISABLE_MFA_INFO: 'mfa.reset_mfa_string.propmpt_for_mfa_disable_info',
+        DISABLE_MFA_TOTP_VERIFICATION_HEADER: 'mfa.reset_mfa_string.totp_section_diable_mfa_title',
+        DISABLE_MFA_TOTP_MESSAGE: 'mfa.reset_mfa_string.disable_mfa_topt_message',
+    },
+};

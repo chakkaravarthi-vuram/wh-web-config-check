@@ -1,0 +1,45 @@
+@import '../../../../../scss/constants';
+@import '../../../../../scss/utilities';
+
+.TaskName {
+  // width: 278px;
+  height: 24px;
+  //   margin: 30px 466px 20px 50px;
+  font-size: $font-size-xxl;
+  font-weight: $fw-semibold;
+  color: $gray-v3;
+  text-overflow: ellipsis;
+  &::placeholder {
+    color: $gray-v6;
+    opacity: 1;
+    font-weight: $fw-normal;
+  }
+}
+.TaskDescription {
+  color: $gray-v3;
+  min-height: 72px !important;
+  max-height: 72px !important;
+  text-overflow: ellipsis;
+
+  // margin-bottom: 30px !important;
+  // padding-bottom: 30px !important;
+  &::placeholder {
+    color: $gray-v6;
+  }
+}
+.TaskDescriptionHeight {
+  // height: 72px !important;
+  min-height: 72px !important;
+}
+.FormFieldRadio {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  border: 1px solid $gray-v1;
+  cursor: pointer;
+}
+.RadioSelectedStyle {
+  height: 12px !important;
+  width: 12px !important;
+  border-radius: 9px;
+}

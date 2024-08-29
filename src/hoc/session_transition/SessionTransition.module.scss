@@ -1,0 +1,18 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.OuterClassName {
+    height: 100vh;
+}
+.WorkhallImg {
+    height: 32px;
+}
+.TransitionImg {
+    height: 223px;
+}
+.StayLink {
+    color: $blue-v39;
+}
+.StayLinkOuter {
+    text-decoration: none !important;
+}

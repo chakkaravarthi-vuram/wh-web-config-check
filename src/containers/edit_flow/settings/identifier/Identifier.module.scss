@@ -1,0 +1,15 @@
+@import '../../../../scss/constants';
+
+
+.DropdownWrapper {
+  width: 30%;
+}
+
+.AddIcon {
+  path {
+    fill: $blue-v39;
+  }
+}
+.AlignItems {
+  justify-content: flex-start!important;
+}

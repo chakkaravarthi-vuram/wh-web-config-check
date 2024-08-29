@@ -1,0 +1,39 @@
+@import '../../../../../../../scss/constants';
+@import '../../../../../../../scss/utilities';
+
+.FieldLabel label {
+    @extend %FTwo13;
+    @extend %GrayV104;
+    margin-bottom: 0px;
+  }
+  
+  .RadioLabelMargin label {
+    margin-bottom: 8px !important;
+  }
+
+  .InputTreeRow {
+    & > li:last-child {
+      border-bottom: 1px solid $gray-v1 !important;
+    }
+}
+
+.InputTreeHeaderRow {
+    border-top: none !important;
+    border-bottom: 1px solid $gray-v108 !important;
+    padding: 0px, 16px, 4px, 16px;
+  
+    & > div > div > p {
+      font-size: 12px;
+      color: $gray-v89;
+      font-weight: 500;
+      padding-right: 0px !important;
+    }
+  }
+
+  .ColumnsFlex {
+    flex-basis: 32%;
+  }
+
+  .DeleteIcon {
+    flex-basis: 4%;
+  }

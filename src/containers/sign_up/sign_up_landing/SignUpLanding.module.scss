@@ -1,0 +1,78 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.Button {
+    height: 50px!important;
+    width: 300px!important;
+
+    @include for-phone-and-tab {
+        width: 260px!important;
+    }
+}
+
+.TermsContainer {
+    max-width: 250px;
+    @include for-phone-and-tab {
+        width: 200px!important;
+    }
+}
+
+.CarouselContainer {
+    width: 300px;
+        :global(.carousel .control-dots) {
+            bottom: -15px!important;
+          }
+    div{
+        ol{
+            bottom: -30px!important;
+            li{
+                background-color: rgba(0, 0, 0, 0.2);
+                border-radius: 50%;
+                height: 7px;
+                width: 7px;
+
+                li.active { 
+                    background-color: black!important; 
+                }
+            }
+        }
+    }
+}
+
+
+.Divider {
+    border: solid 1px $gray-v1;
+    position: absolute;
+    height: 100%;
+}
+
+.Content{
+    min-height: 98px;
+}
+
+.OvalCopy {
+    width: 7px!important;
+    height: 7px!important;
+    margin: 0 10px;
+    background-color: #d8d8d8;
+    border-radius: 50%!important;
+  }
+
+.SelectedSlide {
+    background-color: $blue-v39 !important;
+}
+
+.ContainHeight {
+    height: 280px;
+}
+
+.DisplayInline {
+    display: inline;
+}
+
+.PrivacyPolicy:hover{
+    color: $blue-v2;
+    text-decoration: none;
+}
+
+

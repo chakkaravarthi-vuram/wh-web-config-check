@@ -1,0 +1,135 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+.FieldTitle {
+  margin: 0 26px 6px 0;
+}
+
+.FilterIconGray {
+  fill: $gray-v87;
+}
+
+.ContentContainer {
+  padding: 24px;
+  padding-right: 0px;
+}
+
+.MoreFilterContainer {
+  width: 352px;
+  max-height: 235px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.AppliedFieldEditButtonContainer {
+  height: 64px;
+  display: flex;
+  box-shadow: 0 -4px 20px 0 rgba_func($black, 0.1);
+  background-color: $white;
+  bottom: 0;
+  padding: 10px 15px 10px 15px;
+  @include for-phone-and-tab {
+    z-index: 7;
+  }
+}
+
+.FieldsContainer {
+  background-color: $white;
+  box-shadow: 0 -4px 20px 0 rgba_func($black, 0.1);
+  min-width: 300px;
+  max-height: 250px;
+  display: flex;
+  flex-direction: column;
+  @include for-phone-and-tab {
+    width: 100%;
+  }
+  .FieldContent {
+    flex: 1;
+    min-height: 150px;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+}
+
+.FilterFieldTitle {
+  margin: 0px 0px 10px 0px;
+  font-size: 16px;
+  color: $gray-v3;
+}
+
+.NoAppliedFilterDataText {
+  font-size: 11px;
+  font-style: italic;
+  color: $gray-v9;
+}
+
+.closeIcon {
+  width: 9px;
+  height: 9px;
+  margin-top: 3px;
+}
+
+.ModalContent {
+  width: 400px;
+  background: $white;
+  border-radius: 3px;
+  box-shadow: 0px 2px 20px 0px rgba($black, 0.102);
+  z-index: 20;
+  @include responsive-layout {
+    width: 85vw !important;
+    left: -70px;
+  }
+}
+
+.DDListContainer {
+  max-height: 150px !important;
+}
+
+.FilterIconWithCount {
+  display: flex;
+  padding: 6px;
+  gap: 8px;
+  align-items: center;
+  border-radius: 5px;
+  &:hover {
+    background-color: $gray-v107;
+    height: 36px;
+  }
+  .FilterCount {
+    background-color: $blue-v41;
+    color: $blue-v39;
+  }
+}
+
+.SearchIcon {
+  & > path{
+    fill: $gray-v101;
+  }
+}
+
+.CheckBoxClass {
+  & > div:first-child {
+    gap: 8px;
+  }
+}
+
+.Gray107BackColor {
+  background-color: $gray-v107;
+}
+
+.FooterContent {
+  border-top: 1px solid $gray-v88;
+  padding: 16px 24px;
+}
+
+.UserPickerSelectedValue {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.DoubleFieldData {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

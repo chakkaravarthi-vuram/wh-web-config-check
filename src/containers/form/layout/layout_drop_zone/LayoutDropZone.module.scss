@@ -1,0 +1,23 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+
+.DropZoneContainer {
+  height: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.DropZone{
+  border: 2.5px dashed transparent;
+  width: 100%;
+}
+.DropZoneRow{
+   border-bottom-color: $gray-v6;
+}
+
+.DropZoneColumn{
+  border-radius: 4px;
+  height: fit-content;
+  border-color: $gray-v6;
+}

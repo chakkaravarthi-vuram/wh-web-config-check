@@ -1,0 +1,236 @@
+@import './../../../../scss/constants';
+@import './../../../../scss/utilities';
+
+.RectangleShadowBox {
+  // width: 816px;
+  // height: 883px;
+  // margin: 45px 0 0 291px;
+  padding: 0 0 5px 0;
+  // display: none; /* Hidden by default */
+  // position: fixed; /* Stay in place */
+  // position: absolute;
+  // z-index: 2;
+  // display: block;
+  // margin-top: 150px;
+  // margin-left: 150px;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  background-color: $white;
+}
+.BasicUserDetailsSection {
+  // width: 354px;
+  // height: 60px;
+  // margin: 0 0 15px;
+  padding: 12px 108px 12px 20px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background-color: #f6f6f8;
+}
+
+.UserIcon {
+  height: 36px;
+  width: 36px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.Name {
+  // width: 180px;
+  height: 18px;
+  margin-bottom: 0px !important;
+  // padding: 2px 47px 0 63px;
+  font-size: 14px;
+  color: #22252b;
+}
+
+.Email {
+  // width: 171px;
+  height: 18px;
+  margin-bottom: 0px !important;
+  // margin: 17px 9px 0 0;
+  font-size: 13px;
+  color: #888ea4;
+}
+
+.Label {
+  // width: 27px;
+  height: 18px;
+  // margin: 15px 31px 0 20px;
+  font-size: 13px;
+  color: #888ea4;
+  margin-bottom: 2px !important;
+  margin-top: 15px !important;
+  margin-left: 20px !important;
+}
+
+.Value {
+  // width: 89px;
+  height: 18px;
+  // margin: 33px 83px 15px 20px;
+  font-size: 13px;
+  color: $gray-v3;
+  margin-bottom: 0px !important;
+  margin-left: 20px !important;
+}
+
+.TeamsUnauthorizeContainer {
+  display: flex;
+  background-color: $white;
+  border-radius: 6px;
+  box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.25);
+  .UnauthorizedTextClass {
+    padding: 12px 10px 12px 10px
+  }
+}
+.AlertIcon {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.ToolTipContainer {
+  background-color: $white;
+  width: 320px;
+  border-radius: 6px;
+  box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.25);
+
+  .ProfileDetailContainer {
+    padding: 20px 20px 10px;
+    .UserIcon {
+      height: 48px;
+      width: 48px;
+      object-fit: cover;
+    }
+    h3 {
+      color: $gray-v3;
+      font-size: $font-size-xxl;
+      margin: 0;
+      text-transform: capitalize;
+    }
+    p {
+      margin: 0;
+    }
+  }
+
+
+  .ActionContainer {
+    position: relative;
+    &::before {
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: $gray-v52;
+      content: '';
+    }
+    .ButtonContainer {
+      padding: 10px 20px;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .Button {
+        background-color: $blue-v23 !important;
+        background-image: none !important;
+        border-radius: 3px;
+        height: 36px;
+        color: $blue-v21;
+        font-weight: 500;
+        box-shadow: none !important;
+      }
+      .Chat {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.TextClass {
+  min-width: 64px;
+  font-size: 11px;
+  letter-spacing: -0.25px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.DetailViewContainer {
+  background-color: $blue-v41 !important;
+  background-image: none !important;
+  border-radius: 3px;
+  height: 36px;
+  color: #217cf5;
+  font-weight: 500;
+  box-shadow: none !important;
+  padding: 12px 15px;
+}
+
+.CteateTaskIconClass {
+  width: 15px;
+  height: 18px;
+}
+
+.IconFillClass {
+  fill: #1a9cd1;
+}
+
+.IconContainerClass {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  padding-left: 10px;
+  align-items: center;
+  display: flex;
+  margin-left: 2px;
+  &:hover {
+    background-color: $blue-v41 !important;
+  }
+}
+
+.CustomInnerChatClasss {
+  position: relative;
+  left: 20px !important;
+}
+
+.CustomInnerTaskClasss {
+  left: 50px !important;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 80%;
+  margin-left: -60px;
+  background-color: $gray-v3;
+  box-shadow: 4px 4px 12px 0 rgba(0, 0, 0, 0.2);
+  color: $gray-v63 !important;
+  border: 0;
+  border-radius: 6px;
+  padding: 8px 13px;
+  max-width: 200px;
+  width: max-content;
+  font-size: 12px;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+.tooltip .tooltiptext::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 7px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}

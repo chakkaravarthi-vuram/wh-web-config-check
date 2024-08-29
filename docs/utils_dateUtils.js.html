@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: utils/dateUtils.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: utils/dateUtils.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import moment from 'moment';
+import { HOLIDAY_DATE } from '../containers/admin_settings/language_and_calendar/holidays/holiday_table/HolidayTable.strings';
+import { PROCEDURE_STRINGS } from '../containers/procedures/Procedure.strings';
+import { DATE } from './Constants';
+import {
+  DRAFT_DATA_LIST_UPDATED_DATE,
+  DRAFT_PROCEDURE_UPDATED_DATE,
+  DROPDOWN_CONSTANTS,
+  EFFECTIVE_DATE,
+  TEAM_CREATED_DATE,
+  TEAM_CREATED_DATE_TIME,
+} from './strings/CommonStrings';
+
+/** @module date * */
+/**
+ * @memberof date
+ */
+/**
+ * @function getFullDateWithTimeString
+ * @description to return date in the format (DD MMM YYYY HH:MM A)
+ * @param   {string} UTC  utc time format
+ * @return  {string} 12 Jul 2021 12.21 pm
+ */
+export const getFullDateWithTimeString = (utc) =>
+  moment(utc).format('DD MMM YYYY HH:MM A');
+/**
+ * @memberof date
+ */
+/**
+ * @function getTimeToDisplayForAssignedOn
+ * @description is same day return time else date
+ * @param   {string} dateTime date string
+ * @return  {string} date or time
+ */
+export const getTimeToDisplayForAssignedOn = (dateTime) => {
+  if (moment(dateTime).isSame(moment(), 'day')) {
+    return moment(dateTime).format('hh:mm a');
+  }
+  return moment(dateTime).format('DD MMM');
+};
+/**
+ * @memberof date
+ */
+/**
+ * @function getYearDropDown
+ * @description to get customised year dropdown
+ * @return  {Object}
+ */
+export const getYearDropDown = () => {
+  const data = [];
+  let index;
+  let currentYear = Number(moment().format('YYYY'));
+  for (index = 1; index &lt;= 5; index += 1) {
+    data.push({
+      [DROPDOWN_CONSTANTS.OPTION_TEXT]: currentYear,
+      [DROPDOWN_CONSTANTS.VALUE]: currentYear,
+    });
+    currentYear += 1;
+  }
+  return data;
+};
+/**
+ * @memberof date
+ */
+/**
+ * @function timeDifference
+ * @description to get customised date fifference text
+ * @return  {string} a few seconds ago
+ */
+export const timeDifference = (data) => {
+  if (data.years) {
+    if (data) {
+      if (data.years > 1) return `${data.years} years ago`;
+      return `${data.years} years ago`;
+    }
+  } else if (data.months) {
+    if (data.months > 1) return `${data.months} months ago`;
+    return `${data.months} months ago`;
+  } else if (data.days) {
+    if (data.days > 1) return `${data.days} days ago`;
+    return `${data.days} day ago`;
+  } else if (data.hours) {
+    if (data.hours > 1) return `${data.hours} hours ago`;
+    return `${data.hours} hour ago`;
+  } else if (data.minutes) {
+    if (data.minutes > 1) return `${data.minutes} minutes ago`;
+    return `${data.minutes} minute ago`;
+  } else if (data.seconds) {
+    return `${data.seconds} seconds ago`;
+  } else {
+    return 'a few seconds ago';
+  }
+  return '';
+};
+/**
+ * @memberof date
+ */
+/**
+ * @function getFormattedDateFromUTC
+ * @description return date based on given format from UTC
+ * @param   {string} UTCString utc format
+ * @param   {string} type module
+ * @return  {string} date or time
+ */
+export const getFormattedDateFromUTC = (UTCString, type) => {
+  const date = moment(UTCString);
+  switch (type) {
+    case EFFECTIVE_DATE:
+      return date.format(DATE.DATE_FORMAT);
+    case HOLIDAY_DATE:
+      return date.format('DD MMM YYYY');
+    case PROCEDURE_STRINGS.CHANGE_HISTORY:
+      return date.format('DD MMM YYYY');
+    case TEAM_CREATED_DATE:
+      return `${date.format('DD MMM, hh:mm A')} ( ${timeDifference(
+        moment.duration(moment().diff(date))._data,
+      )} )`;
+    case TEAM_CREATED_DATE_TIME: {
+      return date.format('DD MMM, HH:mm A');
+    }
+    case DRAFT_PROCEDURE_UPDATED_DATE:
+    case DRAFT_DATA_LIST_UPDATED_DATE:
+      return date.format('DD-MM-YYYY');
+    default:
+      return UTCString;
+  }
+};
+/**
+ * @memberof date
+ */
+/**
+ * @function getTimeDifferenceInSeconds
+ * @description return time difference in seconds
+ * @param   {string} start_time start time
+ * @param   {string} duration duration
+ * @return  {string} seconds
+ */
+export const getTimeDifferenceInSeconds = (start_time, duration) => {
+  let diff_in_secs = null;
+  const startTime = moment(start_time);
+  const endTime = moment();
+  if (duration) {
+    diff_in_secs =
+      duration -
+      parseInt(moment.duration(endTime.diff(startTime)).asSeconds(), 10);
+  } else {
+    diff_in_secs = parseInt(
+      moment.duration(endTime.diff(startTime)).asSeconds(),
+      10,
+    );
+  }
+  return diff_in_secs;
+};
+/**
+ * @memberof date
+ */
+/**
+ * @function getISOStringFromTimeString
+ * @description get ISO string from time string
+ * @param   {string} time_string time string
+ * @return  {string} ISO
+ */
+export const getISOStringFromTimeString = (timeString) => {
+  console.log(timeString);
+  const time_string = moment(timeString, 'HH:mm A').format('hh:mm A');
+  console.log(time_string);
+  const dateString = moment(time_string, 'HH:mm A').toDate();
+  console.log(dateString);
+  const ISOString = dateString.toISOString();
+  console.log(ISOString);
+  return ISOString;
+};
+/**
+ * @memberof date
+ */
+/**
+ * @function parse12HrsTimeto24HoursTime
+ * @description to parse 12 hours time to 24 hours time
+ * @param   {string} timeString time string
+ * @return  {string}
+ */
+export const parse12HrsTimeto24HoursTime = (timeString) =>
+  // input: 1:00 PM
+  // output: 13:00:00
+  moment(timeString || '12:00 am', ['hh:mm A']).format('HH:mm');
+/**
+ * @memberof date
+ */
+/**
+ * @function parseDateFromUTC
+ * @description to parse date from utc string
+ * @param   {string} utcString utc time string
+ * @return  {string}
+ */
+export const parseDateFromUTC = (utcString) =>
+  moment.parseZone(utcString).format('YYYY-MM-DD');
+  /**
+ * @memberof date
+ */
+/**
+ * @function parse12HoursTimeFromUTC
+ * @description to parse 12hrs time from utc string
+ * @param   {string} utcString time string
+ * @return  {string}
+ */
+export const parse12HoursTimeFromUTC = (utcString) =>
+  moment.parseZone(utcString).format('hh:mm A');
+/**
+ * @memberof date
+ */
+  /**
+ * @function parseTimeZoneOffsetFromUTC
+ * @description to parse timezone offset from utc string
+ * @param   {string} utcString time string
+ * @return  {string}
+ */
+export const parseTimeZoneOffsetFromUTC = (utcString) =>
+  moment.parseZone(utcString).format('Z');
+/**
+ * @memberof date
+ */
+  /**
+ * @function validateDate
+ * @description to find its a valid date or not
+ * @param   {string} dateString date string
+ * @return  {boolean}
+ */
+export const validateDate = (dateString) => {
+  if (dateString &amp;&amp; dateString.length === 10) return moment(moment(dateString).format('YYYY-MM-DD')).isValid();
+  return false;
+};
+/**
+ * @memberof date
+ */
+/**
+ * @function getDaysCountBetweenTwoDates
+ * @description to count days between 2 dates
+ * @param   {string} d1 date 1
+ * @param   {string} d2 date 2
+ * @return  {number}
+ */
+export const getDaysCountBetweenTwoDates = (d1, d2) => {
+  const diffInMs = Math.abs(new Date(d2).getTime() - new Date(d1).getTime());
+  if (diffInMs &lt; 1) {
+    return 0;
+  }
+  const diffInDays = Math.ceil(diffInMs / (1000 * 60 * 60 * 24));
+  return diffInDays;
+};
+/**
+ * @memberof date
+ */
+/**
+ * @function dateToLocaleString
+ * @description to convert date to locale string
+ * @param   {string} date date
+ * @return  {string}
+ */
+export const dateToLocaleString = (date) =>
+  date.toLocaleString('en-US', {
+    hour: 'numeric',
+    minute: 'numeric',
+    hour12: true,
+  });
+
+export default getFullDateWithTimeString;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-date%2520_.html">date *</a></li><li><a href="module-encryption%2520_.html">encryption *</a></li><li><a href="module-getter&generator%2520_.html">getter&generator *</a></li><li><a href="module-helper%2520_.html">helper *</a></li><li><a href="module-imagehelper%2520_.html">imagehelper *</a></li><li><a href="module-joi%2520_.html">joi *</a></li><li><a href="module-loader%2520_.html">loader *</a></li><li><a href="module-popover%2520_.html">popover *</a></li><li><a href="module-profile%2520_.html">profile *</a></li></ul><h3>Global</h3><ul><li><a href="global.html#generateActionName">generateActionName</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Thu Aug 12 2021 18:35:32 GMT+0530 (India Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

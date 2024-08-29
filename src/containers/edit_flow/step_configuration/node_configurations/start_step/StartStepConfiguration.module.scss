@@ -1,0 +1,12 @@
+@import '../../../../../scss/constants';
+@import '../../../../../scss/utilities';
+
+.FieldLabel label {
+  @extend %FTwo13;
+  @extend %BlackV20;
+  margin-bottom: 0px;
+}
+
+.RadioLabelMargin label {
+  margin-bottom: 8px !important;
+}

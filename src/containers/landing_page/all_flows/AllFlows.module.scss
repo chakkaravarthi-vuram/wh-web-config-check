@@ -1,0 +1,130 @@
+/**
+ * @author asttle
+ * @email asttlejvuram.com
+ * @create date 2021-08-02 16:20:42
+ * @modify date 2021-08-02 16:20:42
+ * @desc [description]
+ */
+
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.Container {
+  height: calc(100vh - 92px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 0px 0px 50px 50px;
+  @include for-phone-and-tab {
+    margin: 0px 0px 40px 40px;
+  }
+}
+
+.AllFlowsContainer {
+  top: 47px;
+  background-color: $gray-v3;
+  padding-top: 10px;
+  z-index: 1;
+  margin-right: 42px; // scrollbar gutter 8px so margin-right: 50px-8px = 42px
+  @include for-phone-and-tab {
+    margin-right: 32px;
+  }
+}
+
+.AllFlowsContainerDefaultMargin {
+  margin-top: 36px;
+  @include for-phone-and-tab {
+    margin-top: 25px;
+  }
+}
+
+.AllFlowsContainerCoverMargin {
+  margin-top: 30px;
+  @include for-phone-and-tab {
+    margin-top: 25px;
+  }
+}
+
+.FlowListContainer {
+  padding-right: 42px;
+  padding-top: 20px;
+  padding-bottom: 70px;
+  @include for-phone-and-tab {
+    padding-right: 32px;
+  }
+}
+
+.SearchBarContainer {
+  top: -1px;
+  background-color: transparent !important;
+  z-index: 1;
+  margin-right: 42px;
+  margin-top: 26px;
+  @include for-phone-and-tab {
+    margin-right: 32px;
+    margin-top: 0px;
+  }
+}
+
+.FontSizeForDesktop {
+  @include for-desktop {
+    font-size: 32px !important;
+  }
+}
+
+.WelcomeMessageContainer {
+  margin: 40px 42px 0px 0px;
+  @include for-phone-and-tab {
+    display: none;
+  }
+  // width:538px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.SearchBar {
+  height: 48px !important;
+  border: none !important;
+  border-radius: 9px;
+  background-color: $white;
+
+  input {
+    &::placeholder {
+      color: $gray-v6;
+      opacity: 1;
+    }
+  }
+}
+
+.SearchIcon {
+  fill: $gray-v37;
+  margin-left: 10px;
+  opacity: 1 !important;
+}
+
+.CoverImage {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 9px;
+}
+
+// to bo removed
+.Mask {
+  width: 100%;
+  border-radius: 9px;
+}
+
+.CreateButton {
+  font-size: 13px;
+  padding: 0px 15px 0px 16px;
+  @include for-phone-and-tab {
+    display: none;
+  }
+}
+
+.CreateButtonForMobile {
+  font-size: 20px;
+  padding: 0px 20px 0px 20px;
+  @include for-desktop {
+    display: none;
+  }
+}

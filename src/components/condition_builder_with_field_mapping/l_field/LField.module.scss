@@ -1,0 +1,49 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.OptionTitle {
+    background-color: $gray-v99;
+    color: $gray-v86;
+}
+
+.Placeholder{
+    color: $gray-v106,
+}
+
+.TableColumnsView{
+    background-color: $white;
+    border-radius: 2px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+
+    .DropdownList {
+        box-shadow: none !important;
+        border: none !important;
+    }
+}
+
+.BackBtn {
+  @extend %FTwo13;
+  color: $gray-v90;
+  width: 100%;
+
+  .Text {
+    width: 80%;
+  }
+
+  &:hover {
+    color: $blue-v39;
+
+    svg path {
+      fill: $blue-v39;
+    }
+  }
+}
+
+.TableLabel {
+  order: 1;
+}
+
+.TableIcon {
+  order: 2;
+  margin-left: auto;
+}

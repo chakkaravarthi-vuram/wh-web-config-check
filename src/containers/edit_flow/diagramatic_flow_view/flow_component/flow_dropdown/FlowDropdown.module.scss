@@ -1,0 +1,93 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.Container {
+    width: 210px;
+    list-style: none;
+    background-color: $white;
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
+    & .OptionContainer {
+        padding: 10px 20px;
+        border-bottom: 1px solid $gray-v1;
+        background-color: $white;
+        width: 100%;
+        cursor: pointer;
+        &:last-child {
+            border-bottom: none;
+        }
+        &:hover {
+            background-color: $blue-v41;
+            .OptionLabel {
+                color:  $blue-v39;
+            }
+            .RightArrow {
+                color: $blue-v39;
+            }
+        }
+    }
+    & .SectionTitle {
+        border-bottom: 1px solid $gray-v1;
+        background-color: $gray-v69;
+        @extend %FS13;
+        padding: 5px 15px;
+        font-weight: $fw-semibold;
+        color: $gray-v53;
+      }
+}
+.TriggerIcon {
+    path {
+        fill: $gray-v53;
+    }
+}
+.ApplyBtn {
+    width: 120px !important;
+}
+.OptionLabel {
+    @extend %FS13;
+    color: $gray-v84;
+    font-weight: $fw-semibold;
+}
+.RightArrow {
+    color: $gray-v53;
+}
+.SideMenu {
+    background-color: $white;
+    width: 300px;
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.16);
+    padding: 24px;
+    // margin-top: 111px;
+}
+.OtherOption {
+    padding: 10px !important;
+}
+// .Trigger {
+//     background-color: $white;
+//     height: 40px;
+//     padding: 10px 20px;
+//     @extend %FS13;$gray-v53
+//     color: $gray-v84;
+//     font-weight: $fw-semibold;
+//     width: 210px;
+//     box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.16);
+//     &:hover {
+//         background-color: $blue-v41;
+//         color: $blue-v44;
+//     }
+// }
+.AddContainer {
+    width: fit-content;
+}  
+.DisabledOption {
+    opacity: 0.5;
+    pointer-events: none;
+}
+.Icon {
+    width: 14px;
+}
+.Icons {
+    fill: $gray-v53;
+}
+.MarginBottom {
+    margin-bottom: 16px !important;
+}

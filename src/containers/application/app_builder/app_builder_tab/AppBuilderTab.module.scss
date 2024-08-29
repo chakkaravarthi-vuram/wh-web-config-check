@@ -1,0 +1,79 @@
+@import 'scss/constants';
+
+.Carousel {
+    position: relative;
+    overflow: hidden;
+
+    .CarouselInner {
+      transition: transform 0.5s ease-in-out;
+
+      .CarouselItem {
+        // flex: 1 1 100%;
+        // min-width: 200px;
+        // flex-direction: column;
+        padding: 10px 12px;
+        height: 48px;
+      }
+    }
+  }
+  
+  
+  .carousel-item {
+    flex: 0 0 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .carousel-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .Prev,
+  .Next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .Prev {
+    left: 10px;
+  }
+  
+  .Next {
+    right: 10px;
+  }
+
+  .BM15 {
+    bottom: -15px;
+  }
+
+  .IconContainer {
+    width: 32px;
+    height: 48px;
+  }
+
+  .InputBottom {
+    bottom: -10px;
+  }
+
+  .TabInput div {
+    padding-right: 0px !important;
+  }
+
+  .SelectedColor {
+    color: $blue-v39;
+  }
+
+  .UnselectedColor {
+    color: $black-v22;
+  }

@@ -1,0 +1,71 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+
+.StepperPage {
+  width: 100%;
+  // height: calc(90vh - 61px);
+  border-radius: 6px;
+  background-color: #ffffff;
+  padding: 40px 60px;
+}
+.StepperPageRightSide {
+  width: 50vw;
+}
+
+.MiniHeaderContainer {
+  // background-color: #ffffff;
+  height: 60px;
+  padding-bottom: 30px;
+}
+.ContainerMarginStyles {
+  margin-top: 0px !important;
+}
+
+.SubCommonHeaderTitle {
+  background-color: #fff;
+  padding: 20px 0px 10px 30px;
+  margin-bottom: 0;
+}
+
+.AdminConatiner {
+  .Label {
+    position: relative;
+    padding-right: 15px;
+    line-height: 15px !important;
+  }
+}
+
+.NavBarValues {
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid $gray-v1;
+  padding: 0px 24px;
+  height: 48px;
+}
+
+.ActiveSvg {
+  svg {
+    fill: $blue-v21 !important;
+  }
+}
+
+.Active {
+  content: '';
+  height: 3px;
+  width: calc(100% - 15px);
+  background-color: $blue-v21;
+  position: absolute;
+  left: 0;
+  bottom: -16px;
+}
+
+.AdminTab {
+  display: flex;
+  align-items: center;
+}
+
+.AdminTab span{
+  bottom: -14.5px !important;
+}

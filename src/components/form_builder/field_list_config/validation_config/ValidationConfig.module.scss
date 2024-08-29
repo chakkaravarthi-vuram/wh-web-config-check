@@ -1,0 +1,13 @@
+@import '../../../../scss/constants';
+
+.PaginationRowInput {
+  width: 157px;
+}
+
+.PaginationRowInputInnerClass {
+  width: calc(100% - 91px);
+}
+
+.PaginationRowInputSuffix {
+  color: $gray-v9;
+}

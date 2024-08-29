@@ -1,0 +1,73 @@
+@import '../../../scss/utilities';
+@import '../../../App.scss';
+
+.InputTextStyle {
+  font-size:13px;
+  color:#5b6375;
+  cursor:text;
+  // hiding firefox spin arrows
+}
+
+// hidden spin arrows for number type input
+// .InputTextStyle::-webkit-outer-spin-button,
+// .InputTextStyle::-webkit-inner-spin-button {
+//   -webkit-appearance: none;
+//   margin: 0;
+// }
+
+.DefaultPadding {
+  padding: 13px 9px;
+}
+
+.DefaultInputContainer {
+  width: 100%;
+  border-radius: 3px;
+
+  & input {
+    flex-grow: 1;
+  }
+}
+
+.InputWithSuffixStyle {
+  width: calc(100% - 80px);
+  @extend %InputHeight;
+}
+
+.DefaultInputStyle {
+  width: 100%;
+  @extend %InputHeight;
+}
+
+.ReadOnlySuffix {
+  float: right;
+  line-height: $input-height;
+  @extend %InputHeight;
+}
+
+.ReadOnlyPrefix {
+  float: left;
+  height: 16px;
+  width: 16px;
+}
+.DropDownTitle {
+  // paddinuoouto9gu: 6.5px 15px;
+  border-bottom: 1px solid $gray-v1;
+  background-color: $gray-v49 !important;
+  width: 100%;
+  border-right: 0;
+  border-top: 0;
+  border-left: 0;
+  font-size: 12px !important;
+  font-weight: 600;
+  cursor: context-menu !important;
+   :hover {
+     background-color: $gray-v49 !important;
+   }
+}
+.InfoEditorDiv > div{
+  height: 120px !important;
+}
+.EditorError {
+  border: 1px solid $red-v18;
+  border-radius: 10px;
+}

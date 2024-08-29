@@ -1,0 +1,295 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.Container {
+    border-radius: 6px;
+    background-color: $white;
+    box-shadow: 0 4px 10px 0 $gray-v64;
+    position: relative;
+    height: 100%;
+    min-width: 300px;
+    .InfoContainer { 
+        h5 {
+            @extend %FTwo13Important;
+            @extend %BlackV25Imp;
+            @extend %FontWeight600Imp;
+            margin: 0
+        }
+        h6 {
+            @extend %FTwo13Important;
+            @extend %BlackV25Imp;
+            @extend %FontWeight600Imp;
+            margin: 0;
+            white-space: pre-wrap;
+        }
+    }
+    .ActionButton {
+        margin-left: auto;
+        justify-content: space-between;
+
+        .individual {
+            margin-right: 20px;
+            color: $blue-v39;
+            @extend %FontWeight600;
+            @extend %FS11;
+            cursor: pointer;
+
+
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
+    }
+}
+.Table {
+    border: none!important;
+    @extend %FS13;
+    thead {
+
+        td {
+            background-color: transparent;
+            @extend %FTwo13Important;
+            @extend %BlackV25Imp;
+            @extend %FontWeight600Imp;
+            padding: 7px 15px;
+            border-top: none;
+        }
+        border: none;
+    }
+    tbody {
+        border: solid 1px $gray-v68;
+
+        tr {
+            height: 48px
+        }
+
+        td {
+            color: $gray-v3;
+        }
+    }
+
+}
+
+.InvoiceTable {
+    border: none!important;
+    @extend %FS13;
+    thead {
+
+        td {
+            background-color: transparent;
+            @extend %FTwo13Important;
+            @extend %BlackV25Imp;
+            @extend %FontWeight600Imp;
+            padding: 7px 15px;
+            border-top: none;
+        }
+        border: none;
+    }
+    tbody {
+        border: solid 1px $gray-v68;
+
+        tr {
+            height: 48px
+        }
+
+        td {
+            color: $gray-v3;
+            width: 340px;
+            vertical-align: middle;
+        }
+    }
+
+}
+
+.RowContainer {
+    &:hover {
+        background-color: $gray-v69!important;
+
+        td {
+            background-color: transparent!important;
+        }
+    }
+}
+
+.IconContainer{
+    float: right;
+    svg {
+        fill: $gray-v87;
+    }
+}
+
+.width100 {
+    width: 100%;
+}
+
+.width50 {
+    width: 50%;
+}
+
+.width25 {
+    width: 25%;
+}
+
+.ButtonContainer {
+    button {
+        padding-top: 11px!important;
+        padding-bottom: 11px!important;
+        align-items: center;
+        height: auto;
+        @extend %FS12;
+    }
+
+}
+
+.ButtonContainerRight {
+    justify-content: flex-end;
+}
+.AddMemberContainerWidth{
+    width: 300px;
+}
+.ExpiryContainer {
+    width: 230px;
+    justify-content: space-between;
+
+    .ExpiryDropDown {
+        width: 100px;
+    }
+}
+
+.DropdownWidth {
+    width: 214px;
+}
+
+.DropdownHeight {
+    padding: 19px 10px;
+}
+
+.SetTypeWidth {
+    max-width: 209px;
+}
+
+.RoleValueWidth {
+    width: 200px;
+}
+.MakePayment{
+    height: 26px !important;
+    width: 82px !important;
+    font-size: $font-size-sm !important;
+    padding: 0 !important;
+}
+
+.PaidButton {
+    height: 26px !important;
+    width: 82px !important;
+    
+    border: none;
+    color: $green-v10!important;
+    background-color: $blue-v41!important;
+
+    &:hover {
+        background-image: none!important;
+        box-shadow: none!important;
+    }
+}
+
+.FilterDropdown {
+    height: 36px!important;
+    width: 200px!important;
+}
+
+// .VerifyContainer {
+//     position: absolute;
+//     bottom: 20px;
+//     width: calc(100% - 60px);
+// }
+
+.InputSelect {
+    width: 50px;
+}
+
+.VerificationInfo {
+    width: 100%;
+    border-radius: 4px;
+    margin: 30px auto 0;
+    background-color: rgba(240,174,69,0.3);
+    color: $orange-v8;
+    padding: 18px;
+    p {
+      margin: 0;
+    }
+}
+
+.ExpiryContainer{
+    width: 65%;
+    .ExpiryDropdown{
+      width: 135px;
+      height: 44px !important;
+    }
+}
+
+.Password {
+    -webkit-text-security: disc;
+    font-family: 'text-security-disc';
+    &::placeholder {
+        @extend %FTwo; 
+    }
+}
+
+.InfoContainerExpiry {
+    width: 340px
+}
+
+.DownloadEmpty {
+    margin-left: 38px
+}
+
+.PaymentCardContainer {
+        border-radius: 6px !important;
+        background-color: $white;
+        position: relative;
+        height: 100%;
+        min-width: 300px;
+
+        .ActionButton {
+            margin-left: auto;
+            justify-content: space-between;
+    
+            .individual {
+                margin-right: 20px;
+                color: $blue-v39;
+                @extend %FontWeight600;
+                @extend %FS11;
+                cursor: pointer;
+    
+    
+                &:last-child {
+                    margin-right: 0px;
+                }
+            }
+        }
+}
+
+.FontColor {
+    color: $gray-v3;
+}
+
+.InfoFontSize {
+    @extend %FS13;
+}
+
+.ElipImp {
+    text-overflow: ellipsis !important;
+}
+
+.IconContain {
+    height: 24px;
+    width: 24px;
+    @include border-radius(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        background-color: $white;
+    }
+}

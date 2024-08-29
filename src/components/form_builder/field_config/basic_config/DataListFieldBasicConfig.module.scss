@@ -1,0 +1,35 @@
+
+@import '../../../../scss/constants';
+
+.DataListPicker {
+  // width: calc(100% - 80px);
+  z-index: 2;
+  width: 100%;
+}
+.Note{
+  color: $orange-v14;
+  background-color: $orange-v13;
+  padding: 10px 13px;
+  list-style: disc;
+  list-style-position: inside;
+  border-radius: 4px;
+  & li{
+    display: list-item;
+  }
+  & li::marker{
+    font-size: 12px;
+  };
+}
+
+.Height30{
+  height: 30px;
+}
+
+.ErrorContainer{
+  background-color: $red-v17;
+  color: $red;
+  padding: 10px 13px;
+  font-size: 12px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}

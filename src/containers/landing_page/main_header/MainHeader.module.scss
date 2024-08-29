@@ -1,0 +1,188 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+@import '../../../scss/Typography.module.scss';
+
+.MainHeader {
+  @extend .PL24;
+  @extend .PR20;
+  // box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.04);
+  // border-bottom: solid 1px #dadfe7;
+  background-color: $white;
+  top: 0;
+
+  @include for-desktop {
+    min-height: 64px;
+    display: flex;
+  }
+
+  @include for-phone-and-tab {
+    padding-left: 20px;
+  }
+}
+.Container {
+  background-color: $white;
+  top: 0;
+}
+.NotificationIcon {
+  width: 20px;
+  height: 20px;
+}
+.SubContainer {
+  justify-content: space-between;
+  flex-wrap: nowrap;
+
+  @include for-phone-and-tab {
+    padding-top: 12.5px;
+    padding-bottom: 12.5px;
+  }
+
+  .TopNav {
+    .Selected {
+      position: relative;
+    }
+  }
+
+  @include for-phone-and-tab {
+    flex-wrap: initial;
+  }
+}
+.SearchContainer {
+  position: relative;
+}
+.NotificationContainer {
+  position: relative;
+  button {
+    color: #999898;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  span {
+    position: absolute;
+    right: -6px;
+    top: -4px;
+    border-radius: 50%;
+    height: 18px;
+    width: 18px;
+    color: $white;
+    background-color: #f26464;
+    font-size: $font-size-xs;
+  }
+}
+.Divider {
+  position: absolute;
+  top: calc(50% - 10px);
+  right: 0px;
+  width: 2px;
+  height: 20px;
+  background-color: lighten($black, 90%);
+}
+.MenuToggleDisplay {
+  display: none;
+
+  @include for-phone-and-tab {
+    display: block;
+  }
+}
+.imageContainer {
+  height: 26px;
+  padding-left: 20px;
+
+  img {
+    // width: 100%;
+    height: 100%;
+  }
+  @include for-phone-and-tab {
+    min-width: 60px;
+  }
+}
+.NotificationIconContainer {
+  line-height: 12px !important;
+}
+.NotificationCount{
+  width: 18px;
+  height: 18px;
+  margin-left:-12px;
+  background-color: $red-v18;
+  border-radius: 9px;
+  margin-top: -8px;
+}
+.TransparentBtn {
+  background-color: transparent;
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+.ProfileDownArrow {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.ArrowDown {
+  cursor: pointer;
+  background-color: inherit;
+  border: none;
+  width: 14px;
+  padding-left: 8px;
+}
+.UserProfileDropdown {
+  background-color: $white;
+  width: 190px;
+  top: 15px;
+  right: 15px;
+  padding: 10px;
+  list-style: none;
+  box-shadow: 0 6px 30px 0 rgba($black, 0.25);
+  z-index: 5;
+  @include border-radius(6px);
+  @include transition(0.3s);
+
+  .UserProfileDropdownList {
+   // margin-left: 0;
+    cursor: pointer;
+    padding: 10px;
+    @include border-radius(3px);
+
+    .Icon {
+      fill: $gray-v62;
+    }
+    .IconWidth {
+      width: 18px;
+    }
+    &:hover {
+      background-color: rgba($blue-v21, 0.1);
+      svg path {
+        fill: $blue-v21;
+      }
+      .OptionOnHover {
+        color: $blue-v21 !important;
+      }
+    }
+  }
+}
+.CopyRight {
+  width: 150px;
+  // height: 26px;
+  font-size: 10px;
+  text-align: center;
+  color: $gray-v53;
+  padding-left: 10px;
+}
+.UserIcon2 {
+  height: 24px;
+  width: 24px;
+  object-fit: cover;
+  @include border-radius(50%);
+}
+.optionList {
+  font-weight: 400;
+  svg {
+    width: 18px;
+  }
+}
+.popperContainer {
+  margin: 12px 0px -32px -5px;
+}

@@ -1,0 +1,184 @@
+@import '../../../scss/utilities';
+@import '../../../scss/constants';
+
+.Button {
+  border: 1px solid transparent;
+  padding: 6px 15px; // new UI button
+  height: 34px;
+  min-width: 64px;
+  @extend %FS14;
+  font-weight: $fw-semibold;
+  text-align: center;
+  white-space: nowrap;
+  @include normal-font-styles;
+  @include border-radius(4px);
+  // @include transition(0.1s);
+  // filter: brightness(110%);
+
+  &:focus {
+    outline: none;
+  }
+  @include for-phone-and-tab {
+    padding: 0 15px;
+  }
+
+  &.PrimaryButton {
+    border-width: 0;
+    background-color: $blue-v39;
+    color: $white;
+
+    svg {
+      fill: $white !important;
+      stroke: $white;
+    }
+
+    &:hover {
+      background-color: #1C6FE2;
+      box-shadow: 0px 1px 2px 0px #0000004D;
+      svg {
+        fill: $white;
+        stroke: $white;
+      }
+    }
+  }
+
+  &.OutlinePrimaryButton {
+    background: $white;
+    color: $blue-v39;
+    border: 1px solid $blue-v39;
+
+    &:hover {
+      color: $blue-v39;
+      background-color: $blue-v41;
+    }
+  }
+  &.OutlineSecondaryButton {
+    background: $white;
+    color: $blue-v39;
+    border: 1px solid $blue-v39;
+
+    svg {
+      fill: $blue-v39;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $blue-v39;
+
+      svg {
+        fill: $white;
+      }
+    }
+  }
+
+  &.SecondaryButton {
+    background: $gray-v92;
+    color: $gray-v93;
+
+    &:hover {
+      background: $gray-v94;
+      color: $gray-v89;
+      // box-shadow: 0 8px 20px 0 rgba(31, 36, 61, 0.25);
+
+      svg {
+        fill: $gray-v89;
+        stroke: $gray-v89;
+      }
+    }
+  }
+
+  &.TertiaryButton {
+    height: 28px;
+    color: $blue-v21;
+    border-width: 0;
+    background-image: none;
+    background-color: rgba($blue-v21, 0.1);
+    font-size: $font-size-sm;
+
+    &:hover {
+      color: $white;
+      background-image: linear-gradient(71deg, #72be44, #00a0fd 100%);
+      box-shadow: 0 8px 20px 0 rgba(9, 162, 238, 0.5);
+    }
+  }
+
+  &.Cancel {
+    color: $red-v18;
+    background-image: none;
+    background-color: $white;
+    border-color: $red-v18;
+
+    &:hover {
+      color: $white;
+      background-image: none;
+      background-color: $red-v18;
+      box-shadow: 0 8px 20px 0 rgba(254, 108, 106, 0.5);
+    }
+  }
+  &.Light {
+    color: $gray-v93;
+    background-image: none;
+    background-color: transparent;
+
+    &:hover {
+      color: $gray-v89;
+    }
+  }
+  &.DeleteButton {
+    color: $red-v18;
+    background-image: none;
+    background-color: transparent;
+
+    &:hover {
+      color: $red-v18;
+    }
+  }
+
+  svg {
+    fill: $gray-v53;
+    stroke: $gray-v53;
+  }
+
+  &:hover {
+    svg {
+      fill: $white;
+      stroke: $white;
+    }
+  }
+
+  &.AuthButtonPrimary {
+    height: 44px;
+  }
+  
+  &.AuthButtonPrimary {
+    svg {
+      fill: initial;
+      stroke: initial;
+    }
+    
+    &:hover {
+      svg {
+        fill: initial;
+        stroke: initial;
+      }
+    }
+  }
+}
+
+.DefaultPrimaryDisabledButton, .DefaultPrimaryDisabledButton:hover {
+  box-shadow: none !important;
+  opacity: 0.5 !important;
+}
+
+.PrimaryDisabledButton {
+  color: $white;
+  opacity: 0.6;
+}
+
+.DirectionIcon {
+  vertical-align: initial !important;
+  padding-top: 3px;
+}
+.removePadding{
+  padding: 0px !important;
+}

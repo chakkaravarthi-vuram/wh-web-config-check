@@ -1,0 +1,50 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.InfoField {
+  :global(.child-card-container .card-icons-container){
+    display: none !important;
+  }
+  ul,
+  ol {
+    padding-left: 40px !important;
+    list-style-type: revert;
+  }
+}
+.Ellipsis {
+  width: fit-content;
+  &::after {
+    content: '...';
+  }
+}
+.LinkURL {
+  color: $blue-v39;
+  font-size: $font-size-mdt;
+  overflow: hidden;
+  max-width: 25ch;
+  text-overflow: ellipsis !important;
+  white-space: nowrap;
+  :hover {
+    text-decoration: underline;
+    color: $blue-v39;
+  }
+}
+
+.UrlMaxWidth {
+  max-width: 15ch !important;
+}
+.LinkURLTooltip {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-word;
+  max-height: 6.8em;
+}
+.LinkText {
+  overflow: hidden;
+  max-width: 10ch;
+  text-overflow: ellipsis !important;
+  white-space: nowrap;
+}

@@ -1,0 +1,51 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+.Container {
+  width: 72px;
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+  input {
+    padding: 7px 0px;
+    width: 35px;
+    text-align: center;
+  }
+}
+.HourContainer {
+  border-right: 1px solid $gray-v1;
+}
+.Error .HourContainer {
+  border-right: 1px solid $red;
+}
+.HourContainer:focus + div .HoursDd {
+  visibility: visible;
+}
+.MinutesContainer:focus + div .MinutesDd {
+  visibility: visible;
+}
+
+.HoursDd {
+  height: 200px;
+}
+
+.HoursDd,
+.MinutesDd {
+  position: absolute;
+  overflow-y: auto;
+  background-color: $white;
+  border: 1px solid $gray-v1;
+  min-width: 50px;
+  visibility: hidden;
+  z-index: 1;
+  & li {
+    padding: 4px 20px;
+    &:hover {
+      @extend %DropdownSelectedBg;
+    }
+  }
+}

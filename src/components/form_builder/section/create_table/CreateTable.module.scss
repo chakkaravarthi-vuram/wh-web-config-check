@@ -1,0 +1,152 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.Container {
+  padding: 4px 0px 15px;
+}
+
+.CreateContainer {
+  padding: 15px 15px 15px 15px;
+  // margin: 8px;
+  border-radius: 4px;
+  border: 1px solid $gray-v68;
+  &:hover, &:focus-within {
+    // transform: scale(1.005) !important;
+    border-radius: 4px;
+    // box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    // border: none !important; //Dashed border removed on hover
+    .EditDeleteIconContainer {
+      // visibility: visible;
+      opacity: 1;
+     }
+     .FieldTypeInstruction {
+      visibility: visible;
+     }
+  }
+}
+
+.DropdownPopper {
+  width: 627px;
+  padding-left: 0px;
+  @include for-hd-screen {
+    width: 595px;
+  }
+}
+.Required {
+  color: $red;
+  margin-left: 3px;
+}
+
+// .EditIconContainer {
+//   background-color: $gray-v6;
+//   height: 24px;
+//   width: 24px;
+//   border-radius: 50%;
+//   & .EditIcon {
+//     height: 12px;
+//     width: 12px;
+//     fill: $white;
+//   }
+// }
+.EditContainer:hover {
+    background-color: $gray-v96;
+}
+.AddIcon {
+  path {
+    fill: $blue-v39;
+  }
+}
+.DeleteContainer:hover {
+    background-color: $gray-v96;
+}
+.EditDeleteIconContainer {
+  background-color: $gray-v6;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background-color: #fff;
+  opacity: 0;
+  & .EditIcon {
+    height: 18px;
+    width: 18px;
+    path {
+      fill: $gray-v87;
+    }
+  }
+  & .DeleteIcon {
+    width: 18px;
+    height: 18px;
+    path {
+      fill: $gray-v87;
+    }
+  }
+}
+.AddRow {
+  font-size: $font-size-mdt;
+  font-weight: $fw-semibold;
+}
+.TableHeader {
+  white-space: unset !important;
+}
+
+.FieldTypeInstruction{
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+}
+.UniqueColumnError {
+  background-color: 1px solid red;
+  // border-right: 0px
+}
+
+// Validation config modal
+
+.HeaderContent{
+  height: fit-content !important;
+  padding: 0;
+}
+
+.ModalContainer {
+  width: 30vw !important;
+  height: 55vh !important;
+  overflow: hidden !important;
+  @include for-hd-screen-v2 {
+    height: 65vh !important;
+  }
+  @include for-phone-and-tab {
+    width: 85vw !important;
+    height: 70vh !important;
+  }
+  @include for-small-to-medium-height-device {
+    height: 70vh !important;
+  }
+}
+
+.InnerContent{
+  @include for-phone-and-tab{
+    padding: 15px 25px 0 !important;
+  }
+}
+
+.CloseIconContainer {
+  margin: 11px 15px 10px 0;
+}
+
+.RowDeleteIcon{
+  fill: $gray-v87;
+}
+
+.RowDelIconContainer{
+  height: 24px;
+  width: 24px;
+  @include border-radius(4px);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover{
+    background-color: $gray-v96;
+  }
+}

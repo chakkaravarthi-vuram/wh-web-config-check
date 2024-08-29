@@ -1,0 +1,76 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.PageTitle {
+    color: $gray-v3;
+    font-size: $font-size-xl;
+    font-weight: $fw-semibold;
+    margin-bottom: 0px !important;
+    @include for-phone-and-tab {
+      width: calc(100vw - 65px);
+    }
+  }
+  .ModalHeader {
+      height: fit-content !important;
+  }
+  .ModalHeaderFlow {
+    min-height: 50px !important;
+  }
+  .ModalHeaderContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .ModalCloseIcon {
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+  }
+  .ModalCloseIcon {
+    width: 28px;
+    height: 28px;
+    margin: 0 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include border-radius(4px);
+    border: solid 1px #dadfe7;
+    background-color: #fff;
+  }
+  .CloseButton {
+    width: 12px;
+    height: 12px;
+    fill: #6c727e;
+    // background-color: #6c727e;
+    @include border-radius(1px);
+  }
+  
+  .PrimaryButton,
+  .SecondaryButton,
+  .SecondaryActionButton {
+    width: fit-content !important;
+    height: 38px !important;
+    border-radius: 3px !important;
+  }
+  
+  .SecondaryActionButton {
+    background-color: #e8f5fa !important;
+    color: #63bbdf !important;
+    text-transform: uppercase;
+    &:hover {
+      color: $white !important;
+      background-image: linear-gradient(71deg, #72be44, #00a0fd 100%);
+    }
+  }
+  .ModalFooter {
+    width: 100% !important;
+    padding: 0px !important;
+  }
+  .CreateEditButton {
+    padding-right: 0px !important;
+  }
+  .ContentPaddingNone {
+    padding: 0px !important;
+  }

@@ -1,0 +1,146 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.DatalisListingContainer {
+  position: relative;
+  overflow-y: hidden;
+
+  @include for-small-device {
+    padding-inline: 15px;
+  }
+}
+
+@include for-small-device {
+  .ListHeader {
+    display: none;
+  }
+  .DatalistListView {
+    padding: 4px;
+  }
+  .FlowListingContainer {
+    padding-inline: 15px;
+  }
+}
+
+.TableTaskContainer {
+  border-radius: 6px;
+  overflow-y: auto;
+  height: calc(100% - 60px);
+}
+
+.TitleDescDivider {
+  width: 1px;
+  height: 16px;
+  margin: 0 8px;
+  background-color: $gray-v1;
+}
+
+.DatalistTitleContainer {
+  width: 300px;
+}
+
+@include for-hd-very-big-screen {
+  .DatalistTitleContainer {
+    width: 500px;
+  }
+}
+
+.TaskDefinition {
+  max-width: 50%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.SearchOuterContainer {
+  border-radius: 4px;
+  padding: 4px 0px !important;
+  border: 1px solid $gray-v108;
+  width: 140px;
+  height: 24px;
+  @include transition(0.1s);
+}
+
+.ExpandedSearch {
+  width: 256px !important;
+}
+
+.SearchCloseIcon {
+  &:focus{
+    outline: none;
+  }
+}
+
+.SortContainer {
+  padding: 2px 6px 2px 8px;
+  border-radius: 4px;
+  background-color: $blue-v48;
+}
+
+.TableTaskContainer {
+  border-radius: 6px;
+  overflow-y: auto;
+  height: calc(100vh - 196px);
+  padding: 0px 24px;
+}
+
+.TableTrialContainer {
+  height: calc(100vh - 236px) !important;
+}
+
+.DatalistTable{
+  & thead{
+   & tr {
+      & th {
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+      }
+      & th:first-child {
+        padding-left: 12px;
+      }
+      & th:last-child {
+        padding-right: 12px;
+      }
+    } 
+  }
+  & tbody{
+    & tr:hover td:nth-child(1) svg path {
+      fill: none;
+      stroke: $blue-v39;
+    }
+    & td:first-child {
+      padding-left: 12px;
+    }
+    & td:last-child {
+      padding-right: 12px;
+    }
+    & td{
+      padding-top: 12px !important;
+      padding-bottom: 12px !important;
+    }
+  }
+}
+
+.DescWidth {
+  max-width: 33vw;
+  @include for-medium-hd-screen {
+    max-width: 25vw;
+  }
+}
+
+.EditIcon:hover{
+  & path{
+     stroke: $blue-v39
+  }
+}
+
+.DraftTable{
+  & tbody{
+     & tr{
+        & td:last-child button{ visibility: hidden;}
+     }
+     & tr:hover{
+        & td:last-child button{ visibility: visible;}
+     }
+  }
+}

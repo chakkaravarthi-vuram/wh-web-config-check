@@ -1,0 +1,49 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.Title {
+  // margin-top: 30px;
+  line-height: 18px;
+  span {
+    color: $gray-v53;
+    @extend %FontWeight500;
+    opacity: 0.9;
+  }
+
+  @include for-hd-screen {
+    margin-top: 20px;
+  }
+}
+.TaskCardContainer {
+  height: 48px;
+  margin-bottom: 2px;
+  padding: 4px 15px;
+}
+.MoreItems {
+  position: relative;
+  
+  button {
+    color: $blue-v39;
+    font-size: $font-size-md;
+    background-color: $white;
+    border: 1px solid $blue-v39;
+    border-radius: 6px;
+    padding: 12px;
+    height: 48px; 
+    cursor: pointer;
+    
+    &:hover {
+      background-color: $blue-v40;
+      color: $white;
+    }
+  }
+  .LineMarker {
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    background-color: $gray-v52;
+    z-index: -1;
+}
+}

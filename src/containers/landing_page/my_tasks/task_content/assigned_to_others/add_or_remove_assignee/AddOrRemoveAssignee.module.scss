@@ -1,0 +1,19 @@
+@import '../../../../../../scss/constants';
+@import '../../../../../../scss/utilities';
+.SearchBar {
+  max-width: 300px;
+  margin-left: 20px;
+}
+
+.UserPickerSuggestionList {
+  width: calc(45vw - 80px);
+}
+.RowsPerPage{
+  font-size: 13px;
+  color:$gray-v12;
+}
+
+.InputContainerHeight
+{
+ height: 30px !important;
+}

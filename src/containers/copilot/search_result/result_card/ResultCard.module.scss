@@ -1,0 +1,17 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.ResultCard {
+  display: flex;
+  gap: 8px;
+  padding: 7px 0;
+  width: 100%;
+  height: max-content;
+  @include border-radius(6px);
+}
+
+.Instruction {
+  background-color: $gray-v109;
+  padding: 10px 12px;
+  width: max-content;
+}

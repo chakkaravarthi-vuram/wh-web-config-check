@@ -1,0 +1,166 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.DetailsContainer {
+    padding: 24px;
+    height: calc(100vh - 172px);
+    background-color: $white;
+    overflow-y: auto;
+}
+
+.TopO {
+    top: 0px;
+}
+
+.SummarySubContainer {
+    gap: 16px;
+
+    & > div {
+        flex: 1 1;
+    }
+}
+
+.EditButton {
+    padding: 0px !important;
+    svg path {
+        fill: none !important;
+        stroke: $gray-v101 !important;
+    }
+}
+
+.AddButton {
+    padding: 0px !important;
+    color: $blue-v39 !important;
+    svg path {
+        fill: $blue-v39 !important;
+        stroke: none !important;
+    }
+}
+
+.ShortcutContainer {
+    border-radius: 4px;
+    border: 1px solid $gray-v1;
+    padding: 12px;
+    width: 50%;
+
+    @include responsive-layout {
+        width: 100%;
+    }
+
+    .DlThumbnail label {
+        margin-bottom: 0px !important;
+    }
+
+    .ShortcutDivider {
+        width: 1px;
+        height: 11px;
+        background: $gray-v1;
+    }
+
+    .ShortcutButton {
+        width: 32px;
+        height: 32px;
+    }
+
+    .ShortcutName {
+        width: 130px;
+    }
+
+    .ShortcutDetailsWidth {
+        max-width: 100px;
+    }
+}
+
+.HeaderContainer {
+    position: relative;
+    padding: 24px 32px;
+
+    .CloseIcon {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+    }
+}
+
+.FooterContainer {
+    border-top: 1px solid $gray-v117;
+    padding: 16px 32px;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+.BodyContainer {
+    padding: 0px 32px;
+}
+
+.FieldLabel label {
+    @extend %BlackV20;
+    @extend %FTwo12;
+    margin-bottom: 0px;
+}
+
+.FlowField {
+    width: 36% !important;
+}
+
+.ValueBy {
+    width: 37% !important;
+}
+
+.DlField {
+    width: 25% !important;
+}
+
+.InputTreeContainer{
+    border-radius: 4px;
+    background: $gray-v109;
+    border: 1px solid $gray-v108;
+}
+.TableDependantApps {
+    border-radius: 3px;
+    border: 1px solid $gray-v108;
+  
+    thead tr th {
+        border-bottom: 1px solid $gray-v108 !important;
+        background: $gray-v109 !important;
+    }
+  
+    tbody tr {
+        &:hover {
+            td {
+                background: $blue-v47;
+            }
+        }
+    }
+}
+.TextColor {
+    color: $gray-v91;
+}
+
+.HeadingColor {
+    color: $gray-v3;
+}
+.CancelButton {
+    color: $black-v20;
+    margin-right: 0px !important;
+}
+.CloseIcon {
+    width: 12px;
+    height: 12px;
+    margin: 7px 3px !important;
+    fill: $gray-v101 !important;
+    outline: none;
+}
+.ModalClassName {
+    height: auto !important;
+  }
+
+
+.AddButton {
+    padding: 0px !important;
+    color: $blue-v39 !important;
+    svg path {
+        fill: $blue-v39 !important;
+        stroke: none !important;
+    }
+}

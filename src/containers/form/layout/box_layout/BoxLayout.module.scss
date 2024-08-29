@@ -1,0 +1,27 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.BoxLayout{
+    .DragButton {
+        display: none;
+        position: absolute;
+        top: -30px;
+        right: 29px;
+        border: 1px solid $blue-v39;
+        background-color: $blue-v39;
+        border-radius: 4px 0px 0px 4px;
+        padding: 0px 7px 3px 8px;
+        cursor: grab;
+        transform: rotate(90deg);
+
+        path {
+            fill: #fff;
+        }
+    }
+
+    // &:hover {
+    //     .DragButton {
+    //         display: block;
+    //     }
+    // }
+}

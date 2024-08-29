@@ -1,0 +1,40 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.Container{
+    height: 100vh !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.DownloadActivityWindow {
+    bottom: 30px;
+    right: 30px;
+    z-index: 200;
+    max-height: 28px;
+}
+
+.TaskDownloadActivityWindow {
+    bottom: 45px;
+    right: 45px;
+    z-index: 200;
+    max-height: 28px;
+}
+
+.CreateTeamModal {
+    width: 700px;
+}
+
+.SubContainer {
+    height: calc(100vh - 56px);
+    @include responsive-layout {
+        height: calc(100vh - 110px);
+    }
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.HidePageNavResponsive {
+    @include responsive-layout {
+        display: none !important;
+    }
+}

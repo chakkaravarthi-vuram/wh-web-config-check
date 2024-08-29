@@ -1,0 +1,79 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.ActorsEachDiv {
+  margin-bottom: 19px !important;
+}
+.ActorsContainer {
+  border-top: 1px solid $gray-v1;
+}
+.LastRuleActor {
+  border-bottom: none !important;
+  padding-bottom: 10px 0 0 0 !important;
+}
+.DefaultActor {
+  font-size: $font-size-smt;
+  font-weight: $fw-normal;
+  color: $gray-v104;
+  padding-top: 8px;
+}
+.ActorsEachDiv {
+  margin-bottom: 19px !important;
+}
+.FieldLabel {
+  color: $gray-v104;
+  font-size: $font-size-sm;
+  font-weight: $fw-semibold;
+}
+.AddStepText {
+  margin-left: 8px;
+}
+.TitleClass {
+  font-weight: 500;
+}
+.ActorsAddStep {
+  padding: 16px 0 0 0 !important;
+  border: none !important;
+  background: none !important;
+  width: fit-content !important;
+}
+.PlusIcon {
+  width: 18px;
+  height: 18px;
+  path {
+    stroke: $blue-v39;
+  }
+}
+.HelpIcon {
+  border: 1px solid $gray-v87;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  circle {
+    fill: $white;
+  }
+  path {
+    fill: $gray-v87;
+  }
+}
+.ChangeTextClass {
+  color: $blue-v39;
+  font-size: $font-size-mdt;
+  padding: 0 !important;
+  height: fit-content;
+  font-weight: $fw-semibold;
+  &:hover {
+    color: $blue-v39;
+  }
+}
+.TriggerTitle {
+  font-weight: $fw-semibold;
+  @extend %FS13;
+  line-height: 16px;
+  color: $gray-v3;
+  margin-right: 7px;
+}
+.DropdownGroupClass {
+  background-color: $gray-v40 !important;
+  padding: 16px !important;
+}

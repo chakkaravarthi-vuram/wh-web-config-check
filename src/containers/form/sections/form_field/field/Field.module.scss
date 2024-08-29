@@ -1,0 +1,83 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+// .ScannerField {
+//     display: flex;
+//     align-items: flex-end;
+// }
+.Margin0 {
+    label {
+      margin: 0px !important;
+    }
+  }
+.InfoField {
+  :global(.child-card-container .card-icons-container){
+    display: none !important;
+  }
+  ul, ol {
+    padding-left: 40px !important;
+    list-style-type: revert;
+  }
+
+  p {
+    overflow: hidden;
+    word-wrap: break-word;
+  }
+}
+
+.Ellipsis {
+  label {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+.DeactivatedOptionFieldConatiner{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  & .DeactivateInfo{
+   color: $gray-v86
+  }
+}
+
+// .LabelEditableLabel {
+  // width: 100%;
+// }
+
+.LabelCreationLabel {
+  width: 80%;
+}
+
+.CreationDateStyle {
+  position: relative;
+  overflow: hidden;
+  div[class='flex'] {
+    width: calc(100% - 5px);
+    overflow: hidden;
+  }
+
+  div[class='w-0'] {
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    position: absolute;
+    right: 5px;
+  }
+}
+
+.UserSelector > div > div div:nth-child(2) {
+  max-width: none !important;
+}
+
+.LinkText {
+  max-width: 100px;
+}
+
+.LinkURL {
+  max-width: 200px;
+}

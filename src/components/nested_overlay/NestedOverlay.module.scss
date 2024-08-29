@@ -1,0 +1,17 @@
+@import './../../scss/constants';
+@import './../../scss/utilities';
+
+.DropdownsContainer {
+    border-radius: 3px;
+    border: 1px solid $gray-v107;
+    background-color: $gray-v109;
+    padding: 8px
+}
+
+.InsertDropdown {
+    top: 0px;
+    right: 0px;
+    width: 102px;
+    height: 20px;
+    z-index: 1;
+  }

@@ -1,0 +1,19 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.dropdownListContainer {
+    width: 480px;
+    z-index: 5;
+
+    .popperElement{
+        background-color: $white;
+        box-shadow: 0px 1px 16px 0px rgba(16, 24, 40, 0.12);
+        @include border-radius(3px);
+
+        .listItem {
+            padding: 12px 24px;
+            height: 64px;   
+        }
+    }
+}
+

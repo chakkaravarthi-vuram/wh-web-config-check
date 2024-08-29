@@ -1,0 +1,114 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.Container {
+  width: 338px;
+  box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.25);
+  margin-left: 10px;
+  position: relative;
+  background-color: $white;
+}
+.TitleBar {
+  height: 45px;
+  background-image: linear-gradient(79deg, var(--dark), #26264f);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  padding: 0px 15px;
+  .Name {
+    width: calc(100% - 45px);
+  }
+  .Minimize {
+    width: 20px;
+    height: 20px;
+    &:hover {
+      background-color: #413966;
+      // border-radius: 50%;
+    }
+    .MinimizeIcon {
+      width: 10px;
+      height: 2px;
+      background-color: $white;
+      opacity: 0.65;
+    }
+  }
+  .Close {
+    width: 20px;
+    height: 20px;
+    &:hover {
+      background-color: #413966;
+      // border-radius: 50%;
+    }
+    .CloseIcon {
+      width: 10px;
+      height: 10px;
+      fill: $white;
+      stroke-width: 50px;
+      stroke: $white;
+      opacity: 0.75;
+    }
+  }
+}
+
+.OnlineStatusBar {
+  height: 30px;
+  background-color: $white;
+  border-bottom: solid 1px $gray-v52;
+  %dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+  }
+  padding: 0px 15px;
+  .OnlineDot {
+    @extend %dot;
+    background-color: #4fa64f;
+  }
+  .OfflineDot {
+    @extend %dot;
+    border: solid 1px #979797;
+  }
+}
+.DownloadActivityDataContainer {
+  border-bottom: solid 1px #dcdcdc;
+  flex: 1;
+  background-color: $white;
+  padding: 10px 15px 0px 15px;
+}
+
+.UserImage {
+  width: 48px;
+  height: 48px;
+}
+.Loader {
+  position: absolute;
+  left: 46%;
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.37);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.37);
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.37);
+  top: 83px;
+  border-radius: 50%;
+}
+
+.DownloadActivityCardContainer {
+  padding: 8px 0;
+  .CardTitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #1f243d;
+  }
+  .Failed {
+    color: #f07f7f;
+  }
+  .Circle1 {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    @extend %FlexShrink0;
+    display: inline-flex;
+  }
+}

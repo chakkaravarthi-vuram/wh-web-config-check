@@ -1,0 +1,30 @@
+@import '../../../../../scss/constants';
+@import '../../../../../scss/utilities';
+$container-height: 422px;
+
+.AccTitle {
+  font-size: $font-size-md;
+  font-weight: $fw-semibold;
+  color: $red-v5;
+}
+
+.AccnotStartedtxt {
+  @extend %FS13;
+  line-height: 1.27;
+  text-align: center;
+  color: $red-v5;
+  padding-top: 15px;
+  padding-left: 7px;
+}
+
+.redBorderCard {
+  margin: 15px 0px;
+  border: 1px solid $red-v5;
+  border-radius: 4px;
+  position: unset !important;
+}
+
+.cardheaderbg {
+  background-color: $white;
+  padding: 16px !important;
+}

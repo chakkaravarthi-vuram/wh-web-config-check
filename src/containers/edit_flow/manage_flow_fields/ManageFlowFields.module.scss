@@ -1,0 +1,211 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.ModalWidth {
+    width: 60vw;
+    @include for-medium-height-device {
+        width: 100vw;
+    }
+}
+
+.HeaderContainter {
+    padding: 24px 32px 0px 32px;
+
+    .CloseIcon {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+    }
+}
+
+.MainContent {
+    padding: 20px 32px;
+}
+
+.ButtonDisplayClassName {
+    display: flex;
+    flex-direction:row;
+    justify-content: flex-end;
+}
+
+.FooterContainer {
+    border-top: 1px solid $gray-v1;
+    padding: 16px 24px;
+    justify-content: flex-end;
+    gap: 16px;
+}
+
+.OverFlowInherit{
+    overflow: inherit !important;
+ }
+ 
+ .EditIcon:hover{
+    & path{
+       stroke: $blue-v39
+    }
+}
+
+.AppListTable{
+    width: 100%;
+    & thead{
+      & th{
+        z-index: 4 !important;
+        padding: 12px 24px !important;
+        height: 44px;
+        background-color: $gray-v109 !important;
+      }
+    }
+    & tbody{
+       & tr{
+          & td:last-child { align-content: baseline;}
+          height: auto;
+       }
+       & td{
+        vertical-align: top;
+        padding: 16px 24px !important;
+       }
+    }
+  }
+  
+  .AppListTable tbody td div {
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+.ActionContainer {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.SearchInput {
+    padding-right: 2px !important
+}
+
+.SearchLabel {
+    color: $black-v18 !important;
+    font-size: $font-size-sm !important;
+    font-weight: $fw-semibold !important;
+}
+
+.ColumnHeader {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+    padding: 8px 16px;
+    border-bottom: 1px solid $gray-v1;
+    margin-bottom: 8px;
+  
+    & .EachValue{
+      width: 40%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+.EmptyDiv {
+    display: flex;
+    align-items: center;
+    min-width: 32px;
+    height: 32px;
+    gap: 8px;
+}
+
+.AllColumn{
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+    border-bottom: 1px solid $gray-v1;
+    padding-bottom: 8px;
+}
+
+.ChevronClass {
+    fill: $gray-v101 !important;
+}
+
+.ChevronContainerClass {
+    height: 20px;
+    width: 18px;
+    justify-content: center;
+}
+
+.AccordionHeader {
+    line-height: 20px;
+    color: $black-v22 !important;
+}
+.RowTypeClassName {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.EachColumn{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 16px;
+    border-radius: 4px;
+    border: 1px solid $gray-v1;
+    background: $white;
+    padding: 8px 16px;
+
+    & .EachValue{
+      width: 40%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    & .ButtonContainer{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    & .Button{
+        padding: 0 !important;
+    }
+}
+.ErrorStyles {
+    color: $red-v22;
+}
+  .TextWrapClass {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 320px;
+    white-space: nowrap;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    width: 100%;
+  }
+  
+  .TextWrapExtend {
+    display: -webkit-box;
+    width: 100%;
+    max-width: 320px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    overflow-wrap: break-word;
+  }
+  .TableWrap {
+    display: -webkit-box;
+    width: 100%;
+    max-width: 320px;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    overflow-wrap: break-word;
+  }
+  
+.FieldNameMaxWidth {
+    max-width: 305px !important;
+    width: 100% !important;
+}

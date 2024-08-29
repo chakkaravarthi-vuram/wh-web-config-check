@@ -1,0 +1,21 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.InputColumn {
+  width: 30% !important;
+  margin-right: 16px;
+}
+.TypeColumn {
+  width: 14vw !important;
+  margin-right: 16px;
+}
+.OutputColumn {
+  flex-grow: 1;
+  margin-right: 16px;
+}
+.DeleteColumn {
+  width: 5%;
+}
+.FlexBasisMaxWidth {
+  max-width: 220px;
+}

@@ -1,0 +1,51 @@
+@import '../../../../../scss/constants';
+@import '../../../../../scss/utilities';
+$container-height: 422px;
+
+.AccTitle {
+  font-size: $font-size-md;
+  font-weight: $fw-semibold;
+  color: $gray-v3;
+}
+
+.AccsummaryCircle {
+  display: inline-flex;
+  margin-right: 8px;
+  background: var(--warning-400, #FDB022);
+  border-radius: 16px;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  padding: 6px 0px 0px 5px
+}
+
+.AccnotStartedtxt {
+  @extend %FS14;
+  line-height: 1.27;
+  text-align: center;
+  color: $orange-v32;
+  padding-top: 15px;
+  font-weight: 600;
+  @include for-medium-height-device {
+    padding-left: 5px;
+  }
+}
+
+.yellowborderCard {
+  margin: 15px 0px;
+  border-radius: 3px;
+  border: 1px solid $orange-v32;
+
+}
+.firstyellowborderCard {
+  margin: 0px 0px;
+  border-radius: 3px;
+  border: 1px solid $orange-v32;
+
+}
+
+.cardheaderbg {
+  background-color: $white;
+  cursor: pointer;
+  padding: 16px !important;
+}

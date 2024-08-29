@@ -1,0 +1,63 @@
+
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.FormBodyContainer {
+  border: 1px solid $gray-v108;
+  border-radius: 3px;
+  position: relative;
+
+  &:hover {
+    border-color: $blue-v46;
+  }
+}
+
+.FormBodyChip {
+  font-size: 12px;
+  line-height: 18px;
+  height: 22px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 2;
+  top: 4px;
+  left: 4px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease; /* Add a smooth transition */
+}
+
+.FormBodyContainer:hover .FormBodyChip {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease; /* Add a smooth transition */
+}
+
+.CreateImport{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 16px;
+}
+
+.CreateImportFormBtn{
+  border: 1px dashed $blue-v39;
+  background-color: $blue-v47;
+  height: 76px;
+  border-radius: 3px;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  svg, svg path {
+    flex-shrink: 0;
+    fill: $blue-v39;
+  }
+
+  .Title {
+    text-align: left;
+    color: $blue-v39;
+  }
+}

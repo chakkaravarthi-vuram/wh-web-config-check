@@ -1,0 +1,113 @@
+@import 'scss/utilities';
+@import 'scss/constants';
+
+.DropdownContainer {
+  // display: flex;
+  padding: 10px 0;
+  border-bottom: 1px solid $gray-v1;
+  @media (max-width: 680px) {
+    flex-direction: column;
+    gap: 1rem;
+    .ActorTypes{
+      width: 100%;
+    }
+    .ActorTypeInitialField,
+    .ActorTypeField{
+      width: 100%;
+      padding-right: 15px;
+    }
+  }
+}
+
+.NestedAssigneeClass{
+  border: none !important;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.UserPickerDropdown {
+  width: calc(calc(60vw - 240px));
+}
+
+.InputClass {
+  width: 75% !important;
+}
+
+.SubtitleClass {
+  margin: 9px 0px 6px 0px;
+  @extend %FS13;
+  font-weight: $fw-medium;
+  color: $black-v13 !important;
+}
+
+.DropdownClass {
+  border-radius: 4px;
+  background-color: #fff !important;
+  margin-right: 15px;
+}
+
+// .ActorTypes {
+  // width: 35%;
+// }
+.ActorDropdownView{
+  width: 350px !important;
+}
+.ActorDropdownViewRecursive{
+  width: 250px !important;
+}
+
+.VerticalDivider{
+  height: 26px;
+  width: 1px;
+  background-color: $gray-v1;
+  margin: 4px 16px;
+}
+
+.ActorTypeField {
+  width: 30vw;
+  margin-right: 13px;
+}
+
+.ContainerUserPanel {
+  padding: 30px;
+  // box-shadow: 0 4px 10px 0 $gray-v64;
+  // background-color: $white;
+  border-radius: 6px;
+  position: relative;
+  min-width: 280px;
+  min-height: 222px;
+  overflow: hidden;
+}
+
+.DeleteIcon {
+  fill: $gray-v87;
+}
+.DeleteIconContainer{
+  height: 24px;
+  width: 24px;
+  @include border-radius(4px);
+  &:hover{
+    background-color: $gray-v96;
+  }
+}
+
+.ActorTypeInitialField {
+  width: 30vw;
+  margin-right: 0px;
+}
+
+.RuleRecipients{
+  position: relative;
+}
+
+.RuleRecipients::before {
+    content: '';
+    position: absolute;
+    top: -17px;
+    left: 8px;
+    border-style: solid;
+    border-color: $gray-v1;
+    border-width: 0 0 1.5px 1.5px;
+    width: 12px;
+    height: 40px;
+}

@@ -1,0 +1,75 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.Title {
+  margin-top: 30px;
+  line-height: 18px;
+  span {
+    @extend %FontWeight500;
+    opacity: 0.9;
+  }
+  @include for-hd-screen {
+    margin-top: 20px;
+  }
+}
+
+.DataLists {
+  display: flex;
+  list-style-type: none;
+  min-height: 44px;
+  grid-gap: 16px;
+  & li {
+    cursor: pointer;
+    transition: all 0.3s;
+    max-width: 200px;
+    text-overflow: ellipsis;
+    // margin: 0 10px;
+    border-radius: 6px;
+    background-color: $white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.04);
+
+    &:hover {
+      background-color: $blue-v39;
+      color: $white !important;
+    }
+
+    .DataListIconContainer {
+      min-width: 32px;
+      height: 32px;
+      border-radius: 3px;
+      background-color: $blue-v41;
+      .DatalistIcon {
+        width: 16px !important;
+        height: 18px !important;
+      }
+    }
+
+
+    &.MoreCard {
+      color: $blue-v39;
+      font-size: $font-size-md;
+      background-color: $white;
+      border: 1px solid $blue-v39;
+      &:hover {
+        background-color: $blue-v40;
+        color: $white;
+      }
+    }
+    .ContentSpacing {
+      padding: 12px;
+      height: 48px;
+    }
+  }
+}
+
+.DataListColorCode {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+.CountColor {
+  color: $gray-v53;
+}
+

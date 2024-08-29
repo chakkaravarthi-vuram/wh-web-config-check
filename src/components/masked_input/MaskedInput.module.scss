@@ -1,0 +1,22 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+.EditIcon {
+    width: 15px !important;
+    height: 15px !important;
+    cursor: pointer;
+    path {
+      fill: $gray-v53 !important;
+    }
+}
+.CloseIcon {
+    width: 15px !important;
+    height: 15px !important;
+    margin-right: 24px;
+    cursor: pointer;
+}
+.IconContainer {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 15px;
+}

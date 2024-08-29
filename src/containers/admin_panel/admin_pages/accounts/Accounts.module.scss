@@ -1,0 +1,135 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.HeaderTitle {
+  font-size: 28px;
+  font-weight: 500;
+}
+.ActionButton {
+  width: 110px;
+  height: 40px;
+  border-radius: 20px;
+  background-image: linear-gradient(70deg, #72be44 0%, #00a0fd);
+}
+.Table {
+  padding: 0px 20px;
+
+  &.UserDetailsTable {
+    overflow: initial;
+  }
+}
+.PaginationContainer {
+  padding: 0px 20px;
+  margin-top: 0px !important;
+}
+.SearchSortContainer {
+  height: 40px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.04);
+  border: solid 1px #dadfe7;
+  border-top: none !important;
+  background-color: $white;
+  padding: 0px 30px;
+
+  .SearchContainer {
+    flex: 1;
+  }
+  .SearchContainer,
+  .SortContainer {
+    display: flex;
+    align-items: center;
+  }
+}
+.PaginationInnerClass {
+  background-color: $white;
+}
+.UserDetailsContainer {
+  height: calc(100vh - 154px);
+  border-radius: 6px;
+  padding: 20px 10px;
+  overflow-y: auto;
+}
+.RowContainer {
+  white-space: nowrap;
+  padding: 10px 15px;
+  height: 48px;
+  cursor: pointer;
+}
+.DeActive {
+  color: $red;
+}
+.Active {
+  color: $green-v1;
+}
+.IconContainer {
+  float: right;
+}
+
+.EditIcon {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.DeleteIcon {
+  cursor: pointer;
+}
+.AddCategoryModalContainer {
+  position: relative;
+  z-index: 3;
+  width: 45vw;
+}
+.td100 {
+  width: 100px;
+}
+.DropdownList {
+  position: relative;
+  width: 140px;
+  height: 100%;
+  border-radius: 6px;
+  top: -30px;
+  right: 0px;
+  z-index: 3;
+  box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.25);
+}
+.DropdownContainer {
+  width: 100px;
+  margin-left: 10px;
+}
+.DropdownLabelContainer {
+  width: 140px;
+}
+@include for-small-device {
+  .SortContainer {
+    flex-wrap: wrap;
+    justify-content: flex-start !important;
+  }
+}
+@include for-phone-and-tab {
+  .SearchSortContainer {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+  }
+  .SortContainer {
+    justify-content: flex-end;
+    background-color: $white;
+    border-top: solid 1px #dadfe7;
+    padding: 6px 6px 6px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.04);
+  }
+  .UserDetailsContainer {
+    height: calc(100vh - 135px);
+    padding: 15px;
+  }
+  .Table {
+    padding: 0px;
+  } 
+  .PaginationInnerClass {
+    margin-top: 10px;
+  }
+  .PaginationContainer {
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0px;
+  }
+}

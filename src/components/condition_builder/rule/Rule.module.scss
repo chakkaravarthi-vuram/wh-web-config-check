@@ -1,0 +1,48 @@
+
+@import '../../../scss/constants';
+
+.RuleWrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  .ErrorMessage{
+    font-size: 11px;
+    font-weight: 400;
+    color: $red-v22;
+  }
+}
+.Rule{
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    width: 100%;
+
+    .When{
+        width: 20%;
+    }
+
+    .OperatorAndValue {
+        display: flex;
+        align-items: start;
+        gap: 8px;
+        width: 80%;
+        .Operator{
+          max-width: 50%;
+        }
+
+        .Value{
+          min-width: 20%;
+          max-width: 75%;
+        }
+    }
+    
+    .DropdownPopper{
+      min-width: 200px;
+  }
+}
+
+.DropdownPopperOperator{
+  min-width: 138px;
+}

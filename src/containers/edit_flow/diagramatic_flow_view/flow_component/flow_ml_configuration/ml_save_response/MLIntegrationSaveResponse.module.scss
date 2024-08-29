@@ -1,0 +1,92 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.MappingField {
+    width: 200px;
+}
+.TestConfirmation {
+    height: 64px !important;
+    background: $gray-v99;
+    border: 1px solid $gray-v1;
+    padding: 24px;
+    width: 766px;
+}
+.FormFieldRadio {
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    border: 1px solid $gray-v1;
+    cursor: pointer;
+}
+.TableRow {
+    padding-left: 16px !important;
+}
+.ColMax {
+    width: 30% !important;
+}
+.ColMin {
+    width: 20% !important;
+}
+.ColMini {
+    width: 5% !important;
+}
+.RadioSelectedStyle {
+height: 12px !important;
+width: 12px !important;
+border-radius: 9px;
+}
+.TestResponseSuccess {
+    background-color: $green-v19 !important;
+    width: 766px;
+    height: 49px;
+    padding: 16px;
+}
+.TestResponse {
+    overflow-y: auto !important;
+    box-sizing: border-box;
+    width: 766px !important;
+    max-height: 152px !important;
+    height: 152px !important;
+    background: $gray-v1 !important;
+    opacity: 0.5;
+    border: 1px solid $gray-v1;
+    border-radius: 3px;
+    color: $gray-v90 !important;
+}
+.TestResponseFailure {
+    width: 766px;
+    height: 49px;
+    padding: 16px;
+    background-color: $red-v17;
+}
+.Code {
+    padding-right: 15px;
+    border-right: 1px solid $green-v21;
+}
+.Disabled {
+    pointer-events: none !important;
+    background-color:$gray-v7 !important;
+}
+.CreateFieldDropdown {
+    position: absolute !important;
+    background: $white !important;
+    border: 1px solid $gray-v68 !important;
+    box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.15) !important;
+    z-index: 1 !important;
+    // min-width: 300px;
+    cursor: default !important;
+}
+.Note{
+    color: $orange-v14;
+    background-color: $orange-v13;
+    padding: 10px 13px;
+    list-style: none;
+    border-radius: 4px;
+    width: fit-content;
+    & div{
+      display: list-item;
+    }
+    & div::marker{
+      font-size: 12px;
+    };
+  }

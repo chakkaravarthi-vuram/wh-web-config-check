@@ -1,0 +1,29 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.CarouselContainer {
+    height: 96px;
+    :global(.carousel .control-dots) {
+        display: flex;
+        justify-content: end;
+        right: 4px;
+    }
+    :global(.carousel-slider) {
+        height: 96px;
+    }
+    :global(.carousel .slider-wrapper .slider .selected) {
+        z-index: 0 !important;
+    }
+}
+
+.OvalCopy {
+    width: 8px!important;
+    height: 8px!important;
+    margin: 0 4px;
+    background-color: rgb(255, 255, 255, .4);
+    border-radius: 50%!important;
+  }
+
+.SelectedSlide {
+    background-color: $white !important;
+}

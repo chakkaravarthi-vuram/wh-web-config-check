@@ -1,0 +1,29 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.IframeContainer {
+    width: 100%;
+    height: 250px;
+    border: 1px solid $gray-v112;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.NotesContainer {
+    color: $gray-v53;
+}
+
+.PreviewButton {
+    border: 1px solid $gray-v1;
+    width: fit-content;
+}
+
+.EyeIcon path {
+    fill: $black-v20;
+}

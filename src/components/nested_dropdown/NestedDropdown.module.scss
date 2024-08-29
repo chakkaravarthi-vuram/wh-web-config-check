@@ -1,0 +1,120 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.DropdownButton {
+  width: 100%;
+  height: 36px;
+  padding: 12px;
+  font-size: $font-size-mdt;
+  font-weight: 400;
+  border-radius: 2px;
+}
+.ChevronIcon {
+  width: 12px;
+  height: 12px;
+  margin-left: 4px;
+  &:focus {
+    outline: none;
+  }
+  path {
+    fill: $gray-v87;
+  }
+}
+.SearchField {
+  font-size: $font-size-mdt;
+  font-weight: 400;
+  border-bottom: 1px solid $gray-v1;
+}
+.DropdownContainer {
+  position: relative;
+  z-index: 1;
+  cursor: default;
+  width: 280px;
+}
+.SelectedValue {
+  color: $gray-v90;
+}
+.Placeholder {
+  color: $gray-v62;
+}
+.DropdownList {
+  overflow: auto;
+  flex: 1
+}
+.ListOption {
+  @extend %FS13;
+  color: $gray-v3;
+  padding: 10px 12px 10px 12px;
+  margin: 0 5px;
+  word-break: break-word;
+  min-height: 40px;
+  &:hover {
+    background: $blue-v41;
+  }
+}
+.DisabledDropdown {
+  min-height: 32px;
+  padding: 6px 12px;
+  background-color: $gray-v99;
+  color: $gray-v86 !important;
+  font-size: $font-size-sm;
+  font-weight: $fw-semibold;
+}
+.DisabledField {
+  background-color: $gray-v99;
+  color: $gray-v86 !important;
+  font-size: $font-size-sm;
+  font-weight: $fw-semibold;
+  pointer-events: none;
+}
+.BackButton {
+  padding: 10px;
+  align-items: center;
+  @extend %FS13;
+  color: $gray-v3;
+  &:hover {
+    color: $blue-v39;
+    .LeftIcon {
+      path {
+        fill: $blue-v39;
+      }
+    }
+  }
+}
+.SelectedOption {
+  background: $blue-v41;
+  border-left: 3px solid $blue-v39;
+  border-radius: 2px;
+}
+.TitleOption {
+  margin: 0px;
+}
+.DropdownInputLoader {
+  height: 36px;
+}
+.DropdownListWrapper {
+  background: transparent;
+  display: flex;
+  height: 260px;
+}
+[data-popper-placement='top-start'] > .DropdownContainer .DropdownListWrapper {
+  flex-direction: column-reverse;
+}
+[data-popper-placement='bottom-start'] > .DropdownContainer .DropdownListWrapper {
+  flex-direction: column;
+}
+.Wrap {
+  border: 1px solid $gray-v68;
+  box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.15);
+  background: $white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.SearchBar {
+  padding: 10px 16px;
+  border-bottom: 1px solid $gray-v68;
+}
+.ErrorInputBorder {
+  border: 1px solid $red-v27;
+}

@@ -1,0 +1,52 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.Container {
+  width: 100%;
+  border-radius: 6px;
+  border: solid 1px $gray-v1;
+  padding: 20px;
+}
+
+.UserImage {
+  width: 24px;
+  height: 24px;
+}
+
+.CategoryBox {
+  padding: 4px 10px;
+  border-radius: 4px;
+  background-color: rgba($gray-v1, 0.5);
+}
+
+.DescriptionClass {
+
+  & ul,
+  & ol {
+    padding-left: 40px !important;
+    list-style: revert;
+  }
+}
+
+.TimeAndDate {
+  font-size: 13px;
+  font-weight: 500;
+  color: $red-v18;
+}
+
+.Bell {
+  width: 18px;
+  height: 20px;
+}
+
+.FullOpacity {
+  opacity: 1;
+}
+
+.HalfOpacity {
+  opacity: 0.4;
+}
+
+.Attachment {
+  max-width: 200px;
+}

@@ -1,0 +1,38 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.HeaderTitle {
+  font-weight: $fw-medium;
+  font-size: $font-size-mdt;
+  line-height: 16px;
+  color: $gray-v89;
+}
+.QueryParams {
+  font-weight: $fw-semibold;
+  line-height: 17px;
+}
+.EachParam {
+  border-top: 1px solid $gray-v1;
+  padding: 16px 0;
+  &:last-child {
+    border-bottom: 1px solid $gray-v1;
+  }
+}
+.Description {
+  font-size: $font-size-mdt;
+  color: $gray-v86;
+}
+.NoDataTitle {
+  font-size: $font-size-xxxl;
+  font-weight: $fw-medium;
+  color: $gray-v3;
+  line-height: 27px;
+}
+.NoParamsContainer {
+  height: 100%;
+}
+.NoDataInfo {
+  font-size: $font-size-md;
+  line-height: 17px;
+  color: $gray-v86;
+}

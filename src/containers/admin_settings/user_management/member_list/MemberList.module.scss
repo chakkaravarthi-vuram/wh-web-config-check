@@ -1,0 +1,103 @@
+@import '../../../../scss/constants';
+
+.Table {
+  tr {
+    & td:first-child {
+      min-width: 300px;
+    }
+  }
+}
+
+.RowContainer {
+  white-space: nowrap;
+  background-color: $white;
+  height: 30px !important;
+
+  & :focus-within{
+    .Button{
+      opacity: 1;
+    }
+  }
+  
+  & .Button {
+    opacity: 0;
+  }
+
+  &:hover {
+    background-color: $gray-v69 !important;
+
+    td {
+      background-color: transparent !important;
+    }
+    .UsernameStyle {
+      position: relative;
+      z-index: 1;
+    }
+    & .Button {
+      opacity: 1;
+    }
+  }
+}
+.ButtonColm {
+  display: inline-flex;
+  align-items: center;
+  .EditContainer {
+    width: 33px;
+    height: 33px;
+    border-radius: 4px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      background-color: white;
+    }
+  }
+  .EditContainer svg {
+    fill: $gray-v87;  
+  }
+}
+
+.ArrowIcon {
+  fill: $gray-v6;
+  height: 12px;
+  width: 10px;
+}
+.UserImage {
+  height: 36px !important;
+  width: 36px !important;
+}
+
+.EditButton {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 50%;
+}
+
+.EditIcon {
+  width: 12px;
+  height: 12px;
+  margin: 6px;
+}
+
+.AccountStatus {
+  width: 24px;
+  height: 24px;
+}
+.EditIconV4 {
+  border: none;
+}
+.LookUpManagementContainer {
+  margin: 30px;
+}
+.SubCommonHeaderTitle {
+  background-color: $white;
+  padding: 20px 0px 16px 30px;
+  margin-bottom: 0;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.04);
+}
+.IconsSpace {
+  margin-left: 7px;
+}
+.TableContent {
+  text-transform: capitalize;
+}

@@ -1,0 +1,169 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.TabBuilder {
+  position: relative;
+  z-index: 1;
+}
+
+.TabDetails {
+  @extend %InputBorder;
+  @include border-radius(3px);
+  border-top-left-radius: 0px;
+  height: calc(100vh - 150px);
+  z-index: 1;
+  position: relative;
+  
+  &.ReadOnlyClass {
+    height: calc(100vh - 261px);
+    overflow-y: auto;
+  }
+}
+
+.AddPopperContainer {
+  background-color: $white;
+  border-radius: 4px;
+  box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+
+  .AddPopperHeader {
+    border-bottom: 1px solid $gray-v1;
+  }
+  
+  .AddPopperContainer {
+    padding: 12px 16px;
+  }
+}
+
+.FieldLabel label {
+  margin-bottom: 0px;
+  color : $gray-v101 !important;
+}
+
+.SecurityWarning {
+  border-radius: 4px;
+  border: 1px solid $blue-v46;
+  background: $blue-v48;
+  margin-top: 8px !important;
+}
+
+.MdCancelBtn {
+  border: none;
+  color: $gray-v89;
+}
+
+.FooterContainer {
+  border-top: 1px solid $gray-v1;
+  padding: 16px 24px;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.CloseContainer {
+  top: -8px;
+  right: -8px;
+}
+
+.PageSettingsContainer {
+  width: 42vw !important;
+}
+
+.ModalMainContainer {
+  height: 300px !important;
+}
+
+.PageOptions {
+  border: none !important;
+  width: 142px !important;
+
+  svg {
+    width: 6px;
+    height: 6px;
+    path {
+      stroke: $blue-v39 !important;
+      fill: $blue-v39 !important;
+    }
+  }
+}
+
+.PopperWidth {
+  width: max-content;
+  inset: 0px 22px auto auto !important;
+}
+
+.AddPageWidth {
+  width: max-content !important;
+  position: relative;
+  bottom: 1px;
+}
+
+.SecondNestedView {
+  border-radius: 4px;
+  width: 194px;
+  background: $white;
+  box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.10), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);
+
+  .DirectionButton {
+    background: $gray-v107;
+    padding: 8px 12px;
+  }
+}
+
+.AddPageFooter {
+  border-top: solid 1px $gray-v108;
+}
+
+.TabWidth {
+  width: calc(100vw - 424px);
+}
+
+.TabContainer {
+  top: 1px;
+}
+
+.IndividualEntryModal {
+  width: 80vw;
+}
+
+.EntryHeader {
+  padding: 16px 16px 0px 24px;
+  border-bottom: 1px solid $gray-v108;
+}
+
+.TabClass {
+  margin-top: 16px;
+  > div {
+    gap: 24px !important;
+  }
+}
+
+.EachTabClass {
+  margin-bottom: 8px !important;
+}
+
+.MoreButton {
+  position: relative;
+  color: $blue-v39;
+  margin-left: 12px;
+  top: 2px;
+}
+
+.MoreArrow {
+  margin-left: 5px;
+  bottom: -4px;
+  position: relative;
+
+  path {
+    stroke: $blue-v39;
+  }
+}
+
+.AddIcon {
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.DisabledPageOptions {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.4;
+}

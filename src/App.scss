@@ -1,0 +1,116 @@
+// scrollbar
+* {
+  scrollbar-width: $scrollbar-width;
+  scrollbar-color: $scrollbar-color;
+  
+ 
+  // [role=button]:focus-visible, // #commented due to applying outline for all button roles
+  //  button:focus-visible,
+  //  a:focus-visible
+  //   {
+  //   outline: 1px auto -moz-mac-focusring !important;
+  //   outline: 1px auto -webkit-focus-ring-color !important;
+  //   }
+
+    a:focus-visible,
+    button:focus-visible,
+    [role=button]:focus-visible,
+    [role=link]:focus-visible,
+    [role=checkbox]:focus-visible,
+    [role=menuitem]:focus-visible,
+    [role=menu]:focus-visible
+    {
+          border-radius: 4px;
+          box-shadow: 0 0 0 0.2rem $blue-v39-Op75;
+          outline: none !important;
+    }
+    [role=combobox]:focus-visible
+    {
+          border-radius: 4px;
+          box-shadow: 0 0 0 0.2rem $blue-v39-Op75;
+          outline: none !important;
+    }
+
+    [role=radio]:focus-visible{
+          box-shadow: 0 0 0 0.2rem $blue-v39-Op75;
+          outline: none !important;
+    }
+    [role=switch]:focus-visible{
+          box-shadow: 0 0 0 0.2rem $blue-v39-Op75;
+          outline: none !important;
+          border-radius: 2px;
+    }
+    [role=switch]:focus{
+      outline: none !important;
+    }
+    td[role=button]:focus-visible,
+    tr[role=button]:focus-visible
+    {
+      box-shadow: inset 0 0 0 0.2rem $blue-v39-Op75;
+      outline: none !important;
+    }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track-piece  {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $scrollbar-bg;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  border: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $bg-app;
+  accent-color: linear-gradient(83deg, #72be44, #00a0fd);
+  overflow-x: hidden;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+label {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 0;
+}

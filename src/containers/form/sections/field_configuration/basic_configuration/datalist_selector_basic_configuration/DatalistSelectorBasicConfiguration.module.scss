@@ -1,0 +1,40 @@
+@import '../../../../../../scss/constants';
+@import '../../../../../../scss/utilities';
+
+.DatalistField {
+    flex-basis: 45% !important;
+}
+
+.DatalistFieldDropdown {
+    z-index: 16;
+    margin-top: 0 !important;
+}
+
+.DatalistFieldsList {
+    width: 50%;
+}
+
+.AddMoreFields {
+    background: none !important;
+    padding: 0 !important;
+    :hover {
+        background: none !important;
+        padding: 0 !important;
+    }
+}
+
+.RemoveFields {
+    background: none !important;
+    padding: 0 !important;
+    color: $red-v8 !important;
+    :hover {
+        background: none !important;
+        padding: 0 !important;
+    }
+}
+
+.DatalistDropdownList {
+    position: relative;
+    z-index: 15;
+    margin-top: 0 !important;
+}

@@ -1,0 +1,34 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.WelcomeContainer {
+    width: 100%;
+    height: 96px;
+    @include border-radius(4px);
+    padding: 24px;
+    background-image: url('./WelcomeInsights.png');
+    background-repeat:no-repeat;
+    background-size:100% 96px;
+    @include for-small-device {
+        background-image: url('./WelcomeInsightsSmall.png');
+    }
+
+    .HeaderLine {
+        @extend %FS24;
+        @include for-medium-hd-screen {
+            font-size: 18px;
+        }
+        @include for-small-device {
+            font-size: 13px;
+        }
+    }
+
+    .WorkLoadMessage {
+        @include for-desktop {
+            font-size: 16px;
+        }
+        @include for-small-device {
+            font-size: 10px !important;
+        }
+    }
+}

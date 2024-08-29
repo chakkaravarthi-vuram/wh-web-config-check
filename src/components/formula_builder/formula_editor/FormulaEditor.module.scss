@@ -1,0 +1,75 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.BeautifyButton {
+    align-self: flex-end;
+}
+
+.WholeLine {
+    height: 18px;
+    cursor: text;
+    white-space: nowrap;
+}
+
+.Error {
+    text-decoration: $red wavy underline;
+    -webkit-text-decoration: $red wavy underline;
+    text-underline-offset: 2px;
+}
+
+.Container{
+    border: 1px solid $gray-v71 !important;
+}
+
+.Header{
+    border-bottom: 1px solid $gray-v108;
+    .HeaderTitle{
+        font-size: 13px;
+        font-weight: 500;
+        color: $gray-v90;
+    }
+
+    .HeaderBtn {
+        padding: 3px 12px;
+        border-radius: 3px;
+        border: 1px solid $gray-v1;
+        background:  #FFF;
+        font-size: 12px;
+        font-weight: 500;
+    }
+}
+
+.EvaluateButton {
+    height: fit-content !important;
+    text-transform: none !important;
+    display: flex;
+    column-gap: 5px;
+    font-size: 12px !important;
+    // width: 18% !important;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background-color: transparent !important;
+}
+
+.Correct{
+    color: $green-13
+}
+.Incorrect{
+    color: $red-v5
+}
+
+.MathOperators {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    border-radius: 4px;
+    border: 1px solid $gray-v108;
+    background: #FFF;
+    padding: 0px 4px;
+    z-index: 3;
+    .Operator{
+        padding: 4px 8px;
+        background-color: white;
+    }
+}

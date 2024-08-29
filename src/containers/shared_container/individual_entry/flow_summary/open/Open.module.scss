@@ -1,0 +1,119 @@
+@import '../../../../../scss/constants';
+@import '../../../../../scss/utilities';
+$container-height: 422px;
+.Circle1 {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  @extend %FlexShrink0;
+}
+
+.OpenBg {
+  background-color: $gray-v87;
+}
+
+.AccTitle {
+  font-size: $font-size-md;
+  font-weight: $fw-semibold;
+  color: $gray-v3;
+}
+
+.AccsummaryCircle {
+  display: inline-flex;
+  margin-right: 10px;
+  font-weight: $fw-semibold;
+  color: $white;
+  @extend %FS13;
+  text-align: center;
+}
+
+.blueborderCard {
+  margin: 15px 0px;
+  border: 1px solid  $gray-v99 !important;
+  border-radius: 3px;
+  position: unset !important;
+}
+
+.cardheaderNobg {
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0,.125);
+  background-color: $gray-v99 !important;
+}
+
+.InputDropdownContainer {
+  margin-top: -8px;
+  padding-right: 0px !important;
+}
+
+.OptionListDropDownStyles {
+  margin-top: 0px;
+  margin-left: -80px;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+.CustomContentStyle {
+  width: 0px;
+}
+
+.ContainerClass {
+  width: 584px;
+}
+
+.MainContentClassName {
+  min-height: 528px !important;
+  padding-left: 40px;
+  padding-top: 0;
+}
+
+.HeaderClass {
+  border: none;
+  background-color: $white;
+  padding-left: 40px;
+  padding-top: 20px;
+  font-size: 18px;
+}
+
+.IconClass {
+  border: none !important;
+}
+
+.ModalContentStyles {
+  color: $gray_v89;
+}
+
+.WarningTxt {
+  border-radius: 3px;
+  background-color: $orange-v23;
+  text-align: left;
+  color: $orange-v24;
+  padding: 10px 10px;
+  font-size: 13px;
+}
+
+.HeaderContainer {
+  & td {
+    border-top: 1px solid $white !important;
+    border-left: 1px solid $white !important;
+    border-right: 1px solid $white !important;
+    background-color: $white !important;
+  }
+}
+
+.TableBodyContainer {
+  & tr:hover td {
+    background-color: $gray-v63 !important;
+  }
+}
+
+.ReassignedFlowTasks {
+  max-height: 150px !important;
+}
+
+.MenuMargin {
+  margin-bottom: 0px !important;
+}
+
+.ReviewIcon {
+  padding: 1px !important;
+}

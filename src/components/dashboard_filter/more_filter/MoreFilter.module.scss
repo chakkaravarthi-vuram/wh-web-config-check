@@ -1,0 +1,31 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.FieldsContainer {
+    background-color: $white;
+    box-shadow: 0 -4px 20px 0 rgba_func($black, 0.1);
+    min-width: 250px;
+
+    @include for-phone-and-tab {
+      width: 100%;
+    }
+
+    .AppliedFieldEditButtonContainer {
+        height: 64px;
+        display: flex;
+        box-shadow: 0 -4px 20px 0 rgba_func($black, 0.1);
+        background-color: $white;
+        bottom: 0;
+        padding: 10px 15px 10px 15px;
+    
+        @include for-phone-and-tab {
+          z-index: 7;
+        }
+    }
+
+    .ContainerHeight {
+      max-height: 200px;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+}

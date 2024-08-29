@@ -1,0 +1,60 @@
+@import '../../../../../scss/constants';
+@import '../../../../../scss/utilities';
+
+.Circle1 {
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  @extend %FlexShrink0;
+}
+
+.OpenBg {
+  background-color: $blue-v2;
+}
+
+.AccTitle {
+  font-size: $font-size-md;
+  font-weight: $fw-semibold;
+  color: $gray-v3;
+}
+
+.AccsummaryCircle {
+  display: inline-flex;
+  margin-right: 10px;
+  font-weight: $fw-semibold;
+  color: $white;
+  @extend %FS13;
+  text-align: center;
+}
+
+.blueborderCard {
+  margin: 15px 0px;
+  border: 1px solid $blue-v2;
+  position: unset !important;
+}
+
+.cardheaderNobg {
+  background-color: transparent;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0,.125);
+}
+
+.AccnotStartedtxt {
+    @extend %FS13;
+    line-height: 1.27;
+    text-align: center;
+    color: $blue-v2;
+    padding-top: 15px;
+    padding-left: 9px;
+}
+
+.InputDropdownContainer {
+  padding: 10px 0px 0px 10px;
+}
+
+.OptionListDropDownStyles {
+  margin-top: 0px;
+  margin-left: -80px;
+  width: fit-content;
+  white-space: nowrap;
+}

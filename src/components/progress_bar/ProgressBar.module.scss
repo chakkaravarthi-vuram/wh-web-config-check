@@ -1,0 +1,19 @@
+@import '../../scss/constants';
+
+.ProgressBarBG {
+  height: 4px;
+  border-radius: 2px;
+  background-color: $gray-v1;
+  width: 100%;
+}
+
+.ProgressBar {
+  height: 4px;
+  border-radius: 2px;
+  margin-top: -4px;
+}
+
+.PercentageString {
+  min-width: 150px;
+  max-width: 100%;
+}

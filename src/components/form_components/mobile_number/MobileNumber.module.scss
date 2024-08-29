@@ -1,0 +1,31 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.Container {
+  height: 36px;
+}
+.Input {
+  @extend %InputHeight;
+  width: calc(100% - 76px);
+  padding-left: 10px;
+  @extend %PlaceholderOverflow;
+
+  &::placeholder {
+    @extend %PlaceholderOverflow;
+    @extend %GrayV6;
+    opacity: 1;
+  }
+}
+
+.Dropdown {
+  width: 76px;
+  justify-content: space-around;
+  border-right: 1px solid $gray-v1;
+  &:focus {
+    outline: none;
+  }
+}
+
+.DisabledArrow{
+  border-top-color: $gray-v62 !important;
+}

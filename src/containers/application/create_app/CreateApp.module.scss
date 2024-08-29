@@ -1,0 +1,82 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.CreateAppModal {
+    z-index:  152 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    border: 1px solid $gray-v1;
+    &:first-child {
+        // position: sticky;
+        width: 100vw !important;
+      }
+}
+.SearchUser {
+  font-weight: $fw-normal !important;
+}
+.AppHeader {
+  background: none !important;
+  border: none !important;
+}
+
+.Content {
+  margin: 0 !important;
+  height: calc(100vh - 62px) !important;
+}
+.AppUrlLink {
+  width: max-content !important;
+}
+
+
+// .CloseIcon {
+//   width: 16px;
+//   height: 16px;
+//   margin: 24px 24px 0px 0px;
+//   cursor: pointer;
+//   fill: $gray-v101 !important;
+// }
+
+.AppName {
+  margin-top: 16px;
+}
+.InputClass {
+  width: 766px !important;
+}
+
+.AppUrl {
+  &>div>div:nth-child(2)>div>div {
+    width: 766px !important;
+    &>div {
+      flex-basis: content;
+      flex-grow: 1;
+    }
+  }
+}
+
+.InputInnerClass {
+  text-overflow: clip;
+}
+
+.LinkClass {
+  border-left: none;
+}
+
+.AppAdmins {
+  width: 766px !important;
+}
+
+.CloseIcon {
+  width: 16px;
+  height: 16px;
+  margin-top: 3px;
+  fill: $gray-v101 !important;
+  outline: none;
+}
+
+.AppHeaderSpace {
+  margin-top: 32px;
+}
+
+.CancelButton {
+  color: $gray-v3 !important;
+}

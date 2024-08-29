@@ -1,0 +1,108 @@
+@import '../../../../../../scss/constants';
+
+
+.RuleContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.ElseCondition {
+    display: flex;
+    align-items: center;
+    border: 1px solid $gray-v1;
+    width: fit-content; 
+    border-radius: 3px;
+    padding: 24px;
+    background: #F9FAFB;
+}
+.Else {
+    border-radius: 3px;
+    border-right: 1px solid $gray-v1;
+    padding: 7px 12px;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    color: $gray-v87;
+    background: $gray-v109;
+}
+.DropdownWidth {
+    width: 100%;
+}
+.ListButtonClass {
+    height: 36px;
+}
+.Error{
+    border-color: $red-v27; 
+}
+.ErrorMessage {
+    color: $red-v22;
+    font-weight: 400;
+}
+.AddIcon {
+    path {
+      fill: $blue-v39;
+    }
+}
+.Heading{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.ActionDropdownWidth {
+    min-width: 340px !important;
+  }
+.MoveTo {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    height: 34px;
+    display: flex;
+    align-items: center;
+  }
+
+.If {
+    padding: 24px;
+    border-radius: 4px;
+    border: 1px solid $gray-v108;
+    background: $gray-v109;
+
+    .ChooseRule {
+        display: flex;
+        align-items: baseline;
+        gap: 24px;
+    }
+
+    .Rule {
+        border-radius: 4px;
+        border: 1px solid $gray-v1;
+        background: #FFF;
+        padding: 8px 12px;
+        display: flex;
+        justify-content: space-between;
+
+        .RuleControls {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+    }
+
+    .Step {
+        margin-top: 8px;
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}
+
+.AddStep{
+    width: fit-content;
+    font-size: $font-size-mdt;
+    color: $blue-v39;
+    display: flex;
+    gap:4px;
+    align-items: center;
+    font-weight: $fw-semibold;
+  }

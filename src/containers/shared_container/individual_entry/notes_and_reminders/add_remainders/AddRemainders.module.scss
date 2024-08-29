@@ -1,0 +1,34 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.Header {
+  @extend %FS12;
+  color: $gray-v2;
+}
+
+.Value {
+  @extend %FS13;
+  color: $gray-v3;
+}
+
+.Remainder {
+  font-size: 13px;
+  color: $gray-v9;
+}
+
+.RemainderMessage {
+  max-width: 100%;
+}
+
+.ButtonContainer {
+  height: 64px;
+  display: flex;
+  background-color: $white;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+}
+
+.PrimaryButton {
+  margin-right: 30px;
+}

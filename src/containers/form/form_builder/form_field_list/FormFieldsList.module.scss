@@ -1,0 +1,88 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.ComponentDnd {
+    background: $white;
+    height: calc(100% - 90px);
+    margin-top: 24px;
+    .ElementGrid {
+      height: calc(100% - 70px);
+      overflow: hidden;
+      padding: 0px 0px 24px 24px;
+
+      &:hover {
+        overflow-y: auto;
+
+        &::-webkit-scrollbar-thumb {
+          background: rgba($black, 0.2);
+          &:hover {
+            background: rgba($black, 0.5);
+          }
+        }
+      }
+      .DragElement {
+        cursor: grab;
+        width: 128px;
+        min-height: 70px;
+        padding: 8px 6px;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 3px;
+        border: 1px solid $gray-v108;
+        background: $white;
+        flex-direction: column !important;
+
+        &:hover {
+        border: 1px solid $blue-v39;
+        background: $blue-v48;
+
+          .IconStyle path {
+            fill: $blue-v39 !important;
+          }
+          div p{
+            color: $blue-v39 !important;
+          }
+        }
+      }
+    }
+}
+
+.TabSpacing {
+  margin-bottom: 8px !important;
+}
+
+.IconsStrokeHover {
+    transition: 0.3s all;
+    &:hover {
+        path {
+        stroke: $blue-v39;
+        }
+    }
+}
+
+.ToggleIcon {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.Opac1 {
+    opacity: 1 !important;
+}
+
+.BgBlack {
+    background-color: $black-v12 !important;
+}
+
+.FieldIcons {
+  grid-gap: 16px;
+  flex-wrap: wrap;
+}
+
+.SearchIcon{
+  cursor: pointer;
+  outline: none;
+  margin-right: 8px;
+}

@@ -1,0 +1,68 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.DeleteIcon{
+    fill: $gray-v87;
+}
+.DeleteIconContainer{
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include border-radius(4px);
+    align-self: end;
+  }
+
+ .ConfigurationRuleBuilder {
+   padding: 16px;
+   border-radius: 4px 4px 0px 0px;
+   border: 1px solid #EAECF0;
+   background: #F9FAFB;
+   width: 100%;
+ }
+
+ .OperatorContainer {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+ }
+
+ .FieldWidth{
+  width: 30%;
+ }
+
+ .MaxFieldWidth {
+  max-width: 40%;
+ }
+ .MinFieldWidth {
+  min-width: 30%;
+ }
+
+ .Value {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+  width: 100%;
+ }
+
+ .RValue{
+  display: flex;
+  gap: 2px;
+ }
+
+ .ValueAndActionContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+ }
+
+ .AddNew {
+  color:$blue-v39;
+  width: fit-content;
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  font-size: 12px;
+ }

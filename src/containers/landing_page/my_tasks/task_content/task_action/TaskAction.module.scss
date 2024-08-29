@@ -1,0 +1,9 @@
+@import '../../../../../scss/constants';
+@import '../../../../../scss/utilities';
+
+.Container {
+  border-radius: 12px;
+  background-color: $blue-v15;
+  padding: 20px;
+  margin: 24px;
+}

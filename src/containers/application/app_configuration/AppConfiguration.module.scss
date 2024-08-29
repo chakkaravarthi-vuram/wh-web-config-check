@@ -1,0 +1,52 @@
+@import '../../../scss/constants';
+@import '../../../scss/utilities';
+
+.DashboardConfigAppModal {
+  z-index: 152 !important;
+  margin: 0px !important;
+  width: 100% !important;
+  border: 1px solid $gray-v1;
+}
+.AppConfigHeader {
+  margin: 26px 15px 15px 40px;
+}
+.AppConfigMain {
+  margin: 15px 40px;
+}
+.CancelButton {
+  font-size: $font-size-mdt;
+  color: $gray-v93;
+  cursor: pointer;
+  border-radius: 3px;
+  border: none !important;
+  padding: 8px 16px;
+  height: 36px;
+  &:hover {
+    color: $black-v18 !important;
+    background-color: var(--gray-50, $gray-v110) !important;
+  }
+}
+.DeleteButton {
+  font-size: $font-size-mdt;
+  color: $red-v25;
+  padding: 8px 16px;
+  height: 36px;
+  cursor: pointer;
+  &:hover {
+    background: $red-v26;
+  }
+}
+.HeaderTitle {
+  color: $black-v12;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+.FooterContent {
+  padding: 0 24px 24px;
+  height: 100px !important;
+}
+.CloseIcon {
+  fill: $gray-v101 !important;
+}

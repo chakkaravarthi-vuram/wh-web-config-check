@@ -1,0 +1,292 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.FieldConfigContainer{
+  width: 450px;
+}
+.FieldOverlay {
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  border-radius: 4px;
+  bottom: 0;
+  right: 0px;
+  & .DeleteIcon {
+    border-bottom-right-radius: 4px !important;
+  }
+  //overlay doesnt cover full form field width, only for edit and delete icons.
+}
+.R1 {
+  right: -1px !important;
+}
+.CreateFormInstruction {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-word;
+}
+.Container {
+  // margin-bottom: 15px;
+  // width: 100%;
+  &:not(:hover) {
+    .TableField {
+      border-color: transparent !important;
+    }
+  }
+  & .InputContainer {
+    // padding: 4px;
+    // max-width: 339px;
+    list-style: none;
+    border: 1px solid $gray-v68;
+    border-radius: 4px;
+    margin-bottom: 0px;
+    // width: calc(100%);
+    overflow: hidden;
+    width: 200px;
+    height: min-content;
+   & .Table {
+     width: 339px;
+   }
+  }
+  // & .InputContainer:last-of-type {
+  //   margin-bottom: 0px;
+  // }
+  
+   &:focus-visible,
+   &:focus-within{
+    .EditIconContainer {
+      visibility: visible;
+      opacity: 1;
+    }
+    .FieldOverlay {
+      opacity: 1;
+    }
+   }
+
+  &:hover {
+    .FieldOverlay {
+      opacity: 1;
+      }
+  .InputContainer {
+  border-radius: 4px;
+  // box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+  border: 1px solid $blue-v39;
+  }
+   .EditIconContainer {
+    visibility: visible;
+    opacity: 1;
+   }
+   .Table {
+     box-shadow: none;
+     transform: initial;
+     box-shadow: initial;
+   }
+}
+}
+
+.OnDrag {
+  .InputContainer {
+    border: 1px dashed $gray-v1;
+    background-color: $gray-v10;
+    padding: 0px !important;
+  }
+}
+
+.ReadOnlyInput {
+  & * {
+    pointer-events: none;
+  }
+}
+.FormFieldInput {
+  // width: 100% ;
+  height: 36px;
+  // margin-left: 15px !important; // ETF 2401
+ //  margin-right: 15px !important;
+  border-radius: 4px;
+  // background-color: #fff ETF 2436
+}
+.ImportedIcon {
+  overflow: visible !important;
+}
+.EditIconContainer {
+  background-color: $blue-v39;
+  width: 28px;
+  height: 24px;
+  // visibility: hidden;
+  opacity: 0;
+  & .EditIcon {
+    border-right: solid 0.5px $white;
+    padding: 0 5px;
+    width: 100%;
+  }
+}
+.FieldTypeInstruction{
+  margin: 0;
+}
+
+.CheckBox {
+  top: 10px;
+  right: 10px;
+  z-index: 2px;
+  width: 24px;
+  height: 24px;
+  & * {
+    margin-right: 0px;
+  }
+}
+.FormFieldCheckbox {
+  width: 24px !important;
+  height: 24px !important;
+}
+.FormFieldRadio {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  border: 1px solid $gray-v1;
+  cursor: pointer;
+}
+
+.ImportableContainer {
+  border: 1px dashed $gray-v1;
+  padding: 20px 10px 10px 10px;
+  border-radius: 4px;
+}
+
+.ImportFieldOverlay {
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(24, 28, 48, 0.15);
+}
+
+.ActionButtonContainer {
+  z-index: 2;
+}
+
+.ActionButton {
+  padding: 8px 17px;
+  border-radius: 20px;
+  border: 1px solid $white;
+  color: $white;
+}
+
+.SelectedActionButton {
+  background: $white;
+  border: 0;
+}
+.readOnly {
+  word-break: break-word;
+  max-width: 400px;
+}
+
+.EditableViewLinkField {
+  max-width: calc(200% + 30px);
+}
+
+.CreationViewDateTimeField {
+  min-width: 310px;
+}
+.CreationViewDateField {
+  min-width: 250px;
+}
+
+.UserPickerDropdown {
+  width: calc(calc(50vw - 130px) * 0.66);
+  position: relative !important;
+  transform: none !important;
+  width: auto !important;
+  margin: 5px -7px -5px !important;
+}
+
+.TableDropdownWidth{
+  width: 200px;
+}
+
+.UserPickerDropdownAddDataList {
+  width: calc(calc(45vw - 170px) * 0.5);
+  position: relative !important;
+  transform: none !important;
+  width: auto !important;
+  margin: 5px -7px -5px !important;
+}
+.DatalistDataSelectorDropdownAddDatalist{
+  width: calc(30% - 64px);
+  @include for-hd-screen-v2 {
+    width: calc(30% - 65px);
+  }
+  @include for-phone-and-tab{
+      width: calc(50% - 79px);
+  }
+  @include for-small-device{
+      width: calc(100% - 50px);
+  }
+  position: relative !important;
+  transform: none !important;
+  width: auto !important;
+  margin: 5px -7px -5px !important;
+}
+
+.DataListPickerIcon {
+  fill: $gray-v6;
+}
+// .Checkbox {
+//  margin-bottom: -5px;
+// }
+
+.TextArea {
+  word-wrap: break-word;
+  max-height: 300px;
+  overflow-y: auto;
+  min-height: 72px;
+}
+
+.ReadOnlyTextParagraphClass {
+  word-wrap: break-word;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.CorrectIconStyles {
+  height: 9px;
+  width: 12px;
+}
+.RadioSelectedStyle {
+    height: 12px;
+    width: 12px;
+    border-radius: 9px;
+}
+.WrapContent
+{
+  white-space: normal !important;
+  word-break: break-word;
+}
+.InfoSpan ul, ol {
+  padding-left: 40px !important;
+  list-style-type: revert;
+}
+.DisabledIcon{
+  fill: $gray-v62 !important;
+}
+.CheckboxAlignment {
+  flex-wrap: wrap;
+  display: flex !important;
+}
+
+.CustomInnerClasss {
+  max-height: 200px;
+  overflow: auto;
+  max-width: 480px;
+  color: $white;
+  background-color: $black-v6;
+  padding: 10px !important;
+}
+
+.Scanner {
+  position: absolute;
+  bottom: 6px;
+  right: 10px;
+  width: 20px;
+  height: 24px;
+  background-color: $white;
+}

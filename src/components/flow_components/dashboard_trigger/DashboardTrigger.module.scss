@@ -1,0 +1,97 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.TitleTag {
+  font-size: $font-size-sm;
+  font-weight: 500;
+  color: $gray-v3;
+  padding: 4px 8px;
+  border: 1px solid $gray-v1;
+  @include border-radius(3px);
+  background-color: $white;
+  cursor: pointer;
+}
+.dropdownListContainer {
+  width: 270px;
+  z-index: 5;
+}
+.popperElement {
+  padding: 8px;
+  @include border-radius(6px);
+  background-color: $white;
+  box-shadow: 0 6px 30px 0 $gray-v65;
+  .anchorTag {
+    width: 100%;
+    padding: 10px;
+    text-decoration: none;
+    color: $gray-v3;
+    border-radius: 3px;
+    svg {
+      margin-right: 10px;
+      path {
+        fill: $gray-v87;
+      }
+    }
+    &:hover {
+      color: $blue-v39;
+      background-color: $black-v19;
+      path {
+        fill: $blue-v39;
+      }
+    }
+  }
+}
+
+.CardContainer {
+  display: flex;
+  justify-content: space-between;
+  height: 53px;
+  padding: 8px;
+  background-color: $white;
+  @include border-radius(3px);
+  cursor: pointer;
+  &:hover {
+    background-color: $blue-v41;
+    .IconContainer {
+      background-color: $blue-v39;
+      svg {
+        path {
+          fill: $white;
+        }
+      }
+    }
+    .ActionIconContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .Title {
+      color: $blue-v39;
+    }
+  }
+}
+.IconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $blue-v41;
+  width: 32px;
+  height: 32px;
+  border-radius: 3px;
+  margin-top: 0px;
+}
+.ActionIconContainer {
+  display: none;
+}
+.Title {
+  font-size: $font-size-md;
+  color: $gray-v3;
+  font-weight: 500;
+  display: inline-block;
+  max-width: 200px;
+}
+.SubTitle1 {
+  font-size: $font-size-sm;
+  color: $gray-v86;
+  max-width: 200px;
+}

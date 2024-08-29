@@ -1,0 +1,27 @@
+@import '../../../scss/constants';
+
+.InputWidth {
+  width: calc(100% - 65px) !important;
+}
+.DropDownWidth {
+  width: 65px;
+  z-index: 1;
+}
+.Disable {
+  opacity: 0.7;
+}
+.SelectedUserTag {
+  max-width: 250px;
+}
+.SelectedUsersorTeams {
+  margin: 0 9px 0 7px;
+  font-size: $font-size-sm;
+  color: var(--dark);
+}
+.SelectedOptionTag {
+  height: 24px;
+  border-radius: 4px;
+  &:last-of-type {
+    margin-right: 0;
+  }
+}

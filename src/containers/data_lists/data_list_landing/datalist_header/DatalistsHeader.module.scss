@@ -1,0 +1,93 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.HeaderContainer {
+    padding: 0px 24px;
+    background-color: $white;
+    border-bottom: 1px solid $gray-v108;
+}
+
+.DlThumbnail label {
+    width: 32px;
+    height: 32px;
+    @include border-radius(4px);
+    margin-bottom: 0px !important;
+}
+
+.TabContainer >div {
+    gap: 24px
+}
+
+.EditButton {
+    margin-left: 12px;
+    padding: 8px !important;
+    svg path {
+        fill: none !important;
+        stroke: $blue-v39 !important;
+    }
+    &:hover {
+        svg path {
+            fill: $blue-v39 !important;
+            stroke: $white !important;
+        }   
+    }
+}
+.CloseIcon {
+    width: 12px;
+    height: 12px;
+    margin: 7px 3px !important;
+    fill: $gray-v101 !important;
+    outline: none;
+}
+.DatalistName {
+    padding-top: 16px;
+}
+
+.FooterContent {
+    height: 100px !important;
+}
+.BorderBottom {
+border-top: 1px solid $gray-v117;
+padding: 16px 24px 16px 24px;
+}
+
+.HeaderClass {
+    padding: 24px 16px 24px 32px;
+}
+.MainComponent {
+    padding-left: 32px;
+    padding-right: 32px;
+}
+.SubHeadingText {
+    color: $gray-v3;
+}
+.LabelNameClass > label {
+    font-size: 13px;
+    color: $gray-v89;
+    font-weight: 600;
+}
+.DescriptionClass > label {
+    color: $black-v20 !important;
+    font-size: 12px;
+    font-weight: 500 !important;
+}
+.SecondaryButton {
+    padding: 0px !important;
+}
+.DescriptionContainerLabel {
+    color: $gray-v89;
+    font-weight: 400 !important;
+}
+.Showing {
+    color: $gray-v104;
+    line-height: 20px;
+    font-weight: 500;
+}
+.ActiveBar {
+    height: 2px;
+}
+.BreadCrumb p {
+    &:hover {
+        color: none !important;
+    }
+}

@@ -1,0 +1,739 @@
+@import '../../../../scss/constants';
+@import '../../../../scss/utilities';
+
+.SectionContainer {
+  margin: 24px;
+  background-color: white;
+  height: 100%;
+  border-radius: 4px;
+  min-height: 210px;
+
+  @include responsive-layout {
+    padding: 24px;
+  }
+}
+
+.Container {
+  min-height: calc(100% - 56px);
+  position: relative;
+  height: calc(100% - 56px);
+}
+
+.ResponsiveContainerClass {
+  @include responsive-layout {
+    height: calc(100% - 190px);
+  }
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.SelectedList {
+  max-height: 50px !important;
+}
+
+.CommentsArea {
+  max-height: 60px !important;
+}
+
+.StepListDropdown {
+  max-height: 100px !important;
+}
+
+.HeaderWidth {
+  flex: 1;
+}
+
+.Line {
+  height: 1px;
+  opacity: 0.3;
+  background-color: $gray-v16;
+}
+
+.CloseIconContainer {
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+.ModalHeaderContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.ModalHeader {
+  height: 90px !important;
+  padding-left: 50px;
+}
+
+.ModalContent {
+  padding-top: 0px !important;
+}
+
+.ModalHeaderContent {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: flex-start;
+}
+
+.RejectModalContainer {
+  width: 460px;
+  padding: 0;
+  height: fit-content;
+}
+
+.ReassignMaincontentClassName {
+  margin: 40px;
+  margin-bottom: 0;
+  padding: 0px;
+  overflow: hidden;
+  height: fit-content !important;
+}
+
+.ReButtonContainer {
+  box-shadow: none !important;
+  height: fit-content;
+  padding: 40px;
+  padding-top: 0;
+  position: relative;
+}
+
+// .PrimaryButton {
+//   background-image: none !important;
+// }
+.ReassignTaskIcon {
+  top: 10px;
+  position: relative;
+  height: 32px;
+  width: 32px;
+
+  &:hover {
+    border-radius: 3px;
+    background-color: #e9ebed;
+
+  }
+}
+
+.DueBox {
+  padding: 5px 11px;
+  border-radius: 12px;
+  white-space: nowrap;
+  height: 26px;
+  min-width: 110px;
+
+  &:hover {
+    .HighPriorityDueBox {
+      background-color: $red-v7;
+    }
+
+    .MediumPriorityDueBox {
+      background-color: $orange-v2;
+    }
+
+    .LowPriorityDueBox {
+      background-color: $green-v4;
+    }
+
+    .NoDueBox {
+      background-color: $gray-v38;
+    }
+
+    .DueDaysText {
+      color: $white;
+    }
+  }
+}
+
+.HighPriorityDueBox {
+  background-color: $red-v6;
+}
+
+.MediumPriorityDueBox {
+  background-color: $orange-v1;
+}
+
+.LowPriorityDueBox {
+  background-color: $green-v3;
+}
+
+.NoDueBox {
+  background-color: $gray-v26;
+}
+
+.NoDueText {
+  color: $gray-v38;
+}
+
+.OverDueBox {
+  background-color: $red-v8;
+}
+
+.TaskDetail {
+  flex: 1 1 auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin-bottom: 10px;
+  height: fit-content;
+
+  & .LeftScroll1 {
+    padding: 0px 50px 0px 0px !important;
+  }
+
+  @include for-phone-and-tab {
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+  }
+
+  @include for-desktop {
+    padding: 0px 0px 0px 50px;
+  }
+}
+
+.SnoozedIcon {
+  width: 20px !important;
+}
+
+.StepName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 650px;
+
+  @include for-hd-screen {
+    max-width: 500px;
+  }
+}
+
+.Breadcrumb {
+  max-width: 100% !important;
+}
+
+.AssignedToOtherHeader {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.ContentHeaderBlock {
+  border-bottom: solid 1px #dadfe7;
+
+  @include for-desktop {
+    padding-left: 50px;
+  }
+}
+
+.ContentAssignOtherHeader {
+  padding: 15px 50px 0px 0px;
+  border-right: solid 1px #dadfe7;
+
+  @include for-desktop {
+    width: 65%;
+  }
+
+  @include for-phone-and-tab {
+    padding: 15px 20px 0px 20px;
+  }
+}
+
+.ContentHeader {
+  // width: calc(70% + 20px);
+  padding: 15px 50px 15px 0px;
+  border-right: solid 1px #dadfe7;
+
+  @include for-desktop {
+    // margin-right: calc(52vw);
+    width: 65%;
+  }
+
+  @include for-phone-and-tab {
+    padding: 15px 20px 0px 20px;
+    // min-width:420px;
+  }
+
+  // @include for-phone-and-tab{
+  //   width:100vw;
+  //   height:100vh;
+  //   padding:30px;
+  //   border:0px;
+
+  // }
+}
+
+.ContentHeaderRight {
+  width: 35%;
+
+  @include for-desktop {
+    padding: 0 25px;
+  }
+
+  @include for-phone-and-tab {
+    padding: 0 15px;
+  }
+}
+
+// .ButtonPadding {
+//   padding: 9px 18px;
+// }
+
+.ShowHistoryButton {
+  padding: 5px 11px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  margin-bottom: 15px;
+
+  // margin-bottom: 0px !important;
+}
+
+.TaskHistoryModal {
+  width: 700px;
+  padding-left: 60px !important;
+  padding-right: 60px !important;
+}
+
+.SnoozeTaskModal {
+  width: 40vw;
+  height: 60vw;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.04);
+  background-color: #fff;
+  // padding: 13px 13px 13px 20px !important;
+}
+
+.UserImage {
+  height: 24px;
+  width: 24px;
+}
+
+.LeftScroll {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  height: calc(100% - 180px);
+
+  @include for-phone-and-tab {
+    width: 100%;
+  }
+}
+
+.LeftScroll1 {
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  // width: 100% !important;
+  // padding-left: 50px;
+  // padding-right: 50px;
+  margin: 24px;
+  position: relative;
+
+  @include for-phone-and-tab {
+    margin: 12px !important;
+  }
+}
+
+.FitContent {
+  height: fit-content !important;
+}
+
+.InputContainer {
+  // border-bottom: 1px solid rgba(214, 221, 232, 0.3);
+  margin-bottom: 88px;
+
+  // margin-top: 15px;
+  // height: -webkit-fill-available;
+  @include for-desktop {
+    // padding-right: 50px;
+  }
+
+  @include for-phone-and-tab {
+    width: 100% !important;
+    border: 0 !important;
+    // padding-right: 20px !important;
+  }
+  @include responsive-layout {
+    margin-bottom: 24px;
+  }
+}
+
+// chat classes
+.MessageListPadding {
+  padding: 0px 50px;
+
+  @include for-phone-and-tab {
+    padding: 0px 30px;
+  }
+}
+
+.ChatInputPadding {
+  padding: 0px 50px 20px 50px;
+
+  @include for-phone-and-tab {
+    padding: 0px 20px 15px 20px;
+  }
+}
+
+.UserIconCircle {
+  // background-color: $gray-v6;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: $gray-v96;
+
+  }
+}
+
+.UserIcon1 {
+  fill: $gray-v53;
+}
+
+.AddRemoveAssigneeModal {
+  width: 45vw;
+}
+
+.Header {
+  width: 100%;
+  padding: 8px 0 0;
+
+  .TestTask {
+    color: $red-v11;
+  }
+}
+
+.SendBackModalContainer {
+  width: 30vw !important;
+  height: 55vh !important;
+  overflow: hidden !important;
+
+  @include for-hd-screen-v2 {
+    height: 65vh !important;
+  }
+
+  @include for-phone-and-tab {
+    width: 35vw !important;
+    height: 65vh !important;
+  }
+
+  @include for-small-to-medium-height-device {
+    height: 65vh !important;
+  }
+}
+
+.SnoozeHeader {
+  width: 100%;
+  height: 50px;
+  padding: 13px 15px 13px 30px !important;
+  opacity: 0.75;
+  background-color: $gray-v63;
+}
+
+.SnoozeModalHeader {
+  height: fit-content !important;
+  padding: 0px !important;
+}
+
+.SnoozeModalContainer {
+  width: 35vw !important;
+  height: 80vh !important;
+  overflow: hidden !important;
+  @include border-radius(6px);
+
+  @include for-phone-and-tab {
+    width: 35vw !important;
+    height: 80vh !important;
+  }
+
+  @include for-desktop {
+    // margin: 15px 15px 15px 0;
+    padding-bottom: 15px;
+    overflow: initial;
+  }
+
+  overflow: -moz-hidden-unscrollable !important;
+}
+
+.mainContentClassName {
+  padding: 0 !important;
+  overflow: hidden !important;
+}
+
+.SnoozeFooter {
+  padding: 0 !important;
+}
+
+.CloseIcon,
+.ModalCloseIcon {
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  margin: 0 15px 10px;
+  @include border-radius(4px);
+  border: solid 1px #dadfe7;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.SnoozeClose {
+  width: 28px;
+  height: 28px;
+  margin: 13px 14px 10px;
+}
+
+.CloseButton {
+  width: 12px;
+  height: 12px;
+  fill: $gray-v53;
+  // background-color: $gray-v53;
+  @include border-radius(1px);
+}
+
+.FooterButtonContainer {
+  height: 64px;
+  display: flex;
+  box-shadow: 0 -4px 20px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  bottom: 0;
+  // right: 0;
+  position: absolute;
+  width: 100%;
+  padding: 0px 15px 0px 15px;
+  z-index: 7;
+
+  @include for-phone-and-tab {
+    // position: fixed;
+    // z-index: 7;
+    width: 100%;
+  }
+
+  @include for-desktop {
+    // opacity: 0.75;
+  }
+}
+
+.ButtonContainer {
+  height: 60px;
+  display: flex;
+  box-shadow: 0px -1px 4px 0px rgba(16, 24, 40, 0.08);
+  bottom: 0px;
+  // right: 0;
+  width: 100%;
+  padding: 0px 15px 0px 15px;
+  z-index: 7;
+  position: absolute;
+
+  @include for-phone-and-tab {
+    // position: fixed;
+    // z-index: 7;
+    width: 100%;
+  }
+
+  @include for-desktop {
+    // opacity: 0.75;
+  }
+  @include responsive-layout {
+    position: relative;
+  }
+}
+
+.ForSnooze {
+  @include for-phone-and-tab {
+    width: 100% !important;
+  }
+
+  // @include for-small-device {
+  @media (max-width: 585px) {
+    position: absolute;
+    width: 100% !important;
+    // background-color: wheat;
+  }
+}
+
+.RightMargin {
+  border-right: 1px solid $gray-v65;
+  padding-right: 15px;
+  border-left: 1px solid $gray-v65;
+  padding-left: 15px;
+  line-height: 15px;
+}
+
+.RightMarginMobile {
+  border-right: 1px solid $gray-v65;
+  border-left: 1px solid $gray-v65;
+  line-height: 15px !important;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.RightMarginWithoutBorder {
+  padding-right: 15px !important;
+  padding-left: 15px !important;
+  margin-right: 15px !important;
+  margin-left: 15px !important;
+}
+
+.UserIcon {
+  width: 32px;
+  height: 32px;
+  border: solid 2px $white;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.ActionHistory {
+  height: 100%;
+  background-color: $gray-v63;
+  position: relative;
+  width: 35%;
+  // overflow-y:hidden;
+  padding: 0px;
+  // z-index: 6;
+  margin: 0px;
+  height: 100%;
+
+  @include for-phone-and-tab {
+    width: 100% !important;
+    // padding: 0px 10px;
+  }
+}
+
+.DownloadIcon {
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  fill: $gray-v53;
+  stroke: $gray-v53;
+}
+
+.NudgeIcon {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.TableNudge {
+  height: 28px;
+  border-width: 0;
+  font-size: 12px;
+}
+
+.Thumbnail {
+  width: 48px;
+  height: 48px;
+  @include border-radius(3px);
+  background-color: $blue-v41;
+}
+
+.ThumbnailText {
+  fill: $blue-v39;
+}
+
+.TestBedBg {
+  background-color: $orange-v9;
+  border-bottom: 1px solid $gray-v16;
+}
+
+.ScrollableSelectedList {
+  margin-right: 15px;
+}
+
+.TaskActionBtn {
+  width: 32px;
+  height: 32px;
+  margin-top: 9px;
+  border-radius: 4px;
+  justify-content: center;
+
+  &:hover {
+    background-color: $gray-v92;
+  }
+}
+
+.TaskActionIcon {
+  path {
+    fill: $gray-v53;
+  }
+}
+
+// background-color: #6c727e;
+
+.AssignToOthersHeaderBottom {
+  height: 1px;
+  background-color: $gray-v1;
+  position: sticky;
+  left: 0px;
+  margin: 0px -50px;
+  right: 0px;
+  left: 0px;
+
+  @include for-phone-and-tab {
+    display: none;
+  }
+}
+
+.TabContainer {
+  top: -1px;
+  // background-color: white;
+  z-index: 1;
+  // padding: 0 50px;
+  margin: 24px;
+
+  @include for-phone-and-tab {
+    // padding: 0 20px;
+    margin: 12px;
+  }
+}
+
+.TabBorder {
+  border-bottom: 1px solid $gray-v1;
+}
+
+.editIcon {
+  border-radius: 14px !important;
+}
+
+@include for-hd-screen-v2 {
+  .RightMargin {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+.DateWidth {
+  width: 114px;
+}
+
+.ReplicateIcon {
+  height: 18px;
+  width: 18px;
+}
+
+.TestBedTaskName {
+  color: $red-v11 !important;
+}
+
+.SelectReviewerErrorClass {
+  @extend %FS11;
+  @extend %RedV22;
+  font-weight: 400;
+  border-color: $red-v22 !important;
+}
+
+.BreadCrumb {
+  text-overflow: unset !important;
+  max-width: fit-content !important;
+}
+.BreadCrumbEllipsis {
+  &::after {
+    content: "...";
+  }
+}
+
+.TaskUnauthorized {
+  width: 500px;
+}

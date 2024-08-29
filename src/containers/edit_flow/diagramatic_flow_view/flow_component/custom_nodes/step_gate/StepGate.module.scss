@@ -1,0 +1,59 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.Container {
+    width: 64px;
+    height: 64px;
+    border: solid 1px $orange-v18;
+    background-color: $orange-v17;
+    border-radius: 2px;
+    transform: rotateZ(45deg);
+    position: relative !important;
+    right: 2px !important;
+}
+.IntegrationContainer {
+    width: 64px;
+    height: 64px;
+    border: solid 1px $orange-v18;
+    background-color: $orange-v17;
+    border-radius: 2px;
+    transform: rotateZ(45deg);
+    position: relative !important;
+    right: 2px !important;
+}
+.Icon {
+    transform: rotateZ(-45deg);
+    width: 28px;
+    height: 32px;
+    path {
+        fill: $orange-v19;
+    }
+}
+.LeftHandle {
+    margin-top: 27px !important;
+    transform: rotateZ(-45deg) !important;
+}
+.TopHandle {
+    position: absolute !important;
+    left: -2px !important;
+    transform: rotateZ(-45deg) !important;
+}
+.BottomHandle {
+    margin-left: 29px !important;
+    transform: rotateZ(-45deg) !important;
+}
+// .RightHandle {
+//     transform: rotateZ(-45deg) !important;
+//     position: absolute !important;
+//     top: -6px !important;
+// }
+.Container:after{
+    width: 1px;
+    height: 40px;
+    content: '';
+    background-color: $gray-v85;
+    transform: translate(30px, -44px) rotate(45deg);
+}
+.AddButton {
+    margin-left: 48px;
+}

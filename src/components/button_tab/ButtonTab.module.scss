@@ -1,0 +1,17 @@
+@import '../../scss/constants';
+
+.ButtonTab {
+  width: fit-content;
+  &:last-child {
+    border-right: 0;
+  }
+}
+
+.Tab {
+  color: $gray-v6;
+  padding: 7px 15px !important;
+  border-right: 1px solid $gray-v1 !important;
+  &:hover {
+    color: $gray-v2;
+  }
+}

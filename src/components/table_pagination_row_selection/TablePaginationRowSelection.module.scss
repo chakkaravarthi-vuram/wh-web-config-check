@@ -1,0 +1,84 @@
+@import '../../scss/utilities';
+@import '../../scss/constants';
+
+.Container {
+  border: 1px solid $gray-v32;
+}
+
+.Table {
+  margin-bottom: 0;
+  & td {
+    vertical-align: middle;
+    border-top: 0;
+    padding: 10px 15px;
+    @extend %FOne13;
+    @extend %BlackV2;
+  }
+  & thead {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom: solid 1px $gray-v1;
+    white-space: nowrap;
+    & td {
+      padding-top: 11px 15px 7px;
+      background-color: $gray-v8;
+      @extend %GrayV2;
+    }
+  }
+  & tbody {
+    margin-top: -1px;
+  }
+}
+.TableRowBorder {
+  & tbody {
+    & tr {
+      border-bottom: 1px solid $gray-v32;
+    }
+    & tr:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+.TableError {
+  border: 1px solid red;
+  border-right: 0px;
+}
+
+.FixedFirstColumn {
+  & td:first-child {
+    // position: sticky;
+    left: 0;
+  }
+  & td {
+    border-bottom: 1px solid $gray-v32;
+  }
+}
+
+table.FixedFirstColumn {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.Dropdown {
+  width: 203px;
+  max-height: none !important;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 0px !important;
+}
+
+.Popper {
+  margin-top: -20px;
+  margin-bottom: -20px;
+  // box-shadow: 4px 4px 12px 0 rgba(0, 0, 0, 0.2);
+  // border-radius: 12px;
+}
+
+.RowsPerPage{
+  font-size: 13px;
+  color:$gray-v12;
+  margin-right: 10px;
+  margin-top: 7px;
+}
+
+

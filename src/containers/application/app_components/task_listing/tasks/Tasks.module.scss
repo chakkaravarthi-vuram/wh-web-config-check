@@ -1,0 +1,284 @@
+@import '../../../../../scss/constants';
+@import '../../../../../scss/utilities';
+
+.TableInfiniteScrollContainer {
+  // height: 700px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.TablePaginatedContainer {
+  height: fit-content;
+}
+
+.Table {
+  & thead {
+    & th {
+      z-index: 4 !important;
+      font-weight: 600;
+    }
+  }
+}
+
+.OverFlowInherit {
+  overflow: inherit !important;
+}
+ // Task Name
+.TaskName{
+    max-width: 450px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.TaskNotViewedYet{
+  color: $gray-v3
+}
+
+// Task Name
+.TaskName {
+  max-width: 450px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.TaskNotViewedYet {
+  color: $gray-v3;
+}
+
+.TaskViewed {
+  color: $gray-v104;
+}
+
+// User Display Group
+.UserList {
+  min-width: 170px;
+}
+
+// Filter
+
+.FilterContainer {
+  background-color: $white;
+  box-shadow: 0px 1px 16px 0px rgba(16, 24, 40, 0.12);
+  border-radius: 4px;
+}
+
+.FilterTitle {
+  padding: 12px 16px;
+  border-bottom: 1px solid $gray-v102;
+}
+
+.CloseIcon {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+
+.SelectedFilter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px 0 16px;
+}
+
+.Filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: $white;
+  padding: 12px 16px 16px 16px;
+  width: fit-content;
+  & .Dropdown {
+    min-width: 152px;
+    @include for-phone-and-tab {
+      min-width: 100px;
+      max-width: 120px;
+    }
+  }
+  & .SloveneDropdown {
+    min-width: 180px;
+    @include for-phone-and-tab {
+      min-width: 100px;
+      max-width: 120px;
+    }
+  }
+  @include for-phone-and-tab {
+    width: 100%;
+  }
+  @include responsive-layout {
+    flex-wrap: wrap;
+  }
+}
+.FilterPopper {
+  width: fit-content !important;
+  @include responsive-layout {
+    width: 100% !important;
+  }
+}
+
+.ShowBy {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  margin-left: 8px;
+
+  & .ShowByText {
+    color: $gray-v87;
+    white-space: nowrap;
+    @include responsive-layout {
+      display: none;
+    }
+  }
+  & .ShowByField {
+    width: 130px;
+  }
+}
+
+.FilterActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  padding: 16px;
+}
+
+.FilterAndSearch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  .SearchIcon {
+    cursor: pointer;
+    outline: none;
+    & > path {
+      fill: $gray-v101;
+    }
+  }
+  .Search {
+    margin-right: 8px;
+    svg {
+      margin-right: 10px;
+    }
+  }
+  .FilterIcon {
+    padding: 8px;
+  }
+  .FilterIconWithCount {
+    display: flex;
+    padding: 6px 12px;
+    background-color: $gray-v107;
+    gap: 8px;
+    align-items: center;
+  }
+  .Line {
+    height: 16px;
+    width: 1px;
+    background-color: $gray-v103;
+    @include responsive-layout {
+      display: none;
+    }
+  }
+
+  @include responsive-layout {
+    flex-direction: column;
+
+    .ResultsCount {
+      padding-top: 8px;
+      align-self: flex-start;
+
+      h5 {
+        font-size: $font-size-md;
+      }
+    }
+    .TaskActions {
+      padding-top: 8px;
+      align-self: flex-end;
+    }
+    .TaskFilters {
+      > div {
+        max-width: 280px;
+      }
+    }
+  }
+}
+
+.TaskContentModal {
+  // width: 100%;
+  height: 100%;
+  // margin: 30px 0px !important;
+  overflow-x: hidden !important;
+  @include border-radius(6px);
+  @include for-phone-and-tab {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+  }
+  @include for-desktop {
+    width: calc(100% - 60px);
+    height: calc(100% - 60px);
+  }
+  position: fixed;
+}
+
+.OpenTaskModalContainer {
+  width: 60vw;
+  // height: 100%;
+  // margin: 30px 0px !important;
+  overflow-x: hidden !important;
+  overflow-y: hidden !important;
+  @include border-radius(6px);
+  @include for-phone-and-tab {
+    width: 100%;
+  }
+  @include for-desktop {
+    margin: 15px 15px 15px 0px !important; //Margin for create task modal
+  }
+  // @include transition(.3s);
+  @include transition(0.3s);
+  position: fixed;
+}
+
+.ModalCotainerClass {
+  // margin:30px;
+  @include for-desktop {
+    width: 100%;
+    height: 100%;
+  }
+  @include for-phone-and-tab {
+    margin: 0 !important;
+  }
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.minw178px {
+  min-width: 178px;
+  @include responsive-layout {
+    min-width: auto;
+  }
+}
+
+.minw185px {
+  min-width: 185px;
+  @include responsive-layout {
+    min-width: auto;
+  }
+}
+.TestBedIconContainer {
+  height: 24px;
+  width: 24px;
+  background-color: $orange-v3;
+  padding: 4px;
+  border-radius: 4px;
+  path {
+    fill: $white !important;
+  }
+}
+
+.TablePopperHeight {
+  min-height: 250px;
+}
+
+.ResponsiveClass { 
+  @include responsive-layout {
+    width: 85%;
+  }
+}

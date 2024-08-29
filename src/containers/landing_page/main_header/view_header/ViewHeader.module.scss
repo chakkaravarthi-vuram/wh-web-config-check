@@ -1,0 +1,32 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.EditBtn {
+    &:hover {
+      color: $blue-v39;
+    }
+}
+.HeaderContainer {
+    background: $white;
+}
+.ListingTab {
+    padding-left: 24px;
+    background: $white;
+    border-bottom: 1px solid $gray-v102;
+}
+.Breadcrumb {
+    padding-left: 24px;
+}
+.ActiveTab {
+    height: 4px;
+    border-radius: 0 !important;
+}
+.Thumbnail {
+    label {
+        margin-bottom: 0 !important;
+    }
+}
+.TabText {
+    margin-left: 0 !important;
+    margin-bottom: 8px;
+}

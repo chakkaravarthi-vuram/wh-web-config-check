@@ -1,0 +1,20 @@
+@import 'scss/utilities';
+@import 'scss/constants';
+
+.CapsuleContainer {
+  border-radius: 16px;
+  background-color: $gray-v107;
+  gap: 4px;
+}
+
+.LeftContainer {
+  padding: 8px 0px 8px 8px;
+}
+
+.RightContainer {
+  padding: 8px 8px 8px 0px;
+}
+
+.Divider {
+  color: $gray-v108;
+}

@@ -1,0 +1,157 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+.UploadedDropZone {
+  width: 165px;
+  height: 177px;
+  // padding: 64px 25px;
+  // padding: 0 0 32px !important;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+  margin-right: 30px;
+  margin-bottom: 30px;
+  // padding-top: 85px;
+}
+.RemainingAttachments {
+  width: 151px;
+  height: 177px;
+  // padding: 64px 25px;
+  // padding: 0 0 32px !important;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.UserImage {
+  width: 24px;
+  height: 24px;
+  border-radius: 54px;
+  border: solid 1px #fff;
+}
+.DeleteIcon {
+  width: 10.3px;
+  height: 12px;
+  fill: #f29494;
+}
+.DropZone {
+  width: 165px;
+  height: 177px;
+  // padding: 64px 70px;
+  padding-top: 65px;
+  // padding-left: 30px;
+  border-radius: 6px;
+  border: 1px dashed #bbb;
+  background-color: #fff;
+}
+.AddAttachments {
+  padding: 15px;
+  height: 100px;
+  text-align: center;
+  color: $gray-v53;
+  border-radius: 3px; //Dashed border radius
+  width: 100%;
+  border: 1px dashed #dadfe7;
+
+  svg {
+    min-width: 16px;
+    min-height: 16px;
+
+    + label {
+      max-width: 220px;
+      max-height: 16px;
+      margin-bottom: 0;
+    }
+  }
+}
+.AddAttachmentsLanguage {
+  padding: 15px;
+  height: 100px;
+  text-align: center;
+  color: $gray-v53;
+  border-radius: 3px; //Dashed border radius
+  width: 100%;
+  border: 1px dashed #dadfe7;
+
+  svg {
+    min-width: 16px;
+    min-height: 16px;
+
+    + label {
+      max-width: 300px;
+      max-height: 16px;
+      margin-bottom: 0;
+    }
+  }
+}
+.CreateForm {
+  color: $blue-v39;
+  letter-spacing: normal;
+  font-weight: $fw-semibold;
+}
+.FileIcon {
+  width: 165px;
+  height: 100px;
+  position: relative;
+
+  // padding-left: 60px;
+  // padding-top: 15px;
+  border-radius: 3px;
+  background-color: #f9f9f9;
+  .EyeIcon {
+    margin-top: -90px;
+    z-index: 5;
+    margin-left: 70px;
+    position: relative;
+    pointer-events: none;
+    width: 24px;
+    height: 14px;
+    @include for-phone-and-tab {
+      visibility: hidden;
+    }
+  }
+  .VideoHoverIcon {
+    margin-top: -120px;
+    z-index: 5;
+    margin-left: 70px;
+    position: relative;
+    pointer-events: none;
+    @include for-phone-and-tab {
+      visibility: hidden;
+    }
+  }
+}
+.FileDetails {
+  margin-top: -15px;
+}
+.Icon {
+  //   width: 49px;
+  // height: 64px;
+  // object-fit: contain;
+  margin-top: 15px;
+  margin-left: 60px;
+}
+.ImageIcon {
+  width: 165px;
+  height: 100px;
+  // object-fit: contain;
+  // margin-top: 15px;
+  // margin-left:60px
+}
+.VideoIcon {
+  margin-top: -120px;
+  margin-left: 70px;
+  position: relative;
+  z-index: 10;
+}
+.Unsupported {
+  width: 165px;
+  height: 100px;
+  border-radius: 3px;
+  background-color: #000 !important;
+  opacity: 0.5;
+}
+.UploadLabel {
+  padding: 8px 0px 0;
+}

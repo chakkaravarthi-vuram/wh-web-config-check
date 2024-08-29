@@ -1,0 +1,20 @@
+@import '../../../../../../../scss/constants';
+@import '../../../../../../../scss/utilities';
+
+.Indicator{
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+  }
+  .EditedBackground{
+    background-color: $orange-v15;
+  }
+  .DeletedBackground{
+    background-color: $red-v15;
+  }
+  .AddedBackgroung{
+    background-color: $green-V9;
+  }
+  .IndicatorContainer{
+    grid-gap: 20px;
+  }

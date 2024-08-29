@@ -1,0 +1,10 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+.Title {
+    color: $gray-v104;
+}
+.SubTitle {
+    color: $gray-v3;
+    word-break: break-all;
+}

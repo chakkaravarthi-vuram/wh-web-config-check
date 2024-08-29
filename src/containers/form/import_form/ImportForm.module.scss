@@ -1,0 +1,107 @@
+@import 'scss/utilities';
+@import 'scss/constants';
+
+.ModalContainerClass {
+    width: 90vw;
+}
+
+.Header {
+    padding: 20px 32px;
+    position: relative;
+
+    .CloseIcon {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        padding: 2px 6px;
+    }
+}
+
+.Footer {
+    padding: 16px 24px;
+    box-shadow: 0px -1px 4px 0px rgba(16, 24, 40, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .Button {
+        font-size: $font-size-mdt;
+        padding: 8px 16px;
+        height: 36px;
+        font-weight: 500;
+    }
+
+}
+
+.MainContent {
+    display: flex;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.LeftColumn {
+    width: 100%;
+    max-width: 300px;
+    border-right: 1px solid $gray-v1;
+    padding: 8px 32px;
+    overflow-y: auto;
+
+    .StepCard{
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        background-color: #fff;
+        border: 1px solid $gray-v76;
+        border-radius: 4px;
+        padding: 15px 20px;
+        width: 100%;
+
+        &.Selected {
+            border: 1px solid $blue-v39;
+            box-shadow: 0 2px 10px 0 rgba(34,139,181,.15);
+        }
+
+        .StepNo {
+            border-radius: 50%;
+            height: 28px;
+            width: 28px;
+            display: grid;
+            place-items: center;
+            background-color: $gray-v10;
+            color: $blue-v2;
+            font-size: 12px;
+            flex-shrink: 0;
+            margin-right: 10px;
+
+            &.Selected {
+                background-color: $blue-v39;
+                color: #fff;
+            }
+        }
+
+        .StepCardText {
+            font-size: 14px;
+            font-weight: 500;
+            overflow: hidden;
+            text-overflow: ellipsis !important;
+            white-space: nowrap;
+            text-align: left;
+        }
+
+        .RightArrow{
+            border-top-color: $blue-v39;
+        }
+    }
+}
+
+.RightColumn {
+    flex: 1;
+    padding: 8px 32px;
+    overflow-y: auto;
+}
+
+.Line {
+    background-color: $gray-v1;
+    height: 1px;
+    margin: 0 10px;
+}

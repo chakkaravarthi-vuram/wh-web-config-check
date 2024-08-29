@@ -1,0 +1,17 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.UserStepNode {
+    max-width: 300px;
+}
+.ErrorList {
+    list-style: inside !important;
+}
+.HighlightText {
+    background-color: $yellow-v1;
+    padding: 2px 0 !important;
+}
+.ActiveSearchResult {
+    background-color: $orange-v40;
+    padding: 2px 0 !important;
+}

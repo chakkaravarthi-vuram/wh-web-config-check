@@ -1,0 +1,115 @@
+@import 'scss/constants';
+@import 'scss/utilities';
+
+.OptionContainer {
+    background-color: $white;
+    width: 100%;
+    cursor: pointer;
+    &:last-child {
+        border-bottom: none;
+        .OptionListContent {
+            padding-bottom: 24px;
+        }
+    }
+    &:hover {
+        background-color: $blue-v41;
+        .OptionLabel {
+            color:  $blue-v39;
+        }
+        .Option
+        .RightArrow {
+            color: $blue-v39;
+        }
+    }
+    .OptionListContent {
+        padding: 8px 12px;
+        min-height: 69px;
+    }
+}
+.CategoryLabel {
+    padding: 8px 12px;
+    font-size: $font-size-sm;
+    font-weight: $fw-normal;
+    line-height: normal;
+    color: $black-v21;
+    background: $gray-v109;
+    text-align: left;
+}
+.NoResults {
+    height: 40vh !important;
+    @include for-small-to-medium-height-device {
+        height: 35vh !important;
+    }
+    @include for-small-height-device {
+        height: 30vh !important;
+    }
+}
+.IntegrationPopper {
+    z-index: 10 !important;
+    position: absolute;
+}
+.DefaultLogo {
+    width: 16px;
+}
+.SearchTab {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid $gray-v68;
+}
+.NameLabel {
+    line-height: 16px;
+}
+.Description {
+    line-height: 15px;
+}
+.LogoContainer {
+    background: $blue-v41;
+    width: 24px;
+    height: 24px;
+    path {
+        fill: none !important;
+        stroke: $blue-v39 !important;
+    }
+}
+.OptionLabel {
+    max-width: 300px !important;
+}
+
+.Container {
+    box-sizing: border-box;
+    @extend %FTwo;
+    background-color: $white !important;
+    border: 1px solid $gray-v1;
+    max-height: 50vh;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+.TemplateContainer {
+    width: 60px;
+}
+.CalendarTemplate {
+    width: 27px;
+}
+.ListContainer {
+    box-sizing: border-box;
+    @extend %FTwo;
+    background-color: $white !important;
+    border: 1px solid $gray-v1;
+    max-height: 50vh;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    overflow-y: auto !important;
+}
+.TemplateLogo {
+    width: 24px;
+    height: 24px;
+}
+.EventContainer {
+    height: 36px !important;
+    background: $white;
+    border: 1px solid $gray-v1;
+    // padding: 12px;
+    // margin-bottom: 15px !important;
+}
+
+.ErrorClass {
+    border: 1px solid $red-v18 !important
+}

@@ -1,0 +1,47 @@
+@import '../../../scss/constants';
+
+.Container {
+  padding: 15px;
+  padding-left: 20px;
+  // top: 10px;
+  //left: 50%;
+  transform: translate(-50%, 0);
+  // margin: 0 auto;
+  margin-left: 340px;
+  min-width: 300px;
+  z-index: 5;
+  border-radius: 8px;
+  box-shadow: 10px 10px 20px 0 rgba(0, 0, 0, 0.2);
+  position: fixed;
+  bottom: 100px;
+  // right: 0px;
+}
+
+.Success {
+  background-color: $red-v4;
+}
+
+.ServerError {
+  background-color: $red-v18;
+}
+
+.Undo{
+  margin-left: 2em;
+}
+
+.CorrectIconContainer {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-color: $white;
+}
+
+.CorrectIcon {
+  fill: transparent;
+}
+
+@media only screen and (max-width: 600px) {
+  .Container{
+    margin-left: 122px;
+  }
+}

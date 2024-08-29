@@ -1,0 +1,91 @@
+@import '../../scss/constants';
+@import '../../scss/utilities';
+
+
+.Container {
+    justify-content: space-between;
+    flex-direction: row;
+
+    @include for-phone-and-tab {
+        flex-direction: column;
+    }
+}
+
+.CardMargin {
+    flex: 1;
+    margin-right: 30px;
+
+    &:last-child {
+        margin-right: 0px;
+    }
+
+    @include for-phone-and-tab {
+        margin-right: 0px;
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+.CancelContainer {
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px 0 $gray-v64;
+    background-color: $white;
+    padding: 30px;
+    flex-direction: row;
+
+    .WarnSign {
+        width: 48px;
+        height: 48px;
+    }
+
+    h4 {
+        color: $gray-v3;
+        @extend %FS16;
+        @extend %FontWeight500;
+        margin: 0
+    }
+
+    h5 {
+        @extend %FontWeight500;
+        @extend %FS12;
+        color: $gray-v72;
+        margin: 0
+    }
+
+    .CancelSub {
+        margin-left: auto;
+        color: $red-v11;
+        @extend %FS11;
+        @extend %FontWeight600;
+    }
+
+}
+.PaymentDetailsContainer {
+    background-color: $white;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.04);
+
+}
+
+.CenterMargin {
+    width: 1px;
+    height: 110px;
+    margin-top: 60px;
+    border-left: solid 1px $gray-v68;
+}
+
+.CenterMarginEdit {
+    width: 1px;
+    height: 650px;
+    margin-top: 60px;
+    border-left: solid 1px $gray-v68;
+}
+
+@media only screen and (max-width: 1024px) {
+    .CenterMarginEdit, .CenterMargin {
+        display: none;
+    }
+}
