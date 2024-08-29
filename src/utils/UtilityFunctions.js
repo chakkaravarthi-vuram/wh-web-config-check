@@ -83,7 +83,6 @@ import CustomUserInfoToolTipNew from '../components/form_components/user_team_to
 import { TAB_ROUTE } from '../containers/application/app_components/dashboard/flow/Flow.strings';
 import { BASIC_FORM_FIELD_CONFIG_STRINGS } from '../containers/form/sections/field_configuration/basic_configuration/BasicConfiguration.strings';
 
-const jws = require('jws');
 const ms = require('ms');
 
 const cookies = new Cookies();
@@ -2322,31 +2321,6 @@ const timespan = (time, iat) => {
   }
 };
 
-export const signJWT = (payload) => {
-  const secretKey = 'SECRET';
-
-  const header = {
-    alg: 'HS256',
-    typ: 'JWT',
-  };
-
-  const timestamp = Math.floor(Date.now() / 1000);
-
-  const payloadWithExpiry = {
-    ...payload,
-    exp: timespan('300s', timestamp),
-    iat: timestamp,
-  };
-
-  const cubeJsToken = jws.sign({
-    header: header,
-    payload: payloadWithExpiry,
-    secret: secretKey,
-    encoding: 'utf8',
-  });
-
-  return cubeJsToken;
-};
 export function useClickOutsideDetector(ref, closeModal, dependencyArray = []) {
   useEffect(() => {
     function handleClickOutside(event) {
