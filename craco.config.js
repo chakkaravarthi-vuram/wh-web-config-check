@@ -8,7 +8,7 @@ module.exports = {
             fallback: {
               stream: require.resolve("stream-browserify"),
               vm: require.resolve('vm-browserify'),
-              process: require.resolve('process/browser'),
+            //   process: require.resolve('process/browser'),
               util: require.resolve('util/'),
             }
           },
